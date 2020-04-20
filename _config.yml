@@ -58,3 +58,5 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
+minima:
+  skin: dark
