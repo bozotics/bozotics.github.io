@@ -1,0 +1,54 @@
+name: Ruby
+
+on:
+  push:
+    branches: 
+      - source
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: temptest-${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          temptest-${{ runner.os }}-gems-
+    - name: Set up Ruby 2.6
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+    - name: Build and push
+      env:
+        JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+      run: |
+        bundle config path vendor/bundle
+        bundle install --jobs 4 --retry 3
+        bundle exec jekyll build -s $(find . -name _config.yml -exec dirname {} \;) -d build
+        cd build
+        touch .nojekyll
+        if [[ "${GITHUB_REPOSITORY}" == *".github.io"* ]]; then
+          remote_branch="master"
+        else
+          remote_branch="gh-pages"
+        fi
+        if [ "${GITHUB_REF}" == "refs/heads/${remote_branch}" ]; then
+          echo "Cannot publish on branch ${remote_branch}"
+          exit 1
+        fi
+        echo "Publishing to ${GITHUB_REPOSITORY} on branch ${remote_branch}"
+        remote_repo="https://${JEKYLL_PAT}@github.com/${GITHUB_REPOSITORY}.git"
+        git init
+        git config user.name "${GITHUB_ACTOR}"
+        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git add .
+        git commit -m "jekyll build from Action ${GITHUB_SHA}"
+        git push --force $remote_repo master:$remote_branch
+        rm -fr .git
+        cd ..
+        exit 0
