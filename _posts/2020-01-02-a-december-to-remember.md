@@ -8,7 +8,7 @@ tags: [Electronics, Mechanical, Monthly, Programming, Soccer Open]
 >I heard a bird sing in the dark of December.
 >A magical thing and sweet to remember.
 >
->Oliver Herford
+>**Oliver Herford**
 
 ## *Preliminary thoughts...*
 

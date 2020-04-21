@@ -9,7 +9,7 @@ tags: [Electronics, Mechanical, Monthly, Programming, Soccer Lightweight, Soccer
 >A frost-mailed warrior
 >striding a shadowy steed of snow.
 >
->Edgar Fawcett
+>**Edgar Fawcett**
 
 ## *Opening thoughts...*
 
@@ -29,7 +29,7 @@ Time (or more precisely, the race against it), was a key part of our journey in 
 The previous design faced a problem of the ball "repelling" from the dribbler when it entered the catchment area. This was due to the fact that when the ball was dribbled, it would move backwards with a lot of force (especially considering how our dribbler spins the ball at 2000 RPM). The ball would hit the back wall which produces an equal reaction force that pushes the ball directly out of the dribbler. We did not face this problem in previous years because we never made our dribbler spin the ball so quickly before... 🙃
 
 <div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/10rbZp9PNCbBIpNrm1stR8X-hV67njiIu/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
+<iframe src="https://drive.google.com/file/d/1uI81nbX9qsrBN6l5kinv38_HdqpMkz-t/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
  frameborder="0" width="100%" height="100%" 
  allowfullscreen allow="autoplay"></iframe>
 </div>
@@ -38,7 +38,7 @@ The previous design faced a problem of the ball "repelling" from the dribbler wh
 To fix this, a ramp was created on the bottom part of the catchment area, thus redirecting most of the backwards force of the ball diagonally upwards. This not only stopped the ball from bouncing out of the dribbler, but it also improved the dribbler's performance since most of the backwards force of the ball was used to push itself up into the dribbler, which increased the rollers' grip on the ball.
 
 <div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/1Mvhv-nyByCtlIb73K19pvXQYyYlE-PtB/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
+<iframe src="https://drive.google.com/file/d/1UW2QPk34talTuW9DZbfIL0IKQxyY897J/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
  frameborder="0" width="100%" height="100%" 
  allowfullscreen allow="autoplay"></iframe>
 </div>
@@ -72,7 +72,7 @@ On the underside of this plate, we have our 48 light sensors, 36 of which are ar
 
 The second layer is much emptier since its main job is just to support the dribbler and kicker, and hence large holes are also cut where possible in order to save weight. The main component it holds is the 5V buck converter.
 
-![EAGLE 2nd layer top](/assets/layer1-v2-1024x955.png "EAGLE 2nd layer top")
+![EAGLE 2nd layer top](/assets/pcb1-1-1024x897.png "EAGLE 2nd layer top")
 <p class="caption">Does this 2nd layer even exist?</p>
 
 Meanwhile, the third layer (which is still a work in progress), will contain sensors such as the IR ring, Bluetooth module, camera, as well as our micro-controllers like the Teensy and STM32. The final layer is placed very high, above the mirror, and it holds the TOF sensors and compass. This allows the TOF sensors to sense over the goals, while keeping the compass as far away from the motors as possible.
@@ -105,9 +105,9 @@ However, the Raspberry Pi needed to act as a server and assign an IP address to 
 
 In previous years, we have been using Python OpenCV to program our Pi camera, which came at the cost of speed. Due to Python's Global Interpreter Lock (GIL), multi threading was not possible, and all the Python threading library was doing was simply switching between different threads rapidly instead of actually running tasks in parallel. Moreover, many basic functions like loops are significantly slower in Python than C++. Hence, we have decided to switch to programming both our camera and GUI on C++.
 
-We initially created a program to simply capture frames from the camera to push it to its limits and we realised it was able to capture 640 by 480 images at 120 FPS! However, after adding a few basic OpenCV functions such as CvtColor (converting the image's colour space), inRange and clone, we were surprised at how slow they were running. CvtColor itself took around 10ms, so one can just imagine how much longer more complicated functions like findContours would take.
+We initially created a program to simply capture frames from the camera to push it to its limits and we realised it was able to capture 640 by 480 images at 120 FPS! However, after adding a few basic OpenCV functions such as `cvtColor` (converting the image's colour space), `inRange` and `clone`, we were surprised at how slow they were running. `cvtColor` itself took around 10ms, so one can just imagine how much longer more complicated functions like `findContours` would take.
 
-That was when we realised our installation of OpenCV was not optimised. We enabled NEON (optimisation for ARM devices) and VFPV3 (floating point optimisation) in our CMake config before rebuilding and reinstalling OpenCV on our Raspberry Pi. With our new, optimised OpenCV library, the speed of the functions improved by a large margin; the CvtColor function can now run below 2.5ms. Our target will be to process the frames at 50 FPS, which gives us about 20ms to process each frame. 
+That was when we realised our installation of OpenCV was not optimised. We enabled NEON (optimisation for ARM devices) and VFPV3 (floating point optimisation) in our CMake config before rebuilding and reinstalling OpenCV on our Raspberry Pi. With our new, optimised OpenCV library, the speed of the functions improved by a large margin; the `cvtColor` function can now run below 2.5ms. Our target will be to process the frames at 50 FPS, which gives us about 20ms to process each frame. 
 
 Also, to finally stop our rampant spaghetti coding practices and start going "professional", we will use classes to make our code more readable... 🙃
 

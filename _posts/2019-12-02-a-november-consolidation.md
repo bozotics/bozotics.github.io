@@ -7,7 +7,7 @@ tags: [Mechanical, Monthly, Simulation, Soccer Open]
 ---
 >November at its best – with a sort of delightful menace in the air.
 >
->Anne Bosworth Greene
+>**Anne Bosworth Greene**
 
 ## *A few thoughts...*
 
@@ -53,10 +53,10 @@ Having faced many problems with the molding method for making our mirror in prev
 
 ## 2D Simulation
 
-As part of our revamp of robot strategy, we are planning to create smarter, more human-like play by introducing decision trees as well as special offensive/defensive manoeuvres (top secret for now!). Hence, we created a semi-realistic 2D simulator using Python with the Arcade and Pymunk libraries. As of now, we have a robot running a simple ball chasing with goal aiming/shooting program, but this simulator will surely come into great use in the future as we further develop our robot strategy.
+As part of our revamp of robot strategy, we are planning to create smarter, more human-like play by introducing decision trees as well as special offensive/defensive manoeuvres (top secret for now!). Hence, we created a semi-realistic 2D simulator using Python with the [Arcade](http://arcade.academy/) and [Pymunk](http://www.pymunk.org/) libraries. As of now, we have a robot running a simple ball chasing with goal aiming/shooting program, but this simulator will surely come into great use in the future as we further develop our robot strategy.
 
 <div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/1U_WhIWGGLpf__bvGI5MUfWn5aakbTFb7/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
+<iframe src="https://drive.google.com/file/d/1ZeY6IpUh1xZ00UMRzZT7vs5U37Er0hNX/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
  frameborder="0" width="100%" height="100%" 
  allowfullscreen allow="autoplay"></iframe>
 </div>

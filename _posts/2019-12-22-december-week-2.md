@@ -27,5 +27,7 @@ When we were calibrating the camera this year, we realised that the shade of ora
 
 Since the shade of orange might be constantly changing we could predict the next colour range using the current and past few colour ranges, this allows our program to be more dynamic.
 
+---
+
 ## Conclusion
 Juggling between work and life in Malaysia is tough. Avoid using Arch Linux as a start, opt for Ubuntu or something simpler. Right now, we are optimising the camera and its calibration process. 
