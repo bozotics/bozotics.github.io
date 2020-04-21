@@ -1,0 +1,15 @@
+menu:
+  - title: About
+    url: /about/
+
+  - title: Open
+    url: /open/
+
+    submenu:  
+      - title: Design
+        url: /design/
+
+      - title: Electronics
+        url: /electronics/
+
+  
