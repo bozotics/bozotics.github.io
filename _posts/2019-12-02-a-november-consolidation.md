@@ -9,12 +9,12 @@ tags: [Mechanical, Monthly, Simulation, Soccer Open]
 >
 >Anne Bosworth Greene
 
-## A few thoughts...
+## *A few thoughts...*
 
 November is a month of transition from the autumn to winter season. The beautiful spectrum of striking red, flashy orange, and glowing yellow autumn leaves wither and fall, littering the ground with their dry, brown, shriveled bodies, showing no signs of life other than a short flutter from the occasional gust of wind. Days grow shorter and nights grow longer. The cool, crisp air of autumn becomes the bitter, frigid weather of winter. It is no wonder why to some, the month of November symbolizes the approach of death; the nearing of an end of some metaphorical era of one's life. 
 
-![Autumn Lanscape](/assets/Bricher-Autumn_Landscape-1024x524.jpg "Autumn Lanscape by Alfred Thomson Bricher(1870)")
-<p style="text-align: center;"><i>Autumn Lanscape</i> by Alfred Thomson Bricher(1870)</p>
+![Autumn Landscape](/assets/Bricher-Autumn_Landscape-1024x524.jpg "Autumn Landscape by Alfred Thomson Bricher(1870)")
+<p class="caption"><i>Autumn Landscape</i> by Alfred Thomson Bricher(1870)</p>
 
 Personally, I prefer to take a more optimistic outlook. Under the guise of grimness lies a sea of wisdom. Rather than death, November for me represents a rebirth or a reinvention, a chance to impart revolutionary changes to oneself. As a month near the end of the year but just before the holiday month of December, November creates the perfect setting to do some serious self-reflection; to take stock of one's successes and failures and learn from the year's worth of experiences. Our RoboCup experience this year was a failure due to a multitude of inexcusable mistakes such as overextending our workloads and poor time management. We have definitely learnt from our mistakes and have sworn to never repeat them again.
 
@@ -27,17 +27,17 @@ Hence, since mid-October, we have made progress in our Soccer Open robots by lea
 The first draft of the dribbler's 3D design was actually completed way back in August, but due to pesky exams and waiting of Taobao shipments, it was only fully assembled in mid-November.
 
 ![Exploded Dribbler](/assets/exploded-dribbler-2-1024x576.png "Exploded view of dribbler")
-<p style="text-align: center;">Exploded view of dribbler</p>
+<p class="caption">Exploded view of dribbler</p>
 
 The dribbler is powered by an 820kV brushless motor through a 2:5 ratio gear train, giving the bar an estimated 3900 RPM when running on our 12V batteries. This means that the ball will be spinning at over 2000 RPM!
 
 The dribbler's rollers are coated with a layer of [silicone](http://www.zener.com.sg/product/araldite-kitchen-and-bathroom-silicone/) to have high grip on the ball. The whole dribbler module has a pivot point at its back with a spring suspension to allow for the bar to move up and down slightly, thus absorbing impact and giving better control over the dynamic movements of the ball.
 
 ![Dribbler Gearbox](/assets/20191113-2_3-0-1024x498.jpg "Dribbler's gearbox")
-<p style="text-align: center;">Dribbler's gearbox</p>
+<p class="caption">Dribbler's gearbox</p>
 
 ![Assembled Dribbler](/assets/20191113-2_3-3-1024x498.jpg "Assembled dribbler")
-<p style="text-align: center;">Assembled dribbler</p>
+<p class="caption">Assembled dribbler</p>
 
 Slight adjustments of the dribbler's position were done through trial and error to adjust the angle the dribbler pivots to. While results were satisfactory, the ball still does move in and out when dribbled, and thus we will be experimenting with different spring strengths and even an oil damper for our suspension system soon.
 
@@ -47,7 +47,7 @@ Slight adjustments of the dribbler's position were done through trial and error 
 Following a few rounds of experimentation, we finalised on a mirror shape that is a combination of a cone and a hyperbola. The hyperbolic base of the mirror enlarges objects near the robot with minimal deformation, while the conic part of the mirror enlarges the goals and maintains the roughly rectangular shape of the field lines.
 
 ![Mirror Render](/assets/5-48deg-centre-res-1024x787.png "Robot's POV")
-<p style="text-align: center;">Robot's POV</p>
+<p class="caption">Robot's POV</p>
 
 Having faced many problems with the molding method for making our mirror in previous years, we have decided to try manufacturing our mirror this time by sending our design to China for aluminium CNC lathing, followed by polishing it up ourselves. Fingers crossed! 🤞
 

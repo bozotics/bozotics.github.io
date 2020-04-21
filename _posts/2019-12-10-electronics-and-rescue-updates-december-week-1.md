@@ -14,7 +14,7 @@ Can't really think of a good intro like the previous post, and can't find that m
 Since our previous robot, we have designed custom PCBs for our use, utilising different SMD ICs. However, not all of the different circuits worked as expected, and we ended up reverting to some through hole pre-made modules such as for our step-down and boost circuits.
 
 ![Dismantled Old Robot](/assets/IMG_20190401_223008-768x1024.jpg "Dismantled old robot")
-<p style="text-align: center;">Look at the step down module on the top layer!</p>
+<p class="caption">Look at the step down module on the top layer!</p>
 
 This year, in a bid to make our design smaller and fit within the future 20cm diameter size limit, we needed to decrease the amount of these modules used and try to integrate everything into our PCB. These component selections were a result of our previous year’s experience and extensive research into potential alternatives.
 
