@@ -2,8 +2,8 @@
 layout: default
 ---
 <h1>{{ page.title }}</h1>
-{% assign wordCount = content | number_of_words %}
-<p>&#128100; {{ page.author }} - &#128197; {{ page.date | date_to_string }} - {{ wordCount }} min read</p>
+{% assign readTime = page.time %}
+<p>&#128100; {{ page.author }} - &#128197; {{ page.date | date_to_string }} - {{ readTime }} min read</p>
 
 {{ content }}
 

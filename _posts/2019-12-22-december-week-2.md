@@ -2,7 +2,7 @@
 layout: post
 author: Justin Tan
 title: December - Week 2
-time: 4
+time: 3
 tags: [Programming, Soccer Open, Weekly]
 ---
 ## Working from the rainforest
