@@ -5,11 +5,13 @@ menu:
   - title: Open
     url: /open/
 
-    submenu:  
-      - title: Design
-        url: /design/
+  - title: Lightweight
+    url: /lightweight/
 
-      - title: Electronics
-        url: /electronics/
+  - title: Rescue
+    url: /rescue/
+
+  - title: Contact
+    url: /contact/
 
   
