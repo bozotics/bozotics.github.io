@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 author: Justin Tan
 title: December - Week 2
 time: 3

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 author: Kai Cong
 title: The March goes on
 time: 11

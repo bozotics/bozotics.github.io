@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 author: Jing Heng
 title: December - Week 1
 time: 7

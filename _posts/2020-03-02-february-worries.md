@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 author: Kai Cong
 title: February Worries
 time: 10

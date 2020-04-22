@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 author: Kai Cong
 title: A December to Remember
 time: 5

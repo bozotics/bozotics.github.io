@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 author: Jing Heng
 title: Rescue Line - March Update
 time: 5

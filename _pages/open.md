@@ -1,7 +1,7 @@
 ---
-layout: page
-title: Contact Us
-permalink: /contact/
+layout: single
+title: Soccer Open
+permalink: /open/
 ---
 
 {{page.title}}
