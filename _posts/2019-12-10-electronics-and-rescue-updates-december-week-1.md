@@ -2,7 +2,6 @@
 layout: single
 author: Jing Heng
 title: December - Week 1
-time: 7
 tags: [Electronics, Rescue Line, Soccer Open, Weekly]
 ---
 Can't really think of a good intro like the previous post, and can't find that many photos as well, so here is a very wordy introduction / progress update for our Rescue Line and Soccer Open robots.

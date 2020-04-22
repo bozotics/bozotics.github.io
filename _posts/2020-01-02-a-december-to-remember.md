@@ -2,7 +2,6 @@
 layout: single
 author: Kai Cong
 title: A December to Remember
-time: 5
 tags: [Electronics, Mechanical, Monthly, Programming, Soccer Open]
 ---
 >I heard a bird sing in the dark of December.

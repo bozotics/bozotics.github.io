@@ -2,7 +2,6 @@
 layout: single
 author: Kai Cong
 title: A January Commentary
-time: 10
 tags: [Electronics, Mechanical, Monthly, Programming, Soccer Lightweight, Soccer Open]
 ---
 >January is here, with eyes that keenly glow,

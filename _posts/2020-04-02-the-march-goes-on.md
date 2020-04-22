@@ -2,7 +2,6 @@
 layout: single
 author: Kai Cong
 title: The March goes on
-time: 11
 tags: [Electronics, Mechanical, Monthly, Programming, Soccer Lightweight, Soccer Open]
 ---
 >By March, the worst of the winter would be over. The snow would thaw, the rivers begin to run and the world would wake into itself again.

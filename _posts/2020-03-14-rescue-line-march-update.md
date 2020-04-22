@@ -2,7 +2,6 @@
 layout: single
 author: Jing Heng
 title: Rescue Line - March Update
-time: 5
 tags: [Electronics, Mechanical, Rescue Line]
 ---
 A long time has passed since the last Rescue Line update as I’ve been mostly working on getting the Soccer robot up and running, but since everyone is waiting on parts to arrive from China it’s time for another update!
