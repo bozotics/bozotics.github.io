@@ -2,6 +2,8 @@
 layout: single
 title: About Us
 permalink: /about/
+sidebar:
+  nav: "side-about"
 ---
 ## Philosophy
 
@@ -39,15 +41,33 @@ To us, Transcendence symbolises more than just a team; it is a way of life. It i
 
 <style>
     .person-pic {
-        max-width: 23%;
-        margin-right: 20px;
+        max-width: 25%;
+        margin-right: 1em;
     }
     .person-info {
         max-width: 70%;
+        margin: 0;
+    }
+    @media only screen and (max-width: 500px) {
+        .person-pic {
+            max-width: 40%;
+            min-width: 100px;
+            margin: 0 0 0.5em 0 !important;
+        }
+        .person-info {
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+    .person-desc {
+        margin: 0 !important;
+    }
+    .person-name {
+        margin-top: 0 !important;
     }
     .person {
         vertical-align: middle;
-        margin-top: 20px;
+        margin-bottom: 2em;
         display: block;  
     }
     .person-info, .person-pic {
@@ -60,7 +80,7 @@ To us, Transcendence symbolises more than just a team; it is a way of life. It i
     <img src="/assets/image.png" alt="Profile" class="person-pic">
     <div class="person-info">
         <h3 class="person-name">Tan Kai Cong</h3>
-        <p class="person-desc">Hello, my name is Kai Cong! I am the mechanical designer for Soccer Open and the electronics designer for Soccer Lightweight. I am also the developer of robot strategy and other locomotion-related programming for both Soccer Open and Lightweight.</p>
+        <p class="person-desc">Hello, I am Kai Cong! I am the mechanical designer for Soccer Open, electronics designer for Soccer Lightweight, and the developer of robot strategy and other locomotion-related programming for both Soccer Open and Lightweight.</p>
     </div>
 </div>
 <div class="person">

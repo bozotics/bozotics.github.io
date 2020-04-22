@@ -12,11 +12,16 @@ main:
     url: /blog/
   - title: "Contact"
     url: /contact/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+
+side-about:
+  - title: Philosophy
+    url: "/about/#philosophy"
+    children:
+      - title: "Who we are"
+        url: "/about/#who-we-are"
+      - title: "Our Vision"
+        url: "/about/#our-vision"
+      - title: "Our Values"
+        url: "/about/#our-values"
+  - title: Our Team
+    url: "/about/#our-team"
