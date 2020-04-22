@@ -1,5 +1,4 @@
 ---
-layout: single
 author: Kai Cong
 title: A January Commentary
 tags: [Electronics, Mechanical, Monthly, Programming, Soccer Lightweight, Soccer Open]

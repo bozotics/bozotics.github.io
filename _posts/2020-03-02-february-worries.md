@@ -1,5 +1,4 @@
 ---
-layout: single
 author: Kai Cong
 title: February Worries
 tags: [Electronics, Mechanical, Monthly, Programming, Simulation, Soccer Lightweight, Soccer Open]

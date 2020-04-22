@@ -1,5 +1,4 @@
 ---
-layout: single
 author: Kai Cong
 title: A November Consolidation
 tags: [Mechanical, Monthly, Simulation, Soccer Open]

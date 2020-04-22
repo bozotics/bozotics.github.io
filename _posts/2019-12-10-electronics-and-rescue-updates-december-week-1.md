@@ -1,5 +1,4 @@
 ---
-layout: single
 author: Jing Heng
 title: December - Week 1
 tags: [Electronics, Rescue Line, Soccer Open, Weekly]

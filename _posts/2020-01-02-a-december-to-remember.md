@@ -1,5 +1,4 @@
 ---
-layout: single
 author: Kai Cong
 title: A December to Remember
 tags: [Electronics, Mechanical, Monthly, Programming, Soccer Open]

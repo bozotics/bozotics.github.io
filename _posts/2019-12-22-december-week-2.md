@@ -1,5 +1,4 @@
 ---
-layout: single
 author: Justin Tan
 title: December - Week 2
 tags: [Programming, Soccer Open, Weekly]

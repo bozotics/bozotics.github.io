@@ -1,5 +1,4 @@
 ---
-layout: single
 author: Jing Heng
 title: Rescue Line - March Update
 tags: [Electronics, Mechanical, Rescue Line]

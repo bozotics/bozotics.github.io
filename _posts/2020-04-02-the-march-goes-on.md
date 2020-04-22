@@ -1,5 +1,4 @@
 ---
-layout: single
 author: Kai Cong
 title: The March goes on
 tags: [Electronics, Mechanical, Monthly, Programming, Soccer Lightweight, Soccer Open]
