@@ -22,7 +22,7 @@ Follow us on Instagram [@bozotics](https://instagram.com/bozotics)! (We're most 
 
 <!-- LightWidget WIDGET 
 <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/db7e94dcf60f5959a9ccc9a74743bf6b.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-What the actual fuck we cant use this cos we need premium version to run on https fuck me dead 
+Need premium version to run on https 
 -->
 
 ---

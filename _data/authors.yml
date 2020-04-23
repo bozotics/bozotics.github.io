@@ -37,9 +37,6 @@ Justin Tan:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:151548b@student.hci.edu.sg"
-    - label: "My go to website"
-      icon: "fas fa-fw fa-link"
-      url: "https://pornhub.com"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/justintan2002"
@@ -47,7 +44,7 @@ Justin Tan:
 Yijian:
   name        : "Yijian"
   full-name   : "Zhang Yijian"
-  bio         : "Need co<del>ck</del> ffee."
+  bio         : "Need coffee."
   avatar      : "/assets/IMG_2247-1.jpg"
   desc        : "Hi I’m Yijian, the mechanical designer for Rescue Line! #Team8076Z"
   links:
