@@ -13,9 +13,12 @@ jobs:
       - uses: actions/cache@v1
         with:
           path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          key: temptest-${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
-            ${{ runner.os }}-gems-
-      - uses: limjh16/jekyll-action@master
+            temptest-${{ runner.os }}-gems-
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+      - uses: limjh16/jekyll-action@test-ts
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
