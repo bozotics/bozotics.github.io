@@ -1,7 +1,9 @@
 ---
 layout: single
-title: Soccer Open
-permalink: /open/
+title: Electronics
+permalink: /open/elec/
+sidebar:
+  nav: "side-open"
 ---
 
 {{page.title}}

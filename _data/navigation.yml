@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: /about/
   - title: "Open"
-    url: /open/
+    url: /open/intro/
   - title: "Lightweight"
     url: /lightweight/
   - title: "Rescue"
@@ -25,3 +25,13 @@ side-about:
         url: "/about/#our-values"
   - title: Our Team
     url: "/about/#our-team"
+
+side-open:
+  - title: Introduction
+    url: "/open/intro/"
+  - title: Mechanical
+    url: "/open/mech/"
+  - title: Electronics
+    url: "/open/elec/"
+  - title: Camera
+    url: "/open/cam/"
