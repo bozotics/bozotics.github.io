@@ -1,7 +1,8 @@
 ---
 author: Kai Cong
 title: February Worries
-tags: [Electronics, Mechanical, Monthly, Programming, Simulation, Soccer Lightweight, Soccer Open]
+tags: [Electronics, Mechanical, Monthly, Programming, Simulation]
+categories: [Soccer Lightweight, Soccer Open]
 ---
 >February is the uncertain month, neither black nor white but all shades between by turns. Nothing is sure.
 >

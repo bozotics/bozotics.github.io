@@ -75,43 +75,7 @@ To us, Transcendence symbolises more than just a team; it is a way of life. It i
         vertical-align: middle;
     }
 </style>
-<!---
-<div class="person">
-    <img src="/assets/image.png" alt="Profile" class="person-pic">
-    <div class="person-info">
-        <h3 class="person-name">Tan Kai Cong</h3>
-        <p class="person-desc">Hello, I am Kai Cong! I am the mechanical designer for Soccer Open, electronics designer for Soccer Lightweight, and the developer of robot strategy and other locomotion-related programming for both Soccer Open and Lightweight.</p>
-    </div>
-</div>
-<div class="person">
-    <img src="/assets/31131193_10209427935090432_5447242816050692096_o-1-912x1024.jpg" alt="Profile" class="person-pic">
-    <div class="person-info">
-        <h3 class="person-name">Lim Jing Heng</h3>
-        <p class="person-desc">Hello, I am Jing Heng! I am the electronics designer for Soccer Open, as well as the mechanical designer and programmer for Rescue Line.</p>
-    </div>
-</div>
-<div class="person">
-    <img src="/assets/justin.png" alt="Profile" class="person-pic">
-    <div class="person-info">
-        <h3 class="person-name">Justin Tan</h3>
-        <p class="person-desc">Hi I am Justin! I am in charge of the programming of the camera and the RoboCup sokker robot!</p>
-    </div>
-</div>
-<div class="person">
-    <img src="/assets/IMG_2247-1.jpg" alt="Profile" class="person-pic">
-    <div class="person-info">
-        <h3 class="person-name">Zhang Yijian</h3>
-        <p class="person-desc">Hi I’m Yijian, the mechanical designer for Rescue Line! #Team8076Z</p>
-    </div>
-</div>
-<div class="person">
-    <img src="/assets/dunyu.jpg" alt="Profile" class="person-pic">
-    <div class="person-info">
-        <h3 class="person-name">Yeo Dun Yu</h3>
-        <p class="person-desc">Ni hao wo shi dun yu</p>
-    </div>
-</div>
---->
+
 <div class="info">
 {% for author in site.data.authors %}
     <div class="person">

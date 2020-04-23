@@ -1,7 +1,8 @@
 ---
 author: Kai Cong
 title: A November Consolidation
-tags: [Mechanical, Monthly, Simulation, Soccer Open]
+tags: [Mechanical, Monthly, Simulation]
+categories: [Soccer Open]
 ---
 >November at its best – with a sort of delightful menace in the air.
 >

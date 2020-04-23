@@ -1,7 +1,8 @@
 ---
 author: Kai Cong
 title: A December to Remember
-tags: [Electronics, Mechanical, Monthly, Programming, Soccer Open]
+tags: [Electronics, Mechanical, Monthly, Programming]
+categories: [Soccer Open]
 ---
 >I heard a bird sing in the dark of December.
 >A magical thing and sweet to remember.
