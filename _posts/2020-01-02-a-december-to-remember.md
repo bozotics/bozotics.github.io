@@ -80,3 +80,13 @@ A GUI was created to facilitate the calibration of the camera. It streams and pr
 ## Conclusion
 
 Progress overall is still on track and we are slated to finish construction by February, leaving a full month for programming before the Singapore Open. This month of December has been slower than desired, but just like how the tide recedes before a tsunami strikes, we are now more prepared than ever to forge new frontiers in the new year. 2020, here we go!
+
+<style>
+    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
+        transform: scaleX(1);
+    }
+    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
+        color: #fff;
+        background: #0092ca;
+    }
+</style>

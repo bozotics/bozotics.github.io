@@ -74,3 +74,13 @@ Redesign coming right up but not before my test PCB is complete…
 Most of my time last year was spent on FLL so the PCB was completed only like 2 weeks before the competition… Lets just hope that with no FLL this year it can be completed a little earlier!
 
 Also, [github.com/hcbozo](https://github.com/hcbozo)
+
+<style>
+    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
+        transform: scaleX(1);
+    }
+    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
+        color: #fff;
+        background: #0092ca;
+    }
+</style>
