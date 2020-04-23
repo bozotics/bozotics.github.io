@@ -146,6 +146,8 @@ include:
   - .htaccess
   - _pages
   - _open
+  - _lightweight
+  - _rescue
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

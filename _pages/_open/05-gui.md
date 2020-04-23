@@ -1,14 +1,14 @@
 ---
 layout: single
-title: Introduction
-permalink: /open/intro/
+title: Camera GUI
+permalink: /open/gui/
 sidebar:
   nav: "side-open"
 ---
 
 {{page.title}}
 
-# COMING SOON AF
+# COMING SOON
 
 <!-- Including pagination manually since these are pages so page layout MUST be changed under navigation.yml -->
 <nav class="pagination">
@@ -20,6 +20,3 @@ sidebar:
     {% endif %}
 {% endfor %}  
 </nav>
-
-
-

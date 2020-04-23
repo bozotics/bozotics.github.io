@@ -1,14 +1,14 @@
 ---
 layout: single
-title: Introduction
-permalink: /open/intro/
+title: Strategy
+permalink: /open/strat/
 sidebar:
   nav: "side-open"
 ---
 
 {{page.title}}
 
-# COMING SOON AF
+# COMING NOT SO SOON
 
 <!-- Including pagination manually since these are pages so page layout MUST be changed under navigation.yml -->
 <nav class="pagination">
@@ -20,6 +20,3 @@ sidebar:
     {% endif %}
 {% endfor %}  
 </nav>
-
-
-
