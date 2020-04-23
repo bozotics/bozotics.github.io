@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 # Site Settings
 locale                   : "en-US"
 title                    : "Transcendence"
-title_separator          : "-"
+title_separator          : "|"
 subtitle                 : "Treading the fine line between innovation and insanity"
 name                     : 
 description              : "Treading the fine line between innovation and insanity"
@@ -53,7 +53,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true # true, false (default)
 search_full_content      : # true, false (default)
-search_provider          : lunr # lunr (default), algolia, google
+search_provider          : "lunr" # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -85,10 +85,10 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : "UA-157577858-2"
+    anonymize_ip         : false # true, false (default)
 
 
 # Site Author
