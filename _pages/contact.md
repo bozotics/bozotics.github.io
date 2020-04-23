@@ -6,22 +6,30 @@ permalink: /contact/
 
 ## Email
 
-Drop us an email at [robo@infocommsociety.com](mailto:robo@infocommsociety.com)
+Drop us an email at [robo@infocommsociety.com](mailto:robo@infocommsociety.com)!
+
+---
+
+## Github
+
+Check out our [Github](https://github.com/bozotics)!
 
 ---
 
 ## Instagram
 
-Follow us on Instagram [@bozotics](https://instagram.com/bozotics)!
+Follow us on Instagram [@bozotics](https://instagram.com/bozotics)! (We're most active here)
 
-<!-- LightWidget WIDGET -->
+<!-- LightWidget WIDGET 
 <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/db7e94dcf60f5959a9ccc9a74743bf6b.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+What the actual fuck we cant use this cos we need premium version to run on https fuck me dead 
+-->
 
 ---
 
 ## Facebook
 
-Follow and Like our [Facebook page](https://facebook.com/Bozotics-113608380186713)! (just a proxy of our Instagram)
+Follow and Like our [Facebook page](https://facebook.com/Bozotics-113608380186713)! (Just a proxy of our Instagram)
 
 ---
 
@@ -35,6 +43,7 @@ Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCQwvENfjyusL
 
 Follow us on [Twitter](https://twitter.com/bozotics)! (basically dead)
 
+<!-- 
 <a class="twitter-timeline" href="https://twitter.com/bozotics?ref_src=twsrc%5Etfw">Tweets by bozotics</a> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <style>
     .twitter-timeline {
@@ -42,3 +51,5 @@ Follow us on [Twitter](https://twitter.com/bozotics)! (basically dead)
         min-height: 8rem !important;
     }
 </style>
+Commenting this out since theres just this twitter feed left thats kinda user friendly but its empty
+-->
