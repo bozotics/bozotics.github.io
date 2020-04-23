@@ -18,9 +18,9 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 locale                   : "en-US"
 title                    : "Transcendence"
 title_separator          : "|"
-subtitle                 : "Treading the fine line between innovation and insanity"
+subtitle                 : "The fine line between innovation and insanity"
 name                     : 
-description              : "Treading the fine line between innovation and insanity"
+description              : "The fine line between innovation and insanity"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
