@@ -1,7 +1,9 @@
 Kai Cong:
   name        : "Kai Cong"
+  full-name   : "Tan Kai Cong"
   bio         : "Striving to achieve <del>perfection</del> 'good enough'"
   avatar      : "/assets/image.png"
+  desc        : "Hello, I am Kai Cong! I am the mechanical designer for Soccer Open, electronics designer for Soccer Lightweight, and the developer of robot strategy and other locomotion-related programming for both Soccer Open and Lightweight."
   location    : "Imagination Land"
   links:
     - label: "Email"
@@ -12,10 +14,11 @@ Kai Cong:
       url: "https://instagram.com/ranodmperson"
     
 Jing Heng:
-  name        : "Gay Lord"
-  bio         : "^^I look like I'm programming the robot but actually I'm just looking at ass haha sike!! <br> Also I have a bedtime at 10 cos I'm gay hehehe"
+  name        : "Jing Heng"
+  full-name   : "Lim Jing Heng"
+  bio         : "&#128038;"
   avatar      : "/assets/31131193_10209427935090432_5447242816050692096_o-1-912x1024.jpg"
-  location    : Gay town, Singapore
+  desc        : "Hello, I am Jing Heng! I am the electronics designer for Soccer Open, as well as the mechanical designer and programmer for Rescue Line."
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -26,8 +29,10 @@ Jing Heng:
 
 Justin Tan:
   name        : "Justin Tan"
+  full-name   : "Justin Tan"
   bio         : "A delighted donkey in distress."
   avatar      : "/assets/justin.png"
+  desc        : "Hi I am Justin! I am in charge of the programming of the camera and the RoboCup sokker robot!"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -41,8 +46,10 @@ Justin Tan:
 
 Yijian:
   name        : "Yijian"
+  full-name   : "Zhang Yijian"
   bio         : "Need co<del>ck</del> ffee."
   avatar      : "/assets/IMG_2247-1.jpg"
+  desc        : "Hi I’m Yijian, the mechanical designer for Rescue Line! #Team8076Z"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -53,8 +60,10 @@ Yijian:
 
 Dun Yu:
   name        : "Dun Yu"
+  full-name   : "Yeo Dun Yu"
   bio         : "Ghost"
   avatar      : "/assets/dunyu.jpg"
+  desc        : "Hi I'm Dun Yu! I am the mechanical designer for Rescue Line."
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"

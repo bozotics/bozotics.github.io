@@ -1,6 +1,6 @@
 ---
-layout: home
+layout: posts
 title: Blog
-author_profile: true
+author_profile: false
 permalink: /blog/
 ---

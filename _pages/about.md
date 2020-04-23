@@ -75,7 +75,7 @@ To us, Transcendence symbolises more than just a team; it is a way of life. It i
         vertical-align: middle;
     }
 </style>
-
+<!---
 <div class="person">
     <img src="/assets/image.png" alt="Profile" class="person-pic">
     <div class="person-info">
@@ -110,4 +110,16 @@ To us, Transcendence symbolises more than just a team; it is a way of life. It i
         <h3 class="person-name">Yeo Dun Yu</h3>
         <p class="person-desc">Ni hao wo shi dun yu</p>
     </div>
+</div>
+--->
+<div class="info">
+{% for author in site.data.authors %}
+    <div class="person">
+        <img src="{{ author[1].avatar }}" alt="Profile" class="person-pic">
+        <div class="person-info">
+            <h3 class="person-name">{{ author[1].full-name }}</h3>
+            <p class="person-desc">{{ author[1].desc }}</p>
+        </div>
+    </div>
+{% endfor %}
 </div>
