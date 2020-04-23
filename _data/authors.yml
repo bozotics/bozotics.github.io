@@ -1,0 +1,64 @@
+Kai Cong:
+  name        : "Kai Cong"
+  bio         : "Striving to achieve <del>perfection</del> 'good enough'"
+  avatar      : "/assets/image.png"
+  location    : "Imagination Land"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:161815w@student.hci.edu.sg"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/ranodmperson"
+    
+Jing Heng:
+  name        : "Gay Lord"
+  bio         : "^^I look like I'm programming the robot but actually I'm just looking at ass haha sike!! <br> Also I have a bedtime at 10 cos I'm gay hehehe"
+  avatar      : "/assets/31131193_10209427935090432_5447242816050692096_o-1-912x1024.jpg"
+  location    : Gay town, Singapore
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:151436j@student.hci.edu.sg"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/lim._jh"
+
+Justin Tan:
+  name        : "Justin Tan"
+  bio         : "A delighted donkey in distress."
+  avatar      : "/assets/justin.png"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:151548b@student.hci.edu.sg"
+    - label: "My go to website"
+      icon: "fas fa-fw fa-link"
+      url: "https://pornhub.com"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/justintan2002"
+
+Yijian:
+  name        : "Yijian"
+  bio         : "Need co<del>ck</del> ffee."
+  avatar      : "/assets/IMG_2247-1.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:151636e@student.hci.edu.sg"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/sleepy_monsieur/"
+
+Dun Yu:
+  name        : "Dun Yu"
+  bio         : "Ghost"
+  avatar      : "/assets/dunyu.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:151616m@student.hci.edu.sg"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/dy.img/"

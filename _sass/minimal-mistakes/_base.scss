@@ -178,6 +178,22 @@ td > code {
   }
 }
 
+/* Media stuff for blogs*/
+p.caption {
+  text-align: center;
+  margin-top: -0.9em !important;
+  font-size: 0.7em !important;
+}
+p img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.instagram-media {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 /* horizontal rule */
 
 hr {
