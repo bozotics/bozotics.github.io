@@ -119,3 +119,4 @@ At the end of January I had proclaimed February was going to be our make-it-or-b
         background: #0092ca;
     }
 </style>
+<script>{% include lazyload.js %}</script>

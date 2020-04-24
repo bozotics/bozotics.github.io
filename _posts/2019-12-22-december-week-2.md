@@ -40,3 +40,4 @@ Juggling between work and life in Malaysia is tough. Avoid using Arch Linux as a
         background: #0092ca;
     }
 </style>
+<script>{% include lazyload.js %}</script>

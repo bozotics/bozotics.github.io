@@ -14,3 +14,4 @@ permalink: /blog/
         background: #0092ca;
     }
 </style>
+<script>{% include lazyload.js %}</script>

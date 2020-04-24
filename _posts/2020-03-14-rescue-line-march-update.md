@@ -100,3 +100,4 @@ Do follow us on our Instagram for timely updates on our build process!
         background: #0092ca;
     }
 </style>
+<script>{% include lazyload.js %}</script>

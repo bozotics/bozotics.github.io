@@ -75,3 +75,4 @@ November has been eventful and rewarding, with everything having come together r
         background: #0092ca;
     }
 </style>
+<script>{% include lazyload.js %}</script>
