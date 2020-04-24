@@ -13,7 +13,7 @@ categories: [Soccer Open]
 
 December 26 2019, 1:22 PM SGT. Thousands of people across Singapore had their heads tilted towards the sky, mouths agape, standing eerily still; the air was tense with conflicting feelings of awe, surprise, joy, uneasiness and even a tinge of fear. Without any context, one cannot fault a person for thinking that the Second Coming of Jesus Christ was happening at that very instant. Of course, people were watching in amazement not at the descent of some divinely being from the heavens, but the devouring of the Sun by the Moon in a rare annular solar eclipse, darkening the skies to an evening shade in the middle of the afternoon, while leaving a fiery ring of passion around the black, almost soulless circle of the Moon.
 
-![Annular Solar Eclipse](/assets/eclipse-1190239_1920-1024x680.jpg "Annular solar eclipse")
+![Annular Solar Eclipse](/assets/images/eclipse-1190239_1920-1024x680.jpg "Annular solar eclipse")
 <p class="caption">Put a ring on it</p>
 
 Eclipses have traditionally held a lot of symbolic meaning, but to have such a rare annular eclipse occurring just one day after Christmas, near the end of the decade; now that is a truly evocative way to end the year. In astrology, the Sun is typically associated with life and ambition, while the Moon is associated with our subconsciousness and emotions. Hence, a solar eclipse signifies the coalescence of one’s strongest desires with their internal self; the alignment of multiple identities into a new being of incomparable beauty in its own right. In other words, eclipses foretell of major changes beyond our control, but also remind us on the importance of honest self-reflection in the path of personal growth.
@@ -26,15 +26,15 @@ Indeed, much has changed in the month of December, albeit not as much progress a
 
 We had sent our mirror design to be CNC lathed from aluminium in China last month and it arrived in early December.
 
-![Unpolished Mirror](/assets/20191231_205320-1024x498.jpg "Unpolished mirror")
+![Unpolished Mirror](/assets/images/20191231_205320-1024x498.jpg "Unpolished mirror")
 <p class="caption">Unpolished mirror</p>
 
 The mirror was mounted on a drill press and sanded with sandpaper of progressively higher grits, starting from 120 and ending with 2000. This was followed by 2 rounds of polishing, first with the more abrasive [Autosol](https://www.autosol.com/product_p/1000.htm) metal polish and second with [Meguair’s Nxt Generation All Metal Polysh](https://www.autobacs.com.sg/shop/car-care/nxt-generation-metal-polysh/).
 
-![Sanded Mirror](/assets/20191226_182431-e1577863637569-1024x498.jpg "Sanded mirror")
+![Sanded Mirror](/assets/images/20191226_182431-e1577863637569-1024x498.jpg "Sanded mirror")
 <p class="caption">After 2000 grit sanding</p>
 
-![Polished Mirror](/assets/20191226_192236-1024x576.jpg "Polished mirror")
+![Polished Mirror](/assets/images/20191226_192236-1024x576.jpg "Polished mirror")
 <p class="caption">After polishing</p>
 
 The results were acceptable, but scratches were still somewhat visible. Hence, we decided to redo the sanding process with wet sanding, and in true blue Hwa Chong Robotics style. The final image was slightly improved.
@@ -44,7 +44,7 @@ The results were acceptable, but scratches were still somewhat visible. Hence, w
 
 Also, since the weight of the mirror is over 100 grams, the existing thin mirror stands were not strong enough to hold it steadily, causing the image to shift and vibrate when the robot is moving. Hence, a new mirror plate was designed, which connects directly to the four copper stands from the third layer. In addition, four thin stands were extended out from the trapezium mounts on the third layer, which prevents the plate from bending under the mirror’s weight.
 
-![Mirror Plate Render](/assets/TEMP1-1024x768.jpg "Mirror plate render")
+![Mirror Plate Render](/assets/images/TEMP1-1024x768.jpg "Mirror plate render")
 <p class="caption">8 stands for 1 mirror</p>
 
 And yes, there is a maze on top of the mirror plate which fits a 2mm ball. Because, y’know, why not? 😉
@@ -53,14 +53,14 @@ And yes, there is a maze on top of the mirror plate which fits a 2mm ball. Becau
 
 Previously, the dribbler’s spring was quite strong, causing the dribbled ball to not have enough backwards force to fully enter the catchment area sometimes. We tried experimenting with an oil damper, but it was even stiffer than the existing spring and many models were too long to be implemented into our dribbler design easily.  Hence, we ended up simply using a weaker spring and made new rollers (as the old ones were rather worn out), and performance now is quite acceptable. This should be the final, completed version of the dribbler.
 
-![Dribbler Front View](/assets/20200102_140022-1024x498.jpg "Dribbler front view")
+![Dribbler Front View](/assets/images/20200102_140022-1024x498.jpg "Dribbler front view")
 <p class="caption">New year, new <strong><em>spring</em></strong> (ha, geddit?)</p>
 
 ## PCB for testing
 
 We made a PCB which tests out some of the electrical components we will be using in our robot’s actual PCB. This PCB will arrive in early January 2020.
 
-![Test PCB](/assets/pcb.jpg "Test PCB")
+![Test PCB](/assets/images/pcb.jpg "Test PCB")
 <p class="caption">Board layout for our test PCB</p>
 
 We will be testing a 12V to 5V/3.3V buck converter that uses a new IC from the one we used last year, as well as a 12V to 80V boost converter with a digital potentiometer to change the output voltage (for controlling the strength of our solenoid). We also have an STM32 breakout board. This year we used the Maple Mini (which uses the STM32 chip) as our secondary IC and we want to shrink it down to a very small footprint so that we could put more and further parallelize our robot’s processing power. We will also be experimenting with the CAN bus protocol for communication between the STM32 and Teensy. Other components we will be testing are the DRV8833 motor driver and light sensors (LED and phototransistors).
@@ -69,10 +69,10 @@ We will be testing a 12V to 5V/3.3V buck converter that uses a new IC from the o
 
 A GUI was created to facilitate the calibration of the camera. It streams and processes the video feed of the Pi camera in real time. Experimentation with different parameters required to optimise our colour detection program, such as colour ranges, white balance and exposure, was conducted and we created programs to automate the process of identifying these parameters.
 
-![GUI Screenshot](/assets/WhatsApp-Image-2020-01-01-at-12.22.40.jpeg "GUI controls")
+![GUI Screenshot](/assets/images/WhatsApp-Image-2020-01-01-at-12.22.40.jpeg "GUI controls")
 <p class="caption">GUI Controls (top to bottom): Colour space, Zoom function, Region growing function, Exposure parameter, Save calibration data</p>
 
-![Region Growing Algorithm](/assets/WhatsApp-Image-2020-01-01-at-12.22.54.jpeg "Region growing")
+![Region Growing Algorithm](/assets/images/WhatsApp-Image-2020-01-01-at-12.22.54.jpeg "Region growing")
 <p class="caption">Region growing algorithm on an object of interest</p>
 
 ---

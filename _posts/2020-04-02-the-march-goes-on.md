@@ -16,7 +16,7 @@ categories: [Soccer Lightweight, Soccer Open]
 
 March is that special time of the year where nature pulls off its own magic trick. The once barren, white desert of wintertime is replaced with a sea of pastel colours. Flowers bloom on the branches of trees that were seemingly teetering on the edge of life just weeks ago. As the thick layer of snow melts away, revealing the lush green meadows below, many animals awaken from their slumber, taking in the soft glow of the rising sun for the first time in months while birds make the long journey home, returning from their tropical vacation in faraway lands. Up in the heavens, strokes of white scatter the deep blue canvas, and between its cracks, the bright sun seeps through, blanketing the world with its light and warmth, reminding all across the vast lands that the dark wintry days are finally over. One who is surrounded by such greatness and wonder, upon taking a deep breath, will smell the very essence of ***life***. 
 
-![The Pink Orchard](/assets/WLANL_-_artanonymous_-_De_roze_boomgaard-1024x816.jpg "The Pink Orchard")
+![The Pink Orchard](/assets/images/WLANL_-_artanonymous_-_De_roze_boomgaard-1024x816.jpg "The Pink Orchard")
 <p class="caption"><i>The Pink Orchard</i> by Vincent Van Gogh (1888)</p>
 
 Yet, the reality of life reflects a completely different image of nature's scenery. With the worsening of the Covid-19 situation causing the cancellation of not only RoboCup, but many other robotics competitions as well, our disappointment is shared worldwide. For most of us, this would have been our last year participating in RoboCup. It is even more poignant to note how in the past few years, when we were given countless opportunities, we were always unprepared and left in a state of frenzy. Yet now, when we were finally ["more prepared than ever to forge new frontiers in the new year"](/a-december-to-remember/#conclusion), to make our final stand and end this decade long journey of robotics on a high, it was the world that fell into hysteria instead. Alas, when faced with the irony of the absurd world, what can we do, as passengers on this roller coaster of chaos, but to force a helpless smile and move on...
@@ -31,7 +31,7 @@ Many of our remaining electronic parts arrived over the course of the month. All
 
 The 60V circuitry for the solenoid and 12V connectors for the motors are very close to the 3.3V power for the LED light ring. We will need to insulate the bottom of the PCB to ensure accidental shorting does not occur.
 
-![PCB Bottom](/assets/20200401_212418-1024x576.jpg "PCB Bottom")
+![PCB Bottom](/assets/images/20200401_212418-1024x576.jpg "PCB Bottom")
 <p class="caption">The motor and battery connectors (left) near to the LEDs (right)</p>
 
 Also, due to some miscalculations, the back of a motor was too close to the 3.3V pin for the mouse sensor, which blocked us from being able to insert the connector for the sensor. In the end, we wired the mouse sensor up from a spare 3.3V pin.
@@ -44,7 +44,7 @@ For the Lightweight PCBs, most of the important parts such as the motors and IR 
 
 There is also one very, *very* dumb mistake for these PCBs. Due to certain wrong configurations in EAGLE, all of the vias are **not tented**. This is especially bad when it comes to the really complicated boards like the first layer since any stray metal part can easily short it. Sigh...
 
-![PCB Lightweight](/assets/20200401_213146-1024x576.jpg "PCB Lightweight")
+![PCB Lightweight](/assets/images/20200401_213146-1024x576.jpg "PCB Lightweight")
 <p class="caption">Pimples everywhere...</p>
 
 In addition, Lightweight progress may be put on hold or terminated. This is because we have always used Lightweight as an introduction league to guide our first timers with the basics before they go into the Open category and thus, there will be a completely new batch of students who will have to build a completely new set of robots next year. But nothing is confirmed yet, so we'll see how it goes.
@@ -55,15 +55,15 @@ Our STM32 was modeled from the [Maple Mini](https://www.sparkfun.com/products/re
 
 As such, we decided to use the SWD protocol to upload programs directly into the STM32. On our PCB, we breakout the SWD, power and TX/RX pins into a 6 pin JST-SH1.0 connector.
 
-![JST-SH1.0](/assets/20200402_212848-1024x498.jpg "JST-SH1.0")
+![JST-SH1.0](/assets/images/20200402_212848-1024x498.jpg "JST-SH1.0")
 <p class="caption">JST-SH1.0 connector on the 4th layer of Open robot</p>
 
 Using a J-Link OB V8 debugger we are able to upload the compiled .hex files of our programs using the Segger J-Flash software. Also, with a USB to UART converter connected to the TX/RX pins, we can still use Arduino's Serial Monitor to view data the same way as a USB connection would.
 
-![J-Link](/assets/20200402_212808-1024x498.jpg "J-Link")
+![J-Link](/assets/images/20200402_212808-1024x498.jpg "J-Link")
 <p class="caption">J-Link and USB to UART converter wired to the JST-SH1.0 connector</p>
 
-![J-Flash](/assets/f.png "J-Flash")
+![J-Flash](/assets/images/f.png "J-Flash")
 <p class="caption">Screenshot of J-Flash software</p>
 
 ## Intra-robot communication
@@ -82,7 +82,7 @@ The communication between the Raspberry Pi and Teensy is very critical since the
 
 Some improvements were added to the GUI over the month. An additional camera window was created, which can be toggled to a different mode from the main camera window. Hence, when calibrating the threshold in the main window, the results can be viewed immediately in the secondary window instead of having to switch modes like in the older version. Under the secondary window includes a mini notepad as well for recording threshold values or other information. Also, all configuration parameters other than the threshold values have been hidden to make the GUI less cluttered. They can be toggled to be shown under the 'Advanced' tab at the top left corner.
 
-![GUI Window](/assets/Screenshot-from-2020-04-01-16-20-23-1024x576.jpg "GUI Window")
+![GUI Window](/assets/images/Screenshot-from-2020-04-01-16-20-23-1024x576.jpg "GUI Window")
 <p class="caption">Screenshot of new GUI window</p>
 
 ## Camera
