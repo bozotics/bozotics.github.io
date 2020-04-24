@@ -124,4 +124,3 @@ Nonetheless, we know that we are very fortunate to still be able to continue, "b
         background: #0092ca;
     }
 </style>
-<script>{% include lazyload.js %}</script>

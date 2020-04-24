@@ -90,4 +90,3 @@ Progress overall is still on track and we are slated to finish construction by F
         background: #0092ca;
     }
 </style>
-<script>{% include lazyload.js %}</script>

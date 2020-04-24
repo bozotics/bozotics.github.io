@@ -97,4 +97,3 @@ To us, Transcendence symbolises more than just a team; it is a way of life. It i
         background: #0092ca;
     }
 </style>
-<script>{% include lazyload.js %}</script>

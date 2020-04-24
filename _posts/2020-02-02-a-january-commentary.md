@@ -127,4 +127,3 @@ What I do know for sure is that February is going to be our make-it-or-break-it 
         background: #0092ca;
     }
 </style>
-<script>{% include lazyload.js %}</script>

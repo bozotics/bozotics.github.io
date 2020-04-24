@@ -84,4 +84,3 @@ Also, [github.com/hcbozo](https://github.com/hcbozo)
         background: #0092ca;
     }
 </style>
-<script>{% include lazyload.js %}</script>
