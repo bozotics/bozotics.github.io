@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Programing
+title: Programming
 permalink: /rescue/prog/
 sidebar:
   nav: "side-rescue"
