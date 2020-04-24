@@ -1,0 +1,64 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* Media stuff for blogs*/
+p.caption {
+    text-align: center;
+    margin-top: -0.9em !important;
+    font-size: 0.7em !important;
+}
+p img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.instagram-media {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.site-logo {
+    width: 3rem;
+}
+
+.site-logo img {
+    max-height: 3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
+}
+
+blockquote {
+    margin: 1em 1em 1em 0;
+}
+
+nav {
+    ul {
+        padding: 0 0.5em 0 0;
+    }
+}
+
+.masthead {
+    &__inner-wrap {
+        padding: 0.5em;
+    }
+}
+.page__content {
+    p,
+    li,
+    dl {
+    font-size: 0.8rem;
+    }
+}
