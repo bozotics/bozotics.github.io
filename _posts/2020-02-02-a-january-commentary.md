@@ -61,17 +61,17 @@ Despite these problems, the mirror surface itself produced a higher quality imag
 
 There are 4 main layers in our Soccer Lightweight robot. The first layer is at the base and is the most complex plate since it has to hold many large components while having very limited space. Hence, all the components are placed in an extremely compact layout, even the battery slots in perfectly from the back to connect directly to the first layer.
 
-![EAGLE 1st layer top](/assets/pcb-1-1024x962.png "EAGLE 1st layer top")
+![EAGLE 1st layer top](/assets/pcb-1-1024x962.jpg "EAGLE 1st layer top")
 <p class="caption">Top view of 1st layer as seen from EAGLE</p>
 
 On the underside of this plate, we have our 48 light sensors, 36 of which are arranged in a ring of a 64mm radius (a huge improvement compared to our ring's radius last year of only 40+mm), while the remaining 12 are placed in a 2x3 grid on the left and right. No other components are placed on the underside to prevent cases of accidental damage when the robot is moved around.
 
-![Fusion 1st layer bottom](/assets/layer1-v2-1024x955.png "Fusion 1st layer bottom")
+![Fusion 1st layer bottom](/assets/layer1-v2-1024x955.jpg "Fusion 1st layer bottom")
 <p class="caption">Bottom view of 1st layer as seen from Fusion 360</p>
 
 The second layer is much emptier since its main job is just to support the dribbler and kicker, and hence large holes are also cut where possible in order to save weight. The main component it holds is the 5V buck converter.
 
-![EAGLE 2nd layer top](/assets/pcb1-1-1024x897.png "EAGLE 2nd layer top")
+![EAGLE 2nd layer top](/assets/pcb1-1-1024x897.jpg "EAGLE 2nd layer top")
 <p class="caption">Does this 2nd layer even exist?</p>
 
 Meanwhile, the third layer (which is still a work in progress), will contain sensors such as the IR ring, Bluetooth module, camera, as well as our micro-controllers like the Teensy and STM32. The final layer is placed very high, above the mirror, and it holds the TOF sensors and compass. This allows the TOF sensors to sense over the goals, while keeping the compass as far away from the motors as possible.
@@ -82,12 +82,12 @@ Our Soccer Open robot has 4 main layers, of which 3 are PCBs. The first PCB is t
 
 The second PCB is actually on the third layer (the second layer is just a carbon fibre plate since all its space is occupied) and is the main PCB holding all the microcontrollers including the Raspberry Pi, Teensy, STM32s and also the remaining sensors like the compass and Bluetooth module. The battery (which lies on the second layer) is also plugged in to this layer.
 
-![EAGLE 3rd layer top](/assets/Layer42-982x1024.png "EAGLE 3rd layer top")
+![EAGLE 3rd layer top](/assets/Layer42-982x1024.jpg "EAGLE 3rd layer top")
 <p class="caption">3rd layer; a work in progress</p>
 
 The final PCB is just above the third layer and it holds the Pi camera as well as the TOF sensors. It has an STM32 to process the TOF sensor readings as well as to control the 16 Neopixel LEDs on it that are used for debugging purposes.
 
-![EAGLE 4th layer top](/assets/Layer4-1024x1024.png "EAGLE 4th layer top")
+![EAGLE 4th layer top](/assets/Layer4-1024x1024.jpg "EAGLE 4th layer top")
 <p class="caption">Top view of 4th layer as seen from EAGLE</p>
 
 In all, we should be able to finish designing our Open and Lightweight PCBs and sending them to be fabricated by the first week of February.
@@ -98,7 +98,7 @@ We made the <em>amazing</em> discovery that, for the whole of December working o
 
 However, the Raspberry Pi needed to act as a server and assign an IP address to the laptop in order for the laptop to connect through Ethernet, which we faced problems doing. Luckily, with help from the Arch Linux ARM forum, we were able to figure that out and can now connect to the Raspberry Pi directly over Ethernet.
 
-![Forum Screenshot](/assets/test1-1024x512.png "Forum screenshot")
+![Forum Screenshot](/assets/test1-1024x512.jpg "Forum screenshot")
 
 ## Camera
 

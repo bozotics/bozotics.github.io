@@ -82,7 +82,7 @@ The communication between the Raspberry Pi and Teensy is very critical since the
 
 Some improvements were added to the GUI over the month. An additional camera window was created, which can be toggled to a different mode from the main camera window. Hence, when calibrating the threshold in the main window, the results can be viewed immediately in the secondary window instead of having to switch modes like in the older version. Under the secondary window includes a mini notepad as well for recording threshold values or other information. Also, all configuration parameters other than the threshold values have been hidden to make the GUI less cluttered. They can be toggled to be shown under the 'Advanced' tab at the top left corner.
 
-![GUI Window](/assets/Screenshot-from-2020-04-01-16-20-23-1024x576.png "GUI Window")
+![GUI Window](/assets/Screenshot-from-2020-04-01-16-20-23-1024x576.jpg "GUI Window")
 <p class="caption">Screenshot of new GUI window</p>
 
 ## Camera

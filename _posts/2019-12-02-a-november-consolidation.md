@@ -25,7 +25,7 @@ Hence, since mid-October, we have made progress in our Soccer Open robots by lea
 
 The first draft of the dribbler's 3D design was actually completed way back in August, but due to pesky exams and waiting of Taobao shipments, it was only fully assembled in mid-November.
 
-![Exploded Dribbler](/assets/exploded-dribbler-2-1024x576.png "Exploded view of dribbler")
+![Exploded Dribbler](/assets/exploded-dribbler-2-1024x576.jpg "Exploded view of dribbler")
 <p class="caption">Exploded view of dribbler</p>
 
 The dribbler is powered by an 820kV brushless motor through a 2:5 ratio gear train, giving the bar an estimated 3900 RPM when running on our 12V batteries. This means that the ball will be spinning at over 2000 RPM!
@@ -45,7 +45,7 @@ Slight adjustments of the dribbler's position were done through trial and error 
 ## Mirror
 Following a few rounds of experimentation, we finalised on a mirror shape that is a combination of a cone and a hyperbola. The hyperbolic base of the mirror enlarges objects near the robot with minimal deformation, while the conic part of the mirror enlarges the goals and maintains the roughly rectangular shape of the field lines.
 
-![Mirror Render](/assets/5-48deg-centre-res-1024x787.png "Robot's POV")
+![Mirror Render](/assets/5-48deg-centre-res-1024x787.jpg "Robot's POV")
 <p class="caption">Robot's POV</p>
 
 Having faced many problems with the molding method for making our mirror in previous years, we have decided to try manufacturing our mirror this time by sending our design to China for aluminium CNC lathing, followed by polishing it up ourselves. Fingers crossed! 🤞

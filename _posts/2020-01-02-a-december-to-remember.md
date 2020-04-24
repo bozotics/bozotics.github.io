@@ -44,7 +44,7 @@ The results were acceptable, but scratches were still somewhat visible. Hence, w
 
 Also, since the weight of the mirror is over 100 grams, the existing thin mirror stands were not strong enough to hold it steadily, causing the image to shift and vibrate when the robot is moving. Hence, a new mirror plate was designed, which connects directly to the four copper stands from the third layer. In addition, four thin stands were extended out from the trapezium mounts on the third layer, which prevents the plate from bending under the mirror’s weight.
 
-![Mirror Plate Render](/assets/TEMP1-1024x768.png "Mirror plate render")
+![Mirror Plate Render](/assets/TEMP1-1024x768.jpg "Mirror plate render")
 <p class="caption">8 stands for 1 mirror</p>
 
 And yes, there is a maze on top of the mirror plate which fits a 2mm ball. Because, y’know, why not? 😉
@@ -60,7 +60,7 @@ Previously, the dribbler’s spring was quite strong, causing the dribbled ball 
 
 We made a PCB which tests out some of the electrical components we will be using in our robot’s actual PCB. This PCB will arrive in early January 2020.
 
-![Test PCB](/assets/pcb.png "Test PCB")
+![Test PCB](/assets/pcb.jpg "Test PCB")
 <p class="caption">Board layout for our test PCB</p>
 
 We will be testing a 12V to 5V/3.3V buck converter that uses a new IC from the one we used last year, as well as a 12V to 80V boost converter with a digital potentiometer to change the output voltage (for controlling the strength of our solenoid). We also have an STM32 breakout board. This year we used the Maple Mini (which uses the STM32 chip) as our secondary IC and we want to shrink it down to a very small footprint so that we could put more and further parallelize our robot’s processing power. We will also be experimenting with the CAN bus protocol for communication between the STM32 and Teensy. Other components we will be testing are the DRV8833 motor driver and light sensors (LED and phototransistors).
