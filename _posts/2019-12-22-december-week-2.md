@@ -1,9 +1,8 @@
 ---
-layout: post
 author: Justin Tan
 title: December - Week 2
-time: 3
-tags: [Programming, Soccer Open, Weekly]
+tags: [Programming, Weekly]
+categories: [Soccer Open]
 ---
 ## Working from the rainforest
 A thousand apologies… our week 2 post came in a little late, but better than late than never! Doing productive work in Malaysia is really hard. There are tons of distractions around me – from endless errands to chatty relatives. Despite everything I managed to carve out small pockets of time in the middle of the night to get a little work done. 
@@ -31,3 +30,13 @@ Since the shade of orange might be constantly changing we could predict the next
 
 ## Conclusion
 Juggling between work and life in Malaysia is tough. Avoid using Arch Linux as a start, opt for Ubuntu or something simpler. Right now, we are optimising the camera and its calibration process. 
+
+<style>
+    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
+        transform: scaleX(1);
+    }
+    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
+        color: #fff;
+        background: #0092ca;
+    }
+</style>

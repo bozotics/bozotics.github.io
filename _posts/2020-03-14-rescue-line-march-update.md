@@ -1,9 +1,8 @@
 ---
-layout: post
 author: Jing Heng
 title: Rescue Line - March Update
-time: 5
-tags: [Electronics, Mechanical, Rescue Line]
+tags: [Electronics, Mechanical]
+categories: [Rescue Line]
 ---
 A long time has passed since the last Rescue Line update as I’ve been mostly working on getting the Soccer robot up and running, but since everyone is waiting on parts to arrive from China it’s time for another update!
 
@@ -20,19 +19,19 @@ Previously, our drive base was a monolithic 3d printed part which was heavy, was
 Since then, we have redesigned our robot in order to make it lighter, more modular and flexible and to fit our ball collection mechanism. Originally, we wanted to make use of a static stress simulation software in order to decide which parts of the base to cut out, but we wasted a lot of time figuring it out and decided to abandon that route.
 In the end, we just thought about which parts of the robot required more reinforcement and made those specific parts thicker or braced that area.
 
-![Rescue Robot](/assets/rescue_3.0_2020-Mar-14_07-22-22AM-000_CustomizedView37765168667_png-1024x791.png "Rescue robot")
+![Rescue Robot](/assets/images/rescue_3.0_2020-Mar-14_07-22-22AM-000_CustomizedView37765168667_png-1024x791.jpg "Rescue robot")
 <p class="caption">Redesigned robot</p>
 
 Rather than a single big 3d printed base, we have split it up into 4 plates to be connected by copper stands. We would also have a "base plate" across these 4 plates where our electronics and other mechanisms would be mounted upon. All these are quite difficult to show and explain, but more photos will be shared when we finish assembling the robot.
 
-![Robot Plate](/assets/rescue-3.0-v73-1024x419.png "Robot plate")
+![Robot Plate](/assets/images/rescue-3.0-v73-1024x419.jpg "Robot plate")
 <p class="caption">One of the 4 plates</p>
 
 ## Evacuation zone ball collection
 
 For the evacuation zone victims, we considered many different types of ball collection mechanisms, including a rolling intake, a conveyor belt, or the traditional "scoop". However, we wanted our robot to be as small and lightweight as possible, thus we decided to go with a traditional claw and pick up the balls one by one. Electrical contacts would also be taped to the claw to detect whether the victims are dead or alive.
 
-![Grab and Lift](/assets/rescue-3.0-v74-1024x419.png "Grab and lift")
+![Grab and Lift](/assets/images/rescue-3.0-v74-1024x419.jpg "Grab and lift")
 <p class="caption">Grab and Lift mechanism</p>
 
 We are preparing for both 2019 and 2020 rescue line rules as we were unsure of which version our local organiser would be adhering to. Thus, we had to sort the victims before depositing. We came up with a "funnel" that would guide the victim into its own compartment depending on whether it was dead or alive.
@@ -66,22 +65,22 @@ Since we need to prepare for both the 2019 and 2020 rules, we also need to ensur
 
 In order to sense and track the line, we have made our own light sensor array PCBs. These contain 12 LEDs, ALS-PT19 phototransistors, and 2 TCS3200 color sensors, together with a STM32F103 processor which reads and processes these sensors, then sends the data over UART or I2C to a main controller.
 
-![Light Sensor PCB](/assets/RescueLS-1-1024x419.png "Light sensor PCB")
+![Light Sensor PCB](/assets/images/RescueLS-1-1024x419.jpg "Light sensor PCB")
 <p class="caption">Top of the Light Sensor PCB</p>
 
 We haven't started programming the robot yet, but we are planning to use 2 of these PCBs to speed up our line tracking. Details of the exact logic will be finalised when we finish building and start programming our robot.
 
-![Underside of robot](/assets/rescue-3.0-5-1024x419.png "Underside of robot")
+![Underside of robot](/assets/images/rescue-3.0-5-1024x419.jpg "Underside of robot")
 <p class="caption">Bottom of the light sensor PCB, as seen from under the robot</p>
 
 In order to detect the victims in the evacuation zone as well as the rescue kit, we are planning to use a Raspberry Pi Camera with some color tracking / edge detection algorithms to speed up our runs and prevent our robot from "brute forcing".
 
-![Pi camera](/assets/rescue-3.0-6-1024x419.png "Pi camera")
+![Pi camera](/assets/images/rescue-3.0-6-1024x419.jpg "Pi camera")
 <p class="caption">I spy with my little eye...</p>
 
 However, vision detection and computer vision takes a long time to tune and program. Thus, we have backup plans in our small VL53L0X distance sensors which also help to detect obstacles. We place them one above another to help us differentiate victims from the evacuation zone walls, as well as the rescue kit from other obstacles and walls on the field.
 
-![TOF](/assets/rescue-3.0-77-1024x419.png "TOF")
+![TOF](/assets/images/rescue-3.0-77-1024x419.jpg "TOF")
 <p class="caption">There is one more TOF sensor under the Light Sensor PCBs</p>
 
 ---
@@ -91,3 +90,13 @@ However, vision detection and computer vision takes a long time to tune and prog
 The rescue robot is slowly coming to shape. This is a new category for us, thus progress is a little slower as we are testing a lot of new designs and ideas, resulting in many robot iterations. However we remain confident that we can build a working and competitive robot by the time the competition comes (if it isn't cancelled...)
 
 Do follow us on our Instagram for timely updates on our build process!
+
+<style>
+    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
+        transform: scaleX(1);
+    }
+    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
+        color: #fff;
+        background: #0092ca;
+    }
+</style>

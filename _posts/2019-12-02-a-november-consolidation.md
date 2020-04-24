@@ -1,9 +1,8 @@
 ---
-layout: post
 author: Kai Cong
 title: A November Consolidation
-time: 4
-tags: [Mechanical, Monthly, Simulation, Soccer Open]
+tags: [Mechanical, Monthly, Simulation]
+categories: [Soccer Open]
 ---
 >November at its best – with a sort of delightful menace in the air.
 >
@@ -13,7 +12,7 @@ tags: [Mechanical, Monthly, Simulation, Soccer Open]
 
 November is a month of transition from the autumn to winter season. The beautiful spectrum of striking red, flashy orange, and glowing yellow autumn leaves wither and fall, littering the ground with their dry, brown, shriveled bodies, showing no signs of life other than a short flutter from the occasional gust of wind. Days grow shorter and nights grow longer. The cool, crisp air of autumn becomes the bitter, frigid weather of winter. It is no wonder why to some, the month of November symbolizes the approach of death; the nearing of an end of some metaphorical era of one's life. 
 
-![Autumn Landscape](/assets/Bricher-Autumn_Landscape-1024x524.jpg "Autumn Landscape by Alfred Thomson Bricher(1870)")
+![Autumn Landscape](/assets/images/Bricher-Autumn_Landscape-1024x524.jpg "Autumn Landscape by Alfred Thomson Bricher(1870)")
 <p class="caption"><i>Autumn Landscape</i> by Alfred Thomson Bricher(1870)</p>
 
 Personally, I prefer to take a more optimistic outlook. Under the guise of grimness lies a sea of wisdom. Rather than death, November for me represents a rebirth or a reinvention, a chance to impart revolutionary changes to oneself. As a month near the end of the year but just before the holiday month of December, November creates the perfect setting to do some serious self-reflection; to take stock of one's successes and failures and learn from the year's worth of experiences. Our RoboCup experience this year was a failure due to a multitude of inexcusable mistakes such as overextending our workloads and poor time management. We have definitely learnt from our mistakes and have sworn to never repeat them again.
@@ -26,17 +25,17 @@ Hence, since mid-October, we have made progress in our Soccer Open robots by lea
 
 The first draft of the dribbler's 3D design was actually completed way back in August, but due to pesky exams and waiting of Taobao shipments, it was only fully assembled in mid-November.
 
-![Exploded Dribbler](/assets/exploded-dribbler-2-1024x576.png "Exploded view of dribbler")
+![Exploded Dribbler](/assets/images/exploded-dribbler-2-1024x576.jpg "Exploded view of dribbler")
 <p class="caption">Exploded view of dribbler</p>
 
 The dribbler is powered by an 820kV brushless motor through a 2:5 ratio gear train, giving the bar an estimated 3900 RPM when running on our 12V batteries. This means that the ball will be spinning at over 2000 RPM!
 
 The dribbler's rollers are coated with a layer of [silicone](http://www.zener.com.sg/product/araldite-kitchen-and-bathroom-silicone/) to have high grip on the ball. The whole dribbler module has a pivot point at its back with a spring suspension to allow for the bar to move up and down slightly, thus absorbing impact and giving better control over the dynamic movements of the ball.
 
-![Dribbler Gearbox](/assets/20191113-2_3-0-1024x498.jpg "Dribbler's gearbox")
+![Dribbler Gearbox](/assets/images/20191113-2_3-0-1024x498.jpg "Dribbler's gearbox")
 <p class="caption">Dribbler's gearbox</p>
 
-![Assembled Dribbler](/assets/20191113-2_3-3-1024x498.jpg "Assembled dribbler")
+![Assembled Dribbler](/assets/images/20191113-2_3-3-1024x498.jpg "Assembled dribbler")
 <p class="caption">Assembled dribbler</p>
 
 Slight adjustments of the dribbler's position were done through trial and error to adjust the angle the dribbler pivots to. While results were satisfactory, the ball still does move in and out when dribbled, and thus we will be experimenting with different spring strengths and even an oil damper for our suspension system soon.
@@ -46,7 +45,7 @@ Slight adjustments of the dribbler's position were done through trial and error 
 ## Mirror
 Following a few rounds of experimentation, we finalised on a mirror shape that is a combination of a cone and a hyperbola. The hyperbolic base of the mirror enlarges objects near the robot with minimal deformation, while the conic part of the mirror enlarges the goals and maintains the roughly rectangular shape of the field lines.
 
-![Mirror Render](/assets/5-48deg-centre-res-1024x787.png "Robot's POV")
+![Mirror Render](/assets/images/5-48deg-centre-res-1024x787.jpg "Robot's POV")
 <p class="caption">Robot's POV</p>
 
 Having faced many problems with the molding method for making our mirror in previous years, we have decided to try manufacturing our mirror this time by sending our design to China for aluminium CNC lathing, followed by polishing it up ourselves. Fingers crossed! 🤞
@@ -66,3 +65,13 @@ As part of our revamp of robot strategy, we are planning to create smarter, more
 ## Conclusion
 
 November has been eventful and rewarding, with everything having come together rather smoothly (quite literally). With the robot design basically completed, the other half of the robot's hardware, Electronics, will be the focus for the month of December. With our fully custom made PCBs and plans for embedded micro-controllers, this December journey will surely be an interesting one.
+
+<style>
+    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
+        transform: scaleX(1);
+    }
+    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
+        color: #fff;
+        background: #0092ca;
+    }
+</style>

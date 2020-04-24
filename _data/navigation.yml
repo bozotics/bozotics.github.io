@@ -1,0 +1,70 @@
+# main links
+main:
+  - title: "About"
+    url: /about/
+  - title: "Open"
+    url: /open/intro/
+  - title: "Lightweight"
+    url: /lightweight/intro/
+  - title: "Rescue"
+    url: /rescue/intro/
+  - title: "Blog"
+    url: /blog/
+  - title: "Contact"
+    url: /contact/
+
+side-about:
+  - title: Philosophy
+    url: "/about/#philosophy"
+    children:
+      - title: "Who we are"
+        url: "/about/#who-we-are"
+      - title: "Our Vision"
+        url: "/about/#our-vision"
+      - title: "Our Values"
+        url: "/about/#our-values"
+  - title: Our Team
+    url: "/about/#our-team"
+
+side-open:
+  - title: Introduction
+    url: "/open/intro/"
+    children:
+      - title: "Nav Bar Test"
+        url: "/open/intro/#coming-soon-af"
+  - title: Mechanical
+    url: "/open/mech/"
+  - title: Electronics
+    url: "/open/elec/"
+  - title: Camera
+    url: "/open/cam/"
+  - title: Camera GUI
+    url: "/open/gui/"
+  - title: Strategy
+    url: "/open/strat/"
+  - title: Debugging
+    url: "/open/debug/"
+
+side-lw:
+  - title: Introduction
+    url: "/lightweight/intro/"
+  - title: Mechanical
+    url: "/lightweight/mech/"
+  - title: Electronics
+    url: "/lightweight/elec/"
+  - title: Camera
+    url: "/lightweight/cam/"
+  - title: Strategy
+    url: "/lightweight/strat/"
+  - title: Debugging
+    url: "/lightweight/debug/"
+
+side-rescue:
+  - title: Introduction
+    url: "/rescue/intro/"
+  - title: Mechanical
+    url: "/rescue/mech/"
+  - title: Electronics
+    url: "/rescue/elec/"
+  - title: Programming
+    url: "/rescue/prog/"

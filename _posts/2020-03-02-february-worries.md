@@ -1,9 +1,8 @@
 ---
-layout: post
 author: Kai Cong
 title: February Worries
-time: 10
-tags: [Electronics, Mechanical, Monthly, Programming, Simulation, Soccer Lightweight, Soccer Open]
+tags: [Electronics, Mechanical, Monthly, Programming, Simulation]
+categories: [Soccer Lightweight, Soccer Open]
 ---
 >February is the uncertain month, neither black nor white but all shades between by turns. Nothing is sure.
 >
@@ -17,7 +16,7 @@ One, is just how small and insignificant we all seem. The days, months and years
 
 Two, is *our lack of awareness*. This refers to anything from the vast amount of knowledge we will never learn, to the many experiences we will never get to experience in our lifetime and even to the sheer number of people we see everyday, but will never get to know. At face value, leap days are simply a quirky addition to our calendars, but digging deeper, these extra days are required because our calendar is merely a simplification of a whole complex field of astronomy and celestial mechanics that most of us will never understand. I find it humbling and even somewhat overwhelming when considering that everything, be it the littlest of things we know, the smallest of events we encounter, or the most insignificant of people we meet; all of them have an incredibly complex backstory, a series of interconnected events, that brought them to us. Every moment of our lives, countless of immeasurably unique things happen to us, yet we can never truly appreciate them because we are not even aware those moments exist. And even if we were aware of them, what could we possibly do about it? When taking into account the sheer size of the universe, it is simply impossible to fully appreciate the significance of our whole lives. In a twisted way, we try so hard to instill meaning into our lives, but ultimately, we end up knowing so little about the world and our life itself that it begs the question of whether we have truly *lived* in this world...
 
-![Milky Way](/assets/milky-way-1023340-1024x683.jpg "Milky Way")
+![Milky Way](/assets/images/milky-way-1023340-1024x683.jpg "Milky Way")
 
 Personally, I like to do a self-reflection every 29th of February as it only occurs every 4 years. When asked to picture themselves in a decade's time, most people would give an honest "I don't know" for it seems so far away. Yet, when asked to picture themselves in a year's time, most people would only think of themselves in the same, unchanging routine of their lives. However, 4 years is just the perfect timing where it is close enough that most can still roughly picture what kind of path they would be on and what kind of life they would be leading, yet far enough that much of the details would still be murky enough to keep new possibilities open. When reflecting, I will take stock of my long term growth as a person over the past 4 years, while setting an overarching "macro" theme for my life (on top of the more detailed yearly, monthly and daily goals), for the long but conceivable span of the next 4 years.
 
@@ -31,10 +30,10 @@ Following up from the problems with our first mirror molding process, we made so
 
 Hence we decided to experiment with another method: folding a mirror sheet into a cone. First, we drew a 2D net of our conical mirror and printed it out. Next, we pasted this net outline over a 0.5mm PVC mirror sheet (much thinner than the ones used for molding) and cut the shape out. Finally, using epoxy, we stuck this mirror cone net around a 3D printed cone, thus creating our mirror.
 
-![2D Cone Net](/assets/20200301_214055-1024x498.jpg "Cone net")
+![2D Cone Net](/assets/images/20200301_214055-1024x498.jpg "Cone net")
 <p class="caption">2D cone net printed on paper</p>
 
-![Finished mirror](/assets/20200301_214001-1024x498.jpg "Finished mirror")
+![Finished mirror](/assets/images/20200301_214001-1024x498.jpg "Finished mirror")
 <p class="caption">Finished mirror</p>
 
 This method produced a much higher quality mirror, while being way simpler and faster to do. Although there is a large distortion along the line where the two ends of the cone net meet, this mirror is used for lightweight so only the goal detection is crucial. Since the goals are rather huge on the mirror's image, and the line of distortion can be rotated to face the side of the robot, the line does not cause much problems to the otherwise perfect mirror!
@@ -47,10 +46,10 @@ Due to COVID-19, much of our schedule have seen some kind of delay. We sent in o
 
 We have 4 PCBs, with the third and fourth layers mostly soldered. The third layer is a very compact board that holds the OpenMV camera, Teensy, STM32 chip, IR ring and all the other connectors from the other layers. The fourth layer acts as a mirror holder, and also holds the VL531L1X TOF sensors and BNO055 compass. Since the TOF breakout board we are using does not have screw holes, we mounted them using 90 degree male headers that allowed them to be easily detachable yet still perfectly aligned parallel to the ground in a fixed, stable position.
 
-![Assembled Layer 3](/assets/20200302_184602-1024x576.jpg "Layer 3")
+![Assembled Layer 3](/assets/images/20200302_184602-1024x576.jpg "Layer 3")
 <p class="caption">Layer 3 with OpenMV and IR sensors</p>
 
-![Assembled Layer 4](/assets/20200302_184320-1024x576.jpg "Layer 4")
+![Assembled Layer 4](/assets/images/20200302_184320-1024x576.jpg "Layer 4")
 <p class="caption">Layer 4 with TOF and compass sensors</p>
 
 As for the first and second layer, we have opted not to begin soldering it first to be safe, since we want to make sure our TPS5430 buck converter outputs the correct voltage first before soldering the remaining components. They shall stay dormant *for now*, but not *for long*...
@@ -59,10 +58,10 @@ As for the first and second layer, we have opted not to begin soldering it first
 
 For Soccer Open, other than a few connectors, most of the third and fourth layer has been soldered and the parts that we could test, such as the STM32 chip and NeoPixel LEDs, were all working properly. As for our first layer, we have also decided to wait till the buck converter arrives before continuing.
 
-![Re-assembled robot](/assets/20200302_183521-1024x498.jpg "Re-assembled robot")
+![Re-assembled robot](/assets/images/20200302_183521-1024x498.jpg "Re-assembled robot")
 <p class="caption">Re-assembled robot with PCB and CF plates in all its glory</p>
 
-![Neopixel pink](/assets/IMG_20200301_171407-1-869x1024.jpg "Neopixel pink")
+![Neopixel pink](/assets/images/IMG_20200301_171407-1-869x1024.jpg "Neopixel pink")
 <p class="caption">Ring of fire</p>
 
 We have also swapped out our motor switch from a toggle switch to a missile switch instead. As much as one can say it is literally just a toggle switch with a spring loaded cover, it still doesn't stop me from feeling like I'm launching a rocket every time I flip the switch. 🙃
@@ -111,3 +110,12 @@ If I'm going to be honest, February has been a rather bad month as compared to o
 
 At the end of January I had proclaimed February was going to be our make-it-or-break-it month; yet, its the end of February and I am inconclusive about which side of that statement we are lying on. Neither anything exceptionally good nor terribly bad has happened because nothing much has happened in the first place. Perhaps that in itself is *the* bad thing, but then again I don't even know what to think anymore. I seek a deeper meaning to all this that we do, yet I fear deep down in my heart I already know what the answer to that is. But till that day of epiphany *(or admittal)* arrives, I shall just mindlessly wait for those elusive Taobao shipments to arrive...
 
+<style>
+    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
+        transform: scaleX(1);
+    }
+    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
+        color: #fff;
+        background: #0092ca;
+    }
+</style>

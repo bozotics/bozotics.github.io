@@ -1,9 +1,8 @@
 ---
-layout: post
 author: Jing Heng
 title: December - Week 1
-time: 7
-tags: [Electronics, Rescue Line, Soccer Open, Weekly]
+tags: [Electronics, Weekly]
+categories: [Rescue Line, Soccer Open]
 ---
 Can't really think of a good intro like the previous post, and can't find that many photos as well, so here is a very wordy introduction / progress update for our Rescue Line and Soccer Open robots.
 
@@ -13,7 +12,7 @@ Can't really think of a good intro like the previous post, and can't find that m
 
 Since our previous robot, we have designed custom PCBs for our use, utilising different SMD ICs. However, not all of the different circuits worked as expected, and we ended up reverting to some through hole pre-made modules such as for our step-down and boost circuits.
 
-![Dismantled Old Robot](/assets/IMG_20190401_223008-768x1024.jpg "Dismantled old robot")
+![Dismantled Old Robot](/assets/images/IMG_20190401_223008-768x1024.jpg "Dismantled old robot")
 <p class="caption">Look at the step down module on the top layer!</p>
 
 This year, in a bid to make our design smaller and fit within the future 20cm diameter size limit, we needed to decrease the amount of these modules used and try to integrate everything into our PCB. These component selections were a result of our previous year’s experience and extensive research into potential alternatives.
@@ -75,3 +74,13 @@ Redesign coming right up but not before my test PCB is complete…
 Most of my time last year was spent on FLL so the PCB was completed only like 2 weeks before the competition… Lets just hope that with no FLL this year it can be completed a little earlier!
 
 Also, [github.com/hcbozo](https://github.com/hcbozo)
+
+<style>
+    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
+        transform: scaleX(1);
+    }
+    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
+        color: #fff;
+        background: #0092ca;
+    }
+</style>
