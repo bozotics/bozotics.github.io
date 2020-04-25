@@ -41,7 +41,7 @@ jobs:
           ruby-version: 2.6
 
       - name: build
-        uses: limjh16/jekyll-action@test-jekyll-cache
+        uses: limjh16/jekyll-action-ts@v2
         with:
           jekyll_src: ${{ steps.find.outputs.jekyllSrc }}
 
