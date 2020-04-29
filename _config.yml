@@ -21,9 +21,9 @@ title_separator          : "|"
 subtitle                 : "The fine line between innovation and insanity"
 name                     : 
 description              : "The fine line between innovation and insanity"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://bozo.infocommsociety.com/
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : bozotics/bozotics.github.io
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/eagle ver 2.1.3.1-transparent-lowres.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -33,12 +33,6 @@ words_per_minute         : 180
 search                   : true # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : "lunr" # lunr (default), algolia, google
-
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-yandex_site_verification :
-naver_site_verification  :
 
 
 # Analytics
@@ -152,6 +146,8 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jemoji
+  - jekyll-news-sitemap
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -160,6 +156,8 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jemoji
+  - jekyll-news-sitemap
 
 
 # Archives
@@ -212,3 +210,10 @@ defaults:
       comments: # true
       share: true
       related: true
+  - scope:
+      path: "assets/**"
+    values:
+      sitemap: false
+
+# For jekyll-news-sitemap
+publisher: "Transcendence Blog"
