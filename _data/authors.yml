@@ -68,3 +68,17 @@ Dun Yu:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/dy.img/"
+
+Jie Xu:
+  name        : "Jie Xu"
+  full-name   : "Liu Jie Xu"
+  bio         : "I murdered my dog."
+  avatar      : "/assets/images/IMG_2247.jpg"
+  desc        : "Hi I'm Jie Xu! I am in charge of the mechanical design of the Soccer Lightweight robots."
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:181729l@student.hci.edu.sg"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/ljx1608/"
