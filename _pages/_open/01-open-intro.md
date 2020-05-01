@@ -6,9 +6,13 @@ sidebar:
   nav: "side-open"
 ---
 
-{{page.title}}
+## Our robots
 
-# COMING SOON AF
+Our robots are built with a variety of materials and manufacturing techniques. It has two dribblers, one in each catchment area. with a solenoid for kicking in the front. Printed Circuit Boards (PCBs) make up most of our robot's plates, allowing us to save space. A Raspberry Pi running a Pi camera with a hyperbolic mirror gives us a 360 degree view of the field to detect the ball and goals, while a Teensy 3.5/3.6 coupled with assorted STM32 microcontrollers runs the robot itself. Bluetooth modules allow the robot to communicate within themselves as well as to our app for debugging.
+
+## Our history
+
+
 
 <!-- Including pagination manually since these are pages so page layout MUST be changed under navigation.yml -->
 <nav class="pagination">
