@@ -17,9 +17,9 @@ gem "minimal-mistakes-jekyll"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed"
-  gem "jekyll-admin"
   gem "jekyll-compose"
-  gem 'jekyll-timeago', '~> 0.13.1'
+  gem 'jekyll-news-sitemap'
+  gem 'jemoji'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
