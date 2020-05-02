@@ -55,6 +55,8 @@ side-open:
     url: "/open/strat/"
   - title: Debugging
     url: "/open/debug/"
+  - title: AFI
+    url: "/open/afi/"
 
 side-lw:
   - title: Introduction
