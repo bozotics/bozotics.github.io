@@ -4,7 +4,67 @@ title: About Us
 permalink: /about/
 sidebar:
   nav: "side-about"
+gallery1:
+  - url: /assets/images/DSC_0361.jpg
+    image_path: /assets/images/DSC_0361.jpg
+    alt: "RoboCup 2018 HCRC Group Photo 1"
+    title: "RoboCup 2018 HCRC Group Photo 1"
+  - url: /assets/images/DSC_0380.jpg
+    image_path: /assets/images/DSC_0380.jpg
+    alt: "RoboCup 2018 HCRC Group Photo 1"
+    title: "RoboCup 2018 HCRC Group Photo 2"
+  - url: /assets/images/DSC_0338.jpg
+    image_path: /assets/images/DSC_0338.jpg
+    alt: "Post-competition Robo-party"
+    title: "Post-competition Robo-party"
+gallery2:
+  - url: /assets/images/DSC_0029.jpg
+    image_path: /assets/images/DSC_0029.jpg
+    alt: "Team Autokek at work"
+    title: "Team Autokek at work"
+  - url: /assets/images/DSC_0267.jpg
+    image_path: /assets/images/DSC_0267.jpg
+    alt: "RoboCup 2018 HCRC Group Photo 1"
+    title: "RoboCup 2018 HCRC Group Photo 2"
+  - url: /assets/images/DSC_0167.jpg
+    image_path: /assets/images/DSC_0167.jpg
+    alt: "Post-competition Robo-party"
+    title: "Post-competition Robo-party"
+  - url: /assets/images/DSC_0088.jpg
+    image_path: /assets/images/DSC_0088.jpg
+    alt: "Post-competition Robo-party"
+    title: "Post-competition Robo-party"
 ---
+## History
+
+Our school, [Hwa Chong Robotics Club (HCRC)](https://robo.infocommsociety.com), has participated in RoboCup every year since its inception in Singapore in 2009. Despite achieving somewhat stellar results in the initial years, our school's performance severely deteriorated. Year on year, we churned out robots that were either incomplete or had programs that were barely working; landing a podium spot would have been nothing short of a miracle. Alas, all hope seemed lost...
+
+In 2018, things finally took a turn for the better for HCRC. Clinching 1st in Soccer Lightweight and Rescue Line, as well as 2nd and 3rd in Soccer Open, it was our best performance yet. 
+
+{% include gallery id="gallery1" caption="RoboCup 2018 photos" %}
+
+The spark of a new beginning was ignited and Team Transcendence was born. We had one simple goal; not to win, not to be the best, but simply to create robots we could truly be proud of. Here are the stories of how it went.
+
+### Soccer Open
+
+Soccer Open has always been the main Robocup league for us, being the only one we participated in for most of our club's history. In 2018, the members of what would become Transcendence were all in separate teams, and many of us faced problems, be it from lack of certain technical knowledge or just general inexperience. Following the formation of Transcendence, we aimed to create a pair of Soccer Open robots that finally just *worked*.
+
+{% include gallery id="gallery2" layout="half" %}
+
+Despite our simple dreams, 2019 was not meant to be for us from the start. We started work really late, we neglected many things, some of us participated in other competitions, like the First Lego League, which clashed with the preparation schedule, and everything was done in a rush. The entire night before the competition, all 8 hours of it, was spent fervently trying to calibrate our IMU, which for some reason just stopped working and never did again throughout the whole competition. To call it a *total disaster* is an understatement. This failure hit especially hard since it was the final year for Benjamin, the most senior member of our team, who was one of the most talented mechanical designers in our club's history and the first person who actually tried really hard to put our failing club back together.
+
+With such a major setback, we vowed to never commit the same mistakes again; the same mistakes which has plauged our club for the past 10 years. With the dawn of the new decade, we promised to finish what we started, to accomplish the one simple goal which we could never seem to reach. Work commenced early, with the new robots' design completed before 2020 even began. Yet, as we ramped up into overdrive, finally feeling like we were on track for the first time, the world slowed down. Before we knew it, everything stopped. The world was brought to its knees with the Covid-19 pandemic and with it, our goals and aspirations.
+
+For majority of the Soccer Open 2020 team members, where this is their last year, it was definitely not how they envisioned it to go... But life must go on. Although they might never witness the fruits of their labour in action, the least they can do is to record down every last detail of it, hopefully helping the future generation in some way with their Robocup journey.
+
+And well, that is exactly what was done. On the [Open](/open/intro/) page, we have written about every single detail of the robot we could think of.
+
+### Soccer Lightweight
+
+### Rescue Line
+
+### Future...
+
 ## Philosophy
 
 >To be at the forefront of innovation is a prerequisite; to continually forge new frontiers is a habit. Why strive to be the best, when you can strive to go beyond?
