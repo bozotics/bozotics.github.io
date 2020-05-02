@@ -6,9 +6,33 @@ sidebar:
   nav: "side-open"
 ---
 
-{{page.title}}
+# Things to talk about
+Software used, why Autocad
+Robot size, how shrinking done
+Overarching concepts: low cg, stable use copper stands
+Layers?
+Monetary costs
 
-# COMING SOON
+Drive system: 
+motors used, placement angle
+wheel design
+
+Dribbler: design details (gear, bearing, plate, motor, roller, ski ramp)
+Solenoid: why only 1, design (solenoid plate, placement)
+
+Battery slot
+
+Switch
+
+Large microprocessor placements (raspi, teensy)
+
+TOF holder
+
+Camera module: camera cone cover, camera position (height)
+Mirror: design process, manufacturing process
+Mirror plate, mirror plate supporter (trapezium stands)
+
+Handle
 
 <!-- Including pagination manually since these are pages so page layout MUST be changed under navigation.yml -->
 <nav class="pagination">
