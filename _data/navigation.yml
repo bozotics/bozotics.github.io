@@ -43,8 +43,6 @@ side-open:
     children:
       - title: "Our robots"
         url: "/open/intro/#our-robots"
-      - title: "Our history"
-        url: "/open/intro/#our-history"
   - title: Mechanical
     url: "/open/mech/"
   - title: Electronics
