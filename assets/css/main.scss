@@ -74,7 +74,15 @@ nav {
     font-size: 0.9em;
 }
 
-/* Gallery */
+/* Gallery stuff */
 figure {
     margin: 0;
+}
+
+div.mfp-title a {
+    color: #f3f3f3;
+}
+
+div.mfp-title a:hover, div.mfp-title a:active{
+    color: #cccccc;
 }

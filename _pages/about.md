@@ -34,6 +34,23 @@ gallery2:
     image_path: /assets/images/DSC_0088.jpg
     alt: "Running the robots"
     title: "Running the robots"
+gallery3:
+  - url: /assets/images/DSC_0000.jpg
+    image_path: /assets/images/DSC_0000.jpg
+    alt: "Contemplating life decisions..."
+    title: "Contemplating life decisions... (Image courtesy of <a href='https://facebook.com/coresg/'>CORE</a>)"
+  - url: /assets/images/DSC_0245.jpg
+    image_path: /assets/images/DSC_0245.jpg
+    alt: "Ready for kick-off"
+    title: "Ready for kick-off"
+  - url: /assets/images/DSC_0261.jpg
+    image_path: /assets/images/DSC_0261.jpg
+    alt: "Group photo"
+    title: "Group photo"
+  - url: /assets/images/DSC_0001.jpg
+    image_path: /assets/images/DSC_0001.jpg
+    alt: "Lightweight robots in action at RoboCup Montreal (Image courtesy of CORE)"
+    title: "Lightweight robots in action at RoboCup Montreal (Image courtesy of <a href='https://facebook.com/coresg/'>CORE</a>)"
 ---
 ## History
 
@@ -51,17 +68,23 @@ Soccer Open has always been the main Robocup league for us, being the only one w
 
 {% include gallery id="gallery2" layout="half" caption="Soccer Open 2018" %}
 
-Despite our simple dreams, 2019 was not meant to be for us from the start. We started work really late, we neglected many things, some of us participated in other competitions, like the First Lego League, which clashed with the preparation schedule, and everything was done in a rush. The entire night before the competition, all 8 hours of it, was spent fervently trying to calibrate our IMU, which for some reason just stopped working and never did again throughout the whole competition. To call it a *total disaster* is an understatement. This failure hit especially hard since it was the final year for Benjamin, the most senior member of our team, who was one of the most talented mechanical designers in our club's history and the first person who actually tried really hard to put our failing club back together.
+Despite our simple dreams, 2019 was not meant to be from the start. We started work really late, we neglected many things, some of us participated in other competitions, like the First Lego League, which clashed with the preparation schedule, and everything was done in a rush. The entire night before the competition was spent fervently trying to calibrate our IMU, which for some reason just stopped working and never did again throughout the whole competition. To call it a *total disaster* is an understatement. This failure hit especially hard since it was the final year for Benjamin, the most senior member of our team, who was one of the most talented mechanical designers in our club's history and the first person who actually tried really hard to put our failing club back together.
 
 With such a major setback, we vowed to never commit the same mistakes again; the same mistakes which has plauged our club for the past 10 years. With the dawn of the new decade, we promised to finish what we started, to accomplish the one simple goal which we could never seem to reach. Work commenced early, with the new robots' design completed before 2020 even began. Yet, as we ramped up into overdrive, finally feeling like we were on track for the first time, the world slowed down. Before we knew it, everything stopped. The world was brought to its knees with the Covid-19 pandemic and with it, our goals and aspirations.
 
-For majority of the Soccer Open 2020 team members, where this is their last year, it was definitely not how they envisioned it to go... But life must go on. Although they might never witness the fruits of their labour in action, the least they can do is to record down every last detail of it, hopefully helping the future generation in some way with their Robocup journey.
+For majority of the Soccer Open 2020 team members, where this is their last year, it was definitely not how they envisioned it to go... But life must go on. Although they might never witness the fruits of their labour in action, the least they could do is to record down every last detail of it, hopefully helping the future generation in some way with their Robocup journey.
 
-And well, that is exactly what was done. On the [Open](/open/intro/) page, we have written about every single detail of the robot we could think of, and hopefully you, dear reader, can benefit from this!
+And well, that is exactly what we have done. On the [Open](/open/intro/) page, we have written about every single detail of the robot we could think of, and hopefully you, dear reader, can benefit from this!
 
 ### Soccer Lightweight
 
-NO u
+HCRC had never participated in Soccer Lightweight in the past since members traditionally only joined the competition in Secondary 3, leaving 4 years which had to be fully focused on Soccer Open. However, in 2018, as part of our training reform plans, an experimental team of Secondary 2s were formed and coached by us to participate in this category. With a haphazardly built Lego base, a few messily soldered perfboards and an Arduino, a pair of semi-functional Soccer Lightweight robots were created. In spite of the incredible odds, the team came out barely victorious, with the Finals match ending with a thrilling 15-14. In the 2 months leading up to RoboCup Internationals, more "professional robots" were made and an Individual 8th place position was attained; not bad for our school's first international appearance in almost 7 years.
+
+{% include gallery id="gallery3" layout="half" caption="Soccer Lightweight 2018" %}
+
+Fueled by the success of the previous year, we tried to repeat it again in 2019. A new team of Secondary 2s were formed, tasked to create a new set of Soccer Lightweight robots from scratch. However, with the many problems in the main Soccer Open team and over-ambitiousness, training was neglected and Lightweight became just as major a failure as Open was. From this, we realised a major problem in our system: If we took Soccer Lightweight as a "training league" for our juniors, the robots would not be well built, but the robots needed to be well built in order to achieve good results. Unlike in the Soccer Open teams where there were senior and junior teams, Lightweight only consisted of one junior team and our results in the category would be counting on them. A different system was needed if we wanted to take Lightweight seriously and actually do well in it.
+
+As such, for 2020, Transcendece "split" across the 3 categories, officially registering in the separate categories but unofficially helping in all of them. For the Lightweight category, a two-man team comprising one experienced member and one first-timer was formed. More details about the team's progress can be found on the [Soccer Lightweight](/lightweight/intro/) page.
 
 ### Rescue Line
 
@@ -69,7 +92,11 @@ No u
 
 ### The Future...
 
-No u
+By the end of 2020, our 6-man team will be reduced to 2 as most of the seniors will have graduated. With so many years in the making, Transcendence has transcended beyond just a simple team; it has become the physical embodiment of the spirit of continuous pursuit for excellence in our club, and to nurture a new batch of *Transcendence Jr.* would be vital in keeping this spirit alive.
+
+Finding and nurturing worthy successors is a difficult and arduous process, for a member of Transcendence must encompass not only adequate knowledge and skils, but more importantly, the [**Transcendence philosophy**](#philosophy). 
+
+For now, the future is *hopeful*, but definitely *uncertain*...
 
 ---
 
