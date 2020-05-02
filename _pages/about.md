@@ -94,7 +94,7 @@ No u
 
 By the end of 2020, our 6-man team will be reduced to 2 as most of the seniors will have graduated. With so many years in the making, Transcendence has transcended beyond just a simple team; it has become the physical embodiment of the spirit of continuous pursuit for excellence in our club, and to nurture a new batch of *Transcendence Jr.* would be vital in keeping this spirit alive.
 
-Finding and nurturing worthy successors is a difficult and arduous process, for a member of Transcendence must encompass not only adequate knowledge and skils, but more importantly, the [**Transcendence philosophy**](#philosophy). 
+Finding and nurturing worthy successors is a difficult and arduous process, for a member of Transcendence must encompass not only adequate knowledge and skills, but more importantly, the [**Transcendence philosophy**](#philosophy). 
 
 For now, the future is *hopeful*, but definitely *uncertain*...
 
