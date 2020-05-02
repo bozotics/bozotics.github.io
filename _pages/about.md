@@ -41,7 +41,7 @@ Our school, [Hwa Chong Robotics Club (HCRC)](https://robo.infocommsociety.com), 
 
 In 2018, things finally took a turn for the better for HCRC. Clinching 1st in Soccer Lightweight and Rescue Line, as well as 2nd and 3rd in Soccer Open, it was our best performance yet. 
 
-{% include gallery id="gallery1" caption="RoboCup 2018 photos" %}
+{% include gallery id="gallery1" caption="RoboCup 2018" %}
 
 The spark of a new beginning was ignited and Team Transcendence was born. We had one simple goal; not to win, not to be the best, but simply to create robots we could truly be proud of. Here are the stories of how it went.
 
@@ -49,7 +49,7 @@ The spark of a new beginning was ignited and Team Transcendence was born. We had
 
 Soccer Open has always been the main Robocup league for us, being the only one we participated in for most of our club's history. In 2018, the members of what would become Transcendence were all in separate teams, and many of us faced problems, be it from lack of certain technical knowledge or just general inexperience. Following the formation of Transcendence, we aimed to create a pair of Soccer Open robots that finally just *worked*.
 
-{% include gallery id="gallery2" layout="half" %}
+{% include gallery id="gallery2" layout="half" caption="RoboCup Soccer 2018" %}
 
 Despite our simple dreams, 2019 was not meant to be for us from the start. We started work really late, we neglected many things, some of us participated in other competitions, like the First Lego League, which clashed with the preparation schedule, and everything was done in a rush. The entire night before the competition, all 8 hours of it, was spent fervently trying to calibrate our IMU, which for some reason just stopped working and never did again throughout the whole competition. To call it a *total disaster* is an understatement. This failure hit especially hard since it was the final year for Benjamin, the most senior member of our team, who was one of the most talented mechanical designers in our club's history and the first person who actually tried really hard to put our failing club back together.
 
@@ -64,6 +64,8 @@ And well, that is exactly what was done. On the [Open](/open/intro/) page, we ha
 ### Rescue Line
 
 ### Future...
+
+---
 
 ## Philosophy
 
