@@ -24,16 +24,16 @@ gallery2:
     title: "Team Autokek at work"
   - url: /assets/images/DSC_0267.jpg
     image_path: /assets/images/DSC_0267.jpg
-    alt: "RoboCup 2018 HCRC Group Photo 1"
-    title: "RoboCup 2018 HCRC Group Photo 2"
+    alt: "Pre-match preparation"
+    title: "Pre-match preparation"
   - url: /assets/images/DSC_0167.jpg
     image_path: /assets/images/DSC_0167.jpg
-    alt: "Post-competition Robo-party"
-    title: "Post-competition Robo-party"
+    alt: "Callibrating robots (with graduated seniors observing)"
+    title: "Callibrating robots (with graduated seniors observing)"
   - url: /assets/images/DSC_0088.jpg
     image_path: /assets/images/DSC_0088.jpg
-    alt: "Post-competition Robo-party"
-    title: "Post-competition Robo-party"
+    alt: "Running the robots"
+    title: "Running the robots"
 ---
 ## History
 
@@ -49,7 +49,7 @@ The spark of a new beginning was ignited and Team Transcendence was born. We had
 
 Soccer Open has always been the main Robocup league for us, being the only one we participated in for most of our club's history. In 2018, the members of what would become Transcendence were all in separate teams, and many of us faced problems, be it from lack of certain technical knowledge or just general inexperience. Following the formation of Transcendence, we aimed to create a pair of Soccer Open robots that finally just *worked*.
 
-{% include gallery id="gallery2" layout="half" caption="RoboCup Soccer 2018" %}
+{% include gallery id="gallery2" layout="half" caption="Soccer Open 2018" %}
 
 Despite our simple dreams, 2019 was not meant to be for us from the start. We started work really late, we neglected many things, some of us participated in other competitions, like the First Lego League, which clashed with the preparation schedule, and everything was done in a rush. The entire night before the competition, all 8 hours of it, was spent fervently trying to calibrate our IMU, which for some reason just stopped working and never did again throughout the whole competition. To call it a *total disaster* is an understatement. This failure hit especially hard since it was the final year for Benjamin, the most senior member of our team, who was one of the most talented mechanical designers in our club's history and the first person who actually tried really hard to put our failing club back together.
 
@@ -57,13 +57,19 @@ With such a major setback, we vowed to never commit the same mistakes again; the
 
 For majority of the Soccer Open 2020 team members, where this is their last year, it was definitely not how they envisioned it to go... But life must go on. Although they might never witness the fruits of their labour in action, the least they can do is to record down every last detail of it, hopefully helping the future generation in some way with their Robocup journey.
 
-And well, that is exactly what was done. On the [Open](/open/intro/) page, we have written about every single detail of the robot we could think of.
+And well, that is exactly what was done. On the [Open](/open/intro/) page, we have written about every single detail of the robot we could think of, and hopefully you, dear reader, can benefit from this!
 
 ### Soccer Lightweight
 
+NO u
+
 ### Rescue Line
 
-### Future...
+No u
+
+### The Future...
+
+No u
 
 ---
 

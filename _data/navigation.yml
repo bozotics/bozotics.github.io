@@ -14,6 +14,17 @@ main:
     url: /contact/
 
 side-about:
+  - title: History
+    url: "/about/#history"
+    children:
+      - title: "Soccer Open"
+        url: "/about/#soccer-open"
+      - title: "Soccer Lightweight"
+        url: "/about/#soccer-lightweight"
+      - title: "Rescue Line"
+        url: "/about/#rescue-line"
+      - title: "The Future"
+        url: "/about/#the-future"
   - title: Philosophy
     url: "/about/#philosophy"
     children:
