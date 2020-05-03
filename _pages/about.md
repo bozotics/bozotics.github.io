@@ -88,7 +88,8 @@ As such, for 2020, Transcendece "split" across the 3 categories, officially regi
 
 ### Rescue Line
 
-No u
+BP people came in (Xu En, Xin Lei, Ho Chi) then introduced it, huy went worlds that year, saajid&louis continued it
+then one fine day I saw micromouse and was bored and decided to do it since rescue had all lego robots
 
 ### The Future...
 
