@@ -4,6 +4,10 @@ title: Mechanical Deisgn
 permalink: /open/mech/
 sidebar:
   nav: "side-open"
+toc: true
+toc_sticky: true
+toc_icon: "cog"
+toc_label: "Mechanical Design"
 ---
 This page contains all the information regarding design, fabrication and construction of the Soccer Open robots. If you would like to know more about our building process, you can read our (crudely written) [building log](#sike).
 
