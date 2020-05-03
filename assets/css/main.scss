@@ -69,3 +69,12 @@ nav {
 .btn {
     font-size: 0.9em;
 }
+
+/* Post: Table of contents */
+.toc .nav__title {
+    background: #6f777d;
+}
+
+.toc .active a {
+    background-color: #e2e4e5;
+}

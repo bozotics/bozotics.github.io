@@ -3,6 +3,10 @@ author: Kai Cong
 title: A January Commentary
 tags: [Electronics, Mechanical, Monthly, Programming]
 categories: [Soccer Lightweight, Soccer Open]
+toc: true
+toc_sticky: true
+toc_icon: "calendar-alt"
+toc_label: "A January Commentary"
 ---
 >January is here, with eyes that keenly glow,
 >A frost-mailed warrior
