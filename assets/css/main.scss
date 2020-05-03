@@ -86,3 +86,12 @@ div.mfp-title a {
 div.mfp-title a:hover, div.mfp-title a:active{
     color: #cccccc;
 }
+
+/* Post: Table of contents */
+.toc .nav__title {
+    background: #6f777d;
+}
+
+.toc .active a {
+    background-color: #e2e4e5;
+}

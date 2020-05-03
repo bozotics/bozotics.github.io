@@ -3,6 +3,10 @@ author: Jing Heng
 title: December - Week 1
 tags: [Electronics, Weekly]
 categories: [Rescue Line, Soccer Open]
+toc: true
+toc_sticky: true
+toc_icon: "calendar-week"
+toc_label: "December - Week 1"
 ---
 Can't really think of a good intro like the previous post, and can't find that many photos as well, so here is a very wordy introduction / progress update for our Rescue Line and Soccer Open robots.
 
@@ -47,7 +51,7 @@ For our previous robot, we used a TPS5450 for our 3.3v output, a LM2596 (on a mo
 ### Others
 We are using a HC05 Bluetooth module for communication between robots and debug purposes and a Neopixel ring which lights up which direction the ball / goal is in.
 
-### Rescue Line specific components
+### Rescue Line components
 We are experimenting with TCS3200 and TCS34725 color sensors to detect the green square. On one hand, the TCS3200 requires a lot of digital ports and computationally expensive pulseIn() commands to get the readings, however the TCS34725 requires an I2C multiplexer since its I2C addressed cannot be changed (to my knowledge).
 We are also using a DRV8833 Dual Motor Driver IC to power our 2 (old) Faulhaber 2224 motors. We chose this over the popular TB6612 since it has over-current protection, and we don’t need the higher input voltage since we are running on a 2S 7.2V battery for rescue line.
 Lastly, for our light sensors we would be using the same TEMT6000 in our Soccer robots. However, to interface our light sensors with our main processor, we would have a STM32 on each light sensor board and use SPI between them since there are limited UART interfaces in the STM32F103.
