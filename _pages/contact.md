@@ -35,7 +35,7 @@ Follow and Like our [Facebook page](https://facebook.com/Bozotics-11360838018671
 
 ## Youtube
 
-Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCQwvENfjyusLevT4fUYEMyw)!
+Subscribe to our [Youtube channel](https://www.youtube.com/channel/UC_yUYNCAsSCAqj3rdIPPRXg)!
 
 ---
 
