@@ -7,12 +7,20 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-/* Media stuff for blogs*/
+/* Media stuff */
 p.caption, figcaption {
     text-align: center;
     margin-top: -0.9em !important;
     margin-bottom: 1.3em;
     font-size: 0.7em !important;
+}
+p.video-caption {
+    text-align: center;
+    margin-top: -1.3em !important;
+    font-size: 0.7em !important;
+}
+div.fluid-width-video-wrapper{
+    margin-bottom: 1.3em;
 }
 p img {
     margin-left: auto;

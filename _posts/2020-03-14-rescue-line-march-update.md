@@ -40,30 +40,15 @@ For the evacuation zone victims, we considered many different types of ball coll
 
 We are preparing for both 2019 and 2020 rescue line rules as we were unsure of which version our local organiser would be adhering to. Thus, we had to sort the victims before depositing. We came up with a "funnel" that would guide the victim into its own compartment depending on whether it was dead or alive.
 
-<div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/1GIfGhJ9cebe36LavOoRSzydWARoYOmu8/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
- frameborder="0" width="100%" height="100%" 
- allowfullscreen allow="autoplay"></iframe>
-</div>
-<p class="caption">"Funnel" mechanism</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R7Kq_BM1njY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 To dispense the victims, we wanted to use 1 servo motor but be able to separately dispense the dead and live victims. Thus we have decided to use a "wiper" to open each compartment separately.
 
-<div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/1YvVcK1Bej7ZAwR8UUXmeAQGg9HuADF4f/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
- frameborder="0" width="100%" height="100%" 
- allowfullscreen allow="autoplay"></iframe>
-</div>
-<p class="caption">"Wiper" mechanism</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IwuGNuWBgWU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Since we need to prepare for both the 2019 and 2020 rules, we also need to ensure our compartment is large enough to fit around 6+ balls for the 2019 rules, and be able to dispense the rescue kit for the 2020 rules. In order to hold that many balls our ramp inside the compartment cannot be too steep, however to dispense the rescue kit the ramp needs to be steep enough since it's a cube with a lot of friction. Thus, we have decided to make an "angler" which varies the angle of the ramp as well as the compartment size.
 
-<div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/1nXJlgD1yfBoHSY1OrFmMRATaXsW8LVEo/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
- frameborder="0" width="100%" height="100%" 
- allowfullscreen allow="autoplay"></iframe>
-</div>
-<p class="caption">"Angler" mechanism</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MDEHv5JpAko" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Electronics and programming
 

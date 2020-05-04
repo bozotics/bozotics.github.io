@@ -31,21 +31,13 @@ Time (or more precisely, the race against it), was a key part of our journey in 
 
 The previous design faced a problem of the ball "repelling" from the dribbler when it entered the catchment area. This was due to the fact that when the ball was dribbled, it would move backwards with a lot of force (especially considering how our dribbler spins the ball at 2000 RPM). The ball would hit the back wall which produces an equal reaction force that pushes the ball directly out of the dribbler. We did not face this problem in previous years because we never made our dribbler spin the ball so quickly before... 🙃
 
-<div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/1uI81nbX9qsrBN6l5kinv38_HdqpMkz-t/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
- frameborder="0" width="100%" height="100%" 
- allowfullscreen allow="autoplay"></iframe>
-</div>
-<p class="caption">This dribbler has an auto-kick function 🤔</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nKezmaD2Zs4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p class="video-caption">This dribbler has an auto-kick function 🤔</p>
 
 To fix this, a ramp was created on the bottom part of the catchment area, thus redirecting most of the backwards force of the ball diagonally upwards. This not only stopped the ball from bouncing out of the dribbler, but it also improved the dribbler's performance since most of the backwards force of the ball was used to push itself up into the dribbler, which increased the rollers' grip on the ball.
 
-<div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/1UW2QPk34talTuW9DZbfIL0IKQxyY897J/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
- frameborder="0" width="100%" height="100%" 
- allowfullscreen allow="autoplay"></iframe>
-</div>
-<p class="caption">Oddly satisfying...</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/At1M0b0S7Zg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p class="video-caption">Oddly satisfying...</p>
 
 ## Mirror (Lightweight)
 

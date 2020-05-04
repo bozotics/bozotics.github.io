@@ -102,12 +102,7 @@ Anyways, with many problems identified in the original program, we embarked on c
 
 3.  The threads now run on a priority system, allowing for better allocation of CPU resources (priority 1 runs at 90 FPS, priority 2 at 20 FPS and priority 3 at 10 FPS). The priority given to each thread is dynamic, which means that our Teensy can switch the priorities, or even assign 2 threads to the highest priority, as needed during the match (e.g. when chasing for the ball, priority 1 can be assigned for ball detection, but once we have possession of the ball in our dribbler, priority 1 can be assigned for goal detection instead). In the video below, the ball is assigned with priority 1 while the goals are in priority 2. Hence the goals detection are seen flickering as they are only being detected about once every 5 frames.
 
-<div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/136DYu4NqlkhOWCM4gEQOCryZNeKgbQZH/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
- frameborder="0" width="100%" height="100%" 
- allowfullscreen allow="autoplay"></iframe>
-</div>
-<p class="caption">Ball and goals detection from GUI window</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MxzFrM1Lxgk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 With these implementations, our processing of top priority objects can be done at 90 FPS with a latency of around 13 ms.
 
