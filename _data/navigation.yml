@@ -40,11 +40,13 @@ side-about:
 side-open:
   - title: Introduction
     url: "/open/intro/"
-    children:
-      - title: "Our robots"
-        url: "/open/intro/#our-robots"
   - title: Mechanical
     url: "/open/mech/"
+    children:
+      - title: "General Info"
+        url: "/open/mech/general/"
+      - title: "Components"
+        url: "/open/mech/comp/"
   - title: Electronics
     url: "/open/elec/"
   - title: Camera
