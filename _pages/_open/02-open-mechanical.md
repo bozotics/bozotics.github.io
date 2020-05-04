@@ -11,6 +11,98 @@ toc_label: "Mechanical Design"
 ---
 This page contains all the information regarding design, fabrication and construction of the Soccer Open robots. If you would like to know more about our building process, you can read our (crudely written) [building log](#sike).
 
+## Robot Size
+
+Our robot's dimensions fit within a cylinder of diameter 200 mm and height 210 mm. The diameter of the robot was intentionally made to comply with the 2021 rules such that it did not have to be redesigned again then. To fully fit within the 200 mm height limit for 2021, the mirror simply has to be lowered slightly with no major changes required. The robot was not designed to fit the 2022 rules (180mm diameter) directly since we felt the size disadvantage of 40mm would have been too much. 
+
+The process of adapting our 2019 robot to a smaller size was actually quite straightforward, albeit more tedious than what we initially expected. Instinctively, we considered simply offsetting the original 2D layer profiles, but that would not work since the catchment area sizes and screw hole positions would be completely off. Besides, there were a few fixes to the layer designs that we wanted to implement anyway. Thus, the new layers were constructed from scratch by redrawing over the original layers, using the orginals' angles and distances between objects as a guage to keep the new design somewhat similar.
+
+INSERT IMAGES OF OLD VS NEW LAYERS
+
+## Identical Robots
+
+We decided to build both our robot's to be exactly the same instead of having a separate striker and goalie design. Some of the benefits of having individualised vs identical robots that we considered are as follows:
+
+- Individualised robots
+    - Better functionality for each role e.g. goalie can have different motor arrangements to allow for faster lateral movement
+    - More efficient use of parts e.g. a back dribbler is not necessary for a goalie robot
+
+- Identical robots
+    - Robots can dynamically switch between attack and defense roles without compromising in performance for either role
+    - Only one robot design needs to be created, which saves *a lot* of time
+
+In the end, we decided to go with identical robots, since its benefits were much more relevant to our plans.
+
+## Guiding Principles
+
+When designing our robots, there are some overarching concepts that we adhere to, accumulated over past experiences, to ensure the robots are well-built.
+
+### Low CG
+
+Having as low a centre of mass as possible is one of the most commonly desired aspects of any mobile robot since it brings about much higher stability. However, its importance is often not emphasised enough, even though it should be, considering the high-speed, collision-filled nature of a RoboCup soccer match. The video below showcases one of our older robots and demonstrates the consequences of having a high CG.
+
+INSERT CUP ROBOT NOT STOPPING ON LINE VIDEO
+
+It is clear that the robot was able to change its motors' directions almost immediately upon detecting the white line. However, since it had a high CG, when the braking force is applied, the turning moment about the front side of the base of the robot is quite large. This increases the likelihood of the back wheels lifting up slightly, losing traction and skidding pretty badly.
+
+INSERT FBD OF LOW VS HIGH CG
+
+Thus, having a low CG is crucial in ensuring the robot can accelerate quickly **in a reliable manner**, allowing for more **consistent** motion across the field.
+
+Low CG features of our robot:
+- All the heaviest components are concentrated between the first and second layers
+- The height from the ground to the third layer is less than 90 mm
+- A spacer is placed under the motor, elevating the wheels and lowering the whole robot (the distance between the ground and base plate is less than 6 mm)
+- The second layer has many cutouts such that it can fit under the upper angle bracket of the motor, further lowering its height. 
+
+### Weight Distribution
+
+There are 2 factors to weight distribution: even distribution and centralised distribution.
+
+#### Even Distribution
+
+Even distribution of weight is where weight of different parts of the robot is apportioned equally among all of its points. It is necessary in ensuring that the forces acting on each wheel is equal, allowing all wheels to have the same effect on the motion of the robot, thus making the movement of the robot more **accurate**. This can be achieved by making the robot as symmetrical as possible.
+
+Perfectly even weight distribution was impossible for our robot since we were only using 1 solenoid that faced the front. Nonetheless, this solenoid was placed as far back as possible such that it would be nearer to the centre, while the robot was designed to be largely 180 degree rotationally symmetrical.
+
+INSERT GALLERY HERE
+
+#### Centralised Distribution
+
+Centralised distribution of weight is where most of the weight is placed near the centre of the robot. This decreases the moment of inertia of the robot, which makes the amount of torque needed to change the angular acceleration of the robot lower too, allowing for **faster rotational motion** of the robot. This can be achieved by placing objects as close to the centre of the robot as possible.
+
+For our robot, some heavy objects such as the dribblers and solenoid had no choice but be placed further out because of the nature of their functions. However, the remaining heavy objects were all placed closer to the middle. The battery lays directly in the middle of the second layer, while the motors were "pushed" inwards as far as possible. The smaller size of the robot also helped decrease its moment of inertia.
+
+INSERT GALLERY HERE
+
+### Small Mass
+
+Robot should be as light as possible. While this might seem disadvantageous since a heavier opponent might easily push you around, the use of sheer force to overpower an opponent has largely been discouraged, especially with recent changes in the rules that basically forbids all forms of pushing.
+
+A robot with a smaller mass has less inertia, which means it is less resistant to changes in its motion. In additon, by Newton's second law of motion, a robot with a smaller mass requires less force to impart the same change in acceleration since *F = ma*. Thus, having a lighter robot would allow it to **accelerate quickly** in all directions, allowing for **faster translational motion**. To keep the robots relatively light, we:
+
+- Used carbon fibre for our second layer plate since it is a material with one of the highest strength to weight ratio
+- Used 3D printed parts extensively, with infill of 15% to 20%. While higher infill percentages do contribute to greater part strength, in our experience, 15% infill already provides more than enough strength while being much lighter.
+- Chose motors which had very high power to weight ratio
+
+INSERT GALLERY HERE
+
+### Sturdiness
+
+Every robot needs to be sturdy in order to be durable and resist damage, especially in Soccer Open where 2 kg spinning discs are constantly crashing into your robot.
+
+Our robot is quite stable since there are 8-point connections throughout the robot's layers using strong hex brass standoffs, be it between the bottom 3 main layers or up to the mirror plate's support. The motors being wedged between 2 layer plates also ensure they are rigidly connected.
+
+INSERT GALLERY OF STURDINESS
+
+### Modularity
+
+A modular design is a design that comprises multiple independent parts, which is beneficial since different aspects of the design can be easily improved/switched out without much effort. With a RoboCup robot, a design with a reasonable amount of modularity makes mechanical fixes or part replacements due to wear and tear a much less tedious process. However, it is important that sturdiness is not sacrificed for modularity (e.g. making a part easily detachable might also make it weakly connected).
+
+Our robot is somewhat modular in terms of the sectioning of different layers. Each layer can be assembled individually, before bringing it all together. This is especially true for our upper layers, since the handle, mirror and camera layers are all separate parts that can be taken out very easily.
+
+INSERT IMAGE OF LAYERS SEPARATED IRL
+
 ## CAD Software
 
 The CAD software used to design our robots was [AutoCAD](https://www.autodesk.com/education/free-software/autocad). The reasons why we chose AutoCAD over the more commonly used [Fusion 360](https://www.autodesk.com/products/fusion-360/students-teachers-educators) is because:
@@ -19,29 +111,13 @@ The CAD software used to design our robots was [AutoCAD](https://www.autodesk.co
 - AutoCAD has much more versatile camera placements and rendering options, needed for making our mirror
 - AutoCAD is a more "bare bones/stripped down" CAD software, using a command line and direct modelling workflow, which made it easier to learn
 
-Nonetheless, the parametric workflow and added features like simulation analysis that Fusion 360 has can certainly offer some benefits and will be integrated into our designing process in subsequent years.
-
-## Robot Size
-
-Our robot's dimensions fit within a cylinder of diameter 200 mm and height 210 mm. The diameter of the robot was intentionally made to comply with the 2021 rules such that it did not have to be redesigned again then. To fully fit within the 200 mm height limit for 2021, the mirror simply has to be lowered slightly with no major changes required. The robot was not designed to fit the 2022 rules (180mm diameter) directly since we felt the size disadvantage of 40mm would have been too much. 
-
-The process of adapting our 2019 robot to a smaller size actually quite straightforward, albeit more tedious than what we initially expected. Instinctively, we considered simply offsetting the original 2D layer profiles, but that would not work since the catchment area sizes and screw hole positions would be completely off. Besides, there were a few fixes to the layer designs that we wanted to implement anyway. Thus, the new layers were constructed from scratch by redrawing over the original layers, using the orginals' angles and distances between objects as a guage to keep the new design somewhat similar.
-
-INSERT IMAGES OF OLD VS NEW LAYERS
-
-## Robot Identities
-
-We decided to build both our robot's to be exactly the same instead of having a separate striker and goalie design. Here are the benefits of having identical vs different robots we considered:
-
-| Identical Robots  | Separate Robots   |
-|:-----------------:| :----------------:|
-|Gay Gay Gay Gay Gay Gay Gay Gay Gay Gay Gay Gay | Gay Gay Gay Gay Gay Gay Gay Gay Gay Gay Gay Gay |
+Nonetheless, the parametric workflow and added features like simulation analysis that Fusion 360 has can certainly offer many benefits and will be integrated into our designing process in subsequent years.
 
 Software used, why AutoCAD
 Robot size, how shrinking done, identical robots
-Overarching concepts: low cg, stable use copper stands
+Overarching concepts: low cg, centralised cg - symmetry, low mass - momentum, stable use copper stands
 Layers?
-Monetary costs
+Monetary costs (BOM?)
 
 Drive system: 
 motors used, placement angle
