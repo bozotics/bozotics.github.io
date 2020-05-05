@@ -21,7 +21,7 @@ title_separator          : "|"
 subtitle                 : "The fine line between innovation and insanity"
 name                     : 
 description              : "The fine line between innovation and insanity"
-url                      : https://bozo.infocommsociety.com/
+url                      : https://bozo.infocommsociety.com
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : bozotics/bozotics.github.io
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
