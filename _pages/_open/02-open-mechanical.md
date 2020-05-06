@@ -5,7 +5,7 @@ permalink: /open/mech/
 sidebar:
   nav: "side-open"
 ---
-This section contains all the information regarding design, fabrication and construction of the Soccer Open robots.
+This section contains all the information regarding the design, fabrication and construction of the Soccer Open robots.
 
 - [General Info](/open/mech/general/): Explains broader aspects of the design e.g. design concepts applied
 - [Components](/open/mech/comp/): Goes in depth into each major component of our robot e.g. drive system, dribbler
