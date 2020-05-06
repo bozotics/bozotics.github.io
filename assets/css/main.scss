@@ -13,6 +13,8 @@ p.caption, figcaption {
     margin-top: -0.9em !important;
     margin-bottom: 1.3em;
     font-size: 0.7em !important;
+    color: $muted-text-color;
+    font-family: $caption-font-family;
 }
 p.video-caption {
     text-align: center;

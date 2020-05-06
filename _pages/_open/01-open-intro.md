@@ -15,7 +15,7 @@ sidebar:
 <iframe src="https://myhub.autodesk360.com/ue2d4b949/shares/public/SH56a43QTfd62c1cd968d240b070679b9ffd?mode=embed" style="width:100%;height:100%;position:absolute;left:0px;top:0px;" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
 </div>
 
-Open in Fusion 360 for better viewing experience. Controls: Left click + drag to orbit, Middle click + drag to pan, Scroll to zoom
+Controls: Left click + drag to orbit, Middle click + drag to pan, Scroll to zoom
 
 ## Overview
 
