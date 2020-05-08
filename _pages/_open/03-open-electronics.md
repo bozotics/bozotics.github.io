@@ -28,9 +28,13 @@ toc_label: "Electronics"
 - [ ] parts selection
 	- [ ] motor driver
 	- [ ] ESC
-		- [ ] controlling that doomboo
+		- [ ] controlling that doomboo + level shifting
 	- [ ] sensors + why we do / don't put them in breakout boards
 		- [ ] IMU
+			- [ ] the shortage
+			- [ ] CMPS11 woes
+			- [ ] BNO055 salvation, but i2c problems
+			- [ ] FXOS8700+FXAS21002 resulting solution / dedicated BNO055 controller
 		- [ ] Mouse
 		- [ ] Bluetooth
 		- [ ] TOF
