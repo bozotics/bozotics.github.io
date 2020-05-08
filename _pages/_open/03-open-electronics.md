@@ -8,6 +8,7 @@ sidebar:
 
 ## COMING SOON
 
+<!-- markdownlint-disable MD013 -->
 <!-- Including pagination manually since these are pages so page layout MUST be changed under navigation.yml -->
 <nav class="pagination">
 {% assign arrsize = site.data.navigation.side-open|size |minus:1 %}
@@ -38,3 +39,4 @@ sidebar:
     background: #0092ca;
   }
 </style>
+<!-- markdownlint-enable MD013 -->
