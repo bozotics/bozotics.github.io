@@ -197,7 +197,6 @@ compress_html:
     envs: development
 
 
-collections_dir: _pages
 collections:
   open:
     output: true
