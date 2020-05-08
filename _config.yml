@@ -201,13 +201,10 @@ collections_dir: _pages
 collections:
   open:
     output: true
-    permalink: /:collection/:path/
   lightweight:
     output: true
-    permalink: /:collection/:path/
   rescue:
     output: true
-    permalink: /:collection/:path/
 
 
 # Defaults
