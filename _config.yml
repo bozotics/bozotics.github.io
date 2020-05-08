@@ -197,6 +197,15 @@ compress_html:
     envs: development
 
 
+collections:
+  open:
+    output: true
+  lightweight:
+    output: true
+  rescue:
+    output: true
+
+
 # Defaults
 defaults:
   # _posts
@@ -210,6 +219,45 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _pages/_open
+  - scope:
+      path: ""
+      type: open
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      related: false
+      sidebar:
+        nav: "side-open"
+  # _pages/_lightweight
+  - scope:
+      path: ""
+      type: lightweight
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      related: false
+      sidebar:
+        nav: "side-lw"
+  # _pages/_rescue
+  - scope:
+      path: ""
+      type: rescue
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      related: false
+      sidebar:
+        nav: "side-rescue"
   - scope:
       path: "assets/**"
     values:
