@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Strategy
 permalink: /open/strat/
-sidebar:
-  nav: "side-open"
 ---
 
 {{page.title}}

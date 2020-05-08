@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Introduction
 permalink: /rescue/intro/
-sidebar:
-  nav: "side-rescue"
 ---
 
 {{page.title}}

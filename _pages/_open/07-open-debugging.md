@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Debugging
 permalink: /open/debug/
-sidebar:
-  nav: "side-open"
 ---
 
 {{page.title}}

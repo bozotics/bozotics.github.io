@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Mechanical Design
 permalink: /lightweight/mech/
-sidebar:
-  nav: "side-lw"
 ---
 
 {{page.title}}

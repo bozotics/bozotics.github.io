@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Programming
 permalink: /rescue/prog/
-sidebar:
-  nav: "side-rescue"
 ---
 
 {{page.title}}

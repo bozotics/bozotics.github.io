@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Debugging
 permalink: /lightweight/debug/
-sidebar:
-  nav: "side-lw"
 ---
 
 {{page.title}}

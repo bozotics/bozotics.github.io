@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Electronics
 permalink: /open/elec/
-sidebar:
-  nav: "side-open"
 ---
 
 {{page.title}}

@@ -231,6 +231,8 @@ defaults:
       share: false
       comments: false
       related: false
+      sidebar:
+        nav: "side-open"
   # _pages/_lightweight
   - scope:
       path: ""
@@ -242,6 +244,8 @@ defaults:
       share: false
       comments: false
       related: false
+      sidebar:
+        nav: "side-lw"
   # _pages/_rescue
   - scope:
       path: ""
@@ -253,6 +257,8 @@ defaults:
       share: false
       comments: false
       related: false
+      sidebar:
+        nav: "side-rescue"
   - scope:
       path: "assets/**"
     values:

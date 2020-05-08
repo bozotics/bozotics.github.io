@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Mechanical Deisgn
 permalink: /open/mech/
-sidebar:
-  nav: "side-open"
 ---
 
 {{page.title}}

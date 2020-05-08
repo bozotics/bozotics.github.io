@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Camera
 permalink: /lightweight/cam/
-sidebar:
-  nav: "side-lw"
 ---
 
 {{page.title}}

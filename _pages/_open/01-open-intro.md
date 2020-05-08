@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Introduction
 permalink: /open/intro/
-sidebar:
-  nav: "side-open"
 ---
 
 {{page.title}}

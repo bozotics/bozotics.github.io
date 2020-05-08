@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Camera GUI
 permalink: /open/gui/
-sidebar:
-  nav: "side-open"
 ---
 
 {{page.title}}

@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Introduction
 permalink: /lightweight/intro/
-sidebar:
-  nav: "side-lw"
 ---
 
 {{page.title}}

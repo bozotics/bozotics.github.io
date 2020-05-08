@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Electronics
 permalink: /lightweight/elec/
-sidebar:
-  nav: "side-lw"
 ---
 
 {{page.title}}

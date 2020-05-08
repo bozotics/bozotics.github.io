@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Camera
 permalink: /open/cam/
-sidebar:
-  nav: "side-open"
 ---
 
 {{page.title}}

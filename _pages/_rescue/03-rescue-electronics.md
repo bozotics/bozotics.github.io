@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Electronics
 permalink: /rescue/elec/
-sidebar:
-  nav: "side-rescue"
 ---
 
 {{page.title}}

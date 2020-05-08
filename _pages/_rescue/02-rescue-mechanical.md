@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Mechanical Design
 permalink: /rescue/mech/
-sidebar:
-  nav: "side-rescue"
 ---
 
 {{page.title}}

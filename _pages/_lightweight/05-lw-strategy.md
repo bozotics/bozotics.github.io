@@ -1,9 +1,6 @@
 ---
-layout: single
 title: Strategy
 permalink: /lightweight/strat/
-sidebar:
-  nav: "side-lw"
 ---
 
 {{page.title}}
