@@ -42,6 +42,11 @@ side-open:
     url: "/open/mech/"
   - title: Electronics
     url: "/open/elec/"
+    children:
+      - title: "Considerations"
+        url: "/open/elec/considerations/"
+      - title: "Components"
+        url: "/open/elec/components/"
   - title: Camera
     url: "/open/cam/"
   - title: Camera GUI
