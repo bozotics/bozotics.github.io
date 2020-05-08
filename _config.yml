@@ -197,8 +197,15 @@ compress_html:
     envs: development
 
 
+collections_dir: _pages
 collections:
-  pages:
+  open:
+    output: true
+    permalink: /:collection/:path/
+  lightweight:
+    output: true
+    permalink: /:collection/:path/
+  rescue:
     output: true
     permalink: /:collection/:path/
 
@@ -216,10 +223,32 @@ defaults:
       comments: # true
       share: true
       related: true
-  # _pages
+  # _pages/_open
   - scope:
       path: ""
-      type: pages
+      type: open
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      related: false
+  # _pages/_lightweight
+  - scope:
+      path: ""
+      type: lightweight
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      related: false
+  # _pages/_rescue
+  - scope:
+      path: ""
+      type: rescue
     values:
       layout: single
       read_time: false
