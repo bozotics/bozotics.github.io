@@ -3,7 +3,7 @@ layout: single
 title: Electronics
 permalink: /open/elec/
 sidebar:
-	nav: "side-open"
+  nav: "side-open"
 toc: true
 toc_sticky: true
 toc_icon: "bolt"
