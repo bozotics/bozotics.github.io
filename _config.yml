@@ -136,7 +136,7 @@ sass:
 permalink: /blog/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Singapore # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -270,3 +270,7 @@ publisher: "Transcendence Blog"
 
 after_footer_scripts:
   - /assets/js/lazyload.js
+
+
+# jekyll build defaults
+incremental: true
