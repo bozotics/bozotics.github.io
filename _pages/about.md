@@ -87,13 +87,3 @@ To us, Transcendence symbolises more than just a team; it is a way of life. It i
     </div>
 {% endfor %}
 </div>
-
-<style>
-    ul.visible-links li.masthead__menu-item a[href="{{page.url}}"]:before {
-        transform: scaleX(1);
-    }
-    ul.hidden-links li.masthead__menu-item a[href="{{page.url}}"] {
-        color: #fff;
-        background: #0092ca;
-    }
-</style>

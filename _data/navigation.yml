@@ -2,16 +2,22 @@
 main:
   - title: "About"
     url: /about/
+    highlight: /about/
   - title: "Open"
     url: /open/intro/
+    highlight: /open/
   - title: "Lightweight"
     url: /lightweight/intro/
+    highlight: /lightweight/
   - title: "Rescue"
     url: /rescue/intro/
+    highlight: /rescue/
   - title: "Blog"
     url: /blog/
+    highlight: /blog/
   - title: "Contact"
     url: /contact/
+    highlight: /contact/
 
 side-about:
   - title: Philosophy
