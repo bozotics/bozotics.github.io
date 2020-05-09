@@ -20,6 +20,7 @@ group :jekyll_plugins do
   gem "jekyll-compose"
   gem 'jekyll-news-sitemap'
   gem 'jemoji'
+  gem 'jekyll-paginate-v2'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

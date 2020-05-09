@@ -132,14 +132,43 @@ sass:
 
 
 # Outputting
-paginate: 10 # amount of posts to show
-paginate_path: /blog/page:num/
 timezone: Asia/Singapore # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+############################################################
+# Site configuration for the Jekyll 3 Pagination Gem
+# The values here represent the defaults if nothing is set
+pagination:
+  
+  # Site-wide kill switch, disabled here it doesn't run at all 
+  enabled: true
+
+  # How many objects per paginated page, used to be `paginate` (default: 0, means all)
+  per_page: 8
+
+  # The permalink structure for the paginated pages (this can be any level deep)
+  #permalink: '/page/:num/' # Pages are index.html inside this folder (default)
+  permalink: '/page:num.html' # Pages are simple html files 
+  #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
+
+  # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
+  title: ':title (page :num of :max)'
+
+  # Optional, sorts the posts in reverse order (omit to default decending or sort_reverse: true)
+  sort_reverse: true
+
+  # Optional,omit or set both before and after to zero to disable. 
+  # Controls how the pagination trail for the paginated pages look like. 
+  trail: 
+    before: 3
+    after: 3
+
+############################################################
 
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -149,7 +178,7 @@ plugins:
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
