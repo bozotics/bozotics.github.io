@@ -105,13 +105,3 @@ However, our simulation project will be put on hold for now as all our more adva
 If I'm going to be honest, February has been a rather bad month as compared to our previous months. Progress has been frustratingly slow due to bottlenecks on the supply side, an external problem that we have completely no control over. As of now, we are 2 weeks behind schedule, *at best*. But on the other hand, at this rate, the Singapore Open would probably be postponed too, soooo... 🤷‍♂️🙃
 
 At the end of January I had proclaimed February was going to be our make-it-or-break-it month; yet, its the end of February and I am inconclusive about which side of that statement we are lying on. Neither anything exceptionally good nor terribly bad has happened because nothing much has happened in the first place. Perhaps that in itself is *the* bad thing, but then again I don't even know what to think anymore. I seek a deeper meaning to all this that we do, yet I fear deep down in my heart I already know what the answer to that is. But till that day of epiphany *(or admittal)* arrives, I shall just mindlessly wait for those elusive Taobao shipments to arrive...
-
-<style>
-    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
-        transform: scaleX(1);
-    }
-    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
-        color: #fff;
-        background: #0092ca;
-    }
-</style>

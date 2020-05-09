@@ -113,13 +113,3 @@ Also, to finally stop our rampant spaghetti coding practices and start going "pr
 To be honest, January was a solid "meh"; we have definitely made progress but things seem like they can go much faster than this. Maybe its just the low after the New Year's high I'm feeling here, or maybe our gears need time to be oiled up before going into overdrive... who knows? Personally, I would say I am entering February with a feeling of optimistic apprehension; optimism stemming from the hope that these robots could very well be the best robots in the history of our team, but apprehension stemming from the cognizance of the multitude of ways we could all fail spectacularly, especially when considering past experiences. But then again, maybe I worry too much... 🤷
 
 What I do know for sure is that February is going to be our make-it-or-break-it month. As long as we finish construction of our robots by the end of February, all should be well... 🤞
-
-<style>
-    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
-        transform: scaleX(1);
-    }
-    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
-        color: #fff;
-        background: #0092ca;
-    }
-</style>

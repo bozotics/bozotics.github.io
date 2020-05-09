@@ -34,13 +34,3 @@ Since the shade of orange might be constantly changing we could predict the next
 
 ## Conclusion
 Juggling between work and life in Malaysia is tough. Avoid using Arch Linux as a start, opt for Ubuntu or something simpler. Right now, we are optimising the camera and its calibration process. 
-
-<style>
-    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
-        transform: scaleX(1);
-    }
-    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
-        color: #fff;
-        background: #0092ca;
-    }
-</style>

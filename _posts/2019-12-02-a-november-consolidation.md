@@ -65,13 +65,3 @@ As part of our revamp of robot strategy, we are planning to create smarter, more
 ## Conclusion
 
 November has been eventful and rewarding, with everything having come together rather smoothly (quite literally). With the robot design basically completed, the other half of the robot's hardware, Electronics, will be the focus for the month of December. With our fully custom made PCBs and plans for embedded micro-controllers, this December journey will surely be an interesting one.
-
-<style>
-    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
-        transform: scaleX(1);
-    }
-    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
-        color: #fff;
-        background: #0092ca;
-    }
-</style>
