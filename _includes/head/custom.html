@@ -1,4 +1,31 @@
 <!-- start custom head snippets -->
+{% for link in site.data.navigation.main %}
+
+{% if page.url contains link.highlight %}
+{% assign highlight = link.url %}
+{% break %}
+
+{% elsif link.highlight == "/blog/" and page.url contains "/categories/" or page.url contains "/tags/" %}
+{% assign highlight = link.url %}
+{% break %}
+
+{% endif %}
+
+{% endfor %}
+
+{% if highlight %}
+<style>
+    ul.visible-links li.masthead__menu-item a[href="{{highlight}}"]:before {
+        transform: scaleX(1);
+    }
+
+    ul.hidden-links li.masthead__menu-item a[href="{{highlight}}"] {
+        color: #fff;
+        background: #0092ca;
+    }
+</style>
+{% assign highlight = false %}
+{% endif %}
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <link rel="icon" href="/assets/images/eagle ver 2.1.3.1-lowres.jpg">

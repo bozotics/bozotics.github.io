@@ -53,13 +53,3 @@ Follow us on [Twitter](https://twitter.com/bozotics)! (basically dead)
 </style>
 Commenting this out since theres just this twitter feed left thats kinda user friendly but its empty
 -->
-
-<style>
-    ul.visible-links li.masthead__menu-item a[href="{{page.url}}"]:before {
-        transform: scaleX(1);
-    }
-    ul.hidden-links li.masthead__menu-item a[href="{{page.url}}"] {
-        color: #fff;
-        background: #0092ca;
-    }
-</style>

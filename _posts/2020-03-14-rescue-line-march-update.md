@@ -94,13 +94,3 @@ However, vision detection and computer vision takes a long time to tune and prog
 The rescue robot is slowly coming to shape. This is a new category for us, thus progress is a little slower as we are testing a lot of new designs and ideas, resulting in many robot iterations. However we remain confident that we can build a working and competitive robot by the time the competition comes (if it isn't cancelled...)
 
 Do follow us on our Instagram for timely updates on our build process!
-
-<style>
-    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
-        transform: scaleX(1);
-    }
-    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
-        color: #fff;
-        background: #0092ca;
-    }
-</style>

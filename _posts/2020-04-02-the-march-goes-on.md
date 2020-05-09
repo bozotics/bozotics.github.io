@@ -118,13 +118,3 @@ With these implementations, our processing of top priority objects can be done a
 On the one hand, this is definitely a disheartening end to the 2020 RoboCup journey for all of us, but on the other hand, perhaps this is a reminder for us to look beyond just the competition itself. We have always been overly focused on **HOW** we do what we do that we often forget about **WHY**. It is times like this, when we still continue doing what we do, with no conceivable end in sight, that really forces us to ponder about the purpose of it all...
 
 Nonetheless, we know that we are very fortunate to still be able to continue, "business (somewhat) as usual", and as long as this remains possible, we will definitely not stop. In the meantime, stay safe, stay healthy, stay strong! 💪
-
-<style>
-    ul.visible-links li.masthead__menu-item a[href="/blog/"]:before {
-        transform: scaleX(1);
-    }
-    ul.hidden-links li.masthead__menu-item a[href="/blog/"] {
-        color: #fff;
-        background: #0092ca;
-    }
-</style>
