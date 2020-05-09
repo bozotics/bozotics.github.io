@@ -1,0 +1,11 @@
+---
+layout: archive
+---
+
+{{content}}
+
+<hr />
+
+{% for post in paginator.posts %} {% include archive-single.html %} {% endfor %}
+
+{% include paginator-v2.html %}
