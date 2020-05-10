@@ -175,6 +175,7 @@ plugins:
   - jekyll-include-cache
   - jemoji
   - jekyll-news-sitemap
+  - jekyll-last-modified-at
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -185,6 +186,7 @@ whitelist:
   - jekyll-include-cache
   - jemoji
   - jekyll-news-sitemap
+  - jekyll-last-modified-at
 
 
 # Archives
