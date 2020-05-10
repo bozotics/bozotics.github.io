@@ -9,8 +9,10 @@ jobs:
   github-pages:
     runs-on: ubuntu-16.04
     steps:
-      - name: 📂 checkout
+      - name: 📂 setup
         uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
 
       - id: find
         name: 📂 find jekyll directory
