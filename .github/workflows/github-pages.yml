@@ -35,10 +35,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-jekyll-
 
-      - name: setup ruby 2.6
+      - name: setup ruby 2.7
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 2.7
 
       - name: build
         uses: limjh16/jekyll-action-ts@v2
