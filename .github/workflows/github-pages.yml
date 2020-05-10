@@ -9,25 +9,26 @@ jobs:
   github-pages:
     runs-on: ubuntu-16.04
     steps:
-      - uses: actions/checkout@v2
+      - name: 📂 checkout
+        uses: actions/checkout@v2
 
       - id: find
-        name: find jekyll directory
+        name: 📂 find jekyll directory
         run: |
           JEKYLL_SRC=$(find . -path ./vendor/bundle -prune -o -name _config.yml -exec dirname {} \; | tr -d '\n')
           JEKYLL_HASH=$(ls -alR --full-time ${JEKYLL_SRC} | sha1sum)
           echo "::set-output name=jekyllSrc::${JEKYLL_SRC}"
           echo "::set-output name=jekyllHash::${JEKYLL_HASH}"
 
-      - name: cache bundler files
+      - name: 📝 cache bundler files
         uses: actions/cache@v1
         with:
           path: vendor/bundle
-          key: bundle-use-ruby-${{ runner.os }}-2.6-${{ hashFiles('**/Gemfile.lock') }}
+          key: bundle-use-ruby-${{ runner.os }}-2.7-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
-            bundle-use-ruby-${{ runner.os }}-2.6-
+            bundle-use-ruby-${{ runner.os }}-2.7-
 
-      - name: cache jekyll files
+      - name: 📝 cache jekyll files
         uses: actions/cache@v1
         with:
           path: ${{ steps.find.outputs.jekyllSrc }}/.jekyll-cache
@@ -35,17 +36,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-jekyll-
 
-      - name: setup ruby 2.7
+      - name: 💎 setup ruby 2.7
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
 
-      - name: build
+      - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
         with:
           jekyll_src: ${{ steps.find.outputs.jekyllSrc }}
 
-      - name: deploy
+      - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
