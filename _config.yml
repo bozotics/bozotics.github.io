@@ -39,7 +39,7 @@ search_provider          : "lunr" # lunr (default), algolia, google
 analytics:
   provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : "UA-157577858-2"
+    tracking_id          : "UA-166112888-1"
     anonymize_ip         : false # true, false (default)
 
 # Site Footer
