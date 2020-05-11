@@ -70,12 +70,8 @@ For Soccer Open, other than a few connectors, most of the third and fourth layer
 
 We have also swapped out our motor switch from a toggle switch to a missile switch instead. As much as one can say it is literally just a toggle switch with a spring loaded cover, it still doesn't stop me from feeling like I'm launching a rocket every time I flip the switch. 🙃
 
-<div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/18A1YzxkasMErCSSEeixpFNbZXgof9fnj/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
- frameborder="0" width="100%" height="100%" 
- allowfullscreen allow="autoplay"></iframe>
-</div>
-<p class="caption">Click clack boom</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_eF3GVjwg4Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p class="video-caption">Click clack boom</p>
 
 ## GUI
 
@@ -93,12 +89,8 @@ We have also experimented with various algorithms to improve our object tracking
 
 On top of thresholding, we have also implemented a basic Kalman filter to predict the movement of the ball if it is obscured by another object such as an opponent’s robot or the copper stands supporting the mirror. However, as the mirror is curved, an extended Kalman filter will have to be used to linearize the distorted image for tracking to be more accurate.
 
-<div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/1O6qNWhiGozyveMNGEYP454a7vnn6VYUo/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
- frameborder="0" width="100%" height="100%" 
- allowfullscreen allow="autoplay"></iframe>
-</div>
-<p class="caption">Red rectangle depicts the predicted ball position</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zP8gnEITTic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p class="video-caption">Red rectangle depicts the predicted ball position</p>
 
 ## Simulation
 
