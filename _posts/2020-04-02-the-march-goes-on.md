@@ -25,7 +25,7 @@ March is that special time of the year where nature pulls off its own magic tric
 
 Yet, the reality of life reflects a completely different image of nature's scenery. With the worsening of the Covid-19 situation causing the cancellation of not only RoboCup, but many other robotics competitions as well, our disappointment is shared worldwide. For most of us, this would have been our last year participating in RoboCup. It is even more poignant to note how in the past few years, when we were given countless opportunities, we were always unprepared and left in a state of frenzy. Yet now, when we were finally ["more prepared than ever to forge new frontiers in the new year"](/a-december-to-remember/#conclusion), to make our final stand and end this decade long journey of robotics on a high, it was the world that fell into hysteria instead. Alas, when faced with the irony of the absurd world, what can we do, as passengers on this roller coaster of chaos, but to force a helpless smile and move on...
 
-Progress now is way behind our original schedule since many of our shipments were delayed. We are also working much slowly now since our actual deadline for completion has been "shifted" to next year, allowing us to balance our time with other things such as academics and new non-RoboCup related projects (hint hint). Nonetheless, we still made some progress in March and here are our key achievements.
+Progress now is way behind our original schedule since many of our shipments were delayed. We are also working much slower now since our actual deadline for completion has been "shifted" to next year, allowing us to balance our time with other things such as academics and new non-RoboCup related projects (hint hint). Nonetheless, we still made some progress in March and here are our key achievements.
 
 ---
 
@@ -102,12 +102,7 @@ Anyways, with many problems identified in the original program, we embarked on c
 
 3.  The threads now run on a priority system, allowing for better allocation of CPU resources (priority 1 runs at 90 FPS, priority 2 at 20 FPS and priority 3 at 10 FPS). The priority given to each thread is dynamic, which means that our Teensy can switch the priorities, or even assign 2 threads to the highest priority, as needed during the match (e.g. when chasing for the ball, priority 1 can be assigned for ball detection, but once we have possession of the ball in our dribbler, priority 1 can be assigned for goal detection instead). In the video below, the ball is assigned with priority 1 while the goals are in priority 2. Hence the goals detection are seen flickering as they are only being detected about once every 5 frames.
 
-<div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/136DYu4NqlkhOWCM4gEQOCryZNeKgbQZH/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
- frameborder="0" width="100%" height="100%" 
- allowfullscreen allow="autoplay"></iframe>
-</div>
-<p class="caption">Ball and goals detection from GUI window</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MxzFrM1Lxgk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 With these implementations, our processing of top priority objects can be done at 90 FPS with a latency of around 13 ms.
 

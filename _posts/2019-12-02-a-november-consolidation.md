@@ -58,11 +58,7 @@ Having faced many problems with the molding method for making our mirror in prev
 
 As part of our revamp of robot strategy, we are planning to create smarter, more human-like play by introducing decision trees as well as special offensive/defensive manoeuvres (top secret for now!). Hence, we created a semi-realistic 2D simulator using Python with the [Arcade](http://arcade.academy/) and [Pymunk](http://www.pymunk.org/) libraries. As of now, we have a robot running a simple ball chasing with goal aiming/shooting program, but this simulator will surely come into great use in the future as we further develop our robot strategy.
 
-<div style="position:relative;padding-bottom:56.25%;margin:15px auto!important;">
-<iframe src="https://drive.google.com/file/d/1ZeY6IpUh1xZ00UMRzZT7vs5U37Er0hNX/preview" style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
- frameborder="0" width="100%" height="100%" 
- allowfullscreen allow="autoplay"></iframe>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t_YrVmQF8q4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 

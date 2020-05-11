@@ -20,6 +20,17 @@ main:
     highlight: /contact/
 
 side-about:
+  - title: History
+    url: "/about/#history"
+    children:
+      - title: "Soccer Open"
+        url: "/about/#soccer-open"
+      - title: "Soccer Lightweight"
+        url: "/about/#soccer-lightweight"
+      - title: "Rescue Line"
+        url: "/about/#rescue-line"
+      - title: "The Future"
+        url: "/about/#the-future"
   - title: Philosophy
     url: "/about/#philosophy"
     children:
@@ -35,11 +46,13 @@ side-about:
 side-open:
   - title: Introduction
     url: "/open/intro/"
-    children:
-      - title: "Nav Bar Test"
-        url: "/open/intro/#coming-soon-af"
   - title: Mechanical
     url: "/open/mech/"
+    children:
+      - title: "General Info"
+        url: "/open/mech/general/"
+      - title: "Components"
+        url: "/open/mech/comp/"
   - title: Electronics
     url: "/open/elec/"
   - title: Camera
@@ -50,6 +63,8 @@ side-open:
     url: "/open/strat/"
   - title: Debugging
     url: "/open/debug/"
+  - title: AFI
+    url: "/open/afi/"
 
 side-lw:
   - title: Introduction
