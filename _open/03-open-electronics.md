@@ -5,15 +5,15 @@ permalink: /open/elec/
 
 ## COMING SOON
 
-This section contains everything related to electronics about our robot:
-why we chose certain components, how we designed our circuits, and reasons
-for some of our decisions.
+This section contains everything related to electronics about our robot: why we
+chose certain components, how we designed our circuits, and reasons for some of
+our decisions.
 
-- [Considerations](/open/elec/considerations/): Details our design history
-  and learning process, as well as how it led to a set of considerations
-  we use when designing our circuits
-- [Components](/open/elec/components/): Explains our choice of components,
-  and alternatives we considered but ultimately rejected
+- [Considerations](/open/elec/considerations/): Details our design history and
+  learning process, as well as how it led to a set of considerations we use when
+  designing our circuits
+- [Components](/open/elec/components/): Explains our choice of components, and
+  alternatives we considered but ultimately rejected
 
 <details><summary>sorry mom</summary>
 I am (we are) not really meticulous with my documentation: when doing
