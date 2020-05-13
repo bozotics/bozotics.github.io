@@ -4,11 +4,52 @@
 
 @charset "utf-8";
 
+$sans-serif: "SFProDisplay", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("/assets/fonts/SFProDisplay-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("/assets/fonts/SFProDisplay-RegularItalic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("/assets/fonts/SFProDisplay-SemiBold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("/assets/fonts/SFProDisplay-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("/assets/fonts/SFProDisplay-Bold.ttf") format("truetype");
+    font-weight: 1000;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("/assets/fonts/SFProDisplay-BoldItalic.ttf") format("truetype");
+    font-weight: 1000;
+    font-style: italic;
+}
+
 /* Media stuff */
 p.caption, figcaption {
+    width: 100%;
     text-align: center;
     margin-top: -0.9em !important;
     margin-bottom: 1.3em;
@@ -50,13 +91,22 @@ p img {
 }
 
 /* Generic font design stuff */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0.5em 0;
+    margin: 0.5em 0;
+}
+
+h1,h2 {
+    font-weight: 1000;
+}
+
+h3,h4,h5,h6 {
+    font-weight: 700;
 }
 
 blockquote {
