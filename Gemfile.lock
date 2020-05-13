@@ -103,7 +103,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.4)
-    rouge (3.18.0)
+    rouge (3.19.0)
     safe_yaml (1.0.5)
     sassc (2.3.0)
       ffi (~> 1.9)
@@ -128,7 +128,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  jekyll (~> 4.0.0)
+  jekyll (~> 4.0.1)
   jekyll-compose
   jekyll-feed
   jekyll-last-modified-at
