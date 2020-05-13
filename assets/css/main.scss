@@ -157,8 +157,15 @@ nav {
     }
     p,
     li,
-    dl {
-    font-size: 0.8rem;
+    dl,
+    summary {
+        font-size: 0.8rem;
+    }
+    details summary::-webkit-details-marker {
+        font-size: 0.8em;
+    }
+    details summary::marker {
+        font-size: 0.8em;
     }
 }
 
