@@ -266,6 +266,7 @@ defaults:
       related: false
       sidebar:
         nav: "side-open"
+      date: 2020-05-02 00:00:00
   # _pages/_lightweight
   - scope:
       path: ""
@@ -280,6 +281,7 @@ defaults:
       related: false
       sidebar:
         nav: "side-lw"
+      date: 2020-05-02 00:00:00
   # _pages/_rescue
   - scope:
       path: ""
@@ -294,6 +296,7 @@ defaults:
       related: false
       sidebar:
         nav: "side-rescue"
+      date: 2020-05-02 00:00:00
   - scope:
       path: "assets/**"
     values:
