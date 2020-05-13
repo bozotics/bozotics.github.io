@@ -12,37 +12,49 @@ $sans-serif: "SFProDisplay", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe
 
 @font-face {
     font-family: "SFProDisplay";
-    src: url("/assets/fonts/SFProDisplay-Regular.ttf") format("truetype");
+    src: //url("/assets/fonts/SFProDisplay-Regular.woff2") format("woff2"),
+         //url("/assets/fonts/SFProDisplay-Regular.woff") format("woff"),
+         url("/assets/fonts/SFProDisplay-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: "SFProDisplay";
-    src: url("/assets/fonts/SFProDisplay-RegularItalic.ttf") format("truetype");
+    src: url("/assets/fonts/SFProDisplay-RegularItalic.woff2") format("woff2"),
+         url("/assets/fonts/SFProDisplay-RegularItalic.woff") format("woff"),
+         url("/assets/fonts/SFProDisplay-RegularItalic.ttf") format("truetype");
     font-weight: 400;
     font-style: italic;
 }
 @font-face {
     font-family: "SFProDisplay";
-    src: url("/assets/fonts/SFProDisplay-SemiBold.ttf") format("truetype");
+    src: url("/assets/fonts/SFProDisplay-SemiBold.woff2") format("woff2"),
+         url("/assets/fonts/SFProDisplay-SemiBold.woff") format("woff"),
+         url("/assets/fonts/SFProDisplay-SemiBold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: "SFProDisplay";
-    src: url("/assets/fonts/SFProDisplay-SemiBoldItalic.ttf") format("truetype");
+    src: url("/assets/fonts/SFProDisplay-SemiBoldItalic.woff2") format("woff2"),
+         url("/assets/fonts/SFProDisplay-SemiBoldItalic.woff") format("woff"),
+         url("/assets/fonts/SFProDisplay-SemiBoldItalic.ttf") format("truetype");
     font-weight: 700;
     font-style: italic;
 }
 @font-face {
     font-family: "SFProDisplay";
-    src: url("/assets/fonts/SFProDisplay-Bold.ttf") format("truetype");
+    src: url("/assets/fonts/SFProDisplay-Bold.woff2") format("woff2"),
+         url("/assets/fonts/SFProDisplay-Bold.woff") format("woff"),
+         url("/assets/fonts/SFProDisplay-Bold.ttf") format("truetype");
     font-weight: 1000;
     font-style: normal;
 }
 @font-face {
     font-family: "SFProDisplay";
-    src: url("/assets/fonts/SFProDisplay-BoldItalic.ttf") format("truetype");
+    src: url("/assets/fonts/SFProDisplay-BoldItalic.woff2") format("woff2"),
+         url("/assets/fonts/SFProDisplay-BoldItalic.woff") format("woff"),
+         url("/assets/fonts/SFProDisplay-BoldItalic.ttf") format("truetype");
     font-weight: 1000;
     font-style: italic;
 }
