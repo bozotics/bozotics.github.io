@@ -55,6 +55,15 @@ side-open:
         url: "/open/mech/comp/"
   - title: Electronics
     url: "/open/elec/"
+    children:
+      - title: "Design"
+        url: "/open/elec/design/"
+      - title: "Components"
+        url: "/open/elec/components/"
+      - title: "Soldering"
+        url: "/open/elec/soldering/"
+      - title: "History"
+        url: "/open/elec/history/"
   - title: Camera
     url: "/open/cam/"
   - title: Camera GUI
