@@ -167,6 +167,10 @@ nav {
     details summary::marker {
         font-size: 0.8em;
     }
+    ol,
+    ul {
+        padding-left: 1.32rem; /* (22(fontsize)*.8(em)*3)/40(boxpadding) */
+    }
 }
 
 .btn {
@@ -187,10 +191,15 @@ div.mfp-title a:hover, div.mfp-title a:active{
 }
 
 /* Post: Table of contents */
-.toc .nav__title {
-    background: #6f777d;
-}
-
-.toc .active a {
-    background-color: #e2e4e5;
+.toc {
+    .nav__title {
+        background: #6f777d;
+    }
+    .active a {
+        background-color: #e2e4e5;
+    }
+    ol,
+    ul {
+        padding-left: 0;
+    }
 }
