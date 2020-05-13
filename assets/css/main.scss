@@ -10,6 +10,7 @@ $sans-serif: "SFProDisplay", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+//SF Pro font: using ttf for regular because woff appears bolder for some reason
 @font-face {
     font-family: "SFProDisplay";
     src: //url("/assets/fonts/SFProDisplay-Regular.woff2") format("woff2"),
@@ -20,10 +21,26 @@ $sans-serif: "SFProDisplay", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe
 }
 @font-face {
     font-family: "SFProDisplay";
-    src: url("/assets/fonts/SFProDisplay-RegularItalic.woff2") format("woff2"),
-         url("/assets/fonts/SFProDisplay-RegularItalic.woff") format("woff"),
+    src: //url("/assets/fonts/SFProDisplay-RegularItalic.woff2") format("woff2"),
+         //url("/assets/fonts/SFProDisplay-RegularItalic.woff") format("woff"),
          url("/assets/fonts/SFProDisplay-RegularItalic.ttf") format("truetype");
     font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("/assets/fonts/SFProDisplay-Medium.woff2") format("woff2"),
+         url("/assets/fonts/SFProDisplay-Medium.woff") format("woff"),
+         url("/assets/fonts/SFProDisplay-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("/assets/fonts/SFProDisplay-MediumItalic.woff2") format("woff2"),
+         url("/assets/fonts/SFProDisplay-MediumItalic.woff") format("woff"),
+         url("/assets/fonts/SFProDisplay-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
     font-style: italic;
 }
 @font-face {
@@ -102,6 +119,9 @@ p img {
     }
 }
 
+.masthead__menu-item {
+    font-weight: 500;
+}
 /* Generic font design stuff */
 
 h1,
