@@ -10,4 +10,4 @@ This section contains all the information regarding the design, fabrication and 
 - [Dribbler](/open/mech/dribbler/): Details all the design considerations for our dribbler
 - [Assorted Parts](/open/mech/assorted/): Showcases every other component in the robot
 
-If you would like to know more about our building process, you can read our (crudely written) [building log](#sike).
+If you would like to know more about our building process, you can read our *crudely written* [building log](/assets/logs/open_2019-2020_log.txt){:target="_blank"} (opens in new tab) .
