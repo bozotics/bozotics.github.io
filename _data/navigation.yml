@@ -51,8 +51,14 @@ side-open:
     children:
       - title: "General Info"
         url: "/open/mech/general/"
-      - title: "Components"
-        url: "/open/mech/comp/"
+      - title: "Drive System"
+        url: "/open/mech/drive/"
+      - title: "Mirror"
+        url: "/open/mech/mirror/"
+      - title: "Dribbler"
+        url: "/open/mech/dribbler/"
+      - title: "Assorted Parts"
+        url: "/open/mech/assorted/"
   - title: Electronics
     url: "/open/elec/"
     children:
