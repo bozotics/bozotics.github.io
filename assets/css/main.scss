@@ -9,6 +9,7 @@ $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+@import "/assets/fonts/inter.css";
 
 /* Media stuff */
 p.caption, figcaption {
