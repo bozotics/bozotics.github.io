@@ -252,7 +252,7 @@ defaults:
       share: true
       related: true
       permalink: /blog/:title/
-  # _pages/_open
+  # _open
   - scope:
       path: ""
       type: open
@@ -267,7 +267,7 @@ defaults:
       sidebar:
         nav: "side-open"
       date: 2020-05-02 00:00:00
-  # _pages/_lightweight
+  # _lightweight
   - scope:
       path: ""
       type: lightweight
@@ -282,7 +282,7 @@ defaults:
       sidebar:
         nav: "side-lw"
       date: 2020-05-02 00:00:00
-  # _pages/_rescue
+  # _rescue
   - scope:
       path: ""
       type: rescue
