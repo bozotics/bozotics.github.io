@@ -131,5 +131,8 @@ div.mfp-title a:hover, div.mfp-title a:active{
     ol,
     ul {
         padding-left: 0;
+        li {
+            font-size: 0.75rem;
+        }
     }
 }
