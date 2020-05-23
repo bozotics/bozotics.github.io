@@ -305,3 +305,4 @@ after_footer_scripts:
 # jekyll build defaults
 incremental: false
 host: 0.0.0.0
+livereload: true
