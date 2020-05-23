@@ -70,6 +70,7 @@ include:
   - _open
   - _lightweight
   - _rescue
+  - _resources
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -124,7 +125,7 @@ kramdown:
 
 # Sass/SCSS
 sass:
-  sass_dir: _sass
+  sass_dir: assets/css
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 # Outputting

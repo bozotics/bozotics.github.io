@@ -1,0 +1,23 @@
+$sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+
+$monospace: "Fira Code", Monaco, Consolas, "Lucida Console", monospace !default;
+
+@import "/assets/fonts/Inter/inter.css";
+@import "/assets/fonts/FiraCode/fira_code.css";
+
+.reveal {
+  font-family: $sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $sans-serif;
+  }
+  code,
+  pre {
+    font-family: $monospace;
+  }
+}
