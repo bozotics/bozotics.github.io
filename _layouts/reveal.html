@@ -22,7 +22,7 @@ layout: compress
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				{{ content | replace: '<p>===</p>', '</section><section>' }}
+				{{ content | replace: '<p>==', '</section><section ' | replace: '==</p>', '>' }}
 			</section>
 		</div>
 	</div>
