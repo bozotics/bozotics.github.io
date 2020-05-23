@@ -6,11 +6,8 @@ layout: compress
 
 <head>
 	<meta charset="utf-8" />
+	{% include seo.html %}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-	{% if site.title %}<title>{{ site.title }}</title>{% endif %}
-	{% if site.description %}<meta name="description" content="{{ site.description }}" />{% endif %}
-	{% if site.author %}<meta name="author" content="{{ site.author }}" />{% endif %}
 
 	<link rel="stylesheet" href="/assets/reveal.js/dist/reset.css" />
 	<link rel="stylesheet" href="/assets/reveal.js/dist/reveal.css" />
