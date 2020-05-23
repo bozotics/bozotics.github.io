@@ -1,0 +1,4 @@
+extends: ../.markdownlint.yml
+MD041: false
+MD001: false
+MD036: false
