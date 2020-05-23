@@ -39,6 +39,7 @@ layout: compress
 			hash: true,
 			slideNumber: true,
 			transitionSpeed: "fast",
+			transition: "{{ page.transition | default: 'slide' }}",
 			fragments: true,
 			fragmentInURL: true,
 			plugins: [RevealNotes],
