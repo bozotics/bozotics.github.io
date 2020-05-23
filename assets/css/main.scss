@@ -15,127 +15,122 @@ $monospace: "Fira Code", Monaco, Consolas, "Lucida Console", monospace !default;
 @import "/assets/fonts/FiraCode/fira_code.css";
 
 /* Media stuff */
-p.caption, figcaption {
-    width: 100%;
-    text-align: center;
-    margin-top: -0.9em !important;
-    margin-bottom: 1.3em;
-    font-size: 0.7em !important;
-    color: $muted-text-color;
-    font-family: $caption-font-family;
+p.caption,
+figcaption {
+  width: 100%;
+  text-align: center;
+  margin-top: -0.9em !important;
+  margin-bottom: 1.3em;
+  font-size: 0.7em !important;
+  color: $muted-text-color;
+  font-family: $caption-font-family;
 }
 p.video-caption {
-    text-align: center;
-    margin-top: -1.3em !important;
-    font-size: 0.7em !important;
+  text-align: center;
+  margin-top: -1.3em !important;
+  font-size: 0.7em !important;
 }
-div.fluid-width-video-wrapper{
-    margin-bottom: 1.3em;
+div.fluid-width-video-wrapper {
+  margin-bottom: 1.3em;
 }
 p img {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 .instagram-media {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 100% !important;
-    max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 /* Masthead stuff */
 .site-logo {
-    width: 3rem;
+  width: 3rem;
 }
-
 .site-logo img {
-    max-height: 3rem;
+  max-height: 3rem;
 }
-
 .masthead {
-    &__inner-wrap {
-        padding: 0.5em;
-    }
+  &__inner-wrap {
+    padding: 0.5em;
+  }
 }
 
 /* Generic font design stuff */
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    margin: 0.5em 0;
+  margin: 0.5em 0;
 }
-
-h3, h4, h5, h6 {
-    font-weight: 600;
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
 }
-
 blockquote {
-    margin: 1em 1em 1em 0;
+  margin: 1em 1em 1em 0;
 }
-
 nav {
-    ul {
-        padding: 0 0.5em 0 0;
-    }
+  ul {
+    padding: 0 0.5em 0 0;
+  }
 }
-
 .page__content {
-    h2 {
-        border: 0;
-    }
-    p,
-    li,
-    dl,
-    summary {
-        font-size: 0.8rem;
-    }
-    details summary::-webkit-details-marker {
-        font-size: 0.8em;
-    }
-    details summary::marker {
-        font-size: 0.8em;
-    }
-    ol,
-    ul {
-        padding-left: 1.32rem; /* (22(fontsize)*.8(em)*3)/40(boxpadding) */
-    }
+  h2 {
+    border: 0;
+  }
+  p,
+  li,
+  dl,
+  summary {
+    font-size: 0.8rem;
+  }
+  details summary::-webkit-details-marker {
+    font-size: 0.8em;
+  }
+  details summary::marker {
+    font-size: 0.8em;
+  }
+  ol,
+  ul {
+    padding-left: 1.32rem; /* (22(fontsize)*.8(em)*3)/40(boxpadding) */
+  }
 }
-
 .btn {
-    font-size: 0.9em;
+  font-size: 0.9em;
 }
 
 /* Gallery stuff */
 figure {
-    margin: 0;
+  margin: 0;
 }
-
 div.mfp-title a {
-    color: #f3f3f3;
+  color: #f3f3f3;
 }
-
-div.mfp-title a:hover, div.mfp-title a:active{
-    color: #cccccc;
+div.mfp-title a:hover,
+div.mfp-title a:active {
+  color: #cccccc;
 }
 
 /* Post: Table of contents */
 .toc {
-    .nav__title {
-        background: #6f777d;
+  .nav__title {
+    background: #6f777d;
+  }
+  .active a {
+    background-color: #e2e4e5;
+  }
+  ol,
+  ul {
+    padding-left: 0;
+    li {
+      font-size: 0.75rem;
     }
-    .active a {
-        background-color: #e2e4e5;
-    }
-    ol,
-    ul {
-        padding-left: 0;
-        li {
-            font-size: 0.75rem;
-        }
-    }
+  }
 }
