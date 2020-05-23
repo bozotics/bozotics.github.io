@@ -1,6 +1,22 @@
 ---
-title: test
+title: Elec \#1
 layout: reveal
+transition: fade
+elapsedTime: 5
 ---
 
-{% include_relative 1-slide.md %}
+## Electronics #1
+
+Transistors and some applications
+
+====
+
+{% include_relative 1-contents.md %}
+
+====
+
+{% include_relative 2-intro.md %}
+
+====
+
+### end
