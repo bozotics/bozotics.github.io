@@ -26,9 +26,10 @@ figcaption {
   font-family: $caption-font-family;
 }
 p.video-caption {
-  text-align: center;
-  margin-top: -1.3em !important;
-  font-size: 0.7em !important;
+    text-align: center;
+    margin-top: -1.3em !important;
+    font-size: 0.7em !important;
+    font-family: $caption-font-family;
 }
 div.fluid-width-video-wrapper {
   margin-bottom: 1.3em;
@@ -134,3 +135,50 @@ div.mfp-title a:active {
     }
   }
 }
+
+/* Accordion */
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.tab {
+    width: 100%;
+    overflow: hidden;
+    font-size: 0.8rem;
+    &-label {
+        display: flex;
+        justify-content: left;
+        padding-left: 0.3em;
+        font-weight: 600;
+        margin: 0;
+        cursor: pointer;
+        /* Icon */
+        &::before {
+            content: "\276F";
+            width: 1em;
+            height: 1em;
+            text-align: center;
+            transition: all .35s;
+        }
+    }
+    &-content {
+        max-height: 0;
+        padding: 0;
+        transition: all .35s;
+    }
+}
+
+// :checked
+input:checked {
+    + .tab-label {
+        &::before {
+            transform: rotate(90deg);
+            margin-top: 0.2em;
+        }
+    }
+    ~ .tab-content {
+        max-height: 100vh;
+    }
+}
+  
