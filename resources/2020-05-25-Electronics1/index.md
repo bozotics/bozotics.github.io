@@ -3,6 +3,7 @@ title: Elec \#1
 layout: reveal
 transition: fade
 elapsedTime: 5
+math: true
 ---
 
 ## Electronics #1
