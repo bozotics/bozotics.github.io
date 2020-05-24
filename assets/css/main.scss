@@ -74,6 +74,9 @@ h5,
 h6 {
   font-weight: 600;
 }
+h3 {
+  font-size: 1.125rem;
+}
 blockquote {
   margin: 1em 1em 1em 0;
 }
@@ -174,11 +177,18 @@ input:checked {
     + .tab-label {
         &::before {
             transform: rotate(90deg);
-            margin-top: 0.2em;
+            margin-top: 0.25em;
         }
     }
     ~ .tab-content {
-        max-height: 100vh;
+        max-height: 10000vh;
     }
+}
+
+/* Katex rendering */
+span.katex {
+    display: block;
+    text-align: center;
+    margin-bottom: 1em;
 }
   
