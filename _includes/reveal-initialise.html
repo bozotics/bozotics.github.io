@@ -1,0 +1,58 @@
+<script>
+	/*
+	More info about initialization & config:
+	- https://revealjs.com/initialization/
+	- https://revealjs.com/config/
+	*/
+	Reveal.initialize({
+		hash: true,
+		slideNumber: true,
+		transitionSpeed: "fast",
+		transition: "{{ page.transition | default: 'slide' }}",
+		fragments: true,
+		fragmentInURL: true,
+		hideInactivecursor: false,
+		chalkboard: {
+			theme: "whiteboard",
+			{% if page.chalkboard-save %}
+			src: "{{ page.dir }}assets/chalkboard.json",
+			{% endif %}
+			readOnly: false,
+			eraser: { src: '/assets/reveal-plugins/chalkboard/img/sponge.png', radius: 15},
+			boardmarkers: [
+				{ color: 'rgba(30,144,255, 1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-blue.png"), auto'},
+				{ color: 'rgba(220,20,60,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-red.png"), auto'},
+				{ color: 'rgba(50,205,50,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-green.png"), auto'},
+				{ color: 'rgba(255,140,0,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-orange.png"), auto'},
+				{ color: 'rgba(150,0,20150,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-purple.png"), auto'},
+				{ color: 'rgba(255,220,0,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-yellow.png"), auto'}
+			],
+			chalks: [
+				{ color: 'rgba(96, 154, 244, 0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-blue.png"), auto'},
+				{ color: 'rgba(237, 20, 28, 0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-red.png"), auto'},
+				{ color: 'rgba(20, 237, 28, 0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-green.png"), auto'},
+				{ color: 'rgba(220, 133, 41, 0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-orange.png"), auto'},
+				{ color: 'rgba(220,0,220,0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-purple.png"), auto'},
+				{ color: 'rgba(255,220,0,0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-yellow.png"), auto'}
+			]
+		},
+		notes_pointer: {
+			pointer: {
+				size: 20
+			}
+		},
+		dependencies: [
+			{ src: '/assets/reveal-plugins/chalkboard/chalkboard.js', async: true },
+			{ src: '/assets/reveal.js/plugin/zoom-js/zoom.js', async: true },
+			{ src: '/assets/reveal-plugins/notes-pointer/notes-pointer.js', async: true }
+		],
+		keyboard: {
+			67: function() { RevealChalkboard.toggleNotesCanvas() },	/* toggle notes canvas when 'c' is pressed */
+			66: function() { RevealChalkboard.toggleChalkboard() },	/* toggle chalkboard when 'b' is pressed */
+			8: function() { RevealChalkboard.clear() },	/* clear chalkboard when 'BACKSPACE' is pressed */
+			68: function() { RevealChalkboard.download() },	/* downlad recorded chalkboard drawing when 'd' is pressed */
+			88: function() { RevealChalkboard.colorNext() },	/* cycle colors forward when 'x' is pressed */
+			89: function() { RevealChalkboard.colorPrev() }	/* cycle colors backward when 'y' is pressed */
+		}
+	});
+</script>
