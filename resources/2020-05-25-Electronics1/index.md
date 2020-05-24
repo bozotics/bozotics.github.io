@@ -24,7 +24,7 @@ Transistors and some applications
 
 ==data-transition="slide-in"==
 
-{% include_relative 4-bjt.md %}
+{% include_relative 4-transistors.md %}
 
 ==data-transition="slide-in"==
 
