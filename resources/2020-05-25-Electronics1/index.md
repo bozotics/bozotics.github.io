@@ -9,14 +9,14 @@ elapsedTime: 5
 
 Transistors and some applications
 
-====
+==data-transition="slide-in"==
 
 {% include_relative 1-contents.md %}
 
-====
+==data-transition="slide-in"==
 
 {% include_relative 2-intro.md %}
 
-====
+==data-transition="slide-in"==
 
 ### end
