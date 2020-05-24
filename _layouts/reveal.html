@@ -79,6 +79,9 @@ layout: compress
 			hideInactivecursor: false,
 			chalkboard: {
 				theme: "whiteboard",
+				{% if page.chalkboard-save %}
+				src: "{{ page.dir }}assets/chalkboard.json",
+				{% endif %}
 				boardmarkers: [
 					{ color: 'rgba(30,144,255, 1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-blue.png"), auto'},
 					{ color: 'rgba(220,20,60,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-red.png"), auto'},
