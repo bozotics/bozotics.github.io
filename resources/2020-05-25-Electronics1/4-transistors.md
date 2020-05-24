@@ -1,5 +1,5 @@
 There are many different types of transistors, but the first important one made
-was the **bipolar junction transistor (BJT)**.
+was the <br/>**bipolar junction transistor (BJT)**
 
 {% include figure
 image_path="assets/BJT.svg"
@@ -7,14 +7,19 @@ alt="NPN BJT"
 caption="[NPN BJT](https://commons.wikimedia.org/wiki/File:BJT_NPN_symbol_(case).svg)"
 %}
 
-<span class="fragment">For switching a lightbulb, a BJT isn't suitable...</span>
+<span class="fragment"><small>It is commonly used as an amplifier, eg. for
+microphones and speakers</small></span>
+
+<span class="fragment"><small>For switching a lightbulb, a BJT isn't the most
+suitable...</small></span>
 
 <aside class="notes" markdown=1>
 
 Those who study H3 semicon prolly know this, but I didn't and that's not the
 point of this presentation anyways.
 
-Draw current flow, explain beta amplification value
+Draw current flow, explain beta amplification value, thus high voltage but low
+current since saturation and beta can only be certain value
 
 On PDF, go through saturation voltages and beta value
 
@@ -38,18 +43,19 @@ alt="N-ch MOSFET"
 caption="[N-ch MOSFET](https://commons.wikimedia.org/wiki/File:IGFET_N-Ch_Enh_Labelled.svg)"
 %}
 
-<span class="fragment">For a very high power lightbulb, power losses may become
-severe...</span>
+<span class="fragment"><small>For a very high power lightbulb, power losses may
+become severe...</small></span>
 
 <aside class="notes" markdown=1>
 
-Go through why it's good: the high input impedance, high beta value, so it is
-specifically made to be a switch
+Go through why it's good: the high input impedance, so it is specifically made
+to be a switch, can support high current
 
 But input parasitic capacitance issues, so must put a resistor to smooth the
 input current since constant charge
 
-But but relatively high output impedance, means output power losses
+But but relatively high output impedance, means output power losses, breakdown
+voltage relatively low
 
 [Good video explaining MOSFET](https://www.youtube.com/watch?v=o4_NeqlJgOs)
 
@@ -58,7 +64,7 @@ But but relatively high output impedance, means output power losses
 ====
 
 to solve the input issues of the MOSFET while acheiving the (relatively lower)
-output impedance of a BJT, a darlington pair configuration can be used
+output impedance of a BJT, a **darlington pair** configuration can be used
 
 {% include figure
 image_path="assets/darlington.png"
@@ -66,7 +72,8 @@ alt="darlington pair configuration"
 caption="[darlington pair configuration](https://circuitdigest.com/sites/default/files/inlineimages/u/Darlington-Transistor-Pair_0.png)"
 %}
 
-<span class="fragment">But Vce is doubled, so more power losses</span>
+<span class="fragment"><small>But Vce is doubled, so more power
+losses</small></span>
 
 ====
 
@@ -79,6 +86,9 @@ image_path="assets/igbt-circuit.png"
 alt="IGBT"
 caption="[IGBT](https://www.electronics-tutorials.ws/power/insulated-gate-bipolar-transistor.html)"
 %}
+
+<span class="fragment"><small>But this is usually a lot more expensive and
+large, for most cases it's overkill</small></span>
 
 <aside class="notes" markdown=1>
 

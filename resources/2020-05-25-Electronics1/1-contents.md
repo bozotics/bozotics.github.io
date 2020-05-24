@@ -2,6 +2,7 @@
 
 - Bipolar Junction Transistors
 - MOSFETs
+- Darlington Pair
 - IGBT
 
 ====

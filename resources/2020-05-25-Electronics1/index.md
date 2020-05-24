@@ -6,7 +6,7 @@ elapsedTime: 5
 math: true
 ---
 
-## Electronics #1
+## Electronics #1/4
 
 Transistors and some applications
 
@@ -25,6 +25,10 @@ Transistors and some applications
 ==data-transition="slide-in"==
 
 {% include_relative 4-transistors.md %}
+
+==data-transition="slide-in"==
+
+{% include_relative 5-applications.md %}
 
 ==data-transition="slide-in"==
 
