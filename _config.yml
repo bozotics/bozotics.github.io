@@ -176,6 +176,7 @@ plugins:
   - jemoji
   - jekyll-news-sitemap
   - jekyll-last-modified-at
+  - jekyll-email-protect
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -187,6 +188,7 @@ whitelist:
   - jemoji
   - jekyll-news-sitemap
   - jekyll-last-modified-at
+  - jekyll-email-protect
 
 # Archives
 #  Type

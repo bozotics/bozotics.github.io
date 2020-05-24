@@ -6,7 +6,7 @@ permalink: /contact/
 
 ## Email
 
-Drop us an email at [bozo@infocommsociety.com](mailto:bozo@infocommsociety.com)!
+Drop us an email at [bozo@infocommsociety.com](mailto:{{ 'bozo@infocommsociety.com' | encode_email }})!
 
 ---
 
