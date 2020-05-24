@@ -12,17 +12,39 @@ layout: compress
 
 	<link rel="stylesheet" href="/assets/reveal.js/css/reset.css" />
 	<link rel="stylesheet" href="/assets/reveal.js/css/reveal.css" />
-	<link rel="stylesheet" href="/assets/reveal.js/css/theme/night.css" id="theme" />
-	<link rel="stylesheet" href="/assets/css/reveal/night-custom.css" id="theme" />
-	<link rel="stylesheet" href="/assets/reveal.js/lib/css/monokai.css" id="highlight-theme" />
+	<link rel="stylesheet" href="/assets/reveal.js/css/theme/night.css" />
+	<link rel="stylesheet" href="/assets/css/reveal/night-custom.css" />
+	<link rel="stylesheet" href="/assets/reveal.js/lib/css/monokai.css" />
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '/assets/reveal.js/css/print/pdf.css' : '/assets/reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
 </head>
 
 <body>
 	{% include_cached browser-upgrade.html %}
+	{% assign processing_content = content | replace: '<p>==', ';;;;;;;;;;' | replace: '==</p>', ';;;;;;;;;;' | split: ';;;;;;;;;;' %}
+	{% capture processed_content %}
+	{% if processing_content.size > 1 %}
+		{% assign processing_size = processing_content.size | divided_by: 2 %}
+		{% for i in (1..processing_size) %}
+			{% assign array_index_even = i | minus: 1 | times: 2 %}
+			{{ processing_content[array_index_even] }}
+			{% assign array_index_odd = i | times: 2 | minus: 1 %}
+			{{ processing_content[array_index_odd] | replace: "’", "'" | replace: '”', '"' | prepend: '</section><section ' | append: '>' }}
+		{% endfor %}
+	{% else %}
+		{{ processing_content[0] }}
+	{% endif %}
+	{% endcapture %}
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				{{ content | replace: '<p>==', '</section><section ' | replace: '==</p>', '>' }}
+				{{ content | replace: '<p>==', '</section><section ' | replace: '==</p>', '>' | replace: "’", "'" | replace: '”', '"' }}
 			</section>
 		</div>
 	</div>
@@ -69,6 +91,7 @@ layout: compress
 			},
 			dependencies: [
 				{ src: '/assets/reveal-plugins/chalkboard.js' },
+				{ src: '/assets/reveal.js/plugin/zoom-js/zoom.js', async: true },
 				{ src: '/assets/reveal.js/plugin/notes/notes.js', async: true}
 			],
 			keyboard: {
