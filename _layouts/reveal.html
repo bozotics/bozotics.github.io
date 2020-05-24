@@ -37,14 +37,18 @@ layout: compress
 			{% assign array_index_odd = i | times: 2 | minus: 1 %}
 			{{ processing_content[array_index_odd] | replace: "’", "'" | replace: '”', '"' | prepend: '</section><section ' | append: '>' }}
 		{% endfor %}
+		{% assign odd_check = processing_content.size | modulo: 2 %}
+		{% if odd_check == 1 %}
+			{{ processing_content.last }}
+		{% endif %}
 	{% else %}
-		{{ processing_content[0] }}
+		{{ processing_content.first }}
 	{% endif %}
 	{% endcapture %}
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				{{ content | replace: '<p>==', '</section><section ' | replace: '==</p>', '>' | replace: "’", "'" | replace: '”', '"' }}
+				{{ processed_content }}
 			</section>
 		</div>
 	</div>
