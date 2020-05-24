@@ -20,4 +20,12 @@ Transistors and some applications
 
 ==data-transition="slide-in"==
 
+{% include_relative 3-relay.md %}
+
+==data-transition="slide-in"==
+
+{% include_relative 4-bjt.md %}
+
+==data-transition="slide-in"==
+
 ### end
