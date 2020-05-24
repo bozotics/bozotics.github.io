@@ -82,6 +82,7 @@ layout: compress
 				{% if page.chalkboard-save %}
 				src: "{{ page.dir }}assets/chalkboard.json",
 				{% endif %}
+				eraser: { src: '/assets/reveal-plugins/chalkboard/img/sponge.png', radius: 15},
 				boardmarkers: [
 					{ color: 'rgba(30,144,255, 1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-blue.png"), auto'},
 					{ color: 'rgba(220,20,60,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-red.png"), auto'},
