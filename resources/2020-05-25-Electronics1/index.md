@@ -1,9 +1,10 @@
 ---
 title: Elec \#1
 layout: reveal
-transition: fade
-elapsedTime: 5
 math: true
+reveal_options:
+  totalTime: 3600 # hours * 3600 seconds
+  transition: fade
 ---
 
 <style>

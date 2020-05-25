@@ -8,10 +8,20 @@
 		hash: true,
 		slideNumber: true,
 		transitionSpeed: "fast",
-		transition: "{{ page.transition | default: 'slide' }}",
 		fragments: true,
-		fragmentInURL: true,
+		fragmentInURL: false,
 		hideInactivecursor: false,
+		{% if page.reveal_options %}
+			{% if page.reveal_options.first.first %}
+		/* Reveal options generated from mapping */
+				{% for option in page.reveal_options %}
+		{{ option[0] }}: "{{ option[1] }}",
+				{% endfor %}
+			{% else %}
+		/* Reveal options generated from a list of strings */
+		{{ page.reveal_options | append: ',' }}
+			{% endif %}
+		{% endif %}
 		chalkboard: {
 			theme: "whiteboard",
 			{% if page.chalkboard-save %}
