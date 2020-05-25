@@ -20,6 +20,8 @@ chalkboard_save: true
 
 Transistors and some applications
 
+<figcaption><small>Press s for speaker notes, backspace to delete random annotations</small></figcaption>
+
 ==id="1-contents" data-transition="slide-in"==
 
 {% include_relative 1-contents.md %}
