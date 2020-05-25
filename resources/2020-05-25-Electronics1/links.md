@@ -11,5 +11,6 @@
 - {: .slide-menu-item}[Solenoid](#/7-solenoid)
 - {: .slide-menu-item}[End](#/end1)
 - {: .slide-menu-item}[VgsIssues](#/8-VgsIssues)
-- {: .slide-menu-item}[End for real](#/end2)
+- {: .slide-menu-item}[End for real](#/end2) <!-- prettier-ignore-start -->
 {:.slide-menu-items}
+<!-- prettier-ignore-end -->
