@@ -21,7 +21,8 @@ point of this presentation anyways.
 Draw current flow, explain beta amplification value, thus high voltage but low
 current since saturation and beta can only be certain value
 
-On PDF, go through saturation voltages and beta value
+On PDF, go through saturation voltages and beta value, teach how to read
+datasheet (the absolute max, recommended, graphs, what is important what isn't)
 
 switching is also relatively slow
 
@@ -57,6 +58,9 @@ input current since constant charge
 But but relatively high output impedance, means output power losses, breakdown
 voltage relatively low
 
+Explain graph, issues with V<sub>gs</sub>, usually use a charge pump to get
+voltage up
+
 [Good video explaining MOSFET](https://www.youtube.com/watch?v=o4_NeqlJgOs)
 
 </aside>
@@ -72,7 +76,7 @@ alt="darlington pair configuration"
 caption="[darlington pair configuration](https://circuitdigest.com/sites/default/files/inlineimages/u/Darlington-Transistor-Pair_0.png)"
 %}
 
-<span class="fragment"><small>But Vce is doubled, so more power
+<span class="fragment"><small>But V<sub>ce</sub> is doubled, so more power
 losses</small></span>
 
 ====

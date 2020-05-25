@@ -6,7 +6,14 @@ elapsedTime: 5
 math: true
 ---
 
-## Electronics #1/4
+<style>
+  figure.sizedImg {
+    height: 400px;
+    width: auto;
+  }
+</style>
+
+## Electronics #1
 
 Transistors and some applications
 
@@ -32,4 +39,26 @@ Transistors and some applications
 
 ==data-transition="slide-in"==
 
+{% include_relative 6-motor.md %}
+
+==data-transition="slide-in"==
+
+{% include_relative 7-solenoid.md %}
+
+==data-transition="slide-in"==
+
 ### end
+
+<aside class="notes" markdown=1>
+
+move on to next if there is time
+
+</aside>
+
+==data-transition="slide-in"==
+
+{% include_relative 8-VgsIssues.md %}
+
+==data-transition="slide-in"==
+
+### end real

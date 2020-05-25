@@ -10,7 +10,9 @@
 ## Contents: Applications
 
 - Low battery detection
-- Variable Resistor
+- Variable Resistor & Regulators
   - LDO
   - Buck Regulator
+  - Boost Regulator
 - Motor Driver
+- Solenoid Switch
