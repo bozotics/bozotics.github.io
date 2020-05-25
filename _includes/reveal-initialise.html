@@ -60,6 +60,12 @@
 			/* If slides do not have a matching title, attempt to use the */
 			/* start of the text content as the title instead */
 			useTextContentForMissingTitles: true,
+			{% if page.menu_options %}
+			/* menu options generated from a list of strings */
+			custom: [
+				{ title: 'Bookmarks', icon: '<i class="fas fa-bookmark">', src: '{{ page.menu_options }}' },
+			]
+			{% endif %}
 		},
 		dependencies: [
 			{ src: '/assets/reveal-plugins/elapsed-time-bar/elapsed-time-bar.js', async: true },

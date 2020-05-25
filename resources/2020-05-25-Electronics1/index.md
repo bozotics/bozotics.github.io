@@ -6,6 +6,7 @@ reveal_options:
   totalTime: 2700 # 45 min * 60 s
   allottedTime: 2700000 # 45 min * 60 s * 1000 ms
   transition: fade
+menu_options: links.html
 ---
 
 <style>
@@ -19,35 +20,35 @@ reveal_options:
 
 Transistors and some applications
 
-==data-transition="slide-in"==
+==id="1-contents" data-transition="slide-in"==
 
 {% include_relative 1-contents.md %}
 
-==data-transition="slide-in"==
+==id="2-intro" data-transition="slide-in"==
 
 {% include_relative 2-intro.md %}
 
-==data-transition="slide-in"==
+==id="3-relay" data-transition="slide-in"==
 
 {% include_relative 3-relay.md %}
 
-==data-transition="slide-in"==
+==id="4-transistors" data-transition="slide-in"==
 
 {% include_relative 4-transistors.md %}
 
-==data-transition="slide-in"==
+==id="5-applications" data-transition="slide-in"==
 
 {% include_relative 5-applications.md %}
 
-==data-transition="slide-in"==
+==id="6-motor" data-transition="slide-in"==
 
 {% include_relative 6-motor.md %}
 
-==data-transition="slide-in"==
+==id="7-solenoid" data-transition="slide-in"==
 
 {% include_relative 7-solenoid.md %}
 
-==data-transition="slide-in"==
+==id="end1" data-transition="slide-in"==
 
 ### end
 
@@ -57,10 +58,10 @@ move on to next if there is time
 
 </aside>
 
-==data-transition="slide-in"==
+==id="8-VgsIssues" data-transition="slide-in"==
 
 {% include_relative 8-VgsIssues.md %}
 
-==data-transition="slide-in"==
+==id="end2" data-transition="slide-in"==
 
-### end real
+### end for real
