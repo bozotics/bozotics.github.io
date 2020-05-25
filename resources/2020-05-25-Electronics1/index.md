@@ -3,7 +3,8 @@ title: Elec \#1
 layout: reveal
 math: true
 reveal_options:
-  totalTime: 3600 # hours * 3600 seconds
+  totalTime: 2700 # 45 min * 60 s
+  allottedTime: 2700000 # 45 min * 60 s * 1000 ms
   transition: fade
 ---
 
