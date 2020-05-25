@@ -6,6 +6,7 @@ reveal_options:
   allottedTime: 2700000 # 45 min * 60 s * 1000 ms
   transition: fade
 menu_options: links.html
+chalkboard_save: true
 ---
 
 <style>
