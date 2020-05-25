@@ -29,6 +29,8 @@
 			{% endif %}
 			readOnly: false,
 			eraser: { src: '/assets/reveal-plugins/chalkboard/img/sponge.png', radius: 15},
+			toggleChalkboardButton: { left: "80px" },
+			toggleNotesButton: { left: "130px" },
 			boardmarkers: [
 				{ color: 'rgba(30,144,255, 1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-blue.png"), auto'},
 				{ color: 'rgba(220,20,60,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-red.png"), auto'},
@@ -51,11 +53,20 @@
 				size: 20
 			}
 		},
+		menu: {
+			/* Add slide numbers to the titles in the slide list. */
+			/* Use 'true' or format string (same as reveal.js slide numbers) */
+			numbers: true,
+			/* If slides do not have a matching title, attempt to use the */
+			/* start of the text content as the title instead */
+			useTextContentForMissingTitles: true,
+		},
 		dependencies: [
 			{ src: '/assets/reveal-plugins/elapsed-time-bar/elapsed-time-bar.js', async: true },
 			{ src: '/assets/reveal-plugins/chalkboard/chalkboard.js', async: true },
 			{ src: '/assets/reveal.js/plugin/zoom-js/zoom.js', async: true },
-			{ src: '/assets/reveal-plugins/notes-pointer/notes-pointer.js', async: true }
+			{ src: '/assets/reveal-plugins/notes-pointer/notes-pointer.js', async: true },
+			{ src: '/assets/reveal-plugins/menu/menu.js', async: true }
 		],
 		keyboard: {
 			67: function() { RevealChalkboard.toggleNotesCanvas() },	/* toggle notes canvas when 'c' is pressed */
