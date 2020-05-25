@@ -1,7 +1,7 @@
 @import "minimal-mistakes/variables";
 
 $sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
-  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+	"Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 
 $monospace: "Fira Code", Monaco, Consolas, "Lucida Console", monospace !default;
 
@@ -9,33 +9,33 @@ $monospace: "Fira Code", Monaco, Consolas, "Lucida Console", monospace !default;
 @import "/assets/fonts/FiraCode/fira_code.css";
 
 .reveal {
-  font-family: $sans-serif;
-  cursor: url("/assets/images/pointer.png")25 25, pointer;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: $sans-serif;
-  }
-  code,
-  pre {
-    font-family: $monospace;
-  }
-  figcaption {
-    margin-bottom: 0.5em;
-    color: $muted-text-color;
-    font-family: $caption-font-family;
-    font-size: $type-size-6;
+	font-family: $sans-serif;
+	cursor: url("/assets/images/pointer.png") 25 25, pointer;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $sans-serif;
+	}
+	code,
+	pre {
+		font-family: $monospace;
+	}
+	figcaption {
+		margin-bottom: 0.5em;
+		color: $muted-text-color;
+		font-family: $caption-font-family;
+		font-size: $type-size-6;
 
-    a {
-      -webkit-transition: $global-transition;
-      transition: $global-transition;
+		a {
+			-webkit-transition: $global-transition;
+			transition: $global-transition;
 
-      &:hover {
-        color: $link-color-hover;
-      }
-    }
-  }
+			&:hover {
+				color: $link-color-hover;
+			}
+		}
+	}
 }
