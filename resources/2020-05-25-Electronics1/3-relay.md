@@ -25,11 +25,9 @@ component is a major problem...
 
 ∴ A "digital" solution is required
 
-</section>
-
-<section id="arc-video" data-transition="slide"
+==id="arc-video" data-transition="slide"
 data-background-iframe="https://www.youtube.com/embed/mQpzwR7wLeo?start=375"
-data-background-interactive>
+data-background-interactive==
 
 <aside class="notes" markdown=1>
 
