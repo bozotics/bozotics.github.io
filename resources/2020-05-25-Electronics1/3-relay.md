@@ -14,20 +14,15 @@ component is a major problem...
 
 ====
 
-<section markdown=1 data-transition="slide">
-
 ### Problems
 
 - slow
 - prone to hardware failure
 - big
-- [arcing](#/arc-video)
+- [arcing](https://www.youtube.com/embed/mQpzwR7wLeo?start=375){:
+  data-preview-link="true"}
 
 ∴ A "digital" solution is required
-
-==id="arc-video" data-transition="slide"
-data-background-iframe="https://www.youtube.com/embed/mQpzwR7wLeo?start=375"
-data-background-interactive==
 
 <aside class="notes" markdown=1>
 
@@ -35,4 +30,3 @@ Also, relays are commonly only used in AC circuits due to the zero-crossing
 nature that will prevent arcing
 
 </aside>
-</section>

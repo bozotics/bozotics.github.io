@@ -2,16 +2,13 @@
 
 ### Driving a linear solenoid
 
-We usually run the solenoids at ~60V, ~2A. This results in huge spikes in
-current and voltage we have to contain.
+We usually run the [solenoids](https://www.youtube.com/embed/Ueio1qoXRbE){:
+data-preview-link="true"} at ~60V, ~2A. This results in huge spikes in current
+and voltage we have to contain.
 
 We first used a relay, but we experienced [arcing](#/arc-video) due to this
 [large power draw](#/solenoid-scope) and
 [inductive nature](#/solenoid-inductive) of the solenoid.
-
-==data-transition="slide"
-data-background-iframe="https://www.youtube.com/embed/Ueio1qoXRbE"
-data-background-interactive==
 
 <aside class="notes" markdown=1>
 
