@@ -175,7 +175,6 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jemoji
   - jekyll-news-sitemap
   - jekyll-last-modified-at
   - jekyll-email-protect
@@ -187,7 +186,6 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jemoji
   - jekyll-news-sitemap
   - jekyll-last-modified-at
   - jekyll-email-protect
