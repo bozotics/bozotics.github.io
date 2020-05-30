@@ -21,7 +21,7 @@ Maybe talk about the huge capacitor?
 ### Current spikes
 
 {% include figure
-image_path="assets/solenoid-oscilloscope.jpg"
+image_path="/_resources/2020-05-25-Electronics1/assets/solenoid-oscilloscope.jpg"
 class="sizedImg"
 alt="Oscilloscope reading of voltage across 0.4Ω resistor"
 caption="Oscilloscope reading of voltage across 0.4Ω resistor"
@@ -38,7 +38,7 @@ point out negative and huge current flowing through (0.4Ω 5v = >10A)
 ### Solenoid's inductive nature
 
 {% include figure
-image_path="assets/solenoid-cross-section.png"
+image_path="/_resources/2020-05-25-Electronics1/assets/solenoid-cross-section.png"
 class="sizedImg"
 alt="Linear solenoid cross section"
 caption="[Linear solenoid cross section](https://www.electronics-tutorials.ws/io/io_6.html)"
@@ -58,7 +58,7 @@ keep increasing and building up until MOSFET diode reaches breakdown voltage
 ### MOSFET switch
 
 {% include figure
-image_path="assets/solenoid-mosfet-noflyback.svg"
+image_path="/_resources/2020-05-25-Electronics1/assets/solenoid-mosfet-noflyback.svg"
 alt="Using a MOSFET to switch a solenoid...?"
 caption="Using a MOSFET to switch a solenoid...?"
 %}
@@ -77,7 +77,7 @@ keep increasing and building up until MOSFET diode reaches breakdown voltage
 ### Flyback diode
 
 {% include figure
-image_path="assets/solenoid-mosfet-withflyback.svg"
+image_path="/_resources/2020-05-25-Electronics1/assets/solenoid-mosfet-withflyback.svg"
 alt="Adding flyback diode to contain inductive 'kickback'"
 caption="Adding flyback diode to contain inductive 'kickback'"
 %}
@@ -87,7 +87,7 @@ caption="Adding flyback diode to contain inductive 'kickback'"
 ### Zener diode
 
 {% include figure
-image_path="assets/solenoid-mosfet-withzener.svg"
+image_path="/_resources/2020-05-25-Electronics1/assets/solenoid-mosfet-withzener.svg"
 alt="Adding zener diode to dissipate energy"
 caption="Adding zener diode to dissipate energy"
 %}

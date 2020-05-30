@@ -1,7 +1,7 @@
 ### Brushed Motor
 
 {% include figure
-image_path="assets/dc-motor.gif"
+image_path="/_resources/2020-05-25-Electronics1/assets/dc-motor.gif"
 class="sizedImg"
 alt="Brushed DC Motor GIF"
 caption="[Brushed DC Motor GIF](https://commons.wikimedia.org/wiki/File:Electric_motor.gif)"
@@ -25,7 +25,7 @@ alternate directions in the vertical part
 ### Full Bridge Rectifier
 
 {% include figure
-image_path="assets/fullbridge.gif"
+image_path="/_resources/2020-05-25-Electronics1/assets/fullbridge.gif"
 alt="Full bridge rectifier GIF"
 caption="[Full bridge rectifier GIF](https://commons.wikimedia.org/wiki/File:Diodebridge-eng.gif)"
 %}
@@ -47,7 +47,7 @@ the vertical DC part
 ### H-Bridge
 
 {% include figure
-image_path="assets/h-bridge.svg"
+image_path="/_resources/2020-05-25-Electronics1/assets/h-bridge.svg"
 alt="H-Bridge"
 caption="[H-Bridge](https://commons.wikimedia.org/wiki/File:H_bridge.svg)"
 %}
@@ -64,7 +64,7 @@ speed...?
 ### Motor Driver
 
 {% include figure
-image_path="assets/vnh5019-blockdiag.png"
+image_path="/_resources/2020-05-25-Electronics1/assets/vnh5019-blockdiag.png"
 class="sizedImg"
 alt="Motor Driver Block Diagram"
 caption="[Motor Driver Block Diagram](https://www.st.com/en/automotive-analog-and-power/vnh5019a-e.html)"

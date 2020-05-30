@@ -1,7 +1,7 @@
 ### Transistors?
 
 {% include figure
-image_path="assets/the-economist-moores-law.svg"
+image_path="/_resources/2020-05-25-Electronics1/assets/the-economist-moores-law.svg"
 alt="Moore's Law in The Economist"
 caption="Moore's Law in [_The Economist_](https://www.economist.com/node/21693710/sites/all/modules/custom/ec_essay)"
 %}
@@ -25,7 +25,7 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Transistor):
 ====
 
 {% include figure
-image_path="assets/battery-switch-bulb.png"
+image_path="/_resources/2020-05-25-Electronics1/assets/battery-switch-bulb.png"
 alt="Normal way to switch a light bulb"
 caption="Normal way to switch a light bulb"
 %}
@@ -45,7 +45,7 @@ You will need a Microcontroller to do that...
 ====
 
 {% include figure
-image_path="assets/arduino-direct-bulb.png"
+image_path="/_resources/2020-05-25-Electronics1/assets/arduino-direct-bulb.png"
 alt="Arduino switching a light bulb?"
 caption="Arduino switching a light bulb?"
 %}
@@ -80,7 +80,7 @@ much amps a lightbulb requires...
 ====
 
 {% include figure
-image_path="assets/phillips-LED-wattage.png"
+image_path="/_resources/2020-05-25-Electronics1/assets/phillips-LED-wattage.png"
 alt="Phillips LED Bulb Wattage"
 caption="[Phillips LED Bulb Wattage](https://www.lighting.philips.com.sg/consumer/led-lights/eco-friendly-led-light)"
 %}
@@ -98,7 +98,7 @@ $$Amps=0.5A>>>0.04A$$ 💥
 ====
 
 {% include figure
-image_path="assets/arduino-controlling-switch.png"
+image_path="/_resources/2020-05-25-Electronics1/assets/arduino-controlling-switch.png"
 alt="What if the Arduino could control the switch?"
 caption="What if the Arduino could control the switch?"
 %}

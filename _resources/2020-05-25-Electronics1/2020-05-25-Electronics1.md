@@ -1,20 +1,13 @@
 ---
 title: Elec \#1
-layout: reveal
 reveal_options:
   totalTime: 2700 # 45 min * 60 s
   allottedTime: 2700000 # 45 min * 60 s * 1000 ms
   transition: fade
-menu_options: links.html
-chalkboard_save: true
+menu_options: /_resources/2020-05-25-Electronics1/assets/links.html
+chalkboard_save: /_resources/2020-05-25-Electronics1/assets/chalkboard.json
+permalink: /resources/2020-05-25-Electronics1/ # just for this one since the link is sent
 ---
-
-<style>
-  figure.sizedImg {
-    height: 400px;
-    width: auto;
-  }
-</style>
 
 ## Electronics #1
 

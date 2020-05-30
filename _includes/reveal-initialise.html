@@ -25,7 +25,7 @@
 		chalkboard: {
 			theme: "whiteboard",
 			{% if page.chalkboard_save %}
-			src: "{{ page.dir }}assets/chalkboard.json",
+			src: "{{ page.chalkboard_save }}",
 			{% endif %}
 			readOnly: false,
 			eraser: { src: '/assets/reveal-plugins/chalkboard/img/sponge.png', radius: 15},

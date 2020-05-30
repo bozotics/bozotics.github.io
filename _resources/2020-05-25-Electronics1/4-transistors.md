@@ -3,7 +3,7 @@ was the
 **bipolar junction transistor (BJT)**
 
 {% include figure
-image_path="assets/BJT.svg"
+image_path="/_resources/2020-05-25-Electronics1/assets/BJT.svg"
 alt="NPN BJT"
 caption="[NPN BJT](https://commons.wikimedia.org/wiki/File:BJT_NPN_symbol_(case).svg)"
 %}
@@ -40,7 +40,7 @@ of transistor, the gate is insulated from the rest of circuit thus there is low
 input current and high input impedance
 
 {% include figure
-image_path="assets/mosfet.svg"
+image_path="/_resources/2020-05-25-Electronics1/assets/mosfet.svg"
 alt="N-ch MOSFET"
 caption="[N-ch MOSFET](https://commons.wikimedia.org/wiki/File:IGFET_N-Ch_Enh_Labelled.svg)"
 %}
@@ -72,7 +72,7 @@ to solve the input issues of the MOSFET while acheiving the (relatively lower)
 output impedance of a BJT, a **darlington pair** configuration can be used
 
 {% include figure
-image_path="assets/darlington.png"
+image_path="/_resources/2020-05-25-Electronics1/assets/darlington.png"
 alt="darlington pair configuration"
 caption="[darlington pair configuration](https://circuitdigest.com/sites/default/files/inlineimages/u/Darlington-Transistor-Pair_0.png)"
 %}
@@ -87,7 +87,7 @@ of a BJT, high input impedance and high switching speed of a MOSFET to make a
 very high powered transistor.
 
 {% include figure
-image_path="assets/igbt-circuit.png"
+image_path="/_resources/2020-05-25-Electronics1/assets/igbt-circuit.png"
 alt="IGBT"
 caption="[IGBT](https://www.electronics-tutorials.ws/power/insulated-gate-bipolar-transistor.html)"
 %}
