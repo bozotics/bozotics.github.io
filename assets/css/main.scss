@@ -226,11 +226,11 @@ details[open] {
 	@keyframes sweep {
 		0% {
 			opacity: 0;
-			margin-top: -1em;
+			transform: translate(0, -2em);
 		}
 		100% {
 			opacity: 1;
-			margin-top: 0;
+			transform: translate(0, 0);
 		}
 	}
 }
