@@ -198,6 +198,11 @@ details {
 		list-style: none;
 		&:focus {
 			outline: 0;
+			/* TODO: enable outline with keyboard interactions
+			* https://github.com/mmistakes/minimal-mistakes/blob/cf398b07abae52eb38b65ecfd42ecd5a56f680dc/_sass/minimal-mistakes/_mixins.scss#L5
+			* http://www.outlinenone.com/
+			* https://github.com/WICG/focus-visible
+			*/
 		}
 		&::-webkit-details-marker {
 			display: none;
