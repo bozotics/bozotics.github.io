@@ -107,12 +107,6 @@ nav {
 	summary {
 		font-size: 0.8rem;
 	}
-	details summary::-webkit-details-marker {
-		font-size: 0.8em;
-	}
-	details summary::marker {
-		font-size: 0.8em;
-	}
 	ol,
 	ul {
 		padding-left: 1.32rem; /* (22(fontsize)*.8(em)*3)/40(boxpadding) */
