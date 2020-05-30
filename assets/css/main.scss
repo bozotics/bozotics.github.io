@@ -199,6 +199,7 @@ details {
 	summary {
 		cursor: pointer;
 		list-style: none;
+		outline: 0;
 	}
 	summary::before {
 		content: "\276F";
