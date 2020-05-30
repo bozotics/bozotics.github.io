@@ -211,7 +211,13 @@ details {
 
 details[open] {
 	summary::before {
-		transform: rotate(90deg);
+		animation: rotate 0.3s ease-in-out forwards;
+	}
+
+	@keyframes rotate {
+		100% {
+			transform: rotate(90deg);
+		}
 	}
 
 	summary ~ * {
