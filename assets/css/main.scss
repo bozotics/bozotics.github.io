@@ -152,7 +152,7 @@ div.mfp-title a:active {
 }
 
 /* Accordion */
-input {
+input:not(.search-input) {
 	position: absolute;
 	opacity: 0;
 	z-index: -1;
