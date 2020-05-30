@@ -232,6 +232,8 @@ collections:
     output: true
   rescue:
     output: true
+  resources:
+    output: true
 
 # Defaults
 defaults:
@@ -293,6 +295,13 @@ defaults:
       sidebar:
         nav: "side-rescue"
       date: 2020-05-02 00:00:00
+  # _resources
+  - scope:
+      path: ""
+      type: resources
+    values:
+      layout: reveal
+      permalink: /resources/:title/
   - scope:
       path: "assets/**"
     values:
