@@ -212,21 +212,12 @@ details {
 	}
 
 	&[open] {
-		summary::before {
-			animation: rotate 0.3s ease-in-out forwards;
-		}
-	
-		@keyframes rotate {
+		@keyframes openrotate {
 			100% {
 				transform: rotate(90deg);
 			}
 		}
-	
-		summary ~ * {
-			animation: sweep 0.5s ease-in-out;
-		}
-	
-		@keyframes sweep {
+		@keyframes opensweep {
 			0% {
 				opacity: 0;
 				transform: translate(0, -2em);
@@ -236,6 +227,44 @@ details {
 				transform: translate(0, 0);
 			}
 		}
+		summary::before {
+			animation: openrotate 0.3s ease-in-out forwards;
+		}
+		summary ~ * {
+			animation: opensweep 0.5s ease-in-out;
+		}
+	}
+
+	&:not([open]) {
+		@keyframes closerotate {
+			0% {
+				transform: rotate(90deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+		/*
+		@keyframes closesweep {
+			0% {
+				opacity: 1;
+				transform: translate(0, -1em);
+				height: 300px;
+			}
+			100% {
+				opacity: 0;
+				transform: translate(0, -3em);
+				height: 0;
+			}
+		}*/
+		summary::before {
+			animation: closerotate 0.3s ease-in-out forwards;
+		}
+		/*
+		summary ~ * {
+			animation: closesweep 3s ease-in-out;
+		}
+		*/
 	}
 }
 
