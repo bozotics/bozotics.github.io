@@ -193,46 +193,48 @@ input:checked {
 
 // details disclosure
 details {
-	summary::-webkit-details-marker {
-		display: none;
-	}
 	summary {
 		cursor: pointer;
 		list-style: none;
-		outline: 0;
-	}
-	summary::before {
-		content: "\276F";
-		display: inline-flex;
-		margin-right: 0.4em;
-		font-weight: 600;
-		font-size: 0.9em;
-	}
-}
-
-details[open] {
-	summary::before {
-		animation: rotate 0.3s ease-in-out forwards;
-	}
-
-	@keyframes rotate {
-		100% {
-			transform: rotate(90deg);
+		&:focus {
+			outline: 0;
+		}
+		&::-webkit-details-marker {
+			display: none;
+		}
+		&::before {
+			content: "\276F";
+			display: inline-flex;
+			margin-right: 0.4em;
+			font-weight: 600;
+			font-size: 0.9em;
 		}
 	}
 
-	summary ~ * {
-		animation: sweep 0.5s ease-in-out;
-	}
-
-	@keyframes sweep {
-		0% {
-			opacity: 0;
-			transform: translate(0, -2em);
+	&[open] {
+		summary::before {
+			animation: rotate 0.3s ease-in-out forwards;
 		}
-		100% {
-			opacity: 1;
-			transform: translate(0, 0);
+	
+		@keyframes rotate {
+			100% {
+				transform: rotate(90deg);
+			}
+		}
+	
+		summary ~ * {
+			animation: sweep 0.5s ease-in-out;
+		}
+	
+		@keyframes sweep {
+			0% {
+				opacity: 0;
+				transform: translate(0, -2em);
+			}
+			100% {
+				opacity: 1;
+				transform: translate(0, 0);
+			}
 		}
 	}
 }
