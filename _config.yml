@@ -302,6 +302,7 @@ defaults:
     values:
       layout: reveal
       permalink: /resources/:title/
+      show_date: true
   - scope:
       path: "assets/**"
     values:

@@ -1,5 +1,5 @@
 ---
-title: Elec \#1
+title: ⚡ Electronics Lesson \#1
 reveal_options:
   totalTime: 2700 # 45 min * 60 s
   allottedTime: 2700000 # 45 min * 60 s * 1000 ms
@@ -9,7 +9,7 @@ chalkboard_save: /_resources/2020-05-25-Electronics1/assets/chalkboard.json
 permalink: /resources/2020-05-25-Electronics1/ # just for this one since the link is sent
 ---
 
-## Electronics #1
+## ⚡ Electronics #1
 
 Transistors and some applications
 
