@@ -1,5 +1,6 @@
 ---
 title: ⚡ Electronics Lesson \#2
+excerpt: Communication, interference, and how everything fits together
 reveal_options:
   totalTime: 2700 # 45 min * 60 s
   allottedTime: 2700000 # 45 min * 60 s * 1000 ms

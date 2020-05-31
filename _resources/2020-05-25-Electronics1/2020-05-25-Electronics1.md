@@ -1,5 +1,6 @@
 ---
 title: ⚡ Electronics Lesson \#1
+excerpt: Transistors and some applications
 reveal_options:
   totalTime: 2700 # 45 min * 60 s
   allottedTime: 2700000 # 45 min * 60 s * 1000 ms
