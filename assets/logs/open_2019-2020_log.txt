@@ -1,0 +1,237 @@
+OPEN Combined Log
+
+OPEN V1
+9/8/19
+-Modeling start
+-Shrunk first layer, mounted motors+solenoid
+
+10/8/19
+-Shrunk second layer
+-Dribbler: Motor, gears, 2 main side plates, rollers
+
+11/8/19
+-Dribbler: gear cover, pivot mounts, spring hook
+-Dribbler v1 completed
+-Mounted battery
+
+12/8/19
+-Mounted battery
+-Shrunk third layer
+-Light gate
+-Switch placement
+
+13/8/19
+-Arranging third layer components
+
+14/8/19
+-Printed dribbler
+
+15/8/19
+-Building start
+-Cut first and second layer on metal plate
+-Assembled robot up to dribbler
+
+(T3 CT + Drones + EOY)
+
+14/10/19
+-Reassembled robot with acrylic cut plates
+
+(15/10/19 to 19/10/19 building room 3D model)
+
+20/10/19
+-Experimented with mirror shape, tried simple spline and cone+spline (cone + spline better)
+
+21/10/19
+-Had to resketch first and second layer plates because they were asymmetrical by 0.071mm kill me now🙃
+-Moved dribbler outwards by 3mm (changed 2nd layer plate + dribbler outer plates)
+-Redesigned dribbler spring holder to be pushed inwards to avoid hitting the ball and away from motor to make sure the spring does not hit the motor
+-Reassembled new dribbler (spring needs to be weaker)
+
+23/10/19
+-Designed switch mount/back battery clamp
+-Modified 2nd layer switch hole to be larger to fit switch vertically
+-Made opposite hole larger too for symmetry
+
+24/10/19
+-Tested some esc positions, concluded that esc should be between dribbler and 3rd layer
+-3rd layer raised to 50mm to accomodate
+-Experimented with 3D printed clips for attaching esc to dribbler
+
+25/10/19
+-Designed and partially assembled pivoting gate clamp for battery holder
+-Pivoting gate blocks battery path because it cannot retract fully because of 2nd layer plate itself
+
+OPEN V1.1
+26/10/19
+-Moved battery to the left as original design did not allow for wires to go through the right side and putting it through the left side blocks the battery from being slotted in
+-Changed 2nd layer to fit switch directly into the plate itself
+-Redesigned whole battery slot
+-Redesigned battery gate to be up-down motion
+-Esc will be ziptied to 3rd layer instead
+
+27/10/19
+-Assembled working battery slot, including gate using Sarasa pen springs
+-Sawed 3rd layer using metal plate
+-Made screen not angled thinking that camera plate will be too large
+-Placed raspi in the front (facing left), maplemini, teensy and screen at the back
+-Mirror render showed component positions must be pushed more inwards by a lot especially if they are elevated
+
+-Calculated that 4th layer pcb must be above camera because of TOF height
+-Should probably try making screen angled directly above raspi again to save more space
+
+28/10/19
+-Kept on rearranging raspi, camera, screen and other components to find space
+-If screen above raspi, height too high, blocks camera plate
+-Current arrangement cannot directly mount camera plate to 3rd layer (might need to do trapezium mounts again)
+-Mirror mount will be separate from camera module mount
+
+29/10/19
+-Reconceptualization of whole camera module
+-Camera + camera cone cover screwed directly on top of 4th layer pcb, tof mounts screwed on top of camera cone cover legs with 10mm standoffs
+-TOF wires routed through the 3D printed mount's holes to 4th layer pcb
+-Compass should be mounted underneath the 4th layer pcb
+
+OPEN V1.2
+29/10/19
+-Decision made that screen will be detached during actual match (footprint now just female pins) (MORE SPACEEEE)
+
+
+30/10/19
+-Moved raspi to middle of 3rd layer, directly under camera plate
+-Designed clips that clamp onto esc wires so that esc is mounted using that instead of zipties (make space for top side of 3rd layer)
+-Teensy reoriented to be parallel with raspi
+-Changed 4th layer pcb from square to circle for more mounting area
+-Compass will be mounted directly to 3rd layer pcb now (no space under 4th layer because raspi is there now)
+-Designed trapezium mounts that cross horizontally across instead of vertically (raspi ports blocking way for vertically crossing mounts)
+-Trapezium mounts connected by copper stands with plates which mount under the 4th layer pcb for extra stability
+-Taobao items officially bought
+
+31/10/19
+-Designed metal top bumper
+-Finished battery front gate 2nd level
+-Camera plate under mount that has a stand crossing directly under the camera will hit the camera; stand is removed, under mount is directly screwed onto each side of the trapezium mount
+-Started assembly of whole camera module
+
+1/11/19
+-Designed and constructed handle
+-Removed metal top bumper because it was blocking too much of the view
+-3rd layer modified to have a small arm extending out to the handles' copper stands to provide stability (necessity to be confirmed)
+-Designed and printed stands for the mirror plate (stands attached to the camera plate, so mirror will definitely be at centre of camera)
+-Designed accompanying mirror plate
+-Finished assembly and mounting of camera module including trapezium stands
+
+OPEN V1.3
+2/11/19
+-Decision to manufacture mirror through CNC lathe + self-polishing
+-Made mirror bigger to utilise full horizontal FOV of robot
+-Changed mirror plate and mirror stands to accommodate bigger mirror
+-Bigger mirror seems to be seeing too much
+-OPT BETWEEN moving mirror down or changing shape of mirror
+-Added rectangle holes behind dribbler on 2nd layer to allow more space for other wires to pass through
+
+7/11/19
+-Changed mirror shape+plate+stands
+-QR code shall be printed on top of mirror plate
+-Placed SMD LED in ring position
+-Cleaned up workspace, changed all 2D plate drawing holes to 3mm holes
+
+12/11/19
+-Reassembled robot to 1st and 2nd layer
+-Ran dribbler
+-Problems with spring strength, vibrations of whole dribbler causing ball to be uncontrollable and jumpy + ball doesn't move all the way into catchment area
+
+13/11/19
+-Tried moving dribbler forward by 2mm to reduce distance pivoted by dribbler
+-More stable now but still going to try weaker spring and using damper
+-Reassembled (and printed parts for) remaining of whole robot
+
+14/11/19
+-Tried polishing metal plate directly and sanding followed by polishing
+-Sand+polish had terrible results, worse off than before; polish directly had subpar results, plate was reflective enough see reflection but it is still VERY scratched and has a diminished image
+-Messed around with SPI but it doesn't work very well
+
+PROGRAMMING stuff starts
+15/11/19
+-Messed around with STM32 chip programming
+-Downloaded STM32Cube IDE + STM32Cube Programmer and bought STLink programmer, can probably experiment with ARM programming when the STLink arrives
+
+16/11/19
+-Came up with offensive manoeuvres for all robot combinations (2v2, 2v1, 1v2, 1v1)
+
+18/11/19
+-Started making top-down simulation of field
+-Using Python with the Arcade and Pymunk libraries to make it
+
+19/11/19
+-Finished making environment (added friction)
+-Finished making physics and controls of robot and ball
+
+22/11/19
+-Finished making robot basic program without detection (no return), goal aiming, back dribbling (still need to fix)
+
+26/11/19
+-Hand sketched "Transcendence" ambigram
+
+27/11/19
+-Created "Transcendence" ambigram in CAD
+-Messed around with handle designs
+-Tried Meguiars metal polish on aluminium sheet seems to be great improvement from Autosol results
+
+28/11/19
+-Handle: lion + dinosaur eating hand 🙃
+-Created obstacle avoidance in simulation (using orbit movement)
+
+1/12/19
+-Converted maze to 3D, placed on mirror plate
+
+26/12/19
+-Sanded+polished mirror, image is workable but scratches still quite visible
+-Changed dribbler spring to weaker spring, performance slightly better but worn out rollers should be changed out
+
+27/12/19
+-Resanded mirror with wet sanding, scratches cleared up slightly but still visible but image should be good enough so just keep with this
+-Redesigned mirror plate to be supported by the four copper stands from the trapezium supports on third layer
+-Redesigned handle to be supported from those four copper stands too
+
+28/12/19
+-Printed mirror plate with maze
+-Sawed new handle
+
+30/12/19
+-Placed stm32 on camera plate pcb + pins for ESC
+-Assembled 2nd dribbler to test with new rollers but with old pivot mount, dribbler now pivots way too much
+
+OPEN V1.4
+31/12/19
+-Arranged more electrical components for 3rd layer
+-Added stands coming from trapezium mount that support the mirror plate closer to the mirror to prevent wobbling
+
+1/1/20
+-OPEN V1.41: Added materials + recolour
+
+1/20 (going for a monthly overview from here since everything is basically done)
+- dribbler had the stupid problem of NOT DRIBBLING because the ball keeps on bouncing out
+- fixed it by putting a "ski ramp" at the bottom
+- all major electrical components got arranged, layouts all finalised, pcb to be made by first week of feb
+- did not really do much this month since more focus was placed on lightweight + there really isn't much left to do...
+
+2/20
+OPEN V1.5
+- small knick-knacks, itsy-bitsy changes to layer plates to fit the electronics stuff
+- changed big switch to missile switch for absolutely no reason
+- robot got partially reassembled with a working 4th layer i.e. neopixel ring
+- made 1 more dribbler
+
+3/20
+- added words to the mirror plate
+- changed maze to have wider walls so now it actually works as a ball maze good job me
+- changed the motor spacer to have a little indent so it doesn't hit the motor driver
+- remade rollers for the old dribbler (which were super chamfered and dead) - the old dribbler's gear epoxy somehow died too, so I re-epoxyed it, now it works again
+- for dribbler on the solenoid side, the ball still hits the solenoid plate which causes the old problem of the ball bouncing in and out,
+- easy fix would be to push the solenoid back but I can't exactly magically move the screw holes of the PCB magically :(( Made the solenoid plate thinner and pushed the dribbler+ski ramp combo outwards abit and it was kinda fixed, but somehow my new dribbler has worse grip than my older one??
+
+4/20
+- this month doesn't exist
+
+5/20
+- made new TOF holder for new TOFs
