@@ -1,5 +1,5 @@
 {% include figure
-image_path="/_resources/2020-05-25-Electronics1/assets/relay.svg"
+image_path="/assets/resources-assets/2020-05-25-Electronics1/relay.svg"
 alt="Electromechanical switch: Relay"
 caption='[Electro<span class="fragment highlight-red">mechanical</span> switch: Relay](https://commons.wikimedia.org/wiki/File:SPST-NO_relay_symbol.svg)'
 %}

@@ -3,7 +3,7 @@
 ### MOSFET V<sub>gs</sub> Threshold Issues
 
 {% include figure
-image_path="/_resources/2020-05-25-Electronics1/assets/solenoid-mosfet-withzener.svg"
+image_path="/assets/resources-assets/2020-05-25-Electronics1/solenoid-mosfet-withzener.svg"
 alt="'CONTROL' voltage of 3.3v to drive MOSFET?"
 caption="'_CONTROL_' voltage of 3.3v to drive MOSFET?"
 %}
@@ -20,7 +20,7 @@ to R<sub>ds</sub> power losses
 ### Using 12v battery as gate drive
 
 {% include figure
-image_path="/_resources/2020-05-25-Electronics1/assets/mosfet-12v-gate-drive.svg"
+image_path="/assets/resources-assets/2020-05-25-Electronics1/mosfet-12v-gate-drive.svg"
 alt="Using 12v for gate drive"
 caption="Using 12v for gate drive"
 %}

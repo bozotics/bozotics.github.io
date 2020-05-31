@@ -67,10 +67,6 @@ footer:
 include:
   - .htaccess
   - _pages
-  - _open
-  - _lightweight
-  - _rescue
-  - _resources
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
