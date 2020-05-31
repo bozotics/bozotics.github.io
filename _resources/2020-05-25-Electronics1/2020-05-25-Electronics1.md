@@ -6,7 +6,8 @@ reveal_options:
   transition: fade
 menu_options: /_resources/2020-05-25-Electronics1/assets/links.html
 chalkboard_save: /_resources/2020-05-25-Electronics1/assets/chalkboard.json
-permalink: /resources/2020-05-25-Electronics1/ # just for this one since the link is sent
+redirect_from: /resources/2020-05-25-Electronics1/ # just for this one since the link is sent
+permalink: /resources/Electronics1/
 ---
 
 ## ⚡ Electronics #1
