@@ -157,7 +157,7 @@ pagination:
   # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
   title: ":title (page :num of :max)"
 
-  # Optional, sorts the posts in reverse order (omit to default decending or sort_reverse: true)
+  # Optional, sorts the posts in reverse order (omit to default descending or sort_reverse: true)
   sort_reverse: true
 
   # Optional,omit or set both before and after to zero to disable.
