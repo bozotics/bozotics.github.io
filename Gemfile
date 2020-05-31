@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem 'kramdown-math-katex'
   gem 'katex'
   gem 'execjs'
+  gem 'jekyll-redirect-from'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

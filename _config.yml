@@ -178,6 +178,7 @@ plugins:
   - jekyll-news-sitemap
   - jekyll-last-modified-at
   - jekyll-email-protect
+  - jekyll-redirect-from
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -189,6 +190,7 @@ whitelist:
   - jekyll-news-sitemap
   - jekyll-last-modified-at
   - jekyll-email-protect
+  - jekyll-redirect-from
 
 # Archives
 #  Type
