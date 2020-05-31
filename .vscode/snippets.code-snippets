@@ -1,0 +1,40 @@
+{
+	"include figure": {
+		"scope": "markdown",
+		"prefix": "include figure",
+		"body": [
+			"{% include figure",
+			"image_path='${1:/assets/images/}'",
+			"alt='$2'",
+			"caption='$3'",
+			"%}\n$0"
+		],
+		"description": "include figure"
+	},
+	"revealjs speaker notes": {
+		"scope": "markdown",
+		"prefix": "revealjs speaker notes",
+		"body": [
+			"<aside class=\"notes\" markdown=1>\n",
+			"$0",
+			"\n</aside>\n"
+		],
+		"description": "revealjs speaker notes"
+	},
+	"revealjs fragments": {
+		"scope": "markdown",
+		"prefix": "revealjs fragments",
+		"body": "<span class=\"${1|fragment,fragment highlight-red|}\">$2</span>$0",
+		"description": "revealjs fragments"
+	},
+	"revealjs vertical slides": {
+		"scope": "markdown",
+		"prefix": "revealjs vertical slides",
+		"body": [
+			"<section markdown=1 data-transition=\"${1|slide,fade|}\">\n",
+			"$0",
+			"\n</section>\n"
+		],
+		"description": "revealjs vertical slides"
+	}
+}
