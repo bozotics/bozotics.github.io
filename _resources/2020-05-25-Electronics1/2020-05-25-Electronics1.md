@@ -7,7 +7,6 @@ reveal_options:
 menu_options: /assets/resources-assets/2020-05-25-Electronics1/links.html
 chalkboard_save: /assets/resources-assets/2020-05-25-Electronics1/chalkboard.json
 redirect_from: /resources/2020-05-25-Electronics1/ # just for this one since the link is sent
-permalink: /resources/Electronics1/
 ---
 
 ## ⚡ Electronics #1
