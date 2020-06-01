@@ -2,13 +2,11 @@
 title: ⚡ Electronics Lesson \#2
 excerpt: Communication, interference, and how everything fits together
 reveal_options:
-  totalTime: 2700 # 45 min * 60 s
-  allottedTime: 2700000 # 45 min * 60 s * 1000 ms
+  totalTime: 3000 # 50 min * 60 s
+  allottedTime: 3000000 # 50 min * 60 s * 1000 ms
   transition: fade
-#menu_options: /_resources/2020-06-03-Electronics2/assets/links.html
-#chalkboard_save: /_resources/2020-06-03-Electronics2/assets/chalkboard.json
-#permalink: /resources/Electronics2/ # temporary since defaults don't work
-#layout: reveal # temporary since defaults don't work
+#menu_options: /assets/resources-assets/2020-06-03-Electronics2/links.html
+#chalkboard_save: /assets/resources-assets/2020-06-03-Electronics2/chalkboard.json
 ---
 
 ## ⚡ Electronics #2
