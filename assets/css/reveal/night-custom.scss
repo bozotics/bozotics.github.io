@@ -7,8 +7,6 @@
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
 
-@import "reveal/reveal-main";
-
 /*********************************************
   * GLOBAL STYLES
   *********************************************/
@@ -325,3 +323,5 @@ body {
 		background-color: #111;
 	}
 }
+
+@import "reveal/reveal-main";
