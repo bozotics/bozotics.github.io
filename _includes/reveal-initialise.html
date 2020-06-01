@@ -28,25 +28,9 @@
 			src: "{{ page.chalkboard_save }}",
 			{% endif %}
 			readOnly: false,
-			eraser: { src: '/assets/reveal-plugins/chalkboard/img/sponge.png', radius: 15},
+			eraser: { src: '/assets/reveal-plugins/chalkboard/img/sponge.png', radius: 15 },
 			toggleChalkboardButton: { left: "80px" },
-			toggleNotesButton: { left: "130px" },
-			boardmarkers: [
-				{ color: 'rgba(30,144,255, 1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-blue.png"), auto'},
-				{ color: 'rgba(220,20,60,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-red.png"), auto'},
-				{ color: 'rgba(50,205,50,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-green.png"), auto'},
-				{ color: 'rgba(255,140,0,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-orange.png"), auto'},
-				{ color: 'rgba(150,0,20150,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-purple.png"), auto'},
-				{ color: 'rgba(255,220,0,1)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/boardmarker-yellow.png"), auto'}
-			],
-			chalks: [
-				{ color: 'rgba(96, 154, 244, 0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-blue.png"), auto'},
-				{ color: 'rgba(237, 20, 28, 0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-red.png"), auto'},
-				{ color: 'rgba(20, 237, 28, 0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-green.png"), auto'},
-				{ color: 'rgba(220, 133, 41, 0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-orange.png"), auto'},
-				{ color: 'rgba(220,0,220,0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-purple.png"), auto'},
-				{ color: 'rgba(255,220,0,0.5)', cursor: 'url("/assets/reveal-plugins/chalkboard/img/chalk-yellow.png"), auto'}
-			]
+			toggleNotesButton: { left: "130px" }
 		},
 		notes_pointer: {
 			pointer: {
@@ -60,12 +44,13 @@
 			/* If slides do not have a matching title, attempt to use the */
 			/* start of the text content as the title instead */
 			useTextContentForMissingTitles: true,
-			{% if page.menu_options %}
 			/* menu options generated from a list of strings */
 			custom: [
+				{% if page.menu_options %}
 				{ title: 'Bookmarks', icon: '<i class="fas fa-bookmark">', src: '{{ page.menu_options }}' },
+				{% endif %}
+				{ title: 'Marker color', icon: '<i class="fas fa-marker">', src:'/assets/reveal-plugins/chalkboard/markers.html' }
 			]
-			{% endif %}
 		},
 		dependencies: [
 			{ src: '/assets/reveal-plugins/elapsed-time-bar/elapsed-time-bar.js', async: true },
