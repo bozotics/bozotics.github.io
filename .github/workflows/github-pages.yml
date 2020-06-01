@@ -15,14 +15,6 @@ jobs:
           fetch-depth: "0"
           submodules: true
 
-      - name: 📝 cache bundler files
-        uses: actions/cache@v1
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-
       - name: 💎 setup ruby 2.7
         uses: ruby/setup-ruby@v1
         with:
@@ -33,6 +25,7 @@ jobs:
         with:
           jekyll_src: .
           gem_src: .
+          enable_cache: true
 
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
