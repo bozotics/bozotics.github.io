@@ -36,5 +36,23 @@
 			"\n</section>\n"
 		],
 		"description": "revealjs vertical slides"
+	},
+	"revealjs embedded links": {
+		"scope": "markdown",
+		"prefix": "revealjs embedded links",
+		"body": "{: data-preview-link=\"true\"}",
+		"description": "revealjs embedded links"
+	},
+	"revealjs vertical section": {
+		"scope": "markdown",
+		"prefix": "revealjs vertical section",
+		"body": [
+			"<section markdown=1 data-transition=\"slide\">\n",
+			"$1\n",
+			"====\n",
+			"$2\n",
+			"</section>\n\n$0"
+		],
+		"description": "revealjs vertical section"
 	}
 }
