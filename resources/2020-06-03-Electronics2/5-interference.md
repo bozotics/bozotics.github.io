@@ -1,7 +1,7 @@
 <section markdown=1 data-transition="slide">
 
-Probably no time to do interference separately, it's damn boring anyways and it
-only really occurs for i2c so just touch on this briefly:
+Probably no time to do interference separately, it's boring anyways and it only
+really occurs for i2c so:
 
 - i2c requires very very precise timing signals
 - has some wonky pull up system since it is open drain (you pull it low but
