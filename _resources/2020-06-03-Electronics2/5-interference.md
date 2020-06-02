@@ -25,7 +25,7 @@ select a pull up resistor
 
 </aside>
 
-====
+==data-transition="slide"==
 
 tl;dr, if you need to use i2c (most probably will):
 
@@ -38,7 +38,7 @@ tl;dr, if you need to use i2c (most probably will):
 
 [very good Hackaday article about I2C over long wires](https://hackaday.com/2017/02/08/taking-the-leap-off-board-an-introduction-to-i2c-over-long-wires/)
 
-====
+==data-transition="slide"==
 
 wherever possible (mostly between µC) opt for UART as it's more stable and the
 complex hardware implementation is done for us already.

@@ -185,7 +185,7 @@ Will (hopefully) talk about this more in next presentation on uC
 | -            | -                   | -              | -                |
 |              | RX is unpredictable | need start bit | set 2 baud rates |
 
-====
+==data-transition="slide"==
 
 |              | multiplexing        | <span class="fragment highlight-red">interference</span> | power use       |
 | ------------ | ------------------- | -------------------------------------------------------- | --------------- |

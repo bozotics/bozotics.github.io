@@ -13,7 +13,7 @@
 **TX 🡒 RX**{: style="color: darkmagenta"}  
 **RX 🡐 TX**{: style="color: darkmagenta"}
 
-====
+==data-transition="slide"==
 
 {% include figure
 image_path='/assets/resources-assets/2020-06-03-Electronics2/async.png'
@@ -47,7 +47,7 @@ slaves and master-slave relationship therefore sensors mainly use this
 
 </aside>
 
-====
+==data-transition="slide"==
 
 {% include figure
 image_path='/assets/resources-assets/2020-06-03-Electronics2/clock.png'
@@ -92,7 +92,7 @@ so have to do it via bit-banging
 
 </aside>
 
-====
+==data-transition="slide"==
 
 {% include figure
 image_path='/assets/resources-assets/2020-06-03-Electronics2/spi.png'
@@ -115,7 +115,7 @@ other industrial purposes
 These are all **differential** protocols. They usually don't exist for normal
 microcontrollers since it's difficult to implement
 
-====
+==data-transition="slide"==
 
 ### USB (2.0)
 
@@ -137,7 +137,7 @@ used everywhere else
 
 </aside>
 
-====
+==data-transition="slide"==
 
 ### CAN, RS485 / LVDS
 
