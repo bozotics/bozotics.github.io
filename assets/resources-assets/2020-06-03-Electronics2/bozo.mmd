@@ -1,0 +1,19 @@
+graph LR
+	subgraph Layer 1
+		Mouse --> |SPI| µC1
+		Light --> MUX --> |analogIn| µC1
+	end
+	subgraph Layer 3
+		Compass --> |I2C| µC2
+	end
+	subgraph Layer 4
+		TOF --> |I2C| µC3
+		Neopixel --> |Digital| µC3
+	end
+	subgraph Camera
+		C[Camera] --> |I2C| RasPi
+	end
+	subgraph Driver
+		µC1 & µC2 & µC3 & RasPi --> |UART| A{Teensy}
+		A --> |PWM| M[Motor Driver]
+	end
