@@ -5,7 +5,7 @@ reveal_options:
   totalTime: 3000 # 50 min * 60 s
   allottedTime: 3000000 # 50 min * 60 s * 1000 ms
   transition: fade
-#menu_options: /assets/resources-assets/2020-06-03-Electronics2/links.html
+menu_options: /assets/resources-assets/2020-06-03-Electronics2/links.html
 #chalkboard_save: /assets/resources-assets/2020-06-03-Electronics2/chalkboard.json
 gallery-network:
   - url: https://commons.wikimedia.org/wiki/File:BusNetwork.svg
