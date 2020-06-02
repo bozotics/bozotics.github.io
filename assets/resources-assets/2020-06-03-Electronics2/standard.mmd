@@ -1,0 +1,6 @@
+graph LR
+	Light --> MUX --> |analogIn| A{Arduino}
+	Compass --> |I2C| A
+	Ultrasonic --> |Pulse| Nano --> |UART/I2C| A
+	OpenMV/Pixy --> |UART/SPI/I2C| A
+	A --> |PWM| M[Motor Driver]

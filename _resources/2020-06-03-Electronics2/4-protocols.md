@@ -34,10 +34,18 @@ link='https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#w
 - Half-duplex
 - Prone to interference:  
   do not use over long wires
-- Most sensors use this
+- Made to use with "sensors"  
+  Most sensors use this
 
 **SDA ⟺ SDA**{: style="color: darkmagenta"}  
 **SCL 🡒 SCL**{: style="color: darkmagenta"}
+
+<aside class="notes" markdown=1>
+
+explain that i2c was made to use with sensors, due to open drain and multiple
+slaves and master-slave relationship therefore sensors mainly use this
+
+</aside>
 
 ====
 
@@ -78,9 +86,9 @@ and unidirectional. (vs i2c which is bidirectional, and uart which is async).
 Hence this is used in display drivers and sensors/drivers where large amount of
 data is transferred
 
-Explain why complex in code: SPI slave mode, must respond to the slave select
-immediately, hardware peripherals don't support it (eg RasPi) so have to do it
-via bit-banging
+Explain why complex in code: SPI slave mode: master expects slave to respond to
+the slave select immediately, hardware peripherals don't support it (eg RasPi)
+so have to do it via bit-banging
 
 </aside>
 
@@ -145,6 +153,8 @@ recommend looking at CAN since transceivers are easily available, and it has a
 robust, well defined and error free protocol (which is bulky but good enough).
 Alternatively RS485 transceivers are also very cheap and popular, but the
 protocol implementation is ??
+
+but this is nowhere near top priority and UART works very well
 
 </aside>
 

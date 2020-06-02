@@ -229,19 +229,12 @@ $$2\overline{\smash{)}1+0+0+0+1+1+0+0}$$
 
 ====
 
+<style>.sizedGallery { height: 200px; }</style>
+
 ### Network topologies
 
-{% include figure
-class='sizedImg'
-image_path='/assets/resources-assets/2020-06-03-Electronics2/bus-network.svg'
-alt=''
-caption=''
-link='https://commons.wikimedia.org/wiki/File:BusNetwork.svg'
+{% include gallery
+id='gallery-network'
+caption='Different network topologies'
+class='sizedGallery'
 %}
-
-<!--- include the 3 other networks in side by side --->
-<!---
-https://commons.wikimedia.org/wiki/File:NetworkTopology-Mesh.svg
-https://commons.wikimedia.org/wiki/File:NetworkTopology-Ring.png
-https://commons.wikimedia.org/wiki/File:StarNetwork.svg
---->

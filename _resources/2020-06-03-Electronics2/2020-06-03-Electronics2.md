@@ -7,6 +7,19 @@ reveal_options:
   transition: fade
 #menu_options: /assets/resources-assets/2020-06-03-Electronics2/links.html
 #chalkboard_save: /assets/resources-assets/2020-06-03-Electronics2/chalkboard.json
+gallery-network:
+  - url: https://commons.wikimedia.org/wiki/File:BusNetwork.svg
+    image_path: /assets/resources-assets/2020-06-03-Electronics2/bus-network.svg
+    alt: Bus Network
+  - url: https://commons.wikimedia.org/wiki/File:NetworkTopology-Mesh.svg
+    image_path: /assets/resources-assets/2020-06-03-Electronics2/mesh-network.png
+    alt: Mesh Network
+  - url: https://commons.wikimedia.org/wiki/File:NetworkTopology-Ring.png
+    image_path: /assets/resources-assets/2020-06-03-Electronics2/ring-network.png
+    alt: Ring Network
+  - url: https://commons.wikimedia.org/wiki/File:StarNetwork.svg
+    image_path: /assets/resources-assets/2020-06-03-Electronics2/star-network.svg
+    alt: Star Network
 ---
 
 ## ⚡ Electronics #2
@@ -33,6 +46,10 @@ and how everything fits together
 ==id="5-interference" data-transition="slide-in"==
 
 {% include_relative 5-interference.md %}
+
+==id="6-integration" data-transition="slide-in"==
+
+{% include_relative 6-integration.md %}
 
 ==id="end" data-transition="slide-in"==
 
