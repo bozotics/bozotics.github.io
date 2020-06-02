@@ -20,7 +20,7 @@ alt='Standard connection diagram'
 caption='Standard connection diagram'
 %}
 
-====
+==data-transition="slide"==
 
 {% include figure
 image_path='/assets/resources-assets/2020-06-03-Electronics2/bozo-mmd.svg'
