@@ -6,7 +6,7 @@ reveal_options:
   allottedTime: 3000000 # 50 min * 60 s * 1000 ms
   transition: fade
 menu_options: /assets/resources-assets/2020-06-03-Electronics2/links.html
-#chalkboard_save: /assets/resources-assets/2020-06-03-Electronics2/chalkboard.json
+chalkboard_save: /assets/resources-assets/2020-06-03-Electronics2/chalkboard.json
 gallery-network:
   - url: https://commons.wikimedia.org/wiki/File:BusNetwork.svg
     image_path: /assets/resources-assets/2020-06-03-Electronics2/bus-network.svg
@@ -26,6 +26,8 @@ gallery-network:
 
 Communication, interference,  
 and how everything fits together
+
+<figcaption><small>Press s for speaker notes, backspace to delete random annotations</small></figcaption>
 
 ==id="1-contents" data-transition="slide-in"==
 
