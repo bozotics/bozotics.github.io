@@ -216,7 +216,7 @@ var store = [{
         "teaser": null
       },{
         "title": "⚡ Electronics Lesson \\#2",
-        "excerpt":"⚡ Electronics #2 Communication, interference, and how everything fits together ==id=”1-contents” data-transition=”slide-in”== Contents Analog communication Digital communication Definitions Communication protocols Interference Integrating everything ==id=”2-analog” data-transition=”slide-in”== How do we “communicate”? Senses: Vision Hearing Touch Balance Taste Smell All of these are “analog” Vision: RGB, 0-255. Hearing: dB value. All of these...","categories": [],
+        "excerpt":"⚡ Electronics #2 Communication, interference, and how everything fits together Press s for speaker notes, backspace to delete random annotations ==id=”1-contents” data-transition=”slide-in”== Contents Analog communication Digital communication Definitions Communication protocols Interference Integrating everything ==id=”2-analog” data-transition=”slide-in”== How do we “communicate”? Senses: Vision Hearing Touch Balance Taste Smell All of these are...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/resources/Electronics2/",
         "teaser": null
