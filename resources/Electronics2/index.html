@@ -1,1 +1,1384 @@
-<!DOCTYPE html><html><head><meta charset="utf-8" /> <!-- begin _includes/seo.html --><title>⚡ Electronics Lesson #2 | Transcendence</title><meta name="description" content="Communication, interference, and how everything fits together "><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="Transcendence"><meta property="og:title" content="⚡ Electronics Lesson #2"><meta property="og:url" content="https://bozo.infocommsociety.com/resources/Electronics2/"><meta property="og:description" content="Communication, interference, and how everything fits together "><meta property="article:published_time" content="2020-06-03T00:00:00+08:00"><meta property="article:modified_time" content="2020-06-03T18:14:32+08:00"><link rel="canonical" href="https://bozo.infocommsociety.com/resources/Electronics2/"> <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Person", "name": null, "url": "https://bozo.infocommsociety.com/" } </script> <!-- end _includes/seo.html --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous"><link rel="icon" href="/assets/images/eagle ver 2.1.3.1-lowres.jpg"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><link rel="stylesheet" href="/assets/reveal.js/css/reset.css" /><link rel="stylesheet" href="/assets/reveal.js/css/reveal.css" /><link rel="stylesheet" href="/assets/css/reveal/night-custom.css" /><link rel="stylesheet" href="/assets/reveal.js/lib/css/monokai.css" /> <!-- Printing and PDF exports --> <script> var link = document.createElement( 'link' ); link.rel = 'stylesheet'; link.type = 'text/css'; link.href = window.location.search.match( /print-pdf/gi ) ? '/assets/reveal.js/css/print/pdf.css' : '/assets/reveal.js/css/print/paper.css'; document.getElementsByTagName( 'head' )[0].appendChild( link ); </script></head><body> <!--[if lt IE 9]><div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]--><div class="reveal"><div class="slides"><section><h2 id="-electronics-2">⚡ Electronics #2</h2><p>Communication, interference,<br /> and how everything fits together</p><figcaption><small>Press s for speaker notes, backspace to delete random annotations</small></figcaption></section><section id="1-contents" data-transition="slide-in"><h2 id="contents">Contents</h2><ul><li>Analog communication</li><li>Digital communication<ul><li>Definitions</li><li>Communication protocols</li><li>Interference</li></ul></li><li>Integrating everything</li></ul></section><section id="2-analog" data-transition="slide-in"><style> @counter-style senses { system: fixed; symbols: 👁️ 👂 🖐️ ⚖️ 👅 👃; suffix: " "; }</style><h3 id="how-do-we-communicate">How do we “communicate”?</h3><p>Senses:</p><ul style="list-style: senses;"><li>Vision</li><li>Hearing</li><li>Touch</li><li>Balance</li><li>Taste</li><li>Smell <!-- prettier-ignore --></li></ul><p><span class="fragment">All of these are “analog”</span></p><aside class="notes"><p>Vision: RGB, 0-255. Hearing: dB value. All of these are “analog”, but it doesn’t really work for microcontrollers…</p></aside></section><section ><h3 id="what-is-analog">What is “analog”?</h3><p>From <a href="https://en.wikipedia.org/wiki/Data_transmission#Applications_and_history">Wikipedia</a>:</p><blockquote><p>“Analog transmission is a method of conveying […] information using a signal which <span class="fragment highlight-red">varies</span> in amplitude, phase, or some other property”</p></blockquote><p><span class="fragment">Most “common sense” since it can vary</span></p></section><section ><h3 id="however-microcontrollers-cannot-do-analog-well">However, microcontrollers cannot do analog well</h3><p>Bus capacitance, stray inductance and resistances, all affect the analog signal massively.</p><p>For the communication to be reliable,<br /> we need it to be digital.</p><aside class="notes"><p>open whiteboard, draw normal microcontroller connection diagram, explain stray resistances, capacitances, etc</p><p>maybe add a svgbob?</p></aside></section><section id="3-digital-defines" data-transition="slide-in"><h2 id="terminology">Terminology</h2></section><section ><h3 id="digital-bytes">Digital bytes</h3><p>From <a href="https://en.wikipedia.org/wiki/Byte">Wikipedia</a>:</p><blockquote><p>The byte is a unit of digital information. It is the smallest <span class="fragment highlight-red">addressable</span> unit of memory in many computer architectures.</p></blockquote><aside class="notes"><p>Why is this important? It is the one you’ll be dealing with most often: a string is an array of chars, a char is a (unsigned) byte. An integer is (default) 2 bytes. During communication, this is the thing that is being sent.</p><p>But what is a byte???</p></aside></section><section ><h3 id="-and-bits-binary-digit">… and bits (binary digit)</h3><p>From <a href="https://en.wikipedia.org/wiki/Byte">Wikipedia</a>:</p><blockquote><p>A bit is the smallest unit of storage. The modern de facto standard of eight bits in a byte permits <span class="fragment highlight-red">binary</span> values 0 through 2<sup>8</sup>=255 for one byte. Modern architectures typically use 32- or 64-bit words, built of four or eight bytes.</p></blockquote><aside class="notes"><p><a href="https://web.stanford.edu/class/cs101/bits-bytes.html">good reference</a></p><p>Most of the time, don’t have to care about bits: even if your integer doesn’t need to be in bytes, eg if you only need values within 7 bits, you just store it as bytes anyways because architectures are optimised to work with 8 bits.</p><p>Maybe talk about bit shifting?</p></aside></section><section ><h3 id="what-is-a-digital-signal">What is a “digital” signal?</h3><figure class=""> <a href="https://commons.wikimedia.org/wiki/File:Parallel_and_Serial_Transmission.gif"> <img src="/assets/resources-assets/2020-06-03-Electronics2/digital-communication.gif" alt="Digital Communication" /> </a><figcaption> <a href="https://commons.wikimedia.org/wiki/File:Parallel_and_Serial_Transmission.gif"> Digital Communication </a></figcaption></figure><aside class="notes"><p>explain serial vs parallel, why everyone uses serial<br /> maybe how serial can be better even though intuitively parallel is better: no clock skew</p><p>LSB and MSB, talk about endian, parity bits in serial</p></aside></section><section ><h3 id="duplex">Duplex</h3><p>once again from <a href="https://en.wikipedia.org/wiki/Duplex_(telecommunications)">Wikipedia</a>:</p><blockquote><p>A duplex communication system is a point-to-point system composed of <span class="fragment highlight-red">two or more</span> connected parties or devices that can communicate with one another in <span class="fragment highlight-red">both directions</span>.</p></blockquote></section><section ><h3 id="half--and-full-duplex">Half- and full-duplex</h3><figure class=""> <a href="https://commons.wikimedia.org/wiki/File:HalfDuplex.JPG"> <img src="/assets/resources-assets/2020-06-03-Electronics2/half-duplex.jpg" alt="Half Duplex Communication" /> </a><figcaption> <a href="https://commons.wikimedia.org/wiki/File:HalfDuplex.JPG"> Half Duplex Communication </a></figcaption></figure><aside class="notes"><p>it’s still “duplex” since the switching between directions happens basically instantaneously</p></aside></section><section ><h3 id="asynchronous">Asynchronous</h3><figure class=""> <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#whats-wrong-with-serial-ports"> <img src="/assets/resources-assets/2020-06-03-Electronics2/async.png" alt="Asynchronous Signal Diagram" /> </a><figcaption> <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#whats-wrong-with-serial-ports"> Asynchronous Signal Diagram </a></figcaption></figure><aside class="notes"><p>Closest to humans communication, most intuitive (start bit is the “oi”)</p><p>But it needs to send a “sync” bit every byte, means it wastes 1 bit in every 9 bits, speed will drop by 1/9. Both sides must also agree to a baud rate beforehand, difficult for “master slave” devices where you have no control over the slave (usually a sensor)</p><p>also, asynchronous comms is complex:<br /> since we cannot predict when the “slave” sends info (there’s no master/slave relationship here) and when the uC is doing something else or when it is transmitting it cannot “listen” to the receive (like in human convo: when 2 people talk over each other, cannot hear each other).<br /> Therefore you cannot have more than 1 “slave” on the line, since there is no slave.<br /> UARTs are therefore usually separate from software: something in hardware which writes to a buffer until the uC is ready to access it. Therefore, in a uC UARTs are limited because you can’t just add it effectively into software, it’s a piece of hardware inside the chip.</p><p>explain this after the next slide:</p><p>bad: Multiplexing is difficult in asynchronous because you cannot “miss” any data, and you cannot predict when the data starts.</p><p>good thing about this is: only 1 wire needed, no wasted energy, doesn’t suffer from that much EMI issues, send data only when you need.</p></aside></section><section ><h3 id="clock--multiplexing">Clock &amp; Multiplexing</h3><p>Basically a metronome for digital <strong>synchronous</strong> circuits.</p><figure class=""> <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#a-synchronous-solution"> <img src="/assets/resources-assets/2020-06-03-Electronics2/clock.png" alt="Synchronous Clock Diagram" /> </a><figcaption> <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#a-synchronous-solution"> Synchronous Clock Diagram </a></figcaption></figure><aside class="notes"><p>When you are sending data at high speeds, cannot afford to waste 1 bit every byte. Both sides also don’t need to agree to a baud rate beforehand. Also can multiplex easily</p><p>explain how multiplexing works: since you can predict when the next signals will come in, you can “split” the clock and change signals to listen to before the next bit</p><p>talk about issues with clocks: rapidly changing signals, causes a lot of EMI, difficult to drive, according to <a href="https://en.wikipedia.org/wiki/Clock_signal#Distribution">Wikipedia</a> it accounts for 30% of the total power used by the entire chip, but explain that it’s used within the chip to communicate between different parts of the chip to increase bandwidth</p><p>Will (hopefully) talk about this more in next presentation on uC</p></aside></section><section > <!-- markdownlint-disable line-length --><section data-transition="slide"><table><thead><tr><th> </th><th>implementation</th><th>data rate</th><th>configuration</th></tr></thead><tbody><tr><td>synchronous</td><td>simpler</td><td>faster</td><td>easier</td></tr></tbody><tbody><tr><td> </td><td>RX is controlled</td><td>no start bit</td><td>set 1 baud rate</td></tr><tr><td>asynchronous</td><td>complex</td><td>slower</td><td>tougher</td></tr></tbody><tbody><tr><td> </td><td>RX is unpredictable</td><td>need start bit</td><td>set 2 baud rates</td></tr></tbody></table></section><section data-transition="slide"><table><thead><tr><th> </th><th>multiplexing</th><th><span class="fragment highlight-red">interference</span></th><th>power use</th></tr></thead><tbody><tr><td>synchronous</td><td>easier</td><td>bad</td><td>more</td></tr></tbody><tbody><tr><td> </td><td>RX is controlled</td><td>clock signal can be antenna</td><td>clock always on</td></tr><tr><td>asynchronous</td><td>insane</td><td>better</td><td>less</td></tr></tbody><tbody><tr><td> </td><td>RX is unpredictable</td><td>data only live when needed, no clock</td><td>no clock</td></tr></tbody></table></section><!-- markdownlint-enable line-length --></section><section ><h3 id="differential-signals">Differential Signals</h3><figure class=""> <a href="https://commons.wikimedia.org/wiki/File:Ssiblockdiagram.jpg"> <img src="/assets/resources-assets/2020-06-03-Electronics2/differential.jpg" alt="Differential Signal Diagram" /> </a><figcaption> <a href="https://commons.wikimedia.org/wiki/File:Ssiblockdiagram.jpg"> Differential Signal Diagram </a></figcaption></figure><aside class="notes"><p>solves many EMI issues as will be explained later. but requires 2 wires.</p></aside></section><section ><h3 id="cyclic-redundancy-check-crc">Cyclic Redundancy Check (CRC)</h3><p>Basically sum of the data and divide it</p><p><small>eg, if the data is 10001100, parity bit is 1:</small><br /> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>R</mi></mrow><annotation encoding="application/x-tex">1R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span></span></span></span><span style="color:red"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></span><br /> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mover accent="true"><mrow><mpadded height="0px" depth="0px"><mo stretchy="false" lspace="0em" rspace="0em">)</mo></mpadded><mn>1</mn><mo>+</mo><mn>0</mn><mo>+</mo><mn>0</mn><mo>+</mo><mn>0</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>0</mn><mo>+</mo><mn>0</mn></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">2\overline{\smash{)}1+0+0+0+1+1+0+0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9277700000000001em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mord overline"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8444400000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mord"><span class="mclose">)</span></span></span></span></span></span></span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">0</span></span></span><span style="top:-3.76444em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.08333em;"><span></span></span></span></span></span></span></span></span></p></section><section ><style>.sizedGallery { height: 200px; }</style><h3 id="network-topologies">Network topologies</h3><figure class="third sizedGallery"> <a href="https://commons.wikimedia.org/wiki/File:BusNetwork.svg"> <img src="/assets/resources-assets/2020-06-03-Electronics2/bus-network.svg" alt="Bus Network" /> </a> <a href="https://commons.wikimedia.org/wiki/File:NetworkTopology-Mesh.svg"> <img src="/assets/resources-assets/2020-06-03-Electronics2/mesh-network.png" alt="Mesh Network" /> </a> <a href="https://commons.wikimedia.org/wiki/File:NetworkTopology-Ring.png"> <img src="/assets/resources-assets/2020-06-03-Electronics2/ring-network.png" alt="Ring Network" /> </a> <a href="https://commons.wikimedia.org/wiki/File:StarNetwork.svg"> <img src="/assets/resources-assets/2020-06-03-Electronics2/star-network.svg" alt="Star Network" /> </a><figcaption>Different network topologies</figcaption></figure></section><section id="4-protocols" data-transition="slide-in"><h2 id="protocols">Protocols</h2></section><section ><section data-transition="slide"><h3 id="uart">UART</h3><ul><li>Asynchronous</li><li>Full-duplex</li><li>Preferred choice</li></ul><p><strong style="color: darkmagenta">TX 🡒 RX</strong><br /> <strong style="color: darkmagenta">RX 🡐 TX</strong></p></section><section data-transition="slide"><figure class=""> <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#whats-wrong-with-serial-ports"> <img src="/assets/resources-assets/2020-06-03-Electronics2/async.png" alt="UART Connection Diagram" /> </a><figcaption> <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#whats-wrong-with-serial-ports"> UART Connection Diagram </a></figcaption></figure></section></section><section ><section data-transition="slide"><h3 id="i2c">I<sup>2</sup>C</h3><ul><li>Synchronous</li><li>Half-duplex</li><li>Prone to interference:<br /> do not use over long wires</li><li>Made to use with “sensors”<br /> Most sensors use this</li></ul><p><strong style="color: darkmagenta">SDA ⟺ SDA</strong><br /> <strong style="color: darkmagenta">SCL 🡒 SCL</strong></p><aside class="notes"><p>explain that i2c was made to use with sensors, due to open drain and multiple slaves and master-slave relationship therefore sensors mainly use this</p></aside></section><section data-transition="slide"><figure class=""> <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#a-synchronous-solution"> <img src="/assets/resources-assets/2020-06-03-Electronics2/clock.png" alt="I&lt;sup&gt;2&lt;/sup&gt;C Connection Diagram" /> </a><figcaption> <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#a-synchronous-solution"> I<sup>2</sup>C Connection Diagram </a></figcaption></figure></section></section><section ><section data-transition="slide"><h3 id="spi">SPI</h3><ul><li>Synchronous</li><li>Pseudo Full-duplex</li><li>Fastest, but “Bulkiest”: 4 lines</li><li>Easy in hardware, complex in code</li><li>Used mostly in display drivers</li></ul><p><strong style="color: darkmagenta">MOSI 🡒 MOSI</strong><br /> <strong style="color: darkmagenta">MISO 🡐 MISO</strong><br /> <strong style="color: darkmagenta">SCK 🡒 SCK</strong><br /> <strong style="color: darkmagenta">SS 🡒 SS</strong></p><aside class="notes"><p>Explain the pseudo full duplex: both can transmit data simultaneously, but the master must request the data first.<br /> While receiving data (into a buffer) master can transmit the next “line” of data</p><p>Explain why easy in hardware: simple shift register, since it’s a serial + clock and unidirectional. (vs i2c which is bidirectional, and uart which is async). Hence this is used in display drivers and sensors/drivers where large amount of data is transferred</p><p>Explain why complex in code: SPI slave mode: master expects slave to respond to the slave select immediately, hardware peripherals don’t support it (eg RasPi) so have to do it via bit-banging</p></aside></section><section data-transition="slide"><figure class=""> <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#slave-select-ss"> <img src="/assets/resources-assets/2020-06-03-Electronics2/spi.png" alt="SPI Connection Diagram" /> </a><figcaption> <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#slave-select-ss"> SPI Connection Diagram </a></figcaption></figure></section></section><section ><section data-transition="slide"><h3 id="miscellaneous">Miscellaneous</h3><p>We don’t really need to know the next few for cup, they are mostly used for other industrial purposes</p><p>These are all <strong>differential</strong> protocols. They usually don’t exist for normal microcontrollers since it’s difficult to implement</p></section><section data-transition="slide"><h3 id="usb-20">USB (2.0)</h3><ul><li>(A)synchronous</li><li>Half-duplex (up till USB3)</li><li>Differential</li><li>Industry standard</li><li>Very fast but complex<ul><li>Requires accurate clock</li></ul></li></ul><p><strong style="color: darkmagenta">D+ ⟺ D+</strong><br /> <strong style="color: darkmagenta">D- ⟺ D-</strong></p><aside class="notes"><p>Implementation is complex, that’s why it is not used in uC where flash space, computing power is limited. However it is fast and UNIVERSAL, that’s why it’s used everywhere else</p></aside></section><section data-transition="slide"><h3 id="can-rs485--lvds">CAN, RS485 / LVDS</h3><ul><li>“all the others”</li><li>Differential</li><li>CAN is used in cars</li><li>The others have industrial applications<ul><li>RS485 does not define a protocol</li></ul></li></ul><aside class="notes"><p>recommend looking at CAN since transceivers are easily available, and it has a robust, well defined and error free protocol (which is bulky but good enough). Alternatively RS485 transceivers are also very cheap and popular, but the protocol implementation is ??</p><p>but this is nowhere near top priority and UART works very well</p></aside></section></section><section id="5-interference" data-transition="slide-in"><section data-transition="slide"><p>Probably no time to do interference separately, it’s boring anyways and it only really occurs for i2c so:</p><ul><li>i2c requires very very precise timing signals</li><li>has some wonky pull up system since it is open drain (you pull it low but leave it open and don’t drive it high)</li><li>together with a bidirectional data wire, it is very very <strong>prone to interference</strong>.</li></ul><aside class="notes"><p>if have time explain why open drain</p><ul><li>very simple, just one NPN BJT (which is usually cheaper than PNP)</li><li>if 2 or more slaves try to drive it, it won’t harm each other</li><li>can have separate supply voltages without complex data driving circuit<ul><li>just need to share common ground</li></ul></li></ul><p>hence this is literally made for use with sensors</p><p>yet it causes a lot of grief power loss in resistors and hair loss trying to select a pull up resistor</p></aside></section><section data-transition="slide"><p>tl;dr, if you need to use i2c (most probably will):</p><ul><li>keep wire lengths short</li><li>maybe don’t use the 400kHz fast mode (probably don’t need it to be that fast in reality anyways)</li><li>ensure wires <strong>DON’T PASS BY MOTORS</strong></li><li>and try to keep buses separate for critical sensors (like <strong>BNO055!!!!!!!!!! VERY IMPORTANT!!!!!!</strong>)</li></ul><p><a href="https://hackaday.com/2017/02/08/taking-the-leap-off-board-an-introduction-to-i2c-over-long-wires/">very good Hackaday article about I2C over long wires</a></p></section><section data-transition="slide"><p>wherever possible (mostly between µC) opt for UART as it’s more stable and the complex hardware implementation is done for us already.</p><p>SPI may be preferred but slave mode is not always well implemented in hardware, and software emulation is not that good</p><p>But we cannot escape i2c, and it’s not THAT bad anyways, mostly just BNO055’s implementation and wonky pull ups.</p></section></section><section id="6-integration" data-transition="slide-in"> <!-- markdownlint-disable line-length --><table><thead><tr><th>I<sup>2</sup>C</th><th>SPI</th><th>UART</th><th>AIN</th><th>PWM</th><th>Others</th></tr></thead><tbody><tr><td><span class="fragment highlight-red" data-fragment-index="1"><strong>TOF</strong></span></td><td>Mouse</td><td><span class="fragment highlight-red" data-fragment-index="1"><strong>µC</strong></span></td><td><span class="fragment highlight-red" data-fragment-index="1"><strong>Light</strong></span></td><td><span class="fragment highlight-red" data-fragment-index="1"><strong>Motor</strong></span></td><td><span class="fragment highlight-red" data-fragment-index="1"><strong>Ultra</strong></span></td></tr><tr><td>Camera</td><td>Camera</td><td>RasPi</td><td> </td><td> </td><td>Neopixel</td></tr><tr><td>Color</td><td>OpenMV</td><td><span class="fragment highlight-red" data-fragment-index="1"><strong>OpenMV</strong></span></td><td> </td><td> </td><td>Color</td></tr><tr><td><span class="fragment highlight-red" data-fragment-index="1"><strong>Compass</strong></span></td><td>Display</td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td>POT</td><td> </td><td> </td><td> </td><td> </td></tr></tbody></table><!-- markdownlint-enable line-length --></section><section ><section data-transition="slide"><figure class=""> <img src="/assets/resources-assets/2020-06-03-Electronics2/standard-mmd.svg" alt="Standard connection diagram" /><figcaption> Standard connection diagram</figcaption></figure></section><section data-transition="slide"><figure class=""> <img src="/assets/resources-assets/2020-06-03-Electronics2/bozo-mmd.svg" alt="Our connection diagram" /><figcaption> Our connection diagram</figcaption></figure></section></section><section id="end" data-transition="slide-in"><h3 id="end">end</h3></section></div></div><script src="/assets/reveal.js/js/reveal.js"></script> <script> /* More info about initialization & config: - https://revealjs.com/initialization/ - https://revealjs.com/config/ */ Reveal.initialize({ hash: true, slideNumber: true, transitionSpeed: "fast", fragments: true, fragmentInURL: false, hideInactivecursor: false, /* Reveal options generated from mapping */ totalTime: "3000", allottedTime: "3000000", transition: "fade", chalkboard: { theme: "whiteboard", src: "/assets/resources-assets/2020-06-03-Electronics2/chalkboard.json", readOnly: false, eraser: { src: '/assets/reveal-plugins/chalkboard/img/sponge.png', radius: 15 }, toggleChalkboardButton: { left: "80px" }, toggleNotesButton: { left: "130px" } }, notes_pointer: { pointer: { size: 20 } }, menu: { /* Add slide numbers to the titles in the slide list. */ /* Use 'true' or format string (same as reveal.js slide numbers) */ numbers: true, /* If slides do not have a matching title, attempt to use the */ /* start of the text content as the title instead */ useTextContentForMissingTitles: true, /* menu options generated from a list of strings */ custom: [ { title: 'Bookmarks', icon: '<i class="fas fa-bookmark">', src: '/assets/resources-assets/2020-06-03-Electronics2/links.html' }, { title: 'Marker color', icon: '<i class="fas fa-marker">', src:'/assets/reveal-plugins/chalkboard/markers.html' } ] }, dependencies: [ { src: '/assets/reveal-plugins/elapsed-time-bar/elapsed-time-bar.js', async: true }, { src: '/assets/reveal-plugins/chalkboard/chalkboard.js', async: true }, { src: '/assets/reveal.js/plugin/zoom-js/zoom.js', async: true }, { src: '/assets/reveal-plugins/notes-pointer/notes-pointer.js', async: true }, { src: '/assets/reveal-plugins/menu/menu.js', async: true } ], keyboard: { 67: function() { RevealChalkboard.toggleNotesCanvas() }, /* toggle notes canvas when 'c' is pressed */ 66: function() { RevealChalkboard.toggleChalkboard() }, /* toggle chalkboard when 'b' is pressed */ 8: function() { RevealChalkboard.clear() }, /* clear chalkboard when 'BACKSPACE' is pressed */ 68: function() { RevealChalkboard.download() }, /* downlad recorded chalkboard drawing when 'd' is pressed */ 88: function() { RevealChalkboard.colorNext() }, /* cycle colors forward when 'x' is pressed */ 89: function() { RevealChalkboard.colorPrev() }, /* cycle colors backward when 'y' is pressed */ 13: function() { ElapsedTimeBar.isPaused ? ElapsedTimeBar.resume() : ElapsedTimeBar.pause(); }, /* pause/resume time when Enter is pressed */ 82: function() { ElapsedTimeBar.reset(); } /* reset timer when 'r' is pressed */ /* todo: #13 when esc is pressed, if in chalkboard exit that, else show slide overview */ } }); </script> <script src="/assets/js/lazyload.js"></script></body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- begin _includes/seo.html -->
+		<title>⚡ Electronics Lesson #2 | Transcendence</title>
+		<meta
+			name="description"
+			content="Communication, interference, and how everything fits together "
+		/>
+
+		<meta property="og:type" content="article" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="Transcendence" />
+		<meta property="og:title" content="⚡ Electronics Lesson #2" />
+		<meta
+			property="og:url"
+			content="https://bozo.infocommsociety.com/resources/Electronics2/"
+		/>
+
+		<meta
+			property="og:description"
+			content="Communication, interference, and how everything fits together "
+		/>
+
+		<meta
+			property="article:published_time"
+			content="2020-06-03T00:00:00+08:00"
+		/>
+
+		<meta
+			property="article:modified_time"
+			content="2020-06-03T18:14:32+08:00"
+		/>
+
+		<link
+			rel="canonical"
+			href="https://bozo.infocommsociety.com/resources/Electronics2/"
+		/>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+
+				"@type": "Person",
+				"name": null,
+				"url": "https://bozo.infocommsociety.com/"
+			}
+		</script>
+
+		<!-- end _includes/seo.html -->
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+			integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="icon" href="/assets/images/eagle ver 2.1.3.1-lowres.jpg" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="stylesheet" href="/assets/reveal.js/css/reset.css" />
+		<link rel="stylesheet" href="/assets/reveal.js/css/reveal.css" />
+		<link rel="stylesheet" href="/assets/css/reveal/night-custom.css" />
+		<link rel="stylesheet" href="/assets/reveal.js/lib/css/monokai.css" />
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement("link");
+			link.rel = "stylesheet";
+			link.type = "text/css";
+			link.href = window.location.search.match(/print-pdf/gi)
+				? "/assets/reveal.js/css/print/pdf.css"
+				: "/assets/reveal.js/css/print/paper.css";
+			document.getElementsByTagName("head")[0].appendChild(link);
+		</script>
+	</head>
+
+	<body>
+		<!--[if lt IE 9]>
+			<div class="notice--danger align-center" style="margin: 0;">
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="https://browsehappy.com/">upgrade your browser</a> to improve
+				your experience.
+			</div>
+		<![endif]-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2 id="-electronics-2">⚡ Electronics #2</h2>
+
+					<p>
+						Communication, interference,<br />
+						and how everything fits together
+					</p>
+
+					<figcaption>
+						<small
+							>Press s for speaker notes, backspace to delete random
+							annotations</small
+						>
+					</figcaption>
+				</section>
+				<section id="1-contents" data-transition="slide-in">
+					<h2 id="contents">Contents</h2>
+
+					<ul>
+						<li>Analog communication</li>
+						<li>
+							Digital communication
+							<ul>
+								<li>Definitions</li>
+								<li>Communication protocols</li>
+								<li>Interference</li>
+							</ul>
+						</li>
+						<li>Integrating everything</li>
+					</ul>
+				</section>
+				<section id="2-analog" data-transition="slide-in">
+					<style>
+						@counter-style senses {
+							system: fixed;
+							symbols: 👁️ 👂 🖐️ ⚖️ 👅 👃;
+							suffix: "  ";
+						}
+					</style>
+
+					<h3 id="how-do-we-communicate">How do we “communicate”?</h3>
+
+					<p>Senses:</p>
+
+					<ul style="list-style: senses;">
+						<li>Vision</li>
+						<li>Hearing</li>
+						<li>Touch</li>
+						<li>Balance</li>
+						<li>Taste</li>
+						<li>
+							Smell
+							<!-- prettier-ignore -->
+						</li>
+					</ul>
+
+					<p><span class="fragment">All of these are “analog”</span></p>
+
+					<aside class="notes">
+						<p>
+							Vision: RGB, 0-255. Hearing: dB value. All of these are “analog”,
+							but it doesn’t really work for microcontrollers…
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="what-is-analog">What is “analog”?</h3>
+
+					<p>
+						From
+						<a
+							href="https://en.wikipedia.org/wiki/Data_transmission#Applications_and_history"
+							>Wikipedia</a
+						>:
+					</p>
+
+					<blockquote>
+						<p>
+							“Analog transmission is a method of conveying […] information
+							using a signal which
+							<span class="fragment highlight-red">varies</span> in amplitude,
+							phase, or some other property”
+						</p>
+					</blockquote>
+
+					<p>
+						<span class="fragment">Most “common sense” since it can vary</span>
+					</p>
+				</section>
+				<section>
+					<h3 id="however-microcontrollers-cannot-do-analog-well">
+						However, microcontrollers cannot do analog well
+					</h3>
+
+					<p>
+						Bus capacitance, stray inductance and resistances, all affect the
+						analog signal massively.
+					</p>
+
+					<p>
+						For the communication to be reliable,<br />
+						we need it to be digital.
+					</p>
+
+					<aside class="notes">
+						<p>
+							open whiteboard, draw normal microcontroller connection diagram,
+							explain stray resistances, capacitances, etc
+						</p>
+
+						<p>maybe add a svgbob?</p>
+					</aside>
+				</section>
+				<section id="3-digital-defines" data-transition="slide-in">
+					<h2 id="terminology">Terminology</h2>
+				</section>
+				<section>
+					<h3 id="digital-bytes">Digital bytes</h3>
+
+					<p>
+						From <a href="https://en.wikipedia.org/wiki/Byte">Wikipedia</a>:
+					</p>
+
+					<blockquote>
+						<p>
+							The byte is a unit of digital information. It is the smallest
+							<span class="fragment highlight-red">addressable</span> unit of
+							memory in many computer architectures.
+						</p>
+					</blockquote>
+
+					<aside class="notes">
+						<p>
+							Why is this important? It is the one you’ll be dealing with most
+							often: a string is an array of chars, a char is a (unsigned) byte.
+							An integer is (default) 2 bytes. During communication, this is the
+							thing that is being sent.
+						</p>
+
+						<p>But what is a byte???</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="-and-bits-binary-digit">… and bits (binary digit)</h3>
+
+					<p>
+						From <a href="https://en.wikipedia.org/wiki/Byte">Wikipedia</a>:
+					</p>
+
+					<blockquote>
+						<p>
+							A bit is the smallest unit of storage. The modern de facto
+							standard of eight bits in a byte permits
+							<span class="fragment highlight-red">binary</span> values 0
+							through 2<sup>8</sup>=255 for one byte. Modern architectures
+							typically use 32- or 64-bit words, built of four or eight bytes.
+						</p>
+					</blockquote>
+
+					<aside class="notes">
+						<p>
+							<a href="https://web.stanford.edu/class/cs101/bits-bytes.html"
+								>good reference</a
+							>
+						</p>
+
+						<p>
+							Most of the time, don’t have to care about bits: even if your
+							integer doesn’t need to be in bytes, eg if you only need values
+							within 7 bits, you just store it as bytes anyways because
+							architectures are optimised to work with 8 bits.
+						</p>
+
+						<p>Maybe talk about bit shifting?</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="what-is-a-digital-signal">What is a “digital” signal?</h3>
+
+					<figure class="">
+						<a
+							href="https://commons.wikimedia.org/wiki/File:Parallel_and_Serial_Transmission.gif"
+						>
+							<img
+								src="/assets/resources-assets/2020-06-03-Electronics2/digital-communication.gif"
+								alt="Digital Communication"
+							/>
+						</a>
+
+						<figcaption>
+							<a
+								href="https://commons.wikimedia.org/wiki/File:Parallel_and_Serial_Transmission.gif"
+							>
+								Digital Communication
+							</a>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							explain serial vs parallel, why everyone uses serial<br />
+							maybe how serial can be better even though intuitively parallel is
+							better: no clock skew
+						</p>
+
+						<p>LSB and MSB, talk about endian, parity bits in serial</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="duplex">Duplex</h3>
+
+					<p>
+						once again from
+						<a href="https://en.wikipedia.org/wiki/Duplex_(telecommunications)"
+							>Wikipedia</a
+						>:
+					</p>
+
+					<blockquote>
+						<p>
+							A duplex communication system is a point-to-point system composed
+							of
+							<span class="fragment highlight-red">two or more</span> connected
+							parties or devices that can communicate with one another in
+							<span class="fragment highlight-red">both directions</span>.
+						</p>
+					</blockquote>
+				</section>
+				<section>
+					<h3 id="half--and-full-duplex">Half- and full-duplex</h3>
+
+					<figure class="">
+						<a href="https://commons.wikimedia.org/wiki/File:HalfDuplex.JPG">
+							<img
+								src="/assets/resources-assets/2020-06-03-Electronics2/half-duplex.jpg"
+								alt="Half Duplex Communication"
+							/>
+						</a>
+
+						<figcaption>
+							<a href="https://commons.wikimedia.org/wiki/File:HalfDuplex.JPG">
+								Half Duplex Communication
+							</a>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							it’s still “duplex” since the switching between directions happens
+							basically instantaneously
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="asynchronous">Asynchronous</h3>
+
+					<figure class="">
+						<a
+							href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#whats-wrong-with-serial-ports"
+						>
+							<img
+								src="/assets/resources-assets/2020-06-03-Electronics2/async.png"
+								alt="Asynchronous Signal Diagram"
+							/>
+						</a>
+
+						<figcaption>
+							<a
+								href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#whats-wrong-with-serial-ports"
+							>
+								Asynchronous Signal Diagram
+							</a>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							Closest to humans communication, most intuitive (start bit is the
+							“oi”)
+						</p>
+
+						<p>
+							But it needs to send a “sync” bit every byte, means it wastes 1
+							bit in every 9 bits, speed will drop by 1/9. Both sides must also
+							agree to a baud rate beforehand, difficult for “master slave”
+							devices where you have no control over the slave (usually a
+							sensor)
+						</p>
+
+						<p>
+							also, asynchronous comms is complex:<br />
+							since we cannot predict when the “slave” sends info (there’s no
+							master/slave relationship here) and when the uC is doing something
+							else or when it is transmitting it cannot “listen” to the receive
+							(like in human convo: when 2 people talk over each other, cannot
+							hear each other).<br />
+							Therefore you cannot have more than 1 “slave” on the line, since
+							there is no slave.<br />
+							UARTs are therefore usually separate from software: something in
+							hardware which writes to a buffer until the uC is ready to access
+							it. Therefore, in a uC UARTs are limited because you can’t just
+							add it effectively into software, it’s a piece of hardware inside
+							the chip.
+						</p>
+
+						<p>explain this after the next slide:</p>
+
+						<p>
+							bad: Multiplexing is difficult in asynchronous because you cannot
+							“miss” any data, and you cannot predict when the data starts.
+						</p>
+
+						<p>
+							good thing about this is: only 1 wire needed, no wasted energy,
+							doesn’t suffer from that much EMI issues, send data only when you
+							need.
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="clock--multiplexing">Clock &amp; Multiplexing</h3>
+
+					<p>
+						Basically a metronome for digital
+						<strong>synchronous</strong> circuits.
+					</p>
+
+					<figure class="">
+						<a
+							href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#a-synchronous-solution"
+						>
+							<img
+								src="/assets/resources-assets/2020-06-03-Electronics2/clock.png"
+								alt="Synchronous Clock Diagram"
+							/>
+						</a>
+
+						<figcaption>
+							<a
+								href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#a-synchronous-solution"
+							>
+								Synchronous Clock Diagram
+							</a>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							When you are sending data at high speeds, cannot afford to waste 1
+							bit every byte. Both sides also don’t need to agree to a baud rate
+							beforehand. Also can multiplex easily
+						</p>
+
+						<p>
+							explain how multiplexing works: since you can predict when the
+							next signals will come in, you can “split” the clock and change
+							signals to listen to before the next bit
+						</p>
+
+						<p>
+							talk about issues with clocks: rapidly changing signals, causes a
+							lot of EMI, difficult to drive, according to
+							<a href="https://en.wikipedia.org/wiki/Clock_signal#Distribution"
+								>Wikipedia</a
+							>
+							it accounts for 30% of the total power used by the entire chip,
+							but explain that it’s used within the chip to communicate between
+							different parts of the chip to increase bandwidth
+						</p>
+
+						<p>
+							Will (hopefully) talk about this more in next presentation on uC
+						</p>
+					</aside>
+				</section>
+				<section>
+					<!-- markdownlint-disable line-length -->
+
+					<section data-transition="slide">
+						<table>
+							<thead>
+								<tr>
+									<th></th>
+									<th>implementation</th>
+									<th>data rate</th>
+									<th>configuration</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>synchronous</td>
+									<td>simpler</td>
+									<td>faster</td>
+									<td>easier</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>RX is controlled</td>
+									<td>no start bit</td>
+									<td>set 1 baud rate</td>
+								</tr>
+								<tr>
+									<td>asynchronous</td>
+									<td>complex</td>
+									<td>slower</td>
+									<td>tougher</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>RX is unpredictable</td>
+									<td>need start bit</td>
+									<td>set 2 baud rates</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section data-transition="slide">
+						<table>
+							<thead>
+								<tr>
+									<th></th>
+									<th>multiplexing</th>
+									<th>
+										<span class="fragment highlight-red">interference</span>
+									</th>
+									<th>power use</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>synchronous</td>
+									<td>easier</td>
+									<td>bad</td>
+									<td>more</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>RX is controlled</td>
+									<td>clock signal can be antenna</td>
+									<td>clock always on</td>
+								</tr>
+								<tr>
+									<td>asynchronous</td>
+									<td>insane</td>
+									<td>better</td>
+									<td>less</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>RX is unpredictable</td>
+									<td>data only live when needed, no clock</td>
+									<td>no clock</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<!-- markdownlint-enable line-length -->
+				</section>
+				<section>
+					<h3 id="differential-signals">Differential Signals</h3>
+
+					<figure class="">
+						<a
+							href="https://commons.wikimedia.org/wiki/File:Ssiblockdiagram.jpg"
+						>
+							<img
+								src="/assets/resources-assets/2020-06-03-Electronics2/differential.jpg"
+								alt="Differential Signal Diagram"
+							/>
+						</a>
+
+						<figcaption>
+							<a
+								href="https://commons.wikimedia.org/wiki/File:Ssiblockdiagram.jpg"
+							>
+								Differential Signal Diagram
+							</a>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							solves many EMI issues as will be explained later. but requires 2
+							wires.
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="cyclic-redundancy-check-crc">
+						Cyclic Redundancy Check (CRC)
+					</h3>
+
+					<p>Basically sum of the data and divide it</p>
+
+					<p>
+						<small>eg, if the data is 10001100, parity bit is 1:</small><br />
+						<span class="katex"
+							><span class="katex-mathml"
+								><math xmlns="http://www.w3.org/1998/Math/MathML"
+									><semantics
+										><mrow><mn>1</mn><mi>R</mi></mrow
+										><annotation encoding="application/x-tex"
+											>1R</annotation
+										></semantics
+									></math
+								></span
+							><span class="katex-html" aria-hidden="true"
+								><span class="base"
+									><span
+										class="strut"
+										style="height: 0.68333em; vertical-align: 0em;"
+									></span
+									><span class="mord">1</span
+									><span
+										class="mord mathdefault"
+										style="margin-right: 0.00773em;"
+										>R</span
+									></span
+								></span
+							></span
+						><span style="color: red;"
+							><span class="katex"
+								><span class="katex-mathml"
+									><math xmlns="http://www.w3.org/1998/Math/MathML"
+										><semantics
+											><mrow><mn>1</mn></mrow
+											><annotation encoding="application/x-tex"
+												>1</annotation
+											></semantics
+										></math
+									></span
+								><span class="katex-html" aria-hidden="true"
+									><span class="base"
+										><span
+											class="strut"
+											style="height: 0.64444em; vertical-align: 0em;"
+										></span
+										><span class="mord">1</span></span
+									></span
+								></span
+							></span
+						><br />
+						<span class="katex"
+							><span class="katex-mathml"
+								><math xmlns="http://www.w3.org/1998/Math/MathML"
+									><semantics
+										><mrow
+											><mn>2</mn
+											><mover accent="true"
+												><mrow
+													><mpadded height="0px" depth="0px"
+														><mo stretchy="false" lspace="0em" rspace="0em"
+															>)</mo
+														></mpadded
+													><mn>1</mn><mo>+</mo><mn>0</mn><mo>+</mo><mn>0</mn
+													><mo>+</mo><mn>0</mn><mo>+</mo><mn>1</mn><mo>+</mo
+													><mn>1</mn><mo>+</mo><mn>0</mn><mo>+</mo
+													><mn>0</mn></mrow
+												><mo stretchy="true">‾</mo></mover
+											></mrow
+										><annotation encoding="application/x-tex"
+											>2\overline{\smash{)}1+0+0+0+1+1+0+0}</annotation
+										></semantics
+									></math
+								></span
+							><span class="katex-html" aria-hidden="true"
+								><span class="base"
+									><span
+										class="strut"
+										style="
+											height: 0.9277700000000001em;
+											vertical-align: -0.08333em;
+										"
+									></span
+									><span class="mord">2</span
+									><span class="mord overline"
+										><span class="vlist-t vlist-t2"
+											><span class="vlist-r"
+												><span
+													class="vlist"
+													style="height: 0.8444400000000001em;"
+													><span style="top: -3em;"
+														><span class="pstrut" style="height: 3em;"></span
+														><span class="mord"
+															><span class="mord"
+																><span class="vlist-t"
+																	><span class="vlist-r"
+																		><span class="vlist" style="height: 0em;"
+																			><span style="top: -3em;"
+																				><span
+																					class="pstrut"
+																					style="height: 3em;"
+																				></span
+																				><span
+																					><span class="mord"
+																						><span class="mclose">)</span></span
+																					></span
+																				></span
+																			></span
+																		></span
+																	></span
+																></span
+															><span class="mord">1</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mbin">+</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mord">0</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mbin">+</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mord">0</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mbin">+</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mord">0</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mbin">+</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mord">1</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mbin">+</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mord">1</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mbin">+</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mord">0</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mbin">+</span
+															><span
+																class="mspace"
+																style="margin-right: 0.2222222222222222em;"
+															></span
+															><span class="mord">0</span></span
+														></span
+													><span style="top: -3.76444em;"
+														><span class="pstrut" style="height: 3em;"></span
+														><span
+															class="overline-line"
+															style="border-bottom-width: 0.04em;"
+														></span></span></span
+												><span class="vlist-s">​</span></span
+											><span class="vlist-r"
+												><span class="vlist" style="height: 0.08333em;"
+													><span></span></span></span></span></span></span></span
+						></span>
+					</p>
+				</section>
+				<section>
+					<style>
+						.sizedGallery {
+							height: 200px;
+						}
+					</style>
+
+					<h3 id="network-topologies">Network topologies</h3>
+
+					<figure class="third sizedGallery">
+						<a href="https://commons.wikimedia.org/wiki/File:BusNetwork.svg">
+							<img
+								src="/assets/resources-assets/2020-06-03-Electronics2/bus-network.svg"
+								alt="Bus Network"
+							/>
+						</a>
+
+						<a
+							href="https://commons.wikimedia.org/wiki/File:NetworkTopology-Mesh.svg"
+						>
+							<img
+								src="/assets/resources-assets/2020-06-03-Electronics2/mesh-network.png"
+								alt="Mesh Network"
+							/>
+						</a>
+
+						<a
+							href="https://commons.wikimedia.org/wiki/File:NetworkTopology-Ring.png"
+						>
+							<img
+								src="/assets/resources-assets/2020-06-03-Electronics2/ring-network.png"
+								alt="Ring Network"
+							/>
+						</a>
+
+						<a href="https://commons.wikimedia.org/wiki/File:StarNetwork.svg">
+							<img
+								src="/assets/resources-assets/2020-06-03-Electronics2/star-network.svg"
+								alt="Star Network"
+							/>
+						</a>
+
+						<figcaption>Different network topologies</figcaption>
+					</figure>
+				</section>
+				<section id="4-protocols" data-transition="slide-in">
+					<h2 id="protocols">Protocols</h2>
+				</section>
+				<section>
+					<section data-transition="slide">
+						<h3 id="uart">UART</h3>
+
+						<ul>
+							<li>Asynchronous</li>
+							<li>Full-duplex</li>
+							<li>Preferred choice</li>
+						</ul>
+
+						<p>
+							<strong style="color: darkmagenta;">TX 🡒 RX</strong><br />
+							<strong style="color: darkmagenta;">RX 🡐 TX</strong>
+						</p>
+					</section>
+					<section data-transition="slide">
+						<figure class="">
+							<a
+								href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#whats-wrong-with-serial-ports"
+							>
+								<img
+									src="/assets/resources-assets/2020-06-03-Electronics2/async.png"
+									alt="UART Connection Diagram"
+								/>
+							</a>
+
+							<figcaption>
+								<a
+									href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#whats-wrong-with-serial-ports"
+								>
+									UART Connection Diagram
+								</a>
+							</figcaption>
+						</figure>
+					</section>
+				</section>
+				<section>
+					<section data-transition="slide">
+						<h3 id="i2c">I<sup>2</sup>C</h3>
+
+						<ul>
+							<li>Synchronous</li>
+							<li>Half-duplex</li>
+							<li>
+								Prone to interference:<br />
+								do not use over long wires
+							</li>
+							<li>
+								Made to use with “sensors”<br />
+								Most sensors use this
+							</li>
+						</ul>
+
+						<p>
+							<strong style="color: darkmagenta;">SDA ⟺ SDA</strong><br />
+							<strong style="color: darkmagenta;">SCL 🡒 SCL</strong>
+						</p>
+
+						<aside class="notes">
+							<p>
+								explain that i2c was made to use with sensors, due to open drain
+								and multiple slaves and master-slave relationship therefore
+								sensors mainly use this
+							</p>
+						</aside>
+					</section>
+					<section data-transition="slide">
+						<figure class="">
+							<a
+								href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#a-synchronous-solution"
+							>
+								<img
+									src="/assets/resources-assets/2020-06-03-Electronics2/clock.png"
+									alt="I&lt;sup&gt;2&lt;/sup&gt;C Connection Diagram"
+								/>
+							</a>
+
+							<figcaption>
+								<a
+									href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#a-synchronous-solution"
+								>
+									I<sup>2</sup>C Connection Diagram
+								</a>
+							</figcaption>
+						</figure>
+					</section>
+				</section>
+				<section>
+					<section data-transition="slide">
+						<h3 id="spi">SPI</h3>
+
+						<ul>
+							<li>Synchronous</li>
+							<li>Pseudo Full-duplex</li>
+							<li>Fastest, but “Bulkiest”: 4 lines</li>
+							<li>Easy in hardware, complex in code</li>
+							<li>Used mostly in display drivers</li>
+						</ul>
+
+						<p>
+							<strong style="color: darkmagenta;">MOSI 🡒 MOSI</strong><br />
+							<strong style="color: darkmagenta;">MISO 🡐 MISO</strong><br />
+							<strong style="color: darkmagenta;">SCK 🡒 SCK</strong><br />
+							<strong style="color: darkmagenta;">SS 🡒 SS</strong>
+						</p>
+
+						<aside class="notes">
+							<p>
+								Explain the pseudo full duplex: both can transmit data
+								simultaneously, but the master must request the data first.<br />
+								While receiving data (into a buffer) master can transmit the
+								next “line” of data
+							</p>
+
+							<p>
+								Explain why easy in hardware: simple shift register, since it’s
+								a serial + clock and unidirectional. (vs i2c which is
+								bidirectional, and uart which is async). Hence this is used in
+								display drivers and sensors/drivers where large amount of data
+								is transferred
+							</p>
+
+							<p>
+								Explain why complex in code: SPI slave mode: master expects
+								slave to respond to the slave select immediately, hardware
+								peripherals don’t support it (eg RasPi) so have to do it via
+								bit-banging
+							</p>
+						</aside>
+					</section>
+					<section data-transition="slide">
+						<figure class="">
+							<a
+								href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#slave-select-ss"
+							>
+								<img
+									src="/assets/resources-assets/2020-06-03-Electronics2/spi.png"
+									alt="SPI Connection Diagram"
+								/>
+							</a>
+
+							<figcaption>
+								<a
+									href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#slave-select-ss"
+								>
+									SPI Connection Diagram
+								</a>
+							</figcaption>
+						</figure>
+					</section>
+				</section>
+				<section>
+					<section data-transition="slide">
+						<h3 id="miscellaneous">Miscellaneous</h3>
+
+						<p>
+							We don’t really need to know the next few for cup, they are mostly
+							used for other industrial purposes
+						</p>
+
+						<p>
+							These are all <strong>differential</strong> protocols. They
+							usually don’t exist for normal microcontrollers since it’s
+							difficult to implement
+						</p>
+					</section>
+					<section data-transition="slide">
+						<h3 id="usb-20">USB (2.0)</h3>
+
+						<ul>
+							<li>(A)synchronous</li>
+							<li>Half-duplex (up till USB3)</li>
+							<li>Differential</li>
+							<li>Industry standard</li>
+							<li>
+								Very fast but complex
+								<ul>
+									<li>Requires accurate clock</li>
+								</ul>
+							</li>
+						</ul>
+
+						<p>
+							<strong style="color: darkmagenta;">D+ ⟺ D+</strong><br />
+							<strong style="color: darkmagenta;">D- ⟺ D-</strong>
+						</p>
+
+						<aside class="notes">
+							<p>
+								Implementation is complex, that’s why it is not used in uC where
+								flash space, computing power is limited. However it is fast and
+								UNIVERSAL, that’s why it’s used everywhere else
+							</p>
+						</aside>
+					</section>
+					<section data-transition="slide">
+						<h3 id="can-rs485--lvds">CAN, RS485 / LVDS</h3>
+
+						<ul>
+							<li>“all the others”</li>
+							<li>Differential</li>
+							<li>CAN is used in cars</li>
+							<li>
+								The others have industrial applications
+								<ul>
+									<li>RS485 does not define a protocol</li>
+								</ul>
+							</li>
+						</ul>
+
+						<aside class="notes">
+							<p>
+								recommend looking at CAN since transceivers are easily
+								available, and it has a robust, well defined and error free
+								protocol (which is bulky but good enough). Alternatively RS485
+								transceivers are also very cheap and popular, but the protocol
+								implementation is ??
+							</p>
+
+							<p>
+								but this is nowhere near top priority and UART works very well
+							</p>
+						</aside>
+					</section>
+				</section>
+				<section id="5-interference" data-transition="slide-in">
+					<section data-transition="slide">
+						<p>
+							Probably no time to do interference separately, it’s boring
+							anyways and it only really occurs for i2c so:
+						</p>
+
+						<ul>
+							<li>i2c requires very very precise timing signals</li>
+							<li>
+								has some wonky pull up system since it is open drain (you pull
+								it low but leave it open and don’t drive it high)
+							</li>
+							<li>
+								together with a bidirectional data wire, it is very very
+								<strong>prone to interference</strong>.
+							</li>
+						</ul>
+
+						<aside class="notes">
+							<p>if have time explain why open drain</p>
+
+							<ul>
+								<li>
+									very simple, just one NPN BJT (which is usually cheaper than
+									PNP)
+								</li>
+								<li>
+									if 2 or more slaves try to drive it, it won’t harm each other
+								</li>
+								<li>
+									can have separate supply voltages without complex data driving
+									circuit
+									<ul>
+										<li>just need to share common ground</li>
+									</ul>
+								</li>
+							</ul>
+
+							<p>hence this is literally made for use with sensors</p>
+
+							<p>
+								yet it causes a lot of grief power loss in resistors and hair
+								loss trying to select a pull up resistor
+							</p>
+						</aside>
+					</section>
+					<section data-transition="slide">
+						<p>tl;dr, if you need to use i2c (most probably will):</p>
+
+						<ul>
+							<li>keep wire lengths short</li>
+							<li>
+								maybe don’t use the 400kHz fast mode (probably don’t need it to
+								be that fast in reality anyways)
+							</li>
+							<li>ensure wires <strong>DON’T PASS BY MOTORS</strong></li>
+							<li>
+								and try to keep buses separate for critical sensors (like
+								<strong>BNO055!!!!!!!!!! VERY IMPORTANT!!!!!!</strong>)
+							</li>
+						</ul>
+
+						<p>
+							<a
+								href="https://hackaday.com/2017/02/08/taking-the-leap-off-board-an-introduction-to-i2c-over-long-wires/"
+								>very good Hackaday article about I2C over long wires</a
+							>
+						</p>
+					</section>
+					<section data-transition="slide">
+						<p>
+							wherever possible (mostly between µC) opt for UART as it’s more
+							stable and the complex hardware implementation is done for us
+							already.
+						</p>
+
+						<p>
+							SPI may be preferred but slave mode is not always well implemented
+							in hardware, and software emulation is not that good
+						</p>
+
+						<p>
+							But we cannot escape i2c, and it’s not THAT bad anyways, mostly
+							just BNO055’s implementation and wonky pull ups.
+						</p>
+					</section>
+				</section>
+				<section id="6-integration" data-transition="slide-in">
+					<!-- markdownlint-disable line-length -->
+
+					<table>
+						<thead>
+							<tr>
+								<th>I<sup>2</sup>C</th>
+								<th>SPI</th>
+								<th>UART</th>
+								<th>AIN</th>
+								<th>PWM</th>
+								<th>Others</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="fragment highlight-red" data-fragment-index="1"
+										><strong>TOF</strong></span
+									>
+								</td>
+								<td>Mouse</td>
+								<td>
+									<span class="fragment highlight-red" data-fragment-index="1"
+										><strong>µC</strong></span
+									>
+								</td>
+								<td>
+									<span class="fragment highlight-red" data-fragment-index="1"
+										><strong>Light</strong></span
+									>
+								</td>
+								<td>
+									<span class="fragment highlight-red" data-fragment-index="1"
+										><strong>Motor</strong></span
+									>
+								</td>
+								<td>
+									<span class="fragment highlight-red" data-fragment-index="1"
+										><strong>Ultra</strong></span
+									>
+								</td>
+							</tr>
+							<tr>
+								<td>Camera</td>
+								<td>Camera</td>
+								<td>RasPi</td>
+								<td></td>
+								<td></td>
+								<td>Neopixel</td>
+							</tr>
+							<tr>
+								<td>Color</td>
+								<td>OpenMV</td>
+								<td>
+									<span class="fragment highlight-red" data-fragment-index="1"
+										><strong>OpenMV</strong></span
+									>
+								</td>
+								<td></td>
+								<td></td>
+								<td>Color</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="fragment highlight-red" data-fragment-index="1"
+										><strong>Compass</strong></span
+									>
+								</td>
+								<td>Display</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>POT</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- markdownlint-enable line-length -->
+				</section>
+				<section>
+					<section data-transition="slide">
+						<figure class="">
+							<img
+								src="/assets/resources-assets/2020-06-03-Electronics2/standard-mmd.svg"
+								alt="Standard connection diagram"
+							/>
+
+							<figcaption>
+								Standard connection diagram
+							</figcaption>
+						</figure>
+					</section>
+					<section data-transition="slide">
+						<figure class="">
+							<img
+								src="/assets/resources-assets/2020-06-03-Electronics2/bozo-mmd.svg"
+								alt="Our connection diagram"
+							/>
+
+							<figcaption>
+								Our connection diagram
+							</figcaption>
+						</figure>
+					</section>
+				</section>
+				<section id="end" data-transition="slide-in">
+					<h3 id="end">end</h3>
+				</section>
+			</div>
+		</div>
+
+		<script src="/assets/reveal.js/js/reveal.js"></script>
+		<script>
+			/*
+	More info about initialization & config:
+	- https://revealjs.com/initialization/
+	- https://revealjs.com/config/
+	*/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+				transitionSpeed: "fast",
+				fragments: true,
+				fragmentInURL: false,
+				hideInactivecursor: false,
+
+				/* Reveal options generated from mapping */
+
+				totalTime: "3000",
+
+				allottedTime: "3000000",
+
+				transition: "fade",
+
+				chalkboard: {
+					theme: "whiteboard",
+
+					src:
+						"/assets/resources-assets/2020-06-03-Electronics2/chalkboard.json",
+
+					readOnly: false,
+					eraser: {
+						src: "/assets/reveal-plugins/chalkboard/img/sponge.png",
+						radius: 15,
+					},
+					toggleChalkboardButton: { left: "80px" },
+					toggleNotesButton: { left: "130px" },
+				},
+				notes_pointer: {
+					pointer: {
+						size: 20,
+					},
+				},
+				menu: {
+					/* Add slide numbers to the titles in the slide list. */
+					/* Use 'true' or format string (same as reveal.js slide numbers) */
+					numbers: true,
+					/* If slides do not have a matching title, attempt to use the */
+					/* start of the text content as the title instead */
+					useTextContentForMissingTitles: true,
+					/* menu options generated from a list of strings */
+					custom: [
+						{
+							title: "Bookmarks",
+							icon: '<i class="fas fa-bookmark">',
+							src:
+								"/assets/resources-assets/2020-06-03-Electronics2/links.html",
+						},
+
+						{
+							title: "Marker color",
+							icon: '<i class="fas fa-marker">',
+							src: "/assets/reveal-plugins/chalkboard/markers.html",
+						},
+					],
+				},
+				dependencies: [
+					{
+						src: "/assets/reveal-plugins/elapsed-time-bar/elapsed-time-bar.js",
+						async: true,
+					},
+					{
+						src: "/assets/reveal-plugins/chalkboard/chalkboard.js",
+						async: true,
+					},
+					{ src: "/assets/reveal.js/plugin/zoom-js/zoom.js", async: true },
+					{
+						src: "/assets/reveal-plugins/notes-pointer/notes-pointer.js",
+						async: true,
+					},
+					{ src: "/assets/reveal-plugins/menu/menu.js", async: true },
+				],
+				keyboard: {
+					67: function () {
+						RevealChalkboard.toggleNotesCanvas();
+					} /* toggle notes canvas when 'c' is pressed */,
+					66: function () {
+						RevealChalkboard.toggleChalkboard();
+					} /* toggle chalkboard when 'b' is pressed */,
+					8: function () {
+						RevealChalkboard.clear();
+					} /* clear chalkboard when 'BACKSPACE' is pressed */,
+					68: function () {
+						RevealChalkboard.download();
+					} /* downlad recorded chalkboard drawing when 'd' is pressed */,
+					88: function () {
+						RevealChalkboard.colorNext();
+					} /* cycle colors forward when 'x' is pressed */,
+					89: function () {
+						RevealChalkboard.colorPrev();
+					} /* cycle colors backward when 'y' is pressed */,
+					13: function () {
+						ElapsedTimeBar.isPaused
+							? ElapsedTimeBar.resume()
+							: ElapsedTimeBar.pause();
+					} /* pause/resume time when Enter is pressed */,
+					82: function () {
+						ElapsedTimeBar.reset();
+					} /* reset timer when 'r' is pressed */,
+					/* todo: #13 when esc is pressed, if in chalkboard exit that, else show slide overview */
+				},
+			});
+		</script>
+		<script src="/assets/js/lazyload.js"></script>
+	</body>
+</html>

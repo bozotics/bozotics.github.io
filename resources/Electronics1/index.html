@@ -1,1 +1,1397 @@
-<!DOCTYPE html><html><head><meta charset="utf-8" /> <!-- begin _includes/seo.html --><title>⚡ Electronics Lesson #1 | Transcendence</title><meta name="description" content="Transistors and some applications "><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="Transcendence"><meta property="og:title" content="⚡ Electronics Lesson #1"><meta property="og:url" content="https://bozo.infocommsociety.com/resources/Electronics1/"><meta property="og:description" content="Transistors and some applications "><meta property="article:published_time" content="2020-05-25T00:00:00+08:00"><meta property="article:modified_time" content="2020-05-31T21:42:56+08:00"><link rel="canonical" href="https://bozo.infocommsociety.com/resources/Electronics1/"> <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Person", "name": null, "url": "https://bozo.infocommsociety.com/" } </script> <!-- end _includes/seo.html --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous"><link rel="icon" href="/assets/images/eagle ver 2.1.3.1-lowres.jpg"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><link rel="stylesheet" href="/assets/reveal.js/css/reset.css" /><link rel="stylesheet" href="/assets/reveal.js/css/reveal.css" /><link rel="stylesheet" href="/assets/css/reveal/night-custom.css" /><link rel="stylesheet" href="/assets/reveal.js/lib/css/monokai.css" /> <!-- Printing and PDF exports --> <script> var link = document.createElement( 'link' ); link.rel = 'stylesheet'; link.type = 'text/css'; link.href = window.location.search.match( /print-pdf/gi ) ? '/assets/reveal.js/css/print/pdf.css' : '/assets/reveal.js/css/print/paper.css'; document.getElementsByTagName( 'head' )[0].appendChild( link ); </script></head><body> <!--[if lt IE 9]><div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]--><div class="reveal"><div class="slides"><section><h2 id="-electronics-1">⚡ Electronics #1</h2><p>Transistors and some applications</p><figcaption><small>Press s for speaker notes, backspace to delete random annotations</small></figcaption></section><section id="1-contents" data-transition="slide-in"><h2 id="contents-transistors">Contents: Transistors</h2><ul><li>Bipolar Junction Transistors</li><li>MOSFETs</li><li>Darlington Pair</li><li>IGBT</li></ul></section><section ><h2 id="contents-applications">Contents: Applications</h2><ul><li>Low battery detection</li><li>Variable Resistor &amp; Regulators<ul><li>LDO</li><li>Buck Regulator</li><li>Boost Regulator</li></ul></li><li>Motor Driver</li><li>Solenoid Switch</li></ul></section><section id="2-intro" data-transition="slide-in"><h3 id="transistors">Transistors?</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/the-economist-moores-law.svg" alt="Moore's Law in The Economist" /><figcaption> Moore’s Law in <a href="https://www.economist.com/node/21693710/sites/all/modules/custom/ec_essay"><em>The Economist</em></a></figcaption></figure><aside class="notes"><p>What are transistors? May have seen it being thrown around before, here’s a diagram from <em>The Economist</em> abt Moore’s Law</p></aside></section><section ><p>From <a href="https://en.wikipedia.org/wiki/Transistor">Wikipedia</a>:</p><blockquote><p>“A transistor is a semiconductor device used to <span class="fragment highlight-red">amplify</span> or <span class="fragment highlight-red">switch</span> electronic signals and electrical power.”</p></blockquote></section><section ><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/battery-switch-bulb.png" alt="Normal way to switch a light bulb" /><figcaption> Normal way to switch a light bulb</figcaption></figure><aside class="notes"><p>Normally, when we want to turn on and off lightbulbs or other high powered components, we use a switch.</p><p>However, what if we want to control these automatically?</p><p>Eg, in a Smart Home, when you reach home you want it to turn on automatically. You will need a Microcontroller to do that…</p></aside></section><section ><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/arduino-direct-bulb.png" alt="Arduino switching a light bulb?" /><figcaption> Arduino switching a light bulb?</figcaption></figure><aside class="notes"><p>Instinctively, we may think of this: using a microcontroller’s digital pin (which you can program to output 1 or 0) to switch the bulb.</p><p>however…</p></aside></section><section ><p>From <a href="https://www.arduino.cc/en/Tutorial/DigitalPins">Arduino’s Tutorial</a>:</p><blockquote><p>“pins can source <span class="fragment highlight-red">(provide positive current)</span> or sink (provide negative current) up to <span class="fragment highlight-red">40 mA</span> (milliamps) of current to other devices/circuits. […] attempting to run high current devices from them, can <span class="fragment highlight-red">damage or destroy</span> the output transistors in the pin, or damage the entire Atmega chip.”</p></blockquote><aside class="notes"><p>The arduino only allows for 40mA MAX to be output from it’s pins. I wonder how much amps a lightbulb requires…</p></aside></section><section ><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/phillips-LED-wattage.png" alt="Phillips LED Bulb Wattage" /><figcaption> <a href="https://www.lighting.philips.com.sg/consumer/led-lights/eco-friendly-led-light">Phillips LED Bulb Wattage</a></figcaption></figure></section><section ><p>Assuming Arduino runs at 5v,</p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mi>a</mi><mi>t</mi><mi>t</mi><mi>s</mi><mo>=</mo><mi>V</mi><mi>o</mi><mi>l</mi><mi>t</mi><mi>a</mi><mi>g</mi><mi>e</mi><mo>×</mo><mi>A</mi><mi>m</mi><mi>p</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Watts=Voltage\times Amps</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mord mathdefault">s</span></span></span></span></span> <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.5</mn><mi>W</mi><mo>=</mo><mn>5</mn><mi>V</mi><mo>×</mo><mi>A</mi><mi>m</mi><mi>p</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">2.5W=5V\times Amps</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">5</span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord">5</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mord mathdefault">s</span></span></span></span></span><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>m</mi><mi>p</mi><mi>s</mi><mo>=</mo><mn>0.5</mn><mi>A</mi><mo>&gt;</mo><mo>&gt;</mo><mo>&gt;</mo><mn>0.04</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">Amps=0.5A&gt;&gt;&gt;0.04A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">0</span><span class="mord">4</span><span class="mord mathdefault">A</span></span></span></span> 💥</p></section><section ><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/arduino-controlling-switch.png" alt="What if the Arduino could control the switch?" /><figcaption> What if the Arduino could control the switch?</figcaption></figure><figcaption><small>disclaimer: this circuit doesn't actually work</small></figcaption></section><section id="3-relay" data-transition="slide-in"><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/relay.svg" alt="Electromechanical switch: Relay" /><figcaption> <a href="https://commons.wikimedia.org/wiki/File:SPST-NO_relay_symbol.svg">Electro<span class="fragment highlight-red">mechanical</span> switch: Relay</a></figcaption></figure><aside class="notes"><p>One method is to use an electromechanical switch: a relay. A magnet would control a metal piece to close or open the circuit. However, the “mechanical” component is a major problem…</p></aside></section><section ><h3 id="problems">Problems</h3><ul><li>slow</li><li>prone to hardware failure</li><li>big</li><li><a href="https://www.youtube.com/embed/mQpzwR7wLeo?start=375" data-preview-link="true">arcing</a></li></ul><p>∴ A “digital” solution is required</p><aside class="notes"><p>Also, relays are commonly only used in AC circuits due to the zero-crossing nature that will prevent arcing</p></aside></section><section id="4-transistors" data-transition="slide-in"><p>There are many different types of transistors, but the first important one made was the<br /> <strong>bipolar junction transistor (BJT)</strong></p><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/BJT.svg" alt="NPN BJT" /><figcaption> <a href="https://commons.wikimedia.org/wiki/File:BJT_NPN_symbol_(case).svg">NPN BJT</a></figcaption></figure><p><span class="fragment"><small>It is commonly used as an amplifier, eg. for microphones and speakers</small></span></p><p><span class="fragment"><small>For switching a lightbulb, a BJT isn’t the most suitable…</small></span></p><aside class="notes"><p>Those who study H3 semicon prolly know this, but I didn’t and that’s not the point of this presentation anyways.</p><p>Draw current flow, explain beta amplification value, thus high voltage but low current since saturation and beta can only be certain value</p><p>On PDF, go through saturation voltages and beta value, teach how to read datasheet (the absolute max, recommended, graphs, what is important what isn’t)</p><p>switching is also relatively slow</p><p><a href="https://www.youtube.com/watch?v=WRm2oUw4owE">Good video explaining BJT</a></p><p><a href="https://www.youtube.com/watch?v=IcrBqCFLHIY">good video explaining P and N doping silicon</a></p></aside></section><section ><p>metal–oxide–semiconductor field-effect transistor <strong>(MOSFET)</strong> is another type of transistor, the gate is insulated from the rest of circuit thus there is low input current and high input impedance</p><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/mosfet.svg" alt="N-ch MOSFET" /><figcaption> <a href="https://commons.wikimedia.org/wiki/File:IGFET_N-Ch_Enh_Labelled.svg">N-ch MOSFET</a></figcaption></figure><p><span class="fragment"><small>For a very high power lightbulb, power losses may become severe…</small></span></p><aside class="notes"><p>Go through why it’s good: the high input impedance, so it is specifically made to be a switch, can support high current</p><p>But input parasitic capacitance issues, so must put a resistor to smooth the input current since constant charge</p><p>But but relatively high output impedance, means output power losses, breakdown voltage relatively low</p><p>Explain graph, issues with V<sub>gs</sub>, usually use a charge pump to get voltage up</p><p><a href="https://www.youtube.com/watch?v=o4_NeqlJgOs">Good video explaining MOSFET</a></p></aside></section><section ><p>to solve the input issues of the MOSFET while acheiving the (relatively lower) output impedance of a BJT, a <strong>darlington pair</strong> configuration can be used</p><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/darlington.png" alt="darlington pair configuration" /><figcaption> <a href="https://circuitdigest.com/sites/default/files/inlineimages/u/Darlington-Transistor-Pair_0.png">darlington pair configuration</a></figcaption></figure><p><span class="fragment"><small>But V<sub>ce</sub> is doubled, so more power losses</small></span></p></section><section ><p>insulated gate bipolar transistor <strong>(IGBT)</strong> combines the low output impedance of a BJT, high input impedance and high switching speed of a MOSFET to make a very high powered transistor.</p><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/igbt-circuit.png" alt="IGBT" /><figcaption> <a href="https://www.electronics-tutorials.ws/power/insulated-gate-bipolar-transistor.html">IGBT</a></figcaption></figure><p><span class="fragment"><small>But this is usually a lot more expensive and large, for most cases it’s overkill</small></span></p><aside class="notes"><p>since we want low input impedance, we use mosfet as input to drive low output impedance BJT. This is also a “PNPN” transistor.</p><p>But this is expensive and usually overkill, also very large in size</p><p><a href="https://www.electronics-tutorials.ws/power/insulated-gate-bipolar-transistor.html">good writeup about this</a></p></aside></section><section id="5-applications" data-transition="slide-in"><section data-transition="slide"><h3 id="for-powering-a-lightbulb-a-mosfet-is-probably-the-most-suitable">For powering a lightbulb, a MOSFET is probably the most suitable</h3><ul><li>A lightbulb isn’t THAT high power to require a IGBT or Darlington pair</li><li>We are digitally controlling the lightbulb using a microcontroller, so we don’t need analog amplification</li><li>Cost effective, small, easily available, commonly used</li></ul></section><section data-transition="slide"><h3 id="going-back-to-the-original-problem">Going back to the original problem…</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/mosfet-LED-switch.png" alt="MOSFET LED Switch" /><figcaption> MOSFET LED Switch</figcaption></figure></section><section data-transition="slide"><h3 id="schematic-diagram">Schematic Diagram</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/mosfet-LED-switch-sch.svg" alt="MOSFET LED Switch Schematic" /><figcaption> MOSFET LED Switch Schematic</figcaption></figure><aside class="notes"><p>Teach how to read schematic, common notations (net label, no 4 crossing, junction)</p><p>Explain the pull down resistor, and the series resistor</p></aside></section></section><section ><h3 id="low-battery-indicator">Low Battery Indicator</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/low-batt-npn.svg" alt="NPN BJT Low Battery Indicator" /><figcaption> <a href="https://www.falstad.com/circuit/circuitjs.html?cct=$+1+0.000005+10.20027730826997+50+5+50%0At+224+224+256+224+0+1+0+0+200%0At+288+192+320+192+0+1+0+0+200%0Aw+256+176+256+192+0%0A162+320+128+320+160+2+default-led+1+0+0+0.01%0Aw+320+160+320+176+1%0Aw+320+128+320+112+0%0Aw+320+112+304+112+0%0Ar+304+112+256+112+0+450%0Ar+192+128+192+176+0+100000%0Aw+192+176+192+224+0%0Aw+192+128+192+112+0%0Ar+256+128+256+176+0+100000%0Aw+256+192+288+192+1%0Aw+256+112+256+128+0%0Aw+320+208+320+304+0%0Aw+320+304+256+304+0%0Ar+192+240+192+288+0+6300%0Aw+192+224+192+240+2%0Aw+192+288+192+304+0%0Aw+192+304+256+304+0%0Aw+256+240+256+304+1%0Aw+192+112+176+112+0%0Aw+192+304+176+304+0%0A172+176+112+144+112+0+7+9.3+9.3+8.7+0+0.5+Voltage%0Ag+176+320+176+336+0%0Aw+192+112+256+112+0%0Aw+256+192+256+208+0%0Aw+176+304+176+320+0%0Aw+192+224+224+224+0%0A" data-preview-link="true">NPN BJT Low Battery Indicator</a></figcaption></figure><aside class="notes"><p>Explain voltage divider, 0.6v saturation, show what saturation means (transistor acts as zener), show on circuitJS</p></aside></section><section ><h3 id="variable-resistor">Variable Resistor</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/mosfet-variable-resistor.svg" alt="MOSFET as Variable Resistor" /><figcaption> MOSFET as Variable Resistor</figcaption></figure><aside class="notes"><p>Explain MOSFET in linear region, so we can control resistance by on-off time, hence explain PWM</p><p><a href="http://www.vishay.com/docs/70598/70598.pdf">Related AppNote</a></p></aside></section><section ><h3 id="low-dropout-regulator-ldo">Low Dropout Regulator (LDO)</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/LM1117-blockdiag.png" alt="LM1117 LDO Block Diagram" /><figcaption> <a href="www.ti.com/lit/ds/symlink/lm1117.pdf">LM1117 LDO Block Diagram</a></figcaption></figure><aside class="notes"><p>Explain what is a block diagram, we don’t actually need to understand but there’s a bunch of transistors around</p></aside></section><section ><h3 id="buck-converter">Buck Converter</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/buckconverter.svg" alt="Buck converter simplified schematic" /><figcaption> <a href="https://commons.wikimedia.org/wiki/File:Buck_operating.svg">Buck converter simplified schematic</a></figcaption></figure><aside class="notes"><p>Very briefly explain inductor capacitor, and the switching action</p></aside></section><section ><h3 id="boost-converter">Boost Converter</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/boostconverter.svg" alt="Boost converter simplified schematic" /><figcaption> <a href="https://commons.wikimedia.org/wiki/File:Boost_operating.svg">Boost converter simplified schematic</a></figcaption></figure><aside class="notes"><p>Very briefly explain inductor capacitor, and the switching action</p></aside></section><section id="6-motor" data-transition="slide-in"><h3 id="brushed-motor">Brushed Motor</h3><figure class="sizedImg"> <img src="/assets/resources-assets/2020-05-25-Electronics1/dc-motor.gif" alt="Brushed DC Motor GIF" /><figcaption> <a href="https://commons.wikimedia.org/wiki/File:Electric_motor.gif">Brushed DC Motor GIF</a></figcaption></figure><aside class="notes"><p>briefly explain motor action, current cause B-field, reversing current cause reversing B-field</p><p>show on tinkercad</p><p>don’t move on to next slide, show on chalkboard thinking behind full bridge, eg we want to make current flow in the same direction at the horizontal part, from alternate directions in the vertical part</p></aside></section><section ><h3 id="full-bridge-rectifier">Full Bridge Rectifier</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/fullbridge.gif" alt="Full bridge rectifier GIF" /><figcaption> <a href="https://commons.wikimedia.org/wiki/File:Diodebridge-eng.gif">Full bridge rectifier GIF</a></figcaption></figure><aside class="notes"><p>show on chalkboard how to come up with a full bridge design, the thinking process of how to convert AC to DC, then link to converting DC to AC</p><p>don’t move on to next slide, show on chalkboard how to convert that idea into full bridge, eg we want to make current flow in alternate directions at horizontal part, so current must come in from left/right side to change it from the vertical DC part</p></aside></section><section ><h3 id="h-bridge">H-Bridge</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/h-bridge.svg" alt="H-Bridge" /><figcaption> <a href="https://commons.wikimedia.org/wiki/File:H_bridge.svg">H-Bridge</a></figcaption></figure><aside class="notes"><p>this is basically the insides of your motor driver. But how to control the speed…?</p></aside></section><section ><h3 id="motor-driver">Motor Driver</h3><figure class="sizedImg"> <img src="/assets/resources-assets/2020-05-25-Electronics1/vnh5019-blockdiag.png" alt="Motor Driver Block Diagram" /><figcaption> <a href="https://www.st.com/en/automotive-analog-and-power/vnh5019a-e.html">Motor Driver Block Diagram</a></figcaption></figure><aside class="notes"><p>point out where the MOSFETs are, explain speed is controlled by PWM</p><p>emphasise that block diagrams aren’t actually that important whenever they’re looking at datasheets, we use them here a lot just to explain how they are found in the things we use</p><p>if have time go through the motor datasheet and key specs</p></aside></section><section id="7-solenoid" data-transition="slide-in"><section data-transition="slide"><h3 id="driving-a-linear-solenoid">Driving a linear solenoid</h3><p>We usually run the <a href="https://www.youtube.com/embed/Ueio1qoXRbE" data-preview-link="true">solenoids</a> at ~60V, ~2A. This results in huge spikes in current and voltage we have to contain.</p><p>We first used a relay, but we experienced <a href="#/3-relay">arcing</a> due to this <a href="#/solenoid-scope">large power draw</a> and <a href="#/solenoid-inductive">inductive nature</a> of the solenoid.</p><aside class="notes"><p>Maybe talk about the huge capacitor?</p></aside></section><section id="solenoid-scope" data-transition="slide"><h3 id="current-spikes">Current spikes</h3><figure class="sizedImg"> <img src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-oscilloscope.jpg" alt="Oscilloscope reading of voltage across 0.4Ω resistor" /><figcaption> Oscilloscope reading of voltage across 0.4Ω resistor</figcaption></figure></section><section id="solenoid-inductive" data-transition="slide"><aside class="notes"><p>point out negative and huge current flowing through (0.4Ω 5v = &gt;10A)</p></aside><h3 id="solenoids-inductive-nature">Solenoid’s inductive nature</h3><figure class="sizedImg"> <img src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-cross-section.png" alt="Linear solenoid cross section" /><figcaption> <a href="https://www.electronics-tutorials.ws/io/io_6.html">Linear solenoid cross section</a></figcaption></figure><aside class="notes"><p>Explain what is an inductor, basically a coil, so coil stores magnetic energy. When power is removed, this magnetic energy is still there, it doesn’t get removed as well. Now this energy has nowhere to go, thus the voltage will just keep increasing and building up until MOSFET diode reaches breakdown voltage</p></aside></section><section data-transition="slide-in fade-out"><h3 id="mosfet-switch">MOSFET switch</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-mosfet-noflyback.svg" alt="Using a MOSFET to switch a solenoid...?" /><figcaption> Using a MOSFET to switch a solenoid…?</figcaption></figure><aside class="notes"><p>Explain what is an inductor, basically a coil, so coil stores magnetic energy. When power is removed, this magnetic energy is still there, it doesn’t get removed as well. Now this energy has nowhere to go, thus the voltage will just keep increasing and building up until MOSFET diode reaches breakdown voltage</p></aside></section><section data-transition="fade"><h3 id="flyback-diode">Flyback diode</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-mosfet-withflyback.svg" alt="Adding flyback diode to contain inductive 'kickback'" /><figcaption> Adding flyback diode to contain inductive ‘kickback’</figcaption></figure></section><section data-transition="fade-in slide-out"><h3 id="zener-diode">Zener diode</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-mosfet-withzener.svg" alt="Adding zener diode to dissipate energy" /><figcaption> Adding zener diode to dissipate energy</figcaption></figure><aside class="notes"><p>Explain what is a zener diode, maintains a voltage difference across. This allows it to dissipate more energy during the OFF state, which helps save the MOSFET. Not really needed or used online, just a safety addition</p></aside></section></section><section id="end1" data-transition="slide-in"><h3 id="end">end</h3><aside class="notes"><p>move on to next if there is time</p></aside></section><section id="8-VgsIssues" data-transition="slide-in"><section data-transition="slide"><h3 id="mosfet-vgs-threshold-issues">MOSFET V<sub>gs</sub> Threshold Issues</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-mosfet-withzener.svg" alt="'CONTROL' voltage of 3.3v to drive MOSFET?" /><figcaption> ‘<em>CONTROL</em>’ voltage of 3.3v to drive MOSFET?</figcaption></figure><aside class="notes"><p>show 2n7000 MOSFET datasheet graph of V<sub>gs</sub>, so MOSFET will get hot due to R<sub>ds</sub> power losses</p></aside></section><section data-transition="slide"><h3 id="using-12v-battery-as-gate-drive">Using 12v battery as gate drive</h3><figure class=""> <img src="/assets/resources-assets/2020-05-25-Electronics1/mosfet-12v-gate-drive.svg" alt="Using 12v for gate drive" /><figcaption> Using 12v for gate drive</figcaption></figure><aside class="notes"><p>Explain how smaller MOSFET has smaller breakdown voltage so can’t use it alone, but bigger MOSFET needs higher V<sub>gs</sub> to acheive lower R<sub>ds</sub>, thus you use both together</p><p>Explain how gate drive isn’t based on “absolute voltage”, but is based on V<sub>gs</sub>, means it’s relative to the source voltage, that’s how this circuit works</p></aside></section></section><section id="end2" data-transition="slide-in"><h3 id="end-for-real">end for real</h3></section></div></div><script src="/assets/reveal.js/js/reveal.js"></script> <script> /* More info about initialization & config: - https://revealjs.com/initialization/ - https://revealjs.com/config/ */ Reveal.initialize({ hash: true, slideNumber: true, transitionSpeed: "fast", fragments: true, fragmentInURL: false, hideInactivecursor: false, /* Reveal options generated from mapping */ totalTime: "2700", allottedTime: "2700000", transition: "fade", chalkboard: { theme: "whiteboard", src: "/assets/resources-assets/2020-05-25-Electronics1/chalkboard.json", readOnly: false, eraser: { src: '/assets/reveal-plugins/chalkboard/img/sponge.png', radius: 15 }, toggleChalkboardButton: { left: "80px" }, toggleNotesButton: { left: "130px" } }, notes_pointer: { pointer: { size: 20 } }, menu: { /* Add slide numbers to the titles in the slide list. */ /* Use 'true' or format string (same as reveal.js slide numbers) */ numbers: true, /* If slides do not have a matching title, attempt to use the */ /* start of the text content as the title instead */ useTextContentForMissingTitles: true, /* menu options generated from a list of strings */ custom: [ { title: 'Bookmarks', icon: '<i class="fas fa-bookmark">', src: '/assets/resources-assets/2020-05-25-Electronics1/links.html' }, { title: 'Marker color', icon: '<i class="fas fa-marker">', src:'/assets/reveal-plugins/chalkboard/markers.html' } ] }, dependencies: [ { src: '/assets/reveal-plugins/elapsed-time-bar/elapsed-time-bar.js', async: true }, { src: '/assets/reveal-plugins/chalkboard/chalkboard.js', async: true }, { src: '/assets/reveal.js/plugin/zoom-js/zoom.js', async: true }, { src: '/assets/reveal-plugins/notes-pointer/notes-pointer.js', async: true }, { src: '/assets/reveal-plugins/menu/menu.js', async: true } ], keyboard: { 67: function() { RevealChalkboard.toggleNotesCanvas() }, /* toggle notes canvas when 'c' is pressed */ 66: function() { RevealChalkboard.toggleChalkboard() }, /* toggle chalkboard when 'b' is pressed */ 8: function() { RevealChalkboard.clear() }, /* clear chalkboard when 'BACKSPACE' is pressed */ 68: function() { RevealChalkboard.download() }, /* downlad recorded chalkboard drawing when 'd' is pressed */ 88: function() { RevealChalkboard.colorNext() }, /* cycle colors forward when 'x' is pressed */ 89: function() { RevealChalkboard.colorPrev() }, /* cycle colors backward when 'y' is pressed */ 13: function() { ElapsedTimeBar.isPaused ? ElapsedTimeBar.resume() : ElapsedTimeBar.pause(); }, /* pause/resume time when Enter is pressed */ 82: function() { ElapsedTimeBar.reset(); } /* reset timer when 'r' is pressed */ /* todo: #13 when esc is pressed, if in chalkboard exit that, else show slide overview */ } }); </script> <script src="/assets/js/lazyload.js"></script></body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- begin _includes/seo.html -->
+		<title>⚡ Electronics Lesson #1 | Transcendence</title>
+		<meta name="description" content="Transistors and some applications " />
+
+		<meta property="og:type" content="article" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="Transcendence" />
+		<meta property="og:title" content="⚡ Electronics Lesson #1" />
+		<meta
+			property="og:url"
+			content="https://bozo.infocommsociety.com/resources/Electronics1/"
+		/>
+
+		<meta
+			property="og:description"
+			content="Transistors and some applications "
+		/>
+
+		<meta
+			property="article:published_time"
+			content="2020-05-25T00:00:00+08:00"
+		/>
+
+		<meta
+			property="article:modified_time"
+			content="2020-05-31T21:42:56+08:00"
+		/>
+
+		<link
+			rel="canonical"
+			href="https://bozo.infocommsociety.com/resources/Electronics1/"
+		/>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+
+				"@type": "Person",
+				"name": null,
+				"url": "https://bozo.infocommsociety.com/"
+			}
+		</script>
+
+		<!-- end _includes/seo.html -->
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+			integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="icon" href="/assets/images/eagle ver 2.1.3.1-lowres.jpg" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="stylesheet" href="/assets/reveal.js/css/reset.css" />
+		<link rel="stylesheet" href="/assets/reveal.js/css/reveal.css" />
+		<link rel="stylesheet" href="/assets/css/reveal/night-custom.css" />
+		<link rel="stylesheet" href="/assets/reveal.js/lib/css/monokai.css" />
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement("link");
+			link.rel = "stylesheet";
+			link.type = "text/css";
+			link.href = window.location.search.match(/print-pdf/gi)
+				? "/assets/reveal.js/css/print/pdf.css"
+				: "/assets/reveal.js/css/print/paper.css";
+			document.getElementsByTagName("head")[0].appendChild(link);
+		</script>
+	</head>
+
+	<body>
+		<!--[if lt IE 9]>
+			<div class="notice--danger align-center" style="margin: 0;">
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="https://browsehappy.com/">upgrade your browser</a> to improve
+				your experience.
+			</div>
+		<![endif]-->
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2 id="-electronics-1">⚡ Electronics #1</h2>
+
+					<p>Transistors and some applications</p>
+
+					<figcaption>
+						<small
+							>Press s for speaker notes, backspace to delete random
+							annotations</small
+						>
+					</figcaption>
+				</section>
+				<section id="1-contents" data-transition="slide-in">
+					<h2 id="contents-transistors">Contents: Transistors</h2>
+
+					<ul>
+						<li>Bipolar Junction Transistors</li>
+						<li>MOSFETs</li>
+						<li>Darlington Pair</li>
+						<li>IGBT</li>
+					</ul>
+				</section>
+				<section>
+					<h2 id="contents-applications">Contents: Applications</h2>
+
+					<ul>
+						<li>Low battery detection</li>
+						<li>
+							Variable Resistor &amp; Regulators
+							<ul>
+								<li>LDO</li>
+								<li>Buck Regulator</li>
+								<li>Boost Regulator</li>
+							</ul>
+						</li>
+						<li>Motor Driver</li>
+						<li>Solenoid Switch</li>
+					</ul>
+				</section>
+				<section id="2-intro" data-transition="slide-in">
+					<h3 id="transistors">Transistors?</h3>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/the-economist-moores-law.svg"
+							alt="Moore's Law in The Economist"
+						/>
+
+						<figcaption>
+							Moore’s Law in
+							<a
+								href="https://www.economist.com/node/21693710/sites/all/modules/custom/ec_essay"
+								><em>The Economist</em></a
+							>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							What are transistors? May have seen it being thrown around before,
+							here’s a diagram from <em>The Economist</em> abt Moore’s Law
+						</p>
+					</aside>
+				</section>
+				<section>
+					<p>
+						From
+						<a href="https://en.wikipedia.org/wiki/Transistor">Wikipedia</a>:
+					</p>
+
+					<blockquote>
+						<p>
+							“A transistor is a semiconductor device used to
+							<span class="fragment highlight-red">amplify</span> or
+							<span class="fragment highlight-red">switch</span> electronic
+							signals and electrical power.”
+						</p>
+					</blockquote>
+				</section>
+				<section>
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/battery-switch-bulb.png"
+							alt="Normal way to switch a light bulb"
+						/>
+
+						<figcaption>
+							Normal way to switch a light bulb
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							Normally, when we want to turn on and off lightbulbs or other high
+							powered components, we use a switch.
+						</p>
+
+						<p>However, what if we want to control these automatically?</p>
+
+						<p>
+							Eg, in a Smart Home, when you reach home you want it to turn on
+							automatically. You will need a Microcontroller to do that…
+						</p>
+					</aside>
+				</section>
+				<section>
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/arduino-direct-bulb.png"
+							alt="Arduino switching a light bulb?"
+						/>
+
+						<figcaption>
+							Arduino switching a light bulb?
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							Instinctively, we may think of this: using a microcontroller’s
+							digital pin (which you can program to output 1 or 0) to switch the
+							bulb.
+						</p>
+
+						<p>however…</p>
+					</aside>
+				</section>
+				<section>
+					<p>
+						From
+						<a href="https://www.arduino.cc/en/Tutorial/DigitalPins"
+							>Arduino’s Tutorial</a
+						>:
+					</p>
+
+					<blockquote>
+						<p>
+							“pins can source
+							<span class="fragment highlight-red"
+								>(provide positive current)</span
+							>
+							or sink (provide negative current) up to
+							<span class="fragment highlight-red">40 mA</span> (milliamps) of
+							current to other devices/circuits. […] attempting to run high
+							current devices from them, can
+							<span class="fragment highlight-red">damage or destroy</span> the
+							output transistors in the pin, or damage the entire Atmega chip.”
+						</p>
+					</blockquote>
+
+					<aside class="notes">
+						<p>
+							The arduino only allows for 40mA MAX to be output from it’s pins.
+							I wonder how much amps a lightbulb requires…
+						</p>
+					</aside>
+				</section>
+				<section>
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/phillips-LED-wattage.png"
+							alt="Phillips LED Bulb Wattage"
+						/>
+
+						<figcaption>
+							<a
+								href="https://www.lighting.philips.com.sg/consumer/led-lights/eco-friendly-led-light"
+								>Phillips LED Bulb Wattage</a
+							>
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<p>Assuming Arduino runs at 5v,</p>
+
+					<span class="katex-display"
+						><span class="katex"
+							><span class="katex-mathml"
+								><math xmlns="http://www.w3.org/1998/Math/MathML"
+									><semantics
+										><mrow
+											><mi>W</mi><mi>a</mi><mi>t</mi><mi>t</mi><mi>s</mi
+											><mo>=</mo><mi>V</mi><mi>o</mi><mi>l</mi><mi>t</mi
+											><mi>a</mi><mi>g</mi><mi>e</mi><mo>×</mo><mi>A</mi
+											><mi>m</mi><mi>p</mi><mi>s</mi></mrow
+										><annotation encoding="application/x-tex"
+											>Watts=Voltage\times Amps</annotation
+										></semantics
+									></math
+								></span
+							><span class="katex-html" aria-hidden="true"
+								><span class="base"
+									><span
+										class="strut"
+										style="height: 0.68333em; vertical-align: 0em;"
+									></span
+									><span
+										class="mord mathdefault"
+										style="margin-right: 0.13889em;"
+										>W</span
+									><span class="mord mathdefault">a</span
+									><span class="mord mathdefault">t</span
+									><span class="mord mathdefault">t</span
+									><span class="mord mathdefault">s</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2777777777777778em;"
+									></span
+									><span class="mrel">=</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2777777777777778em;"
+									></span></span
+								><span class="base"
+									><span
+										class="strut"
+										style="
+											height: 0.8888799999999999em;
+											vertical-align: -0.19444em;
+										"
+									></span
+									><span
+										class="mord mathdefault"
+										style="margin-right: 0.22222em;"
+										>V</span
+									><span class="mord mathdefault">o</span
+									><span
+										class="mord mathdefault"
+										style="margin-right: 0.01968em;"
+										>l</span
+									><span class="mord mathdefault">t</span
+									><span class="mord mathdefault">a</span
+									><span
+										class="mord mathdefault"
+										style="margin-right: 0.03588em;"
+										>g</span
+									><span class="mord mathdefault">e</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2222222222222222em;"
+									></span
+									><span class="mbin">×</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2222222222222222em;"
+									></span></span
+								><span class="base"
+									><span
+										class="strut"
+										style="
+											height: 0.8777699999999999em;
+											vertical-align: -0.19444em;
+										"
+									></span
+									><span class="mord mathdefault">A</span
+									><span class="mord mathdefault">m</span
+									><span class="mord mathdefault">p</span
+									><span class="mord mathdefault">s</span></span
+								></span
+							></span
+						></span
+					>
+
+					<span class="katex-display"
+						><span class="katex"
+							><span class="katex-mathml"
+								><math xmlns="http://www.w3.org/1998/Math/MathML"
+									><semantics
+										><mrow
+											><mn>2.5</mn><mi>W</mi><mo>=</mo><mn>5</mn><mi>V</mi
+											><mo>×</mo><mi>A</mi><mi>m</mi><mi>p</mi><mi>s</mi></mrow
+										><annotation encoding="application/x-tex"
+											>2.5W=5V\times Amps</annotation
+										></semantics
+									></math
+								></span
+							><span class="katex-html" aria-hidden="true"
+								><span class="base"
+									><span
+										class="strut"
+										style="height: 0.68333em; vertical-align: 0em;"
+									></span
+									><span class="mord">2</span><span class="mord">.</span
+									><span class="mord">5</span
+									><span
+										class="mord mathdefault"
+										style="margin-right: 0.13889em;"
+										>W</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2777777777777778em;"
+									></span
+									><span class="mrel">=</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2777777777777778em;"
+									></span></span
+								><span class="base"
+									><span
+										class="strut"
+										style="height: 0.76666em; vertical-align: -0.08333em;"
+									></span
+									><span class="mord">5</span
+									><span
+										class="mord mathdefault"
+										style="margin-right: 0.22222em;"
+										>V</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2222222222222222em;"
+									></span
+									><span class="mbin">×</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2222222222222222em;"
+									></span></span
+								><span class="base"
+									><span
+										class="strut"
+										style="
+											height: 0.8777699999999999em;
+											vertical-align: -0.19444em;
+										"
+									></span
+									><span class="mord mathdefault">A</span
+									><span class="mord mathdefault">m</span
+									><span class="mord mathdefault">p</span
+									><span class="mord mathdefault">s</span></span
+								></span
+							></span
+						></span
+					>
+
+					<p>
+						<span class="katex"
+							><span class="katex-mathml"
+								><math xmlns="http://www.w3.org/1998/Math/MathML"
+									><semantics
+										><mrow
+											><mi>A</mi><mi>m</mi><mi>p</mi><mi>s</mi><mo>=</mo
+											><mn>0.5</mn><mi>A</mi><mo>&gt;</mo><mo>&gt;</mo
+											><mo>&gt;</mo><mn>0.04</mn><mi>A</mi></mrow
+										><annotation encoding="application/x-tex"
+											>Amps=0.5A&gt;&gt;&gt;0.04A</annotation
+										></semantics
+									></math
+								></span
+							><span class="katex-html" aria-hidden="true"
+								><span class="base"
+									><span
+										class="strut"
+										style="
+											height: 0.8777699999999999em;
+											vertical-align: -0.19444em;
+										"
+									></span
+									><span class="mord mathdefault">A</span
+									><span class="mord mathdefault">m</span
+									><span class="mord mathdefault">p</span
+									><span class="mord mathdefault">s</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2777777777777778em;"
+									></span
+									><span class="mrel">=</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2777777777777778em;"
+									></span></span
+								><span class="base"
+									><span
+										class="strut"
+										style="height: 0.72243em; vertical-align: -0.0391em;"
+									></span
+									><span class="mord">0</span><span class="mord">.</span
+									><span class="mord">5</span
+									><span class="mord mathdefault">A</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2777777777777778em;"
+									></span
+									><span class="mrel">&gt;</span></span
+								><span class="base"
+									><span
+										class="strut"
+										style="height: 0.5782em; vertical-align: -0.0391em;"
+									></span
+									><span class="mrel">&gt;</span></span
+								><span class="base"
+									><span
+										class="strut"
+										style="height: 0.5782em; vertical-align: -0.0391em;"
+									></span
+									><span class="mrel">&gt;</span
+									><span
+										class="mspace"
+										style="margin-right: 0.2777777777777778em;"
+									></span></span
+								><span class="base"
+									><span
+										class="strut"
+										style="height: 0.68333em; vertical-align: 0em;"
+									></span
+									><span class="mord">0</span><span class="mord">.</span
+									><span class="mord">0</span><span class="mord">4</span
+									><span class="mord mathdefault">A</span></span
+								></span
+							></span
+						>
+						💥
+					</p>
+				</section>
+				<section>
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/arduino-controlling-switch.png"
+							alt="What if the Arduino could control the switch?"
+						/>
+
+						<figcaption>
+							What if the Arduino could control the switch?
+						</figcaption>
+					</figure>
+
+					<figcaption>
+						<small>disclaimer: this circuit doesn't actually work</small>
+					</figcaption>
+				</section>
+				<section id="3-relay" data-transition="slide-in">
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/relay.svg"
+							alt="Electromechanical switch: Relay"
+						/>
+
+						<figcaption>
+							<a
+								href="https://commons.wikimedia.org/wiki/File:SPST-NO_relay_symbol.svg"
+								>Electro<span class="fragment highlight-red">mechanical</span>
+								switch: Relay</a
+							>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							One method is to use an electromechanical switch: a relay. A
+							magnet would control a metal piece to close or open the circuit.
+							However, the “mechanical” component is a major problem…
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="problems">Problems</h3>
+
+					<ul>
+						<li>slow</li>
+						<li>prone to hardware failure</li>
+						<li>big</li>
+						<li>
+							<a
+								href="https://www.youtube.com/embed/mQpzwR7wLeo?start=375"
+								data-preview-link="true"
+								>arcing</a
+							>
+						</li>
+					</ul>
+
+					<p>∴ A “digital” solution is required</p>
+
+					<aside class="notes">
+						<p>
+							Also, relays are commonly only used in AC circuits due to the
+							zero-crossing nature that will prevent arcing
+						</p>
+					</aside>
+				</section>
+				<section id="4-transistors" data-transition="slide-in">
+					<p>
+						There are many different types of transistors, but the first
+						important one made was the<br />
+						<strong>bipolar junction transistor (BJT)</strong>
+					</p>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/BJT.svg"
+							alt="NPN BJT"
+						/>
+
+						<figcaption>
+							<a
+								href="https://commons.wikimedia.org/wiki/File:BJT_NPN_symbol_(case).svg"
+								>NPN BJT</a
+							>
+						</figcaption>
+					</figure>
+
+					<p>
+						<span class="fragment"
+							><small
+								>It is commonly used as an amplifier, eg. for microphones and
+								speakers</small
+							></span
+						>
+					</p>
+
+					<p>
+						<span class="fragment"
+							><small
+								>For switching a lightbulb, a BJT isn’t the most
+								suitable…</small
+							></span
+						>
+					</p>
+
+					<aside class="notes">
+						<p>
+							Those who study H3 semicon prolly know this, but I didn’t and
+							that’s not the point of this presentation anyways.
+						</p>
+
+						<p>
+							Draw current flow, explain beta amplification value, thus high
+							voltage but low current since saturation and beta can only be
+							certain value
+						</p>
+
+						<p>
+							On PDF, go through saturation voltages and beta value, teach how
+							to read datasheet (the absolute max, recommended, graphs, what is
+							important what isn’t)
+						</p>
+
+						<p>switching is also relatively slow</p>
+
+						<p>
+							<a href="https://www.youtube.com/watch?v=WRm2oUw4owE"
+								>Good video explaining BJT</a
+							>
+						</p>
+
+						<p>
+							<a href="https://www.youtube.com/watch?v=IcrBqCFLHIY"
+								>good video explaining P and N doping silicon</a
+							>
+						</p>
+					</aside>
+				</section>
+				<section>
+					<p>
+						metal–oxide–semiconductor field-effect transistor
+						<strong>(MOSFET)</strong> is another type of transistor, the gate is
+						insulated from the rest of circuit thus there is low input current
+						and high input impedance
+					</p>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/mosfet.svg"
+							alt="N-ch MOSFET"
+						/>
+
+						<figcaption>
+							<a
+								href="https://commons.wikimedia.org/wiki/File:IGFET_N-Ch_Enh_Labelled.svg"
+								>N-ch MOSFET</a
+							>
+						</figcaption>
+					</figure>
+
+					<p>
+						<span class="fragment"
+							><small
+								>For a very high power lightbulb, power losses may become
+								severe…</small
+							></span
+						>
+					</p>
+
+					<aside class="notes">
+						<p>
+							Go through why it’s good: the high input impedance, so it is
+							specifically made to be a switch, can support high current
+						</p>
+
+						<p>
+							But input parasitic capacitance issues, so must put a resistor to
+							smooth the input current since constant charge
+						</p>
+
+						<p>
+							But but relatively high output impedance, means output power
+							losses, breakdown voltage relatively low
+						</p>
+
+						<p>
+							Explain graph, issues with V<sub>gs</sub>, usually use a charge
+							pump to get voltage up
+						</p>
+
+						<p>
+							<a href="https://www.youtube.com/watch?v=o4_NeqlJgOs"
+								>Good video explaining MOSFET</a
+							>
+						</p>
+					</aside>
+				</section>
+				<section>
+					<p>
+						to solve the input issues of the MOSFET while acheiving the
+						(relatively lower) output impedance of a BJT, a
+						<strong>darlington pair</strong> configuration can be used
+					</p>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/darlington.png"
+							alt="darlington pair configuration"
+						/>
+
+						<figcaption>
+							<a
+								href="https://circuitdigest.com/sites/default/files/inlineimages/u/Darlington-Transistor-Pair_0.png"
+								>darlington pair configuration</a
+							>
+						</figcaption>
+					</figure>
+
+					<p>
+						<span class="fragment"
+							><small
+								>But V<sub>ce</sub> is doubled, so more power losses</small
+							></span
+						>
+					</p>
+				</section>
+				<section>
+					<p>
+						insulated gate bipolar transistor <strong>(IGBT)</strong> combines
+						the low output impedance of a BJT, high input impedance and high
+						switching speed of a MOSFET to make a very high powered transistor.
+					</p>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/igbt-circuit.png"
+							alt="IGBT"
+						/>
+
+						<figcaption>
+							<a
+								href="https://www.electronics-tutorials.ws/power/insulated-gate-bipolar-transistor.html"
+								>IGBT</a
+							>
+						</figcaption>
+					</figure>
+
+					<p>
+						<span class="fragment"
+							><small
+								>But this is usually a lot more expensive and large, for most
+								cases it’s overkill</small
+							></span
+						>
+					</p>
+
+					<aside class="notes">
+						<p>
+							since we want low input impedance, we use mosfet as input to drive
+							low output impedance BJT. This is also a “PNPN” transistor.
+						</p>
+
+						<p>
+							But this is expensive and usually overkill, also very large in
+							size
+						</p>
+
+						<p>
+							<a
+								href="https://www.electronics-tutorials.ws/power/insulated-gate-bipolar-transistor.html"
+								>good writeup about this</a
+							>
+						</p>
+					</aside>
+				</section>
+				<section id="5-applications" data-transition="slide-in">
+					<section data-transition="slide">
+						<h3
+							id="for-powering-a-lightbulb-a-mosfet-is-probably-the-most-suitable"
+						>
+							For powering a lightbulb, a MOSFET is probably the most suitable
+						</h3>
+
+						<ul>
+							<li>
+								A lightbulb isn’t THAT high power to require a IGBT or
+								Darlington pair
+							</li>
+							<li>
+								We are digitally controlling the lightbulb using a
+								microcontroller, so we don’t need analog amplification
+							</li>
+							<li>Cost effective, small, easily available, commonly used</li>
+						</ul>
+					</section>
+					<section data-transition="slide">
+						<h3 id="going-back-to-the-original-problem">
+							Going back to the original problem…
+						</h3>
+
+						<figure class="">
+							<img
+								src="/assets/resources-assets/2020-05-25-Electronics1/mosfet-LED-switch.png"
+								alt="MOSFET LED Switch"
+							/>
+
+							<figcaption>
+								MOSFET LED Switch
+							</figcaption>
+						</figure>
+					</section>
+					<section data-transition="slide">
+						<h3 id="schematic-diagram">Schematic Diagram</h3>
+
+						<figure class="">
+							<img
+								src="/assets/resources-assets/2020-05-25-Electronics1/mosfet-LED-switch-sch.svg"
+								alt="MOSFET LED Switch Schematic"
+							/>
+
+							<figcaption>
+								MOSFET LED Switch Schematic
+							</figcaption>
+						</figure>
+
+						<aside class="notes">
+							<p>
+								Teach how to read schematic, common notations (net label, no 4
+								crossing, junction)
+							</p>
+
+							<p>Explain the pull down resistor, and the series resistor</p>
+						</aside>
+					</section>
+				</section>
+				<section>
+					<h3 id="low-battery-indicator">Low Battery Indicator</h3>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/low-batt-npn.svg"
+							alt="NPN BJT Low Battery Indicator"
+						/>
+
+						<figcaption>
+							<a
+								href="https://www.falstad.com/circuit/circuitjs.html?cct=$+1+0.000005+10.20027730826997+50+5+50%0At+224+224+256+224+0+1+0+0+200%0At+288+192+320+192+0+1+0+0+200%0Aw+256+176+256+192+0%0A162+320+128+320+160+2+default-led+1+0+0+0.01%0Aw+320+160+320+176+1%0Aw+320+128+320+112+0%0Aw+320+112+304+112+0%0Ar+304+112+256+112+0+450%0Ar+192+128+192+176+0+100000%0Aw+192+176+192+224+0%0Aw+192+128+192+112+0%0Ar+256+128+256+176+0+100000%0Aw+256+192+288+192+1%0Aw+256+112+256+128+0%0Aw+320+208+320+304+0%0Aw+320+304+256+304+0%0Ar+192+240+192+288+0+6300%0Aw+192+224+192+240+2%0Aw+192+288+192+304+0%0Aw+192+304+256+304+0%0Aw+256+240+256+304+1%0Aw+192+112+176+112+0%0Aw+192+304+176+304+0%0A172+176+112+144+112+0+7+9.3+9.3+8.7+0+0.5+Voltage%0Ag+176+320+176+336+0%0Aw+192+112+256+112+0%0Aw+256+192+256+208+0%0Aw+176+304+176+320+0%0Aw+192+224+224+224+0%0A"
+								data-preview-link="true"
+								>NPN BJT Low Battery Indicator</a
+							>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							Explain voltage divider, 0.6v saturation, show what saturation
+							means (transistor acts as zener), show on circuitJS
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="variable-resistor">Variable Resistor</h3>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/mosfet-variable-resistor.svg"
+							alt="MOSFET as Variable Resistor"
+						/>
+
+						<figcaption>
+							MOSFET as Variable Resistor
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							Explain MOSFET in linear region, so we can control resistance by
+							on-off time, hence explain PWM
+						</p>
+
+						<p>
+							<a href="http://www.vishay.com/docs/70598/70598.pdf"
+								>Related AppNote</a
+							>
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="low-dropout-regulator-ldo">Low Dropout Regulator (LDO)</h3>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/LM1117-blockdiag.png"
+							alt="LM1117 LDO Block Diagram"
+						/>
+
+						<figcaption>
+							<a href="www.ti.com/lit/ds/symlink/lm1117.pdf"
+								>LM1117 LDO Block Diagram</a
+							>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							Explain what is a block diagram, we don’t actually need to
+							understand but there’s a bunch of transistors around
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="buck-converter">Buck Converter</h3>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/buckconverter.svg"
+							alt="Buck converter simplified schematic"
+						/>
+
+						<figcaption>
+							<a
+								href="https://commons.wikimedia.org/wiki/File:Buck_operating.svg"
+								>Buck converter simplified schematic</a
+							>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							Very briefly explain inductor capacitor, and the switching action
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="boost-converter">Boost Converter</h3>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/boostconverter.svg"
+							alt="Boost converter simplified schematic"
+						/>
+
+						<figcaption>
+							<a
+								href="https://commons.wikimedia.org/wiki/File:Boost_operating.svg"
+								>Boost converter simplified schematic</a
+							>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							Very briefly explain inductor capacitor, and the switching action
+						</p>
+					</aside>
+				</section>
+				<section id="6-motor" data-transition="slide-in">
+					<h3 id="brushed-motor">Brushed Motor</h3>
+
+					<figure class="sizedImg">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/dc-motor.gif"
+							alt="Brushed DC Motor GIF"
+						/>
+
+						<figcaption>
+							<a
+								href="https://commons.wikimedia.org/wiki/File:Electric_motor.gif"
+								>Brushed DC Motor GIF</a
+							>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							briefly explain motor action, current cause B-field, reversing
+							current cause reversing B-field
+						</p>
+
+						<p>show on tinkercad</p>
+
+						<p>
+							don’t move on to next slide, show on chalkboard thinking behind
+							full bridge, eg we want to make current flow in the same direction
+							at the horizontal part, from alternate directions in the vertical
+							part
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="full-bridge-rectifier">Full Bridge Rectifier</h3>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/fullbridge.gif"
+							alt="Full bridge rectifier GIF"
+						/>
+
+						<figcaption>
+							<a
+								href="https://commons.wikimedia.org/wiki/File:Diodebridge-eng.gif"
+								>Full bridge rectifier GIF</a
+							>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							show on chalkboard how to come up with a full bridge design, the
+							thinking process of how to convert AC to DC, then link to
+							converting DC to AC
+						</p>
+
+						<p>
+							don’t move on to next slide, show on chalkboard how to convert
+							that idea into full bridge, eg we want to make current flow in
+							alternate directions at horizontal part, so current must come in
+							from left/right side to change it from the vertical DC part
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="h-bridge">H-Bridge</h3>
+
+					<figure class="">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/h-bridge.svg"
+							alt="H-Bridge"
+						/>
+
+						<figcaption>
+							<a href="https://commons.wikimedia.org/wiki/File:H_bridge.svg"
+								>H-Bridge</a
+							>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							this is basically the insides of your motor driver. But how to
+							control the speed…?
+						</p>
+					</aside>
+				</section>
+				<section>
+					<h3 id="motor-driver">Motor Driver</h3>
+
+					<figure class="sizedImg">
+						<img
+							src="/assets/resources-assets/2020-05-25-Electronics1/vnh5019-blockdiag.png"
+							alt="Motor Driver Block Diagram"
+						/>
+
+						<figcaption>
+							<a
+								href="https://www.st.com/en/automotive-analog-and-power/vnh5019a-e.html"
+								>Motor Driver Block Diagram</a
+							>
+						</figcaption>
+					</figure>
+
+					<aside class="notes">
+						<p>
+							point out where the MOSFETs are, explain speed is controlled by
+							PWM
+						</p>
+
+						<p>
+							emphasise that block diagrams aren’t actually that important
+							whenever they’re looking at datasheets, we use them here a lot
+							just to explain how they are found in the things we use
+						</p>
+
+						<p>if have time go through the motor datasheet and key specs</p>
+					</aside>
+				</section>
+				<section id="7-solenoid" data-transition="slide-in">
+					<section data-transition="slide">
+						<h3 id="driving-a-linear-solenoid">Driving a linear solenoid</h3>
+
+						<p>
+							We usually run the
+							<a
+								href="https://www.youtube.com/embed/Ueio1qoXRbE"
+								data-preview-link="true"
+								>solenoids</a
+							>
+							at ~60V, ~2A. This results in huge spikes in current and voltage
+							we have to contain.
+						</p>
+
+						<p>
+							We first used a relay, but we experienced
+							<a href="#/3-relay">arcing</a> due to this
+							<a href="#/solenoid-scope">large power draw</a> and
+							<a href="#/solenoid-inductive">inductive nature</a> of the
+							solenoid.
+						</p>
+
+						<aside class="notes">
+							<p>Maybe talk about the huge capacitor?</p>
+						</aside>
+					</section>
+					<section id="solenoid-scope" data-transition="slide">
+						<h3 id="current-spikes">Current spikes</h3>
+
+						<figure class="sizedImg">
+							<img
+								src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-oscilloscope.jpg"
+								alt="Oscilloscope reading of voltage across 0.4Ω resistor"
+							/>
+
+							<figcaption>
+								Oscilloscope reading of voltage across 0.4Ω resistor
+							</figcaption>
+						</figure>
+					</section>
+					<section id="solenoid-inductive" data-transition="slide">
+						<aside class="notes">
+							<p>
+								point out negative and huge current flowing through (0.4Ω 5v =
+								&gt;10A)
+							</p>
+						</aside>
+
+						<h3 id="solenoids-inductive-nature">Solenoid’s inductive nature</h3>
+
+						<figure class="sizedImg">
+							<img
+								src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-cross-section.png"
+								alt="Linear solenoid cross section"
+							/>
+
+							<figcaption>
+								<a href="https://www.electronics-tutorials.ws/io/io_6.html"
+									>Linear solenoid cross section</a
+								>
+							</figcaption>
+						</figure>
+
+						<aside class="notes">
+							<p>
+								Explain what is an inductor, basically a coil, so coil stores
+								magnetic energy. When power is removed, this magnetic energy is
+								still there, it doesn’t get removed as well. Now this energy has
+								nowhere to go, thus the voltage will just keep increasing and
+								building up until MOSFET diode reaches breakdown voltage
+							</p>
+						</aside>
+					</section>
+					<section data-transition="slide-in fade-out">
+						<h3 id="mosfet-switch">MOSFET switch</h3>
+
+						<figure class="">
+							<img
+								src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-mosfet-noflyback.svg"
+								alt="Using a MOSFET to switch a solenoid...?"
+							/>
+
+							<figcaption>
+								Using a MOSFET to switch a solenoid…?
+							</figcaption>
+						</figure>
+
+						<aside class="notes">
+							<p>
+								Explain what is an inductor, basically a coil, so coil stores
+								magnetic energy. When power is removed, this magnetic energy is
+								still there, it doesn’t get removed as well. Now this energy has
+								nowhere to go, thus the voltage will just keep increasing and
+								building up until MOSFET diode reaches breakdown voltage
+							</p>
+						</aside>
+					</section>
+					<section data-transition="fade">
+						<h3 id="flyback-diode">Flyback diode</h3>
+
+						<figure class="">
+							<img
+								src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-mosfet-withflyback.svg"
+								alt="Adding flyback diode to contain inductive 'kickback'"
+							/>
+
+							<figcaption>
+								Adding flyback diode to contain inductive ‘kickback’
+							</figcaption>
+						</figure>
+					</section>
+					<section data-transition="fade-in slide-out">
+						<h3 id="zener-diode">Zener diode</h3>
+
+						<figure class="">
+							<img
+								src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-mosfet-withzener.svg"
+								alt="Adding zener diode to dissipate energy"
+							/>
+
+							<figcaption>
+								Adding zener diode to dissipate energy
+							</figcaption>
+						</figure>
+
+						<aside class="notes">
+							<p>
+								Explain what is a zener diode, maintains a voltage difference
+								across. This allows it to dissipate more energy during the OFF
+								state, which helps save the MOSFET. Not really needed or used
+								online, just a safety addition
+							</p>
+						</aside>
+					</section>
+				</section>
+				<section id="end1" data-transition="slide-in">
+					<h3 id="end">end</h3>
+
+					<aside class="notes">
+						<p>move on to next if there is time</p>
+					</aside>
+				</section>
+				<section id="8-VgsIssues" data-transition="slide-in">
+					<section data-transition="slide">
+						<h3 id="mosfet-vgs-threshold-issues">
+							MOSFET V<sub>gs</sub> Threshold Issues
+						</h3>
+
+						<figure class="">
+							<img
+								src="/assets/resources-assets/2020-05-25-Electronics1/solenoid-mosfet-withzener.svg"
+								alt="'CONTROL' voltage of 3.3v to drive MOSFET?"
+							/>
+
+							<figcaption>
+								‘<em>CONTROL</em>’ voltage of 3.3v to drive MOSFET?
+							</figcaption>
+						</figure>
+
+						<aside class="notes">
+							<p>
+								show 2n7000 MOSFET datasheet graph of V<sub>gs</sub>, so MOSFET
+								will get hot due to R<sub>ds</sub> power losses
+							</p>
+						</aside>
+					</section>
+					<section data-transition="slide">
+						<h3 id="using-12v-battery-as-gate-drive">
+							Using 12v battery as gate drive
+						</h3>
+
+						<figure class="">
+							<img
+								src="/assets/resources-assets/2020-05-25-Electronics1/mosfet-12v-gate-drive.svg"
+								alt="Using 12v for gate drive"
+							/>
+
+							<figcaption>
+								Using 12v for gate drive
+							</figcaption>
+						</figure>
+
+						<aside class="notes">
+							<p>
+								Explain how smaller MOSFET has smaller breakdown voltage so
+								can’t use it alone, but bigger MOSFET needs higher V<sub
+									>gs</sub
+								>
+								to acheive lower R<sub>ds</sub>, thus you use both together
+							</p>
+
+							<p>
+								Explain how gate drive isn’t based on “absolute voltage”, but is
+								based on V<sub>gs</sub>, means it’s relative to the source
+								voltage, that’s how this circuit works
+							</p>
+						</aside>
+					</section>
+				</section>
+				<section id="end2" data-transition="slide-in">
+					<h3 id="end-for-real">end for real</h3>
+				</section>
+			</div>
+		</div>
+
+		<script src="/assets/reveal.js/js/reveal.js"></script>
+		<script>
+			/*
+	More info about initialization & config:
+	- https://revealjs.com/initialization/
+	- https://revealjs.com/config/
+	*/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+				transitionSpeed: "fast",
+				fragments: true,
+				fragmentInURL: false,
+				hideInactivecursor: false,
+
+				/* Reveal options generated from mapping */
+
+				totalTime: "2700",
+
+				allottedTime: "2700000",
+
+				transition: "fade",
+
+				chalkboard: {
+					theme: "whiteboard",
+
+					src:
+						"/assets/resources-assets/2020-05-25-Electronics1/chalkboard.json",
+
+					readOnly: false,
+					eraser: {
+						src: "/assets/reveal-plugins/chalkboard/img/sponge.png",
+						radius: 15,
+					},
+					toggleChalkboardButton: { left: "80px" },
+					toggleNotesButton: { left: "130px" },
+				},
+				notes_pointer: {
+					pointer: {
+						size: 20,
+					},
+				},
+				menu: {
+					/* Add slide numbers to the titles in the slide list. */
+					/* Use 'true' or format string (same as reveal.js slide numbers) */
+					numbers: true,
+					/* If slides do not have a matching title, attempt to use the */
+					/* start of the text content as the title instead */
+					useTextContentForMissingTitles: true,
+					/* menu options generated from a list of strings */
+					custom: [
+						{
+							title: "Bookmarks",
+							icon: '<i class="fas fa-bookmark">',
+							src:
+								"/assets/resources-assets/2020-05-25-Electronics1/links.html",
+						},
+
+						{
+							title: "Marker color",
+							icon: '<i class="fas fa-marker">',
+							src: "/assets/reveal-plugins/chalkboard/markers.html",
+						},
+					],
+				},
+				dependencies: [
+					{
+						src: "/assets/reveal-plugins/elapsed-time-bar/elapsed-time-bar.js",
+						async: true,
+					},
+					{
+						src: "/assets/reveal-plugins/chalkboard/chalkboard.js",
+						async: true,
+					},
+					{ src: "/assets/reveal.js/plugin/zoom-js/zoom.js", async: true },
+					{
+						src: "/assets/reveal-plugins/notes-pointer/notes-pointer.js",
+						async: true,
+					},
+					{ src: "/assets/reveal-plugins/menu/menu.js", async: true },
+				],
+				keyboard: {
+					67: function () {
+						RevealChalkboard.toggleNotesCanvas();
+					} /* toggle notes canvas when 'c' is pressed */,
+					66: function () {
+						RevealChalkboard.toggleChalkboard();
+					} /* toggle chalkboard when 'b' is pressed */,
+					8: function () {
+						RevealChalkboard.clear();
+					} /* clear chalkboard when 'BACKSPACE' is pressed */,
+					68: function () {
+						RevealChalkboard.download();
+					} /* downlad recorded chalkboard drawing when 'd' is pressed */,
+					88: function () {
+						RevealChalkboard.colorNext();
+					} /* cycle colors forward when 'x' is pressed */,
+					89: function () {
+						RevealChalkboard.colorPrev();
+					} /* cycle colors backward when 'y' is pressed */,
+					13: function () {
+						ElapsedTimeBar.isPaused
+							? ElapsedTimeBar.resume()
+							: ElapsedTimeBar.pause();
+					} /* pause/resume time when Enter is pressed */,
+					82: function () {
+						ElapsedTimeBar.reset();
+					} /* reset timer when 'r' is pressed */,
+					/* todo: #13 when esc is pressed, if in chalkboard exit that, else show slide overview */
+				},
+			});
+		</script>
+		<script src="/assets/js/lazyload.js"></script>
+	</body>
+</html>
