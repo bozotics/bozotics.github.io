@@ -34,6 +34,8 @@ jobs:
           gem_src: .
           enable_cache: true
           prettier_opts: '{ "useTabs": true }'
+          prettier_ignore: |
+            assets/reveal.js/**
 
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
