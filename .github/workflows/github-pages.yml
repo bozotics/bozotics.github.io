@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - source
+    paths-ignore:
+      - .git*
+      - .vscode/**
+      - .editorconfig
+      - .pretterrc.yml
+      - "**/.markdownlint.yml"
+      - README.md
 
 jobs:
   github-pages:
