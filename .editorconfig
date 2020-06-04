@@ -6,11 +6,10 @@ end_of_line = lf
 insert_final_newline = true
 
 # 2 space indentation
-[*.{md,yml}]
+[*.{md,yml,ruby}]
 indent_style = space
 indent_size = 2
 
 # tab indentation
 [*.{scss,sass,css,html,js,jsx,ts}]
 indent_style = tab
-indent_size = 4
