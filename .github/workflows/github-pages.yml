@@ -33,6 +33,7 @@ jobs:
           jekyll_src: .
           gem_src: .
           enable_cache: true
+          prettier_opts: '{ "useTabs": true }'
 
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
