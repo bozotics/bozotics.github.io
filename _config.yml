@@ -310,9 +310,6 @@ defaults:
 # For jekyll-news-sitemap
 publisher: "Transcendence Blog"
 
-after_footer_scripts:
-  - /assets/js/lazyload.js
-
 # jekyll build defaults
 incremental: false
 host: 0.0.0.0
