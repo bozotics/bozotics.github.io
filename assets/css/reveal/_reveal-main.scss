@@ -8,13 +8,17 @@ $monospace: "Fira Code", Monaco, Consolas, "Lucida Console", monospace !default;
 @import "/assets/fonts/Inter/inter.css";
 @import "/assets/fonts/FiraCode/fira_code.css";
 
+$mainFont: $sans-serif;
+$mainFontSize: 36px;
+$headingFont: $sans-serif;
+$headingFontWeight: 600;
+$codeFont: $monospace;
+
 .reveal {
-	font-family: $sans-serif;
-	font-size: 36px;
 	cursor: url("/assets/images/pointer.png") 25 25, pointer;
-	code,
-	pre {
-		font-family: $monospace;
+	mark {
+		background: rgb(29, 116, 35);
+		color: white;
 	}
 	figcaption {
 		margin-bottom: 0.5em;
