@@ -49,16 +49,7 @@ layout: default
 					<h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
 				{% endif %}
 				{% include page__taxonomy.html %}
-				<p class="page__date">
-					<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
-					{% if page.collection == "posts" %}
-						<strong>{{ site.data.ui-text[site.locale].date_label | default: "Posted:" }}</strong>
-						<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-					{% else %}
-						<strong>{{ site.data.ui-text[site.locale].updated_date_label | default: "Updated:" }}</strong>
-						<time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%B %-d, %Y" }}</time>
-					{% endif %}
-				</p>
+				{% include page__date.html %}
 			</footer>
 
 			{% if page.share %}{% include social-share.html %}{% endif %}
