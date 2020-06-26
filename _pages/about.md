@@ -88,8 +88,9 @@ As such, for 2020, Transcendence "split" across the 3 categories, officially reg
 
 ### Rescue Line
 
-BP people came in (Xu En, Xin Lei, Ho Chi) then introduced it, huy went worlds that year, saajid&louis continued it
-then one fine day I saw micromouse and was bored and decided to do it since rescue had all lego robots
+Similar to Soccer Lightweight, HCRC never took part in Rescue Line as Soccer Open had always been the only focus. However, in 2018, a few members which did not have much prior experience in Robotics joined HCRC. With the competition coming up in 3 months, a new team was created to participate in the Rescue Line category that year. Despite being novices at Robotics, the team worked hard and managed to finish as champions in the Singapore Open using a Lego Mindstorms robot, thus, qualifying for RoboCup Internationals. The team went on to integrate Arduino components with Lego Mindstorms for the International competition.
+
+With Rescue Line now on our radar, HCRC teams across various levels have continued participating since then. After much observation, we felt that progress in Rescue Line had somewhat stagnated both in terms of robot designs as well as the program quality. Thus, taking inspiration from micromouse robots, combined with the introduction of many changes in the rules, we became motivated to take part in Rescue Line for 2020. Details about the robot we created can be found on the [Rescue Line](/rescue/intro/) page.
 
 ### The Future...
 
