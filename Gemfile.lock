@@ -115,7 +115,7 @@ PLATFORMS
 
 DEPENDENCIES
   execjs
-  jekyll (~> 4.1.0)
+  jekyll (~> 4.1.1)
   jekyll-email-protect
   jekyll-feed
   jekyll-last-modified-at
