@@ -1,6 +1,8 @@
 ---
 title: Introduction
 permalink: /open/intro/
+redirect_from:
+  - /open/
 ---
 >In the Soccer Open league, two fully autonomous robots go head to head in a soccer match.
 > 
