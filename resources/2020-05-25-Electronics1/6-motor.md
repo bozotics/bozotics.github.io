@@ -2,7 +2,7 @@
 
 {% include figure
 image_path="/assets/resources-assets/2020-05-25-Electronics1/dc-motor.gif"
-class="sizedImg"
+style='height:400px;'
 alt="Brushed DC Motor GIF"
 caption="[Brushed DC Motor GIF](https://commons.wikimedia.org/wiki/File:Electric_motor.gif)"
 %}
@@ -65,7 +65,7 @@ speed...?
 
 {% include figure
 image_path="/assets/resources-assets/2020-05-25-Electronics1/vnh5019-blockdiag.png"
-class="sizedImg"
+style='height:400px;'
 alt="Motor Driver Block Diagram"
 caption="[Motor Driver Block Diagram](https://www.st.com/en/automotive-analog-and-power/vnh5019a-e.html)"
 %}
