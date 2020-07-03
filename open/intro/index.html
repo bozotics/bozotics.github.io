@@ -37,7 +37,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-05-24T13:37:11+08:00"
+			content="2020-07-03T11:06:34+08:00"
 		/>
 
 		<link rel="canonical" href="https://bozo.infocommsociety.com/open/intro/" />
@@ -285,10 +285,10 @@
 					<meta itemprop="headline" content="Introduction" />
 					<meta
 						itemprop="description"
-						content="  In the Soccer Open league, two fully autonomous robots go head to head in a soccer match.  The robots must detect a passive, brightly coloured orange ball and score into a color-coded goal on a special field that resembles a human soccer field."
+						content="  In the Soccer Open league, two fully autonomous robots go head to head in asoccer match.  The robots must detect a passive, brightly coloured orange ball and score intoa color-coded goal on a special field that resembles a human soccer field."
 					/>
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-05-24T13:37:11+08:00" />
+					<meta itemprop="dateModified" content="2020-07-03T11:06:34+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -313,34 +313,38 @@
 
 							<h2 id="our-robot">Our robot</h2>
 
-							<div
-								style="
-									position: relative;
-									padding-bottom: 100%;
-									margin: 15px auto !important;
-								"
-							>
-								<iframe
-									loading="lazy"
-									src="https://myhub.autodesk360.com/ue2d4b949/shares/public/SH56a43QTfd62c1cd968d240b070679b9ffd?mode=embed"
+							<details id="3dButton">
+								<summary>3d Model (≈80mb)</summary>
+								<div
 									style="
-										width: 100%;
-										height: 100%;
-										position: absolute;
-										left: 0px;
-										top: 0px;
+										position: relative;
+										padding-bottom: 100%;
+										margin: 15px auto !important;
 									"
-									allowfullscreen="true"
-									webkitallowfullscreen="true"
-									mozallowfullscreen="true"
-									frameborder="0"
-								></iframe>
-							</div>
-
-							<p>
-								Controls: Left click + drag to orbit, Middle click + drag to
-								pan, Scroll to zoom
-							</p>
+								>
+									<iframe
+										loading="lazy"
+										src="about:blank"
+										data-src="https://myhub.autodesk360.com/ue2d4b949/shares/public/SH56a43QTfd62c1cd968d240b070679b9ffd?mode=embed"
+										style="
+											width: 100%;
+											height: 100%;
+											position: absolute;
+											left: 0px;
+											top: 0px;
+										"
+										allowfullscreen="true"
+										webkitallowfullscreen="true"
+										mozallowfullscreen="true"
+										frameborder="0"
+										id="3dModel"
+									></iframe>
+								</div>
+								<p>
+									Controls: Left click + drag to orbit, Middle click + drag to
+									pan, Scroll to zoom
+								</p>
+							</details>
 
 							<h2 id="overview">Overview</h2>
 
@@ -366,6 +370,18 @@
 								via any of our socials on the
 								<a href="/contact/">Contact</a> page!
 							</p>
+
+							<script>
+								var model = document.getElementById("3dModel");
+								var details = document.getElementById("3dButton");
+								var toggled = false;
+								details.addEventListener("toggle", function () {
+									if (!toggled) {
+										model.setAttribute("src", model.getAttribute("data-src"));
+										toggled = true;
+									}
+								});
+							</script>
 						</section>
 
 						<footer class="page__meta">
@@ -373,7 +389,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-05-24">May 24, 2020</time>
+								<time datetime="2020-07-03">July 3, 2020</time>
 							</p>
 						</footer>
 

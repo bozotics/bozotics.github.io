@@ -36,7 +36,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Introduction",
-        "excerpt":"In the Soccer Open league, two fully autonomous robots go head to head in a soccer match. The robots must detect a passive, brightly coloured orange ball and score into a color-coded goal on a special field that resembles a human soccer field. Our robot Controls: Left click + drag...","categories": [],
+        "excerpt":"In the Soccer Open league, two fully autonomous robots go head to head in a soccer match. The robots must detect a passive, brightly coloured orange ball and score into a color-coded goal on a special field that resembles a human soccer field. Our robot 3d Model (≈80mb) Controls: Left...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/intro/",
         "teaser": null
