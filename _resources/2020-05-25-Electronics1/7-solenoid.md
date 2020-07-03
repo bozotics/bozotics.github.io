@@ -22,7 +22,7 @@ Maybe talk about the huge capacitor?
 
 {% include figure
 image_path="/assets/resources-assets/2020-05-25-Electronics1/solenoid-oscilloscope.jpg"
-class="sizedImg"
+style='height:400px;'
 alt="Oscilloscope reading of voltage across 0.4Ω resistor"
 caption="Oscilloscope reading of voltage across 0.4Ω resistor"
 %}
@@ -39,7 +39,7 @@ point out negative and huge current flowing through (0.4Ω 5v = >10A)
 
 {% include figure
 image_path="/assets/resources-assets/2020-05-25-Electronics1/solenoid-cross-section.png"
-class="sizedImg"
+style='height:400px;'
 alt="Linear solenoid cross section"
 caption="[Linear solenoid cross section](https://www.electronics-tutorials.ws/io/io_6.html)"
 %}

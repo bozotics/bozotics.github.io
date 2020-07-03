@@ -1,7 +1,12 @@
-<figure class="{{ include.class }}">
+<figure
+  {% if include.class %}class="{{ include.class }}"{% endif %}
+  style="{% if include.style %}{{ include.style }}{% endif %}margin-left:auto;margin-right:auto;"
+>
   {% if include.link %}<a href="{{ include.link }}">{% endif %}
-  <img src="{{ include.image_path | relative_url }}"
-       alt="{% if include.alt %}{{ include.alt }}{% endif %}">
+  <img
+    src="{{ include.image_path | relative_url }}"
+    alt="{% if include.alt %}{{ include.alt }}{% endif %}"
+  >
   {% if include.link %}</a>{% endif %}
   {% if include.caption %}
     <figcaption>
