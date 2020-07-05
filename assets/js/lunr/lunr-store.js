@@ -108,15 +108,33 @@ var store = [{
         "teaser": null
       },{
         "title": "Camera",
-        "excerpt":"Camera   COMING SOON  ","categories": [],
+        "excerpt":"This section contains information regarding hardware and software of our camera. General Info: Explain the various choices we made for the camera, both hardware and software. Tracking Algorithms: Details the algorithm we used for the tracking of objects and other algorithms we have tried. GUI: Describes the functions of our...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/cam/",
         "teaser": null
       },{
-        "title": "Camera GUI",
-        "excerpt":"Camera GUI   COMING SOON  ","categories": [],
+        "title": "General Information",
+        "excerpt":"Camera   OS (Arch Linux)   Programming Language   Libraries Used   OpenCv   LibSSH   Threading  ","categories": [],
         "tags": [],
-        "url": "https://bozo.infocommsociety.com/open/gui/",
+        "url": "https://bozo.infocommsociety.com/open/cam/general/",
+        "teaser": null
+      },{
+        "title": "Tracking Algorithm",
+        "excerpt":"Overview   Tracking   Considerations   Speed &amp; Latency   Accuracy &amp; Reliability   Algorithms   Circular buffer   Image Processing   Kalman Filter   Tried &amp; Abandoned   Threading   Precautions   Dynamic priority   ","categories": [],
+        "tags": [],
+        "url": "https://bozo.infocommsociety.com/open/cam/track/",
+        "teaser": null
+      },{
+        "title": "Graphical User Interface",
+        "excerpt":"Purpose   Functions   GUI   Launch Protocol   Development process   ","categories": [],
+        "tags": [],
+        "url": "https://bozo.infocommsociety.com/open/cam/gui/",
+        "teaser": null
+      },{
+        "title": "Communication",
+        "excerpt":"Speed   Protocol  ","categories": [],
+        "tags": [],
+        "url": "https://bozo.infocommsociety.com/open/cam/communication/",
         "teaser": null
       },{
         "title": "Strategy",
