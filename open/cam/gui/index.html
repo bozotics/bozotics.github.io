@@ -11,7 +11,7 @@
 
 		<!-- begin _includes/seo.html -->
 		<title>Graphical User Interface | Transcendence</title>
-		<meta name="description" content="Purpose" />
+		<meta name="description" content="Overview" />
 
 		<meta property="og:type" content="article" />
 		<meta property="og:locale" content="en_US" />
@@ -22,7 +22,7 @@
 			content="https://bozo.infocommsociety.com/open/cam/gui/"
 		/>
 
-		<meta property="og:description" content="Purpose" />
+		<meta property="og:description" content="Overview" />
 
 		<meta
 			property="article:published_time"
@@ -31,7 +31,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-07-05T20:14:31+08:00"
+			content="2020-07-06T00:23:51+08:00"
 		/>
 
 		<link
@@ -247,12 +247,16 @@
 								<a href="/open/cam/"
 									><span class="nav__sub-title">Camera</span></a
 								>
-							</li>
 
-							<li>
-								<a href="/open/gui/"
-									><span class="nav__sub-title">Camera GUI</span></a
-								>
+								<ul>
+									<li><a href="/open/cam/general/">General Info</a></li>
+
+									<li><a href="/open/cam/track/">Tracking Algorithm</a></li>
+
+									<li><a href="/open/cam/gui/" class="active">GUI</a></li>
+
+									<li><a href="/open/cam/communication/">Communication</a></li>
+								</ul>
 							</li>
 
 							<li>
@@ -280,9 +284,9 @@
 					itemtype="https://schema.org/CreativeWork"
 				>
 					<meta itemprop="headline" content="Graphical User Interface" />
-					<meta itemprop="description" content="Purpose" />
+					<meta itemprop="description" content="Overview" />
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-07-05T20:14:31+08:00" />
+					<meta itemprop="dateModified" content="2020-07-06T00:23:51+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -292,15 +296,205 @@
 						</header>
 
 						<section class="page__content" itemprop="text">
-							<h2 id="purpose">Purpose</h2>
+							<aside class="sidebar__right sticky">
+								<nav class="toc">
+									<header>
+										<h4 class="nav__title">
+											<i class="fas fa-window-maximize"></i> GUI
+										</h4>
+									</header>
+									<ul class="toc__menu">
+										<li><a href="#overview">Overview</a></li>
+										<li>
+											<a href="#functions">Functions</a>
+											<ul>
+												<li><a href="#gui">GUI</a></li>
+												<li><a href="#launch-protocol">Launch Protocol</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#development-process">Development process</a>
+										</li>
+									</ul>
+								</nav>
+							</aside>
+
+							<h2 id="overview">Overview</h2>
+
+							<p>
+								Last year during competitions, we realised that the calibration
+								process for our camera was extremely slow and tedious as we had
+								to rely on VNC to display and control the RPi. This year,
+								creating a graphical user interface (GUI) which can effectively
+								strealine the process of debugging was a priority for us. Our
+								GUI is able to stream frames from the camera at realtime which
+								can be launched easily. Furthermore, we can edit the calibration
+								values on the GUI and these changes will be reflected on the GUI
+								immediately.
+							</p>
 
 							<h2 id="functions">Functions</h2>
 
+							<p>
+								These functions were developed to simplify and automate the
+								debugging process.
+							</p>
+
 							<h3 id="gui">GUI</h3>
+
+							<p>
+								This GUI was mainly written in QT5 (CPP). The design and
+								functions of the GUI can be found in
+								<a
+									href="https://github.com/bozotics/GUI/blob/master/mainwindow.cpp"
+									>mainwindow.cpp</a
+								>. Streaming and displaying functions can be found in
+								<a href="https://github.com/bozotics/GUI/blob/master/video.cpp"
+									>video.cpp</a
+								>
+								whereas the
+								<a
+									href="https://github.com/bozotics/GUI/blob/master/notepad.cpp"
+									>notepad.cpp</a
+								>
+								is the code for the notepad.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<img
+									loading="lazy"
+									src="/assets/images/gui_label"
+									alt="Screenshot to explain the functions of the GUI"
+									style="margin-left: auto; margin-right: auto;"
+								/>
+
+								<figcaption>
+									Labelled screenshot of our GUI
+								</figcaption>
+							</figure>
+
+							<p>A) <strong>Send</strong> files to RPi</p>
+							<ul>
+								<li>Send <strong>camera.cpp</strong></li>
+								<li>Send <strong>camera.h</strong></li>
+								<li>Send <strong>main.cpp</strong></li>
+								<li>Send <strong>debug.cpp</strong></li>
+								<li>
+									<strong>Save All</strong> calibration values to config.txt
+								</li>
+								<li>Send <strong>config.txt</strong></li>
+							</ul>
+
+							<p>B) Program <strong>Actions</strong></p>
+							<ul>
+								<li><strong>Makefiles</strong> on RPi</li>
+								<li><strong>Pause Stream</strong> from RPi</li>
+							</ul>
+
+							<p>C) <strong>Advanced</strong> GUI options</p>
+							<ul>
+								<li><strong>Dual Screen</strong> mode</li>
+								<li><strong>Camera Calibration</strong> options</li>
+							</ul>
+
+							<p>D) <strong>Display</strong> options for left frame</p>
+							<ul>
+								<li><strong>Original</strong> frame from the camera</li>
+								<li>HSV colour space (<strong>cvtColor</strong>)</li>
+								<li>Image smoothing (<strong>Blur</strong>)</li>
+								<li>Image thresholding (<strong>inRange</strong>)</li>
+								<li>
+									<strong>E</strong>rode and <strong>D</strong>ilate on
+									threshold frame
+								</li>
+								<li>Find <strong>contour</strong>s from threshold frame</li>
+								<li>Generate <strong>Rect</strong>angle around contour</li>
+							</ul>
+
+							<p>E) <strong>Object</strong> to track or calibrate</p>
+							<ul>
+								<li><strong>Ball</strong></li>
+								<li><strong>Blue Goal</strong></li>
+								<li><strong>Yellow Goal</strong></li>
+								<li><strong>Field</strong></li>
+								<li><strong>All</strong></li>
+							</ul>
+
+							<p>
+								F) <strong>Display</strong> options for right frame (Similar to
+								point D)
+							</p>
+
+							<p>
+								G) <strong>Copy Thres</strong>hold values of selected region on
+								the image frame to the calibration values
+							</p>
+
+							<p>
+								H) <strong>Upper</strong> bound of the values of the threshold
+							</p>
+
+							<p>
+								I) <strong>Lower</strong> bound of the values of the threshold
+							</p>
+
+							<p>J) <strong>Notepad</strong></p>
 
 							<h3 id="launch-protocol">Launch Protocol</h3>
 
+							<ol>
+								<li>Launch GUI on laptop</li>
+								<li>GUI read values from config.txt</li>
+								<li>GUI SSH into RPi to launch the camera program</li>
+								<li>Connect socket client (RPi) to socket server (laptop)</li>
+								<li>
+									Send frame information to the server (dimensions and channels)
+								</li>
+								<li>GUI streams frames from RPi in real-time</li>
+							</ol>
+
 							<h2 id="development-process">Development process</h2>
+
+							<p>
+								Initially, we started off with python as it was easier and
+								quicker to develop with. However, after developing the first
+								simple prototype with a frame display, we soon realized that the
+								support for
+								<code class="language-plaintext highlighter-rouge">PYQT5</code>
+								(python) was meagre compared to
+								<code class="language-plaintext highlighter-rouge">QT5</code>
+								(CPP). Furthermore, we decided to standardize CPP as the code
+								our programs will be written in (refer to program section for
+								more details).
+							</p>
+
+							<p>
+								The GUI started off as a simple application containing a display
+								frame, display options (refer to D in Figure) and spin boxes
+								(refer to H &amp; I in Figure) for calibration of the colour
+								detection. After repeated usage of it during the development of
+								the camera program, we added on other productivity features. For
+								example, the dual screen was added when we found switching the
+								display options on one frame to compare the results of the newly
+								calibrated thresholding values to be especially troublesome.
+							</p>
+
+							<p>
+								Along the way, when improvements are made to the program, the
+								GUI is updated accordingly. The camera calibration options came
+								after realising that using
+								<code class="language-plaintext highlighter-rouge"
+									>raspicam</code
+								>
+								instead of
+								<code class="language-plaintext highlighter-rouge"
+									>raspicam_cv</code
+								>
+								allowed us to control the white balance, ISO and shutter speed
+								of the camera. While this version of GUI is incomplete, it is
+								still able to serve its basic purpose of interfacing with the
+								camera.
+							</p>
 						</section>
 
 						<footer class="page__meta">
@@ -308,7 +502,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-07-05">July 5, 2020</time>
+								<time datetime="2020-07-06">July 6, 2020</time>
 							</p>
 						</footer>
 

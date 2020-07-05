@@ -11,7 +11,10 @@
 
 		<!-- begin _includes/seo.html -->
 		<title>Tracking Algorithm | Transcendence</title>
-		<meta name="description" content="Overview" />
+		<meta
+			name="description"
+			content="Overview                                Flowchart of the program"
+		/>
 
 		<meta property="og:type" content="article" />
 		<meta property="og:locale" content="en_US" />
@@ -22,7 +25,10 @@
 			content="https://bozo.infocommsociety.com/open/cam/track/"
 		/>
 
-		<meta property="og:description" content="Overview" />
+		<meta
+			property="og:description"
+			content="Overview                                Flowchart of the program"
+		/>
 
 		<meta
 			property="article:published_time"
@@ -31,7 +37,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-07-05T20:14:31+08:00"
+			content="2020-07-06T00:23:51+08:00"
 		/>
 
 		<link
@@ -247,12 +253,20 @@
 								<a href="/open/cam/"
 									><span class="nav__sub-title">Camera</span></a
 								>
-							</li>
 
-							<li>
-								<a href="/open/gui/"
-									><span class="nav__sub-title">Camera GUI</span></a
-								>
+								<ul>
+									<li><a href="/open/cam/general/">General Info</a></li>
+
+									<li>
+										<a href="/open/cam/track/" class="active"
+											>Tracking Algorithm</a
+										>
+									</li>
+
+									<li><a href="/open/cam/gui/">GUI</a></li>
+
+									<li><a href="/open/cam/communication/">Communication</a></li>
+								</ul>
 							</li>
 
 							<li>
@@ -280,9 +294,12 @@
 					itemtype="https://schema.org/CreativeWork"
 				>
 					<meta itemprop="headline" content="Tracking Algorithm" />
-					<meta itemprop="description" content="Overview" />
+					<meta
+						itemprop="description"
+						content="Overview                        Flowchart of the program            "
+					/>
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-07-05T20:14:31+08:00" />
+					<meta itemprop="dateModified" content="2020-07-06T00:23:51+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -292,7 +309,83 @@
 						</header>
 
 						<section class="page__content" itemprop="text">
+							<aside class="sidebar__right sticky">
+								<nav class="toc">
+									<header>
+										<h4 class="nav__title">
+											<i class="fas fa-camera"></i> Tracking Algorithm
+										</h4>
+									</header>
+									<ul class="toc__menu">
+										<li><a href="#overview">Overview</a></li>
+										<li>
+											<a href="#tracking">Tracking</a>
+											<ul>
+												<li>
+													<a href="#considerations">Considerations</a>
+													<ul>
+														<li>
+															<a href="#speed--latency">Speed &amp; Latency</a>
+														</li>
+														<li>
+															<a href="#accuracy--reliability"
+																>Accuracy &amp; Reliability</a
+															>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#algorithms">Algorithms</a>
+													<ul>
+														<li>
+															<a href="#circular-buffer">Circular buffer</a>
+														</li>
+														<li>
+															<a href="#image-processing">Image Processing</a>
+														</li>
+														<li><a href="#kalman-filter">Kalman Filter</a></li>
+														<li>
+															<a href="#tried--abandoned"
+																>Tried &amp; Abandoned</a
+															>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#threading">Threading</a>
+											<ul>
+												<li><a href="#precautions">Precautions</a></li>
+												<li>
+													<a href="#dynamic-priority">Dynamic priority</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+							</aside>
+
 							<h2 id="overview">Overview</h2>
+							<figure style="margin-left: auto; margin-right: auto;">
+								<img
+									loading="lazy"
+									src="/assets/images/program_flowchart"
+									alt="Cadence and flow"
+									style="margin-left: auto; margin-right: auto;"
+								/>
+
+								<figcaption>
+									Flowchart of the program
+								</figcaption>
+							</figure>
+
+							<p>
+								Our program will launch on startup and enter either competition
+								or debug mode upon selection by the user. The code behind the
+								tracking program will be explained in this article while the
+								debugging will be covered under GUI (next article).
+							</p>
 
 							<h2 id="tracking">Tracking</h2>
 
@@ -324,7 +417,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-07-05">July 5, 2020</time>
+								<time datetime="2020-07-06">July 6, 2020</time>
 							</p>
 						</footer>
 

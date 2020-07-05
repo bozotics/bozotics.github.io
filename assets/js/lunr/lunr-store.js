@@ -120,13 +120,13 @@ var store = [{
         "teaser": null
       },{
         "title": "Tracking Algorithm",
-        "excerpt":"Overview   Tracking   Considerations   Speed &amp; Latency   Accuracy &amp; Reliability   Algorithms   Circular buffer   Image Processing   Kalman Filter   Tried &amp; Abandoned   Threading   Precautions   Dynamic priority   ","categories": [],
+        "excerpt":"Overview Flowchart of the program Our program will launch on startup and enter either competition or debug mode upon selection by the user. The code behind the tracking program will be explained in this article while the debugging will be covered under GUI (next article). Tracking Considerations Speed &amp; Latency...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/cam/track/",
         "teaser": null
       },{
         "title": "Graphical User Interface",
-        "excerpt":"Purpose   Functions   GUI   Launch Protocol   Development process   ","categories": [],
+        "excerpt":"Overview Last year during competitions, we realised that the calibration process for our camera was extremely slow and tedious as we had to rely on VNC to display and control the RPi. This year, creating a graphical user interface (GUI) which can effectively strealine the process of debugging was a...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/cam/gui/",
         "teaser": null
