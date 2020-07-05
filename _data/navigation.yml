@@ -75,8 +75,15 @@ side-open:
         url: "/open/elec/history/"
   - title: Camera
     url: "/open/cam/"
-  - title: Camera GUI
-    url: "/open/gui/"
+    children:
+      - title: "General Info"
+        url: "/open/cam/general/"
+      - title: "Tracking Algorithm"
+        url: "/open/cam/track/"
+      - title: "GUI"
+        url: "/open/cam/gui/"
+      - title: "Communication"
+        url: "/open/cam/communication/"
   - title: Strategy
     url: "/open/strat/"
   - title: Debugging
