@@ -31,7 +31,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-07-06T00:33:09+08:00"
+			content="2020-07-07T13:27:42+08:00"
 		/>
 
 		<link
@@ -286,7 +286,7 @@
 					<meta itemprop="headline" content="Graphical User Interface" />
 					<meta itemprop="description" content="Overview" />
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-07-06T00:33:09+08:00" />
+					<meta itemprop="dateModified" content="2020-07-07T13:27:42+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -312,6 +312,7 @@
 												<li><a href="#launch-protocol">Launch Protocol</a></li>
 											</ul>
 										</li>
+										<li><a href="#comparison">Comparison</a></li>
 										<li>
 											<a href="#development-process">Development process</a>
 										</li>
@@ -326,25 +327,39 @@
 								process for our camera was extremely slow and tedious as we had
 								to rely on VNC to display and control the RPi. This year,
 								creating a graphical user interface (GUI) which can effectively
-								strealine the process of debugging was a priority for us. Our
-								GUI is able to stream frames from the camera at realtime which
-								can be launched easily. Furthermore, we can edit the calibration
-								values on the GUI and these changes will be reflected on the GUI
-								immediately.
+								streamline the process of debugging was a priority for us.
+								Therefore we created a GUI which can be launched easily to
+								stream frames from the camera at realtime. Furthermore, the
+								calibration values can be tweaked through GUI and these changes
+								will be reflected on the GUI immediately.
 							</p>
 
 							<h2 id="functions">Functions</h2>
 
 							<p>
 								These functions were developed to simplify and automate the
-								debugging process.
+								debugging process:
 							</p>
+							<ul>
+								<li>Can be launched easily</li>
+								<li>Select ROI to specify colour range</li>
+								<li>Code is editable on laptop</li>
+								<li>
+									Dual screen to for ease of comparison, e.g. original frame and
+									contour frame
+								</li>
+								<li>
+									Notepad for recording of any important values during
+									calibration
+								</li>
+							</ul>
 
 							<h3 id="gui">GUI</h3>
 
 							<p>
-								This GUI was mainly written in QT5 (CPP). The design and
-								functions of the GUI can be found in
+								This GUI was mainly written in
+								<code class="language-plaintext highlighter-rouge">QT5</code>
+								(C++). The design and functions of the GUI can be found in
 								<a
 									href="https://github.com/bozotics/GUI/blob/master/mainwindow.cpp"
 									>mainwindow.cpp</a
@@ -453,6 +468,12 @@
 								<li>GUI streams frames from RPi in real-time</li>
 							</ol>
 
+							<h2 id="comparison">Comparison</h2>
+
+							<p>
+								We placed our GUI right next to OpenMV’s GUI as a comparison.
+							</p>
+
 							<h2 id="development-process">Development process</h2>
 
 							<p>
@@ -461,9 +482,9 @@
 								simple prototype with a frame display, we soon realized that the
 								support for
 								<code class="language-plaintext highlighter-rouge">PYQT5</code>
-								(python) was meagre compared to
+								(Python) was meagre compared to
 								<code class="language-plaintext highlighter-rouge">QT5</code>
-								(CPP). Furthermore, we decided to standardize CPP as the code
+								(C++). Furthermore, we decided to standardise C++ as the code
 								our programs will be written in (refer to program section for
 								more details).
 							</p>
@@ -502,7 +523,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-07-06">July 6, 2020</time>
+								<time datetime="2020-07-07">July 7, 2020</time>
 							</p>
 						</footer>
 

@@ -114,19 +114,19 @@ var store = [{
         "teaser": null
       },{
         "title": "General Information",
-        "excerpt":"Camera   OS (Arch Linux)   Programming Language   Libraries Used   OpenCv   LibSSH   Threading  ","categories": [],
+        "excerpt":"Camera Currently, we are using RPi camera V1 which is able to capture frames at 640p and 90 FPS. Other options such as RPi camera V2 had a cap of 40 FPS while capturing at full FOV, USB camera has a high latency and OpenMV cameras do not have as...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/cam/general/",
         "teaser": null
       },{
         "title": "Tracking Algorithm",
-        "excerpt":"Overview Flowchart of the program Our program will launch on startup and enter either competition or debug mode upon selection by the user. The code behind the tracking program will be explained in this article while the debugging will be covered under GUI (next article). Tracking Considerations Speed &amp; Latency...","categories": [],
+        "excerpt":"Overview The camera program is written in C++. It is separated into two sections, the main processing and debugging. These two sections can be found in camera.cpp and debug.cpp respectively. Calibration values can be found in config.txt which can be edited without recompiling the program. Flowchart of the program Our...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/cam/track/",
         "teaser": null
       },{
         "title": "Graphical User Interface",
-        "excerpt":"Overview Last year during competitions, we realised that the calibration process for our camera was extremely slow and tedious as we had to rely on VNC to display and control the RPi. This year, creating a graphical user interface (GUI) which can effectively strealine the process of debugging was a...","categories": [],
+        "excerpt":"Overview Last year during competitions, we realised that the calibration process for our camera was extremely slow and tedious as we had to rely on VNC to display and control the RPi. This year, creating a graphical user interface (GUI) which can effectively streamline the process of debugging was a...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/cam/gui/",
         "teaser": null

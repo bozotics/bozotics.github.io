@@ -11,10 +11,7 @@
 
 		<!-- begin _includes/seo.html -->
 		<title>Tracking Algorithm | Transcendence</title>
-		<meta
-			name="description"
-			content="Overview                                Flowchart of the program"
-		/>
+		<meta name="description" content="Overview" />
 
 		<meta property="og:type" content="article" />
 		<meta property="og:locale" content="en_US" />
@@ -25,10 +22,7 @@
 			content="https://bozo.infocommsociety.com/open/cam/track/"
 		/>
 
-		<meta
-			property="og:description"
-			content="Overview                                Flowchart of the program"
-		/>
+		<meta property="og:description" content="Overview" />
 
 		<meta
 			property="article:published_time"
@@ -37,7 +31,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-07-06T00:33:09+08:00"
+			content="2020-07-07T13:27:42+08:00"
 		/>
 
 		<link
@@ -294,12 +288,9 @@
 					itemtype="https://schema.org/CreativeWork"
 				>
 					<meta itemprop="headline" content="Tracking Algorithm" />
-					<meta
-						itemprop="description"
-						content="Overview                        Flowchart of the program            "
-					/>
+					<meta itemprop="description" content="Overview" />
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-07-06T00:33:09+08:00" />
+					<meta itemprop="dateModified" content="2020-07-07T13:27:42+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -367,6 +358,28 @@
 							</aside>
 
 							<h2 id="overview">Overview</h2>
+
+							<p>
+								The camera program is written in C++. It is separated into two
+								sections, the main processing and debugging. These two sections
+								can be found in
+								<a
+									href="https://github.com/bozotics/GUI/blob/master/cache/current/camera.cpp"
+									>camera.cpp</a
+								>
+								and
+								<a
+									href="https://github.com/bozotics/GUI/blob/master/cache/current/debug.cpp"
+									>debug.cpp</a
+								>
+								respectively. Calibration values can be found in
+								<a
+									href="https://github.com/bozotics/GUI/blob/master/cache/current/config.txt"
+									>config.txt</a
+								>
+								which can be edited without recompiling the program.
+							</p>
+
 							<figure style="margin-left: auto; margin-right: auto;">
 								<img
 									loading="lazy"
@@ -391,11 +404,49 @@
 
 							<h3 id="considerations">Considerations</h3>
 
+							<p>
+								Speed and latency as well as accuracy and reliability were some
+								considerations while we coded our tracking program.
+							</p>
+
 							<h4 id="speed--latency">Speed &amp; Latency</h4>
+
+							<p>
+								We wanted a program which could track object
+								<strong>above 60 FPS</strong> with
+								<strong>minimal latency</strong>. Since our robot is moving at
+								high speeds thoughout the game, it is important to have high
+								refresh rates so that the movement of the robot will be fluid.
+								It is also essential for the robot to have minimal latency to
+								avoid low responsiveness and overshooting the ball while
+								tracking it. From past year’s experience, our robot would
+								overshoot while moving towards the ball which could be explained
+								by the low FPS and high latency of the program as we were using
+								python back then.
+							</p>
 
 							<h4 id="accuracy--reliability">Accuracy &amp; Reliability</h4>
 
+							<p>
+								We also wanted a program which can track the objects on the
+								field accurately while doing so reliably. Given that we are
+								using a omnidirectional mirror, the images captured will be
+								distorted and minimised. Furthermore, our mirror is not
+								completely smooth, thus the image will be slightly blurred. To
+								compensate for these problems arising from the choice of an
+								omnidirectional mirror, we had to create a program which has
+								high accuracy and reliability at detecting objects. Moreover, we
+								had to discern between the bjects in the field and unwanted
+								objects outside of the field accurately to prevent detecting
+								false postives.
+							</p>
+
 							<h3 id="algorithms">Algorithms</h3>
+
+							<p>
+								We used several algorithms and techniques to achieve the fulfill
+								the considerations we had.
+							</p>
 
 							<h4 id="circular-buffer">Circular buffer</h4>
 
@@ -417,7 +468,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-07-06">July 6, 2020</time>
+								<time datetime="2020-07-07">July 7, 2020</time>
 							</p>
 						</footer>
 

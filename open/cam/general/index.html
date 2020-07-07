@@ -31,7 +31,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-07-06T00:23:51+08:00"
+			content="2020-07-07T13:27:42+08:00"
 		/>
 
 		<link
@@ -288,7 +288,7 @@
 					<meta itemprop="headline" content="General Information" />
 					<meta itemprop="description" content="Camera" />
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-07-06T00:23:51+08:00" />
+					<meta itemprop="dateModified" content="2020-07-07T13:27:42+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -302,7 +302,7 @@
 								<nav class="toc">
 									<header>
 										<h4 class="nav__title">
-											<i class="fas fa-Cog"></i> General Information
+											<i class="fas fa-cog"></i> General Information
 										</h4>
 									</header>
 									<ul class="toc__menu">
@@ -317,6 +317,7 @@
 												<li><a href="#opencv">OpenCv</a></li>
 												<li><a href="#libssh">LibSSH</a></li>
 												<li><a href="#threading">Threading</a></li>
+												<li><a href="#qt5">QT5</a></li>
 											</ul>
 										</li>
 									</ul>
@@ -325,17 +326,68 @@
 
 							<h2 id="camera">Camera</h2>
 
+							<p>
+								Currently, we are using RPi camera V1 which is able to capture
+								frames at 640p and 90 FPS. Other options such as RPi camera V2
+								had a cap of 40 FPS while capturing at full FOV, USB camera has
+								a high latency and OpenMV cameras do not have as much
+								flexibility and processing power (Lower FPS) as the RPi.
+							</p>
+
 							<h2 id="os-arch-linux">OS (Arch Linux)</h2>
+
+							<ol>
+								<li>
+									Write
+									<a
+										href="http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-3-latest.tar.gz"
+										>Arch Linux Arm for Raspberry Pi 3</a
+									>
+									image into an SD card
+								</li>
+								<li>Set-up autologin</li>
+								<li>
+									Install Desktop environment preferably a lightweight one
+									(LXDE) due to the limited RAM of the rpi (Optional)
+								</li>
+								<li>Obtain SSH public keys on both devices (laptop and rpi)</li>
+								<li>
+									Set up DHCP server on rpi (Allow RPi to assign the laptop a
+									static IP address)
+								</li>
+								<li>
+									Install OpenCV with optimization (ARM NEON and VFPV3 enabled)
+								</li>
+								<li>
+									Also install the following packages: libssh and raspicam
+									(modified)
+								</li>
+							</ol>
 
 							<h2 id="programming-language">Programming Language</h2>
 
+							<p>
+								All of our code is written in C++ as it is more suited for our
+								use of running programs in realtime. In previous years, we used
+								python but aftering uncovering the problems with the language
+								such as slower computational speed and the Global Interpreter
+								Lock, we made a swicth to C++.
+							</p>
+
 							<h2 id="libraries-used">Libraries Used</h2>
+
+							<p>
+								These are some libraries that we used in the development of our
+								camera program and GUI
+							</p>
 
 							<h3 id="opencv">OpenCv</h3>
 
 							<h3 id="libssh">LibSSH</h3>
 
 							<h3 id="threading">Threading</h3>
+
+							<h3 id="qt5">QT5</h3>
 						</section>
 
 						<footer class="page__meta">
@@ -343,7 +395,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-07-06">July 6, 2020</time>
+								<time datetime="2020-07-07">July 7, 2020</time>
 							</p>
 						</footer>
 
