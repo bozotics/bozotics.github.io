@@ -11,7 +11,10 @@
 
 		<!-- begin _includes/seo.html -->
 		<title>Design | Transcendence</title>
-		<meta name="description" content="Coming Soon!" />
+		<meta
+			name="description"
+			content="It was challenging to fit all our sensors into our circuit boards since we wanted a 20cm diameter robot, while keeping double layered wheels, double dribblers and a solenoid, which took up a lot of space. Here, we detail some design considerations for cramming our sensors and components in a small area."
+		/>
 
 		<meta property="og:type" content="article" />
 		<meta property="og:locale" content="en_US" />
@@ -22,7 +25,10 @@
 			content="https://bozo.infocommsociety.com/open/elec/design/"
 		/>
 
-		<meta property="og:description" content="Coming Soon!" />
+		<meta
+			property="og:description"
+			content="It was challenging to fit all our sensors into our circuit boards since we wanted a 20cm diameter robot, while keeping double layered wheels, double dribblers and a solenoid, which took up a lot of space. Here, we detail some design considerations for cramming our sensors and components in a small area."
+		/>
 
 		<meta
 			property="article:published_time"
@@ -31,7 +37,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-05-24T13:37:12+08:00"
+			content="2020-07-08T07:42:42+08:00"
 		/>
 
 		<link
@@ -237,6 +243,8 @@
 										<a href="/open/elec/design/" class="active">Design</a>
 									</li>
 
+									<li><a href="/open/elec/circuits/">Circuits</a></li>
+
 									<li><a href="/open/elec/components/">Components</a></li>
 
 									<li><a href="/open/elec/soldering/">Soldering</a></li>
@@ -286,9 +294,12 @@
 					itemtype="https://schema.org/CreativeWork"
 				>
 					<meta itemprop="headline" content="Design" />
-					<meta itemprop="description" content="Coming Soon!" />
+					<meta
+						itemprop="description"
+						content="It was challenging to fit all our sensors into our circuit boards since wewanted a 20cm diameter robot, while keeping double layered wheels, doubledribblers and a solenoid, which took up a lot of space. Here, we detail somedesign considerations for cramming our sensors and components in a small area."
+					/>
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-05-24T13:37:12+08:00" />
+					<meta itemprop="dateModified" content="2020-07-08T07:42:42+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -306,52 +317,318 @@
 										</h4>
 									</header>
 									<ul class="toc__menu">
-										<li><a href="#coming-soon">Coming Soon!</a></li>
+										<li><a href="#components">Components</a></li>
+										<li><a href="#positioning">Positioning</a></li>
+										<li><a href="#trace-widths">Trace widths</a></li>
+										<li>
+											<a href="#reference-schematics">Reference Schematics</a>
+										</li>
 									</ul>
 								</nav>
 							</aside>
 
-							<h2 id="coming-soon">Coming Soon!</h2>
+							<p>
+								It was challenging to fit all our sensors into our circuit
+								boards since we wanted a 20cm diameter robot, while keeping
+								double layered wheels, double dribblers and a solenoid, which
+								took up a lot of space. Here, we detail some design
+								considerations for cramming our sensors and components in a
+								small area.
+							</p>
+
+							<h2 id="components">Components</h2>
+
+							<p>
+								More details about the selection process can be found
+								<a href="/open/elec/components">here</a>.
+							</p>
 
 							<details>
-								<summary>todo</summary>
+								<summary>Components List</summary>
 
-								<ul>
-									<li>
-										design “considerations”
-										<ul>
-											<li>positioning of things close to each other</li>
-											<li>
-												actually reading datasheets for suggested land pattern
-											</li>
-											<li>
-												trace width / polygon for power and high speed signals
-											</li>
-											<li>
-												link to AFI (include below in AFI)
-												<ul>
-													<li>high V right next to 3V3 bad</li>
-													<li>
-														signals running parallel bad but difficult to
-														prevent, may really need more layers
-													</li>
-													<li>
-														power lines should still be thicker, still abit
-														sketchy
-													</li>
-													<li>
-														lmao multiplexer power with normal V not analog V
-													</li>
-													<li>
-														maybe more PCBs stacked in a 3d way as 18cm comes,
-														else don’t know how to fit everything
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-								</ul>
+								<!--- TODO: Add links to the component list --->
+
+								<table>
+									<thead>
+										<tr>
+											<th style="text-align: left;">Component</th>
+											<th style="text-align: right;">Cost (SGD)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: left;">
+												<ins><em>Layer 1</em></ins>
+											</td>
+											<td style="text-align: right;"></td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">JMP-BE-3561 Motor × 4</td>
+											<td style="text-align: right;">$480</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">1040B Solenoid</td>
+											<td style="text-align: right;">$5</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">
+												VNH5019A Motor Driver × 4
+											</td>
+											<td style="text-align: right;">$8</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">
+												ALS-PT19 Phototransistor × 40
+											</td>
+											<td style="text-align: right;">$4</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">PMW3360 Mouse Sensor</td>
+											<td style="text-align: right;">$10</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">
+												<ins><em>Layer 2</em></ins>
+											</td>
+											<td style="text-align: right;"></td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">Revolectrix 3S Battery</td>
+											<td style="text-align: right;">$20</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">XA2212 820KV BLDC × 2</td>
+											<td style="text-align: right;">$20</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">
+												<ins><em>Layer 3</em></ins>
+											</td>
+											<td style="text-align: right;"></td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">Teensy 3.5</td>
+											<td style="text-align: right;">$50</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">STM32F103CBT6 × 2</td>
+											<td style="text-align: right;">$6</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">
+												Adafruit NXP Precision IMU
+											</td>
+											<td style="text-align: right;">$25</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">Raspberry Pi 3B</td>
+											<td style="text-align: right;">$45</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">Raspberry Pi Camera V1</td>
+											<td style="text-align: right;">$3</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">HC-05 Bluetooth Module</td>
+											<td style="text-align: right;">$5</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">Hobbywing ESC × 2</td>
+											<td style="text-align: right;">$20</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">
+												<ins><em>Layer 4</em></ins>
+											</td>
+											<td style="text-align: right;"></td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">VL53L1X TOF × 4</td>
+											<td style="text-align: right;">$30</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">WS2812B Neopixel × 16</td>
+											<td style="text-align: right;">$2</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">
+												<ins><em>Others</em></ins>
+											</td>
+											<td style="text-align: right;"></td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">Carbon Fiber</td>
+											<td style="text-align: right;">$26</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">PCB (4 plates)</td>
+											<td style="text-align: right;">$25</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">Assorted Parts</td>
+											<td style="text-align: right;">≈$60</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">
+												<ins><em>Total</em></ins>
+											</td>
+											<td style="text-align: right;">≈$850</td>
+										</tr>
+									</tbody>
+								</table>
 							</details>
+
+							<h2 id="positioning">Positioning</h2>
+
+							<p>
+								While designing our PCB, we made sure to position “groups” of
+								components close to each other. e.g. resistors for motor drivers
+								are placed together with the driver. This ensured that traces
+								for related parts did not run all over the circuit board, and
+								simplified the designing process.
+							</p>
+
+							<p>
+								We also ensured that these groups were placed close to the
+								intended “destination”, e.g. the motor drivers were placed
+								directly under the motors. This shortens cable runs and also
+								ensures high current cables from the motors do not affect other
+								data lines.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<img
+									loading="lazy"
+									src="/assets/images/pcb-layer1.png"
+									alt="Grouping components"
+									style="margin-left: auto; margin-right: auto;"
+								/>
+
+								<figcaption>
+									Grouping components
+								</figcaption>
+							</figure>
+
+							<h2 id="trace-widths">Trace widths</h2>
+
+							<p>
+								A major issue with
+								<a href="/open/elec/history/#first-pcb"
+									>our initial circuit boards</a
+								>
+								were the trace widths. We used the same thin trace width for
+								everything from data lines to motor power, which is a really bad
+								idea since ≈10A of current were running down traces rated for
+								≈0.8A.
+							</p>
+
+							<p>
+								Now, we utilise polygons / pours and thicker trace widths (40
+								mils) for our high current traces e.g. motor and solenoid.
+							</p>
+
+							<p>
+								High current traces running parallel to high speed signals or
+								analog signals (from light sensors) can cause interference. This
+								is especially so since we wanted to keep to a 2-layer PCB,
+								meaning we could not rely on internal layers to separate data
+								and power traces. Hence, to decrease the number of power traces
+								throughout the PCB, high power lines are run through 18AWG
+								wires.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<img
+									loading="lazy"
+									src="/assets/images/pcb-layer1-spaghetti.jpg"
+									alt="Power Cables"
+									style="margin-left: auto; margin-right: auto;"
+								/>
+
+								<figcaption>
+									Power Cables
+								</figcaption>
+							</figure>
+
+							<p>
+								Although it looks ugly, it results in a more reliable circuit
+								board as sudden braking / changing direction of the motor which
+								causes a current spike will not affect surrounding analog
+								circuits or interfere with communication signals.
+							</p>
+
+							<h2 id="reference-schematics">Reference Schematics</h2>
+
+							<p>
+								When we first shifted away from commercial off the shelf (COTS)
+								components and breakout boards of ICs, we consulted the
+								datasheets which contain a “recommended application schematic”
+								most of the time, and simply use those to design our circuits.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<a href="https://www.ti.com/lit/ds/symlink/tps5430.pdf">
+									<img
+										loading="lazy"
+										src="/assets/images/tps5430-application-sch.png"
+										alt="TPS5430 Buck Converter Application Schematic"
+										style="margin-left: auto; margin-right: auto;"
+									/>
+								</a>
+
+								<figcaption>
+									<a href="https://www.ti.com/lit/ds/symlink/tps5430.pdf">
+										TPS5430 Buck Converter Application Schematic
+									</a>
+								</figcaption>
+							</figure>
+
+							<p>
+								Sometimes, these COTS components we purchase from Taobao come
+								with schematics as well, and if we are using the same IC
+								<a href="#sike">(which we usually are)</a
+								><!---/open/elec/components#abcdef--->
+								we consult these schematics to design our circuits as well.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<img
+									loading="lazy"
+									src="/assets/images/adxl345-taobao-sch.png"
+									alt="ADXL345 Accelerometer Taobao Schematic"
+									style="margin-left: auto; margin-right: auto;"
+								/>
+
+								<figcaption>
+									ADXL345 Accelerometer Taobao Schematic
+								</figcaption>
+							</figure>
+
+							<p>
+								Lastly, ICs we use are
+								<a href="#sike">typically found in COTS components</a
+								><!---above--->
+								from popular manufacturers like Sparkfun or Pololu, and these
+								companies usually release their schematics, hence we can take
+								those as reference when designing our circuits.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<a href="https://www.pololu.com/product/1451">
+									<img
+										loading="lazy"
+										src="/assets/images/vnh5019-pololu-sch.png"
+										alt="VNH5019 Motor Driver Pololu Schematic"
+										style="margin-left: auto; margin-right: auto;"
+									/>
+								</a>
+
+								<figcaption>
+									<a href="https://www.pololu.com/product/1451">
+										VNH5019 Motor Driver Pololu Schematic
+									</a>
+								</figcaption>
+							</figure>
 						</section>
 
 						<footer class="page__meta">
@@ -359,7 +636,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-05-24">May 24, 2020</time>
+								<time datetime="2020-07-08">July 8, 2020</time>
 							</p>
 						</footer>
 
@@ -373,9 +650,9 @@
 							>
 
 							<a
-								href="/open/elec/components/"
+								href="/open/elec/circuits/"
 								class="pagination--pager"
-								title="Components
+								title="Circuits
 "
 								>Next</a
 							>

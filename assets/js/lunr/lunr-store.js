@@ -78,15 +78,21 @@ var store = [{
         "teaser": null
       },{
         "title": "Electronics",
-        "excerpt":"COMING SOON This section contains everything related to electronics about our robot: why we chose certain components, how we designed our circuits, and reasons for some of our decisions. Design: Details our design considerations Components: Explains our choice of components, and alternatives we considered but ultimately rejected Soldering: Some tools...","categories": [],
+        "excerpt":"This section contains everything related to electronics about our robot: why we chose certain components, how we designed our circuits, and reasons for some of our decisions. Design: Details our design considerations Circuits: Explains the different circuits on our robot Components: Explains our choice of components, and alternatives we considered...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/",
         "teaser": null
       },{
         "title": "Design",
-        "excerpt":"Coming Soon! todo design “considerations” positioning of things close to each other actually reading datasheets for suggested land pattern trace width / polygon for power and high speed signals link to AFI (include below in AFI) high V right next to 3V3 bad signals running parallel bad but difficult to...","categories": [],
+        "excerpt":"It was challenging to fit all our sensors into our circuit boards since we wanted a 20cm diameter robot, while keeping double layered wheels, double dribblers and a solenoid, which took up a lot of space. Here, we detail some design considerations for cramming our sensors and components in a...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/design/",
+        "teaser": null
+      },{
+        "title": "Circuits",
+        "excerpt":"Coming Soon™  ","categories": [],
+        "tags": [],
+        "url": "https://bozo.infocommsociety.com/open/elec/circuits/",
         "teaser": null
       },{
         "title": "Components",
