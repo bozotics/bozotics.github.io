@@ -67,6 +67,8 @@ side-open:
     children:
       - title: "Design"
         url: "/open/elec/design/"
+      - title: "Circuits"
+        url: "/open/elec/circuits/"
       - title: "Components"
         url: "/open/elec/components/"
       - title: "Soldering"
