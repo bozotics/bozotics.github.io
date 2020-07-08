@@ -11,7 +11,7 @@
 
 		<!-- begin _includes/seo.html -->
 		<title>History | Transcendence</title>
-		<meta name="description" content="COMING SOON" />
+		<meta name="description" content="Warning: this is really lengthy" />
 
 		<meta property="og:type" content="article" />
 		<meta property="og:locale" content="en_US" />
@@ -22,7 +22,7 @@
 			content="https://bozo.infocommsociety.com/open/elec/history/"
 		/>
 
-		<meta property="og:description" content="COMING SOON" />
+		<meta property="og:description" content="Warning: this is really lengthy" />
 
 		<meta
 			property="article:published_time"
@@ -31,7 +31,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-05-24T13:37:12+08:00"
+			content="2020-07-08T22:40:15+08:00"
 		/>
 
 		<link
@@ -239,6 +239,8 @@
 
 									<li><a href="/open/elec/components/">Components</a></li>
 
+									<li><a href="/open/elec/selection/">Selection Process</a></li>
+
 									<li><a href="/open/elec/soldering/">Soldering</a></li>
 
 									<li>
@@ -288,9 +290,12 @@
 					itemtype="https://schema.org/CreativeWork"
 				>
 					<meta itemprop="headline" content="History" />
-					<meta itemprop="description" content="COMING SOON" />
+					<meta
+						itemprop="description"
+						content="Warning: this is really lengthy"
+					/>
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-05-24T13:37:12+08:00" />
+					<meta itemprop="dateModified" content="2020-07-08T22:40:15+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -308,36 +313,32 @@
 										</h4>
 									</header>
 									<ul class="toc__menu">
+										<li><a href="#coming-soon">COMING SOON</a></li>
 										<li>
-											<a href="#coming-soon">COMING SOON</a>
+											<a href="#sensors-and-motor-drivers"
+												>Sensors and Motor Drivers</a
+											>
+										</li>
+										<li><a href="#microcontrollers">Microcontrollers</a></li>
+										<li>
+											<a href="#circuit-boards">Circuit Boards</a>
 											<ul>
+												<li><a href="#first-pcb">First PCB</a></li>
 												<li>
-													<a href="#sensors-and-motor-drivers"
-														>Sensors and Motor Drivers</a
+													<a href="#shift-to-smd-components-and-ics"
+														>Shift to SMD components and ICs</a
 													>
 												</li>
-												<li>
-													<a href="#microcontrollers">Microcontrollers</a>
-												</li>
-												<li>
-													<a href="#circuit-boards">Circuit Boards</a>
-													<ul>
-														<li><a href="#first-pcb">First PCB</a></li>
-														<li>
-															<a href="#shift-to-smd-components-and-ics"
-																>Shift to SMD components and ICs</a
-															>
-														</li>
-														<li><a href="#test-pcb">Test PCB</a></li>
-													</ul>
-												</li>
+												<li><a href="#test-pcb">Test PCB</a></li>
 											</ul>
 										</li>
 									</ul>
 								</nav>
 							</aside>
 
-							<h2 id="coming-soon">COMING SOON</h2>
+							<p><strong>Warning:</strong> this is really lengthy</p>
+
+							<h3 id="coming-soon">COMING SOON</h3>
 
 							<p>
 								When we started RoboCup back in 2017, we were given a set of
@@ -443,11 +444,11 @@
 							<h4 id="first-pcb">First PCB</h4>
 
 							<p>
-								For our 2nd year competiting in 2018, we wanted to shift away
-								from the messiness and inelegance of the past. Seeing as our
-								senior team had made a PCB themselves in 2017, we decided to
-								design a PCB ourselves where everything was fully integrated and
-								we didn’t have to deal with any wires. The first design, very
+								For our 2nd year competing in 2018, we wanted to shift away from
+								the messiness and inelegance of the past. Seeing as our senior
+								team had made a PCB themselves in 2017, we decided to design a
+								PCB ourselves where everything was fully integrated and we
+								didn’t have to deal with any wires. The first design, very
 								surprisingly, worked “fully” without any ad-hoc soldering to fix
 								our circuit. However, our entire board was designed with 8 mil
 								traces, the minimum trace width in SparkFun’s EAGLE DRC file. We
@@ -493,10 +494,10 @@
 							<p>
 								A tip if you are just starting out on a similar path: a good
 								starting point is the recommended application schematic. Many
-								times, apart from Vmax we don’t really need that much info on
-								its characteristics, and skip right to the application schematic
-								to reference and build our circuit from there. Attempt to
-								understand the rationale of every component used in that
+								times, apart from V<sub>max</sub> we don’t really need that much
+								info on its characteristics, and skip right to the application
+								schematic to reference and build our circuit from there. Attempt
+								to understand the rationale of every component used in that
 								application schematic, that way you can optimise the circuit
 								specifically to your needs.
 							</p>
@@ -526,45 +527,108 @@
 								are just starting out I would recommend this as well.
 							</p>
 
+							<p>
+								<a href="#sike/history">We researched extensively</a> and
+								decided on a
+								<a href="https://www.pjrc.com/store/teensy36.html"
+									>Teensy 3.5/6</a
+								>: easily obtainable from the local SGBotic shop, enough I/O
+								(but not too much so the overall size was still small) and fast.
+								The speed was important as that was the year we made the switch
+								from IR to passive orange ball, and we didn’t know how much
+								computing power we would need to detect it yet, thus more was
+								better.
+							</p>
+
+							<!---teensy over other µCs--->
+
+							<!---teensy 3v3 blow up problems--->
+
+							<p>
+								For our 3rd competition in 2019, the next thing to replace was
+								the Nano: we now know that it is there to serve as a “second
+								core”, a sub-processor, and not solely to process the ultrasonic
+								sensor’s data. Although the Nano worked well for this purpose,
+								we wanted to test something new for future development and use.
+								Our first instinct was to go with ST’s Nucleo lineup as it was
+								the first non-Arduino MCU we know of thanks to INPUT, and it was
+								quite cheap. However, it wasn’t easily accessible to us as our
+								main supplier was Taobao.com, and the lineup isn’t very popular
+								on there. What was popular though, was the “Blue Pill” board<!---link--->
+								based upon a STM32F103C8T6, and it was really cheap as well due
+								to economies of scale. Upon further researching however, it
+								seems to have some issues with its USB circuitry. We ended up
+								settling on a cloned “Maple Mini”<!---link--->
+								which was touted as a good alternative at roughly the same price
+								to the blue pill.
+							</p>
+
 							<details>
 								<summary>todo</summary>
 
+								<p>
+									general <strong>BRIEF</strong> “history” about our electronics
+									(mostly to showcase learning process)
+								</p>
+
 								<ul>
 									<li>
-										general <strong>BRIEF</strong> “history” about our
-										electronics (mostly to showcase learning process)
+										old perfboards and first forays into PCB
 										<ul>
 											<li>
-												old perfboards and first forays into PCB
+												KC’s drone and testing with ATMEGA328P
 												<ul>
-													<li>KC’s drone and testing with ATMEGA328P</li>
-													<li>link to bottom pcb design (failures)</li>
+													<li>original confusion of what a programmer is</li>
+													<li>SPI programming</li>
 												</ul>
 											</li>
-											<li>PCB design (failures)</li>
-											<li>
-												too thin power traces in first PCB
-												<ul>
-													<li>
-														lights flickering every time direction changed, or
-														solenoid kick
-													</li>
-													<li>
-														investigations into motor current draw
-														<ul>
-															<li>justin’s project, 12A when reversing!</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-											<li>4 layer lmao</li>
-											<li>
-												ground pour but didn’t realise that it was only
-												connected at one point
-											</li>
-											<li>crosstalk but how we can’t prevent it well</li>
 										</ul>
 									</li>
+									<li>PCB design (failures)</li>
+									<li>
+										too thin power traces in first PCB
+										<ul>
+											<li>
+												lights flickering every time direction changed, or
+												solenoid kick
+											</li>
+											<li>
+												investigations into motor current draw
+												<ul>
+													<li>justin’s project, 12A when reversing!</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>4 layer lmao</li>
+									<li>
+										ground pour but didn’t realise that it was only connected at
+										one point
+									</li>
+									<li>crosstalk but how we can’t prevent it well</li>
+									<li>
+										motor driver
+										<ul>
+											<li>pololu complicated relationship lmao</li>
+											<li>china red driver</li>
+										</ul>
+									</li>
+									<li>
+										IMU
+										<ul>
+											<li>the shortage</li>
+											<li>CMPS11 woes</li>
+											<li>BNO055 salvation, but i2c problems</li>
+										</ul>
+									</li>
+									<li>
+										things we tried and failed
+										<ul>
+											<li>adj POT</li>
+											<li>encoder for wheels</li>
+										</ul>
+									</li>
+									<li>why we chose UART</li>
 								</ul>
 							</details>
 						</section>
@@ -574,7 +638,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-05-24">May 24, 2020</time>
+								<time datetime="2020-07-08">July 8, 2020</time>
 							</p>
 						</footer>
 

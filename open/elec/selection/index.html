@@ -10,16 +10,16 @@
 		<meta charset="utf-8" />
 
 		<!-- begin _includes/seo.html -->
-		<title>Circuits | Transcendence</title>
+		<title>Selection Process | Transcendence</title>
 		<meta name="description" content="Coming Soon™" />
 
 		<meta property="og:type" content="article" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:site_name" content="Transcendence" />
-		<meta property="og:title" content="Circuits" />
+		<meta property="og:title" content="Selection Process" />
 		<meta
 			property="og:url"
-			content="https://bozo.infocommsociety.com/open/elec/circuits/"
+			content="https://bozo.infocommsociety.com/open/elec/selection/"
 		/>
 
 		<meta property="og:description" content="Coming Soon™" />
@@ -36,7 +36,7 @@
 
 		<link
 			rel="canonical"
-			href="https://bozo.infocommsociety.com/open/elec/circuits/"
+			href="https://bozo.infocommsociety.com/open/elec/selection/"
 		/>
 
 		<script type="application/ld+json">
@@ -235,13 +235,15 @@
 								<ul>
 									<li><a href="/open/elec/design/">Design</a></li>
 
-									<li>
-										<a href="/open/elec/circuits/" class="active">Circuits</a>
-									</li>
+									<li><a href="/open/elec/circuits/">Circuits</a></li>
 
 									<li><a href="/open/elec/components/">Components</a></li>
 
-									<li><a href="/open/elec/selection/">Selection Process</a></li>
+									<li>
+										<a href="/open/elec/selection/" class="active"
+											>Selection Process</a
+										>
+									</li>
 
 									<li><a href="/open/elec/soldering/">Soldering</a></li>
 
@@ -289,7 +291,7 @@
 					itemscope
 					itemtype="https://schema.org/CreativeWork"
 				>
-					<meta itemprop="headline" content="Circuits" />
+					<meta itemprop="headline" content="Selection Process" />
 					<meta itemprop="description" content="Coming Soon™" />
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
 					<meta itemprop="dateModified" content="2020-07-08T22:40:15+08:00" />
@@ -297,7 +299,7 @@
 					<div class="page__inner-wrap">
 						<header>
 							<h1 id="page-title" class="page__title" itemprop="headline">
-								Circuits
+								Selection Process
 							</h1>
 						</header>
 
@@ -306,7 +308,7 @@
 								<nav class="toc">
 									<header>
 										<h4 class="nav__title">
-											<i class="fas fa-bolt"></i> Design
+											<i class="fas fa-bolt"></i> Selection Process
 										</h4>
 									</header>
 									<ul class="toc__menu">
@@ -322,120 +324,33 @@
 
 								<ul>
 									<li>
-										buck
+										suppliers
 										<ul>
+											<li>original: sim lim, sgbotic</li>
+											<li>why we shifted to taobao &amp; e14</li>
 											<li>
-												failed LM2596 (was the most popular so we tried first)
-											</li>
-											<li>how we chose which to try</li>
-											<li>
-												failed TPS54330
+												taobao 101
 												<ul>
 													<li>
-														originally wanted because low current performance
+														how this relates to part selection (we start the
+														search in taobao)
 													</li>
-												</ul>
-											</li>
-											<li>why we went with TPS5430 (simple and worked)</li>
-										</ul>
-									</li>
-									<li>
-										boost
-										<ul>
-											<li>
-												asplosion (don’t say here, link to history page before
-												this)
-											</li>
-											<li>
-												misconceptions with how to increase solenoid power
-												<ul>
 													<li>
-														kept looking for increased voltage / cont. current
+														since taobao generally only sells popular components
+														(the big resellers) we know which parts should work,
+														we can use that to pick our components
+													</li>
+													<li>
+														experience with bad quality
 														<ul>
-															<li>
-																attempt to analyse waveform to see how much
-																current it draws but ended up getting some weird
-																negative voltage
-															</li>
+															<li>bad tools (drill, angle grinder)</li>
+															<li>bad parts (broken MAX7219, bad solder)</li>
 														</ul>
-													</li>
-													<li>
-														realised capacitors were a thing and really
-														understood what it did from the ben 600v boost
-													</li>
-												</ul>
-											</li>
-											<li>big fat boost converters of the past</li>
-											<li>
-												why we went with lm2587 in the end
-												<ul>
-													<li>MAX1522 failure</li>
-													<li>considered MC34063 and UC3843</li>
-													<li>
-														other topologies
-														<ul>
-															<li>
-																flyback and the point where every tutorial
-																showed a flyback
-															</li>
-															<li>charge pump</li>
-														</ul>
-													</li>
-													<li>working china breakout board</li>
-												</ul>
-											</li>
-											<li>
-												how we switched it
-												<ul>
-													<li>
-														single mosfet and smoke, then realised power
-														dissipation was a thing for inductive
-													</li>
-													<li>
-														relays for higher A rating but arcing confusion
-														<ul>
-															<li>
-																led to questions about our main switch AC
-																ratings
-															</li>
-														</ul>
-													</li>
-													<li>
-														single mosfet and no smoke but rlly hot cuz Rds not
-														low enough at 3v3
-													</li>
-													<li>finally double mosfet as a weird “multiplier”</li>
-													<li>zener + rectifier as power dissipation</li>
-												</ul>
-											</li>
-											<li>
-												digital POT
-												<ul>
-													<li>
-														first time that made the thing blow because it
-														initialised slow
-													</li>
-													<li>
-														put it in parallel with another resistor, so now at
-														the start when resistance is infinite it won’t blow
-														the IC
-													</li>
-													<li>
-														but in the end decided not to use because no space
-														to route and useless
 													</li>
 												</ul>
 											</li>
 										</ul>
 									</li>
-									<li>
-										ports (xt30, xt60, sh-1.0)
-										<ul>
-											<li>jumper wire confusion and wrong direction</li>
-											<li>6p6c lmao</li>
-										</ul>
-									</li>
-									<li>level shifting</li>
 								</ul>
 							</details>
 						</section>
@@ -451,17 +366,17 @@
 
 						<nav class="pagination">
 							<a
-								href="/open/elec/design/"
+								href="/open/elec/components/"
 								class="pagination--pager"
-								title="Design
+								title="Components
 "
 								>Previous</a
 							>
 
 							<a
-								href="/open/elec/components/"
+								href="/open/elec/soldering/"
 								class="pagination--pager"
-								title="Components
+								title="Soldering
 "
 								>Next</a
 							>

@@ -78,7 +78,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Electronics",
-        "excerpt":"This section contains everything related to electronics about our robot: why we chose certain components, how we designed our circuits, and reasons for some of our decisions. Design: Details our design considerations Circuits: Explains the different circuits on our robot Components: Explains our choice of components, and alternatives we considered...","categories": [],
+        "excerpt":"This section contains everything related to electronics about our robot: why we chose certain components, how we designed our circuits, and reasons for some of our decisions. Design: Details our design considerations Circuits: Explains the different circuits on our robot Components: Explains our choice of components Selection Process: Explains the...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/",
         "teaser": null
@@ -90,15 +90,21 @@ var store = [{
         "teaser": null
       },{
         "title": "Circuits",
-        "excerpt":"Coming Soon™  ","categories": [],
+        "excerpt":"Coming Soon™ todo buck failed LM2596 (was the most popular so we tried first) how we chose which to try failed TPS54330 originally wanted because low current performance why we went with TPS5430 (simple and worked) boost asplosion (don’t say here, link to history page before this) misconceptions with how...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/circuits/",
         "teaser": null
       },{
         "title": "Components",
-        "excerpt":"COMING SOON todo Microcontroller We researched extensively and thanks to Ken Chow we decided on a Teensy: easily obtainable from the local SGBotic shop, enough I/O (but not too much so the overall size was still small) and fast. The speed was important as that was the year we made...","categories": [],
+        "excerpt":"After much consideration we have decided on the following components to be used in our circuit boards. Component Cost (SGD) Layer 1   JMP-BE-3561 Motor × 4 $480 1040B Solenoid $5 VNH5019A Motor Driver × 4 $8 ALS-PT19 Phototransistor × 40 $4 PMW3360 Mouse Sensor $10 Layer 2   Revolectrix...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/components/",
+        "teaser": null
+      },{
+        "title": "Selection Process",
+        "excerpt":"Coming Soon™ todo suppliers original: sim lim, sgbotic why we shifted to taobao &amp; e14 taobao 101 how this relates to part selection (we start the search in taobao) since taobao generally only sells popular components (the big resellers) we know which parts should work, we can use that to...","categories": [],
+        "tags": [],
+        "url": "https://bozo.infocommsociety.com/open/elec/selection/",
         "teaser": null
       },{
         "title": "Soldering",
@@ -108,7 +114,7 @@ var store = [{
         "teaser": null
       },{
         "title": "History",
-        "excerpt":"COMING SOON When we started RoboCup back in 2017, we were given a set of sensors that were the leftovers from whatever our seniors used. With these sensors, there was little documentation as they were usually from JoinMax (the company that produces the RCU and the motor we are currently...","categories": [],
+        "excerpt":"Warning: this is really lengthy COMING SOON When we started RoboCup back in 2017, we were given a set of sensors that were the leftovers from whatever our seniors used. With these sensors, there was little documentation as they were usually from JoinMax (the company that produces the RCU and...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/history/",
         "teaser": null
@@ -156,7 +162,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Areas For Improvement",
-        "excerpt":"Mechanical  Dribbler make it ultra vacuum suck   Make mirror plate the 4th layer pcb, move all TOF and neopixel to top layer so they can actually be used   Do above then make camera cover screwable  ","categories": [],
+        "excerpt":"Mechanical Dribbler make it ultra vacuum suck Make mirror plate the 4th layer pcb, move all TOF and neopixel to top layer so they can actually be used Do above then make camera cover screwable todo elec/design high V right next to 3V3 bad signals running parallel bad but difficult...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/afi/",
         "teaser": null

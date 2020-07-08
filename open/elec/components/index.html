@@ -11,7 +11,10 @@
 
 		<!-- begin _includes/seo.html -->
 		<title>Components | Transcendence</title>
-		<meta name="description" content="COMING SOON" />
+		<meta
+			name="description"
+			content="After much consideration we have decided on the following components to be used in our circuit boards."
+		/>
 
 		<meta property="og:type" content="article" />
 		<meta property="og:locale" content="en_US" />
@@ -22,7 +25,10 @@
 			content="https://bozo.infocommsociety.com/open/elec/components/"
 		/>
 
-		<meta property="og:description" content="COMING SOON" />
+		<meta
+			property="og:description"
+			content="After much consideration we have decided on the following components to be used in our circuit boards."
+		/>
 
 		<meta
 			property="article:published_time"
@@ -31,7 +37,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-05-24T13:37:12+08:00"
+			content="2020-07-08T22:40:15+08:00"
 		/>
 
 		<link
@@ -243,6 +249,8 @@
 										>
 									</li>
 
+									<li><a href="/open/elec/selection/">Selection Process</a></li>
+
 									<li><a href="/open/elec/soldering/">Soldering</a></li>
 
 									<li><a href="/open/elec/history/">History</a></li>
@@ -290,9 +298,12 @@
 					itemtype="https://schema.org/CreativeWork"
 				>
 					<meta itemprop="headline" content="Components" />
-					<meta itemprop="description" content="COMING SOON" />
+					<meta
+						itemprop="description"
+						content="After much consideration we have decided on the followingcomponents to be used in our circuit boards."
+					/>
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-05-24T13:37:12+08:00" />
+					<meta itemprop="dateModified" content="2020-07-08T22:40:15+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -306,365 +317,611 @@
 								<nav class="toc">
 									<header>
 										<h4 class="nav__title">
-											<i class="fas fa-bolt"></i> Electronics
+											<i class="fas fa-bolt"></i> Components
 										</h4>
 									</header>
 									<ul class="toc__menu">
 										<li>
-											<a href="#coming-soon">COMING SOON</a>
+											<a href="#microcontrollers-µc">Microcontrollers (µC)</a>
 											<ul>
-												<li><a href="#microcontroller">Microcontroller</a></li>
+												<li><a href="#main-µc">Main µC</a></li>
+												<li><a href="#sub-µc">Sub-µC</a></li>
+												<li><a href="#programmers">Programmers</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#motor-drivers">Motor Drivers</a>
+											<ul>
+												<li>
+													<a href="#dc-motor-drivers">DC Motor Drivers</a>
+												</li>
+												<li><a href="#bldc-esc">BLDC ESC</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#sensors">Sensors</a>
+											<ul>
+												<li><a href="#imu--compass">IMU / Compass</a></li>
+												<li><a href="#mouse-sensor">Mouse Sensor</a></li>
+												<li><a href="#distance-sensor">Distance Sensor</a></li>
+												<li><a href="#light-sensor">Light Sensor</a></li>
+												<li><a href="#camera">Camera</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#debugging">Debugging</a>
+											<ul>
+												<li><a href="#rgb-led-ring">RGB LED Ring</a></li>
+												<li><a href="#bluetooth">Bluetooth</a></li>
 											</ul>
 										</li>
 									</ul>
 								</nav>
 							</aside>
 
-							<h2 id="coming-soon">COMING SOON</h2>
+							<p>
+								After much <a href="#sike/history">consideration</a> we have
+								decided on the following components to be used in our circuit
+								boards.
+							</p>
 
-							<details>
-								<summary>todo</summary>
+							<!--- TODO: Add links to the component list --->
 
-								<h3 id="microcontroller">Microcontroller</h3>
+							<table>
+								<thead>
+									<tr>
+										<th style="text-align: left;">Component</th>
+										<th style="text-align: right;">Cost (SGD)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="text-align: left;">
+											<ins><em>Layer 1</em></ins>
+										</td>
+										<td style="text-align: right;"></td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">JMP-BE-3561 Motor × 4</td>
+										<td style="text-align: right;">$480</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">1040B Solenoid</td>
+										<td style="text-align: right;">$5</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">VNH5019A Motor Driver × 4</td>
+										<td style="text-align: right;">$8</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											ALS-PT19 Phototransistor × 40
+										</td>
+										<td style="text-align: right;">$4</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">PMW3360 Mouse Sensor</td>
+										<td style="text-align: right;">$10</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<ins><em>Layer 2</em></ins>
+										</td>
+										<td style="text-align: right;"></td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Revolectrix 3S Battery</td>
+										<td style="text-align: right;">$20</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">XA2212 820KV BLDC × 2</td>
+										<td style="text-align: right;">$20</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<ins><em>Layer 3</em></ins>
+										</td>
+										<td style="text-align: right;"></td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Teensy 3.5</td>
+										<td style="text-align: right;">$50</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">STM32F103CBT6 × 2</td>
+										<td style="text-align: right;">$6</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											Adafruit NXP Precision IMU
+										</td>
+										<td style="text-align: right;">$25</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Raspberry Pi 3B</td>
+										<td style="text-align: right;">$45</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Raspberry Pi Camera V1</td>
+										<td style="text-align: right;">$3</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">HC-05 Bluetooth Module</td>
+										<td style="text-align: right;">$5</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Hobbywing ESC × 2</td>
+										<td style="text-align: right;">$20</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<ins><em>Layer 4</em></ins>
+										</td>
+										<td style="text-align: right;"></td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">VL53L1X TOF × 4</td>
+										<td style="text-align: right;">$30</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">WS2812B Neopixel × 16</td>
+										<td style="text-align: right;">$2</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<ins><em>Others</em></ins>
+										</td>
+										<td style="text-align: right;"></td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Carbon Fiber</td>
+										<td style="text-align: right;">$26</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">PCB (4 plates)</td>
+										<td style="text-align: right;">$25</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Assorted Parts</td>
+										<td style="text-align: right;">≈$60</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<ins><em>Total</em></ins>
+										</td>
+										<td style="text-align: right;">≈$850</td>
+									</tr>
+								</tbody>
+							</table>
 
-								<p>
-									We researched extensively and thanks to Ken Chow<!--pls change name--->
-									we decided on a Teensy:<!---link--->
-									easily obtainable from the local SGBotic shop, enough I/O (but
-									not too much so the overall size was still small) and fast.
-									The speed was important as that was the year we made the
-									switch from IR to passive orange ball, and we didn’t know how
-									much computing power we would need to detect it yet, thus more
-									was better.
-									<!---MOVE THIS TO COMPONENTS--->
-								</p>
+							<hr />
 
-								<!---teensy 3v3 blow up problems--->
+							<h2 id="microcontrollers-µc">Microcontrollers (µC)</h2>
 
-								<p>
-									For our 3rd competition in 2019, the next thing to replace was
-									the Nano: we now know that it is there to serve as a “second
-									core”, a sub-processor, and not solely to process the
-									ultrasonic sensor’s data. Although the Nano worked well for
-									this purpose, we wanted to test something new for future
-									development and use. Our first instinct was to go with ST’s
-									Nucleo lineup as it was the first non-Arduino MCU we know of
-									thanks to INPUT, and it was quite cheap. However, it wasn’t
-									easily accessible to us as our main supplier was Taobao.com,
-									and the lineup isn’t very popular on there. What was popular
-									though, was the “Blue Pill” board<!---link--->
-									based upon a STM32F103C8T6, and it was really cheap as well
-									due to economies of scale. Upon further researching however,
-									it seems to have some issues with its USB circuitry. We ended
-									up settling on a cloned “Maple Mini”<!---link--->
-									which was touted as a good alternative at roughly the same
-									price to the blue pill.
-									<!---MOVE THIS TO COMPONENTS--->
-								</p>
+							<h3 id="main-µc">Main µC</h3>
 
-								<ul>
-									<li>
-										suppliers
-										<ul>
-											<li>original: sim lim, sgbotic</li>
-											<li>why we shifted to taobao &amp; e14</li>
-											<li>
-												taobao 101
-												<ul>
-													<li>
-														how this relates to part selection (we start the
-														search in taobao)
-													</li>
-													<li>
-														since taobao generally only sells popular components
-														(the big resellers) we know which parts should work,
-														we can use that to pick our components
-													</li>
-													<li>
-														experience with bad quality
-														<ul>
-															<li>bad tools (drill, angle grinder)</li>
-															<li>bad parts (broken MAX7219, bad solder)</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li>
-										parts selection
-										<ul>
-											<li>
-												motor driver
-												<ul>
-													<li>pololu complicated relationship lmao</li>
-													<li>china red driver</li>
-												</ul>
-											</li>
-											<li>
-												ESC
-												<ul>
-													<li>controlling that doomboo + level shifting</li>
-												</ul>
-											</li>
-											<li>
-												sensors + why we do / don’t put them in breakout boards
-												<ul>
-													<li>
-														IMU
-														<ul>
-															<li>the shortage</li>
-															<li>CMPS11 woes</li>
-															<li>BNO055 salvation, but i2c problems</li>
-															<li>
-																FXOS8700+FXAS21002 resulting solution /
-																dedicated BNO055 controller
-															</li>
-														</ul>
-													</li>
-													<li>Mouse</li>
-													<li>Bluetooth</li>
-													<li>TOF</li>
-													<li>neopixel ring</li>
-													<li>light sensor</li>
-													<li>
-														camera+raspi
-														<ul>
-															<li>
-																vs other SBC (jetson nano, tinkerboard, odroid)
-															</li>
-															<li>vs compute module</li>
-															<li>vs raspi 4</li>
-															<li>SD card woes + backup problems</li>
-															<li>
-																initial confusions, python opencv era of
-																reinstalling 100000 times
-															</li>
-															<li>
-																OS considered
-																<ul>
-																	<li>raspbian (lite)</li>
-																	<li>dietpi</li>
-																	<li>arch</li>
-																	<li>
-																		buildroot and why we haven’t done that yet
-																	</li>
-																	<li>
-																		bare metal and why we also didn’t do that
-																		(yet???)
-																	</li>
-																</ul>
-															</li>
-															<li>
-																link to camera section (include other cameras
-																considered from arducam + issues with V2)
-															</li>
-														</ul>
-													</li>
-													<li>
-														things we tried and failed
-														<ul>
-															<li>adj POT</li>
-															<li>encoder for wheels</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-											<li>
-												power
-												<ul>
-													<li>
-														buck
-														<ul>
-															<li>
-																failed LM2596 (was the most popular so we tried
-																first)
-															</li>
-															<li>how we chose which to try</li>
-															<li>
-																failed TPS54330
-																<ul>
-																	<li>
-																		originally wanted because low current
-																		performance
-																	</li>
-																</ul>
-															</li>
-															<li>
-																why we went with TPS5430 (simple and worked)
-															</li>
-														</ul>
-													</li>
-													<li>
-														boost
-														<ul>
-															<li>
-																asplosion (don’t say here, link to history page
-																before this)
-															</li>
-															<li>
-																misconceptions with how to increase solenoid
-																power
-																<ul>
-																	<li>
-																		kept looking for increased voltage / cont.
-																		current
-																		<ul>
-																			<li>
-																				attempt to analyse waveform to see how
-																				much current it draws but ended up
-																				getting some weird negative voltage
-																			</li>
-																		</ul>
-																	</li>
-																	<li>
-																		realised capacitors were a thing and really
-																		understood what it did from the ben 600v
-																		boost
-																	</li>
-																</ul>
-															</li>
-															<li>big fat boost converters of the past</li>
-															<li>
-																why we went with lm2587 in the end
-																<ul>
-																	<li>MAX1522 failure</li>
-																	<li>considered MC34063 and UC3843</li>
-																	<li>
-																		other topologies
-																		<ul>
-																			<li>
-																				flyback and the point where every
-																				tutorial showed a flyback
-																			</li>
-																			<li>charge pump</li>
-																		</ul>
-																	</li>
-																	<li>working china breakout board</li>
-																</ul>
-															</li>
-															<li>
-																how we switched it
-																<ul>
-																	<li>
-																		single mosfet and smoke, then realised power
-																		dissipation was a thing for inductive
-																	</li>
-																	<li>
-																		relays for higher A rating but arcing
-																		confusion
-																		<ul>
-																			<li>
-																				led to questions about our main switch
-																				AC ratings
-																			</li>
-																		</ul>
-																	</li>
-																	<li>
-																		single mosfet and no smoke but rlly hot cuz
-																		Rds not low enough at 3v3
-																	</li>
-																	<li>
-																		finally double mosfet as a weird
-																		“multiplier”
-																	</li>
-																	<li>
-																		zener + rectifier as power dissipation
-																	</li>
-																</ul>
-															</li>
-															<li>
-																digital POT
-																<ul>
-																	<li>
-																		first time that made the thing blow because
-																		it initialised slow
-																	</li>
-																	<li>
-																		put it in parallel with another resistor, so
-																		now at the start when resistance is infinite
-																		it won’t blow the IC
-																	</li>
-																	<li>
-																		but in the end decided not to use because no
-																		space to route and useless
-																	</li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-											<li>
-												microcontroller
-												<ul>
-													<li>
-														main controller (teensy vs others, problems with
-														teensy)
-													</li>
-													<li>
-														“sub” controller (acting as sensors)
-														<ul>
-															<li>
-																why we chose STM32
-																<ul>
-																	<li>
-																		link to above 328p history, why we
-																		eventually didn’t use that even tho it
-																		worked
-																	</li>
-																	<li>
-																		which others did we consider (freescale
-																		since teensy, SAMD since arduino)
-																	</li>
-																	<li>
-																		why did we eventually choose STM32
-																		<ul>
-																			<li>bought maple mini and it worked</li>
-																			<li>
-																				schematic seemed simple at time when we
-																				didnt know anything
-																			</li>
-																			<li>cheap as heck cuz china</li>
-																		</ul>
-																	</li>
-																</ul>
-															</li>
-															<li>
-																programmers
-																<ul>
-																	<li>
-																		initial confusion over what things are
-																		<ul>
-																			<li>SPI programming</li>
-																			<li>
-																				ST-link vs J-link vs BMP vs Nucleo
-																			</li>
-																		</ul>
-																	</li>
-																	<li>
-																		current setup of programmer + UART debug
-																		link
-																	</li>
-																	<li>future using SWO / J-Link RTT</li>
-																</ul>
-															</li>
-															<li>why we chose UART</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-											<li>
-												ports (xt30, xt60, sh-1.0)
-												<ul>
-													<li>jumper wire confusion and wrong direction</li>
-													<li>6p6c lmao</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</details>
+							<p>
+								We use a
+								<a href="https://www.pjrc.com/store/teensy36.html"
+									>Teensy 3.5/6</a
+								>
+								as a main µC due to its fast processing speed, large number of
+								peripherals and I/O (but not too much so the overall size was
+								still small), extensive support on Arduino IDE, and ease of
+								reuse in the future as it was on a breakout board.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<a href="https://www.pjrc.com/store/teensy36.html">
+									<img
+										loading="lazy"
+										src="/assets/images/teensy36.jpg"
+										alt="Teensy 3.5/6"
+										style="margin-left: auto; margin-right: auto;"
+									/>
+								</a>
+
+								<figcaption>
+									<a href="https://www.pjrc.com/store/teensy36.html">
+										Teensy 3.5/6
+									</a>
+								</figcaption>
+							</figure>
+
+							<p>
+								We chose the Teensy over other 32-bit µCs such as the Arduino
+								Due, ST’s Nucleo lineup, etc because of its small size and good
+								Arduino IDE support. We also wanted it to be on a breakout board
+								as it was expensive, so soldering something like a STM32F4
+								directly onto our PCB was not a solution.
+							</p>
+
+							<p>
+								We are looking at the newer Teensy 4.0/1 µCs, however we are
+								unlikely to switch away as we do not require <em>that</em> much
+								speed and it is quite expensive to replace.
+								<!---link to teensy kaboom history--->
+							</p>
+
+							<h3 id="sub-µc">Sub-µC</h3>
+
+							<p>
+								We use multiple
+								<a
+									href="https://www.st.com/en/microcontrollers-microprocessors/stm32f103cb.html"
+									>STM32F103CBT6</a
+								>
+								as sub-µCs to process sensor data (e.g. sensor fusion for our
+								IMU) to not slow our main processor down and allow more tasks to
+								be run parallel to each other.
+							</p>
+
+							<p>
+								We chose this IC in particular because we used it before on a
+								Maple Mini, and the schematics for that are simple enough to
+								understand. Also, it has extensive support from the
+								<a href="https://github.com/stm32duino/Arduino_Core_STM32"
+									>Arduino STM32 Core</a
+								>, and it has a very cheap price (cheaper than the popular
+								ATMEGA328P on Taobao!) so we could solder it down directly
+								without a breakout board.
+							</p>
+
+							<p>
+								We did consider other alternatives such as NXP’s Freescale
+								(since the Teensy also used this) and Microchip’s ATSAMD (since
+								it had good Arduino support) lineups. However, the lack of
+								availability and the very low price of the STM32s on Taobao
+								pulled us in that direction instead.
+							</p>
+
+							<p>
+								However, the STM32F103 is quite annoying to solder with the QFP
+								package (we have broken a few legs before) and we do not
+								saturate the I/O anyways. We are looking to shift towards
+								smaller µCs with TSSOP packages in the STM32F0 series, and with
+								that shift away from the Arduino ecosystem.
+							</p>
+
+							<h3 id="programmers">Programmers</h3>
+
+							<p>
+								To program the STM32s, we use
+								<a
+									href="https://item.taobao.com/item.htm?spm=a230r.1.14.270.76ae5329lH9aOm&amp;id=601672470954"
+									>J-Link OB boards</a
+								>
+								from Taobao.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<a
+									href="https://item.taobao.com/item.htm?spm=a230r.1.14.270.76ae5329lH9aOm&amp;id=601672470954"
+								>
+									<img
+										loading="lazy"
+										src="/assets/images/j-link-programmer.jpg"
+										alt="J-Link OB Programmer"
+										style="margin-left: auto; margin-right: auto;"
+									/>
+								</a>
+
+								<figcaption>
+									<a
+										href="https://item.taobao.com/item.htm?spm=a230r.1.14.270.76ae5329lH9aOm&amp;id=601672470954"
+									>
+										J-Link OB Programmer
+									</a>
+								</figcaption>
+							</figure>
+
+							<p>
+								They were the best choice since J-Link Edu Mini / Black Magic
+								Probe boards were not sold locally, and real ST-Links were
+								significantly more expensive locally. We also wanted to be able
+								to program chips other than STM32s in the future, hence we
+								preferred the flexibility of J-Links over STLinks.
+							</p>
+
+							<p>
+								Currently, we use SH1.0 ports to connect the programmers to the
+								PCB to save space. We have 6 pins: 3v3, GND, SWDIO, SWCLK, TX,
+								RX. In the future, we would like to replace the TX/RX with SWO
+								pins to fully utilise peripherals of the ARM ecosystem and not
+								waste a UART, or even use the
+								<a
+									href="https://www.segger.com/products/debug-probes/j-link/technology/about-real-time-transfer/"
+									>Real Time Transfer (RTT)</a
+								>
+								feature available on J-Links to save on pins since the RTT can
+								work through SWDIO.
+							</p>
+
+							<hr />
+
+							<h2 id="motor-drivers">Motor Drivers</h2>
+
+							<h3 id="dc-motor-drivers">DC Motor Drivers</h3>
+
+							<p>
+								We use 4
+								<a
+									href="https://www.st.com/en/automotive-analog-and-power/vnh5019a-e.html"
+									>VNH5019A</a
+								>
+								motor drivers to control our motors because it had a high
+								current limit, low R<sub>ds(on)</sub> so there is minimal heat
+								output, and it had a 3.3v voltage level. Since we had used the
+								VNH2SP30 motor driver previously, and these two have similar
+								architectures, we were confident that the motor driver would
+								work well.
+							</p>
+
+							<p>
+								However, we (very recently) discovered that the VNH5019 coasts
+								(leaves the switches off) rather than brakes (turns all the
+								switches on to short the terminals) at every “0” in the PWM duty
+								cycle. So far, we have not faced any issues with this
+								implementation, but Texas Instrument’s DRV line could be
+								considered if any problems come up.
+							</p>
+
+							<h3 id="bldc-esc">BLDC ESC</h3>
+
+							<p>
+								We use 2
+								<a
+									href="http://www.hobbywing.com/goods.php?id=407&amp;filter_attr=6345.6463"
+									>HobbyWing SkyWalker 30A</a
+								>
+								ESCs for our
+								<a href="/open/mech/dribbler/#motor">dribbler BLDC motors</a>.
+								We use these due to the high current limit and cheap price from
+								Taobao.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<a
+									href="https://item.taobao.com/item.htm?spm=a230r.1.14.1.785423efcJL6UM&amp;id=14222029428"
+								>
+									<img
+										loading="lazy"
+										src="/assets/images/skywalker-esc.jpg"
+										alt="HobbyWing SkyWalker 30A ESC"
+										style="margin-left: auto; margin-right: auto;"
+									/>
+								</a>
+
+								<figcaption>
+									<a
+										href="https://item.taobao.com/item.htm?spm=a230r.1.14.1.785423efcJL6UM&amp;id=14222029428"
+									>
+										HobbyWing SkyWalker 30A ESC
+									</a>
+								</figcaption>
+							</figure>
+
+							<p>
+								However, from our testing our dribbler rarely draws more than
+								≈2A of current. In the future, smaller and lighter ESCs can be
+								used. We have been testing small
+								<a
+									href="https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-21603605950.14.965e3cabAhrB4E&amp;id=571193702193"
+									>HSKRC BLHeli_S ESCs</a
+								>, however as we did not want to waste the ESCs we already had
+								we still use the large HobbyWing ESCs.
+							</p>
+
+							<p>
+								A note of caution: both these ESCs were annoying to control.
+								They both required 5v logic levels, the HobbyWing one needed
+								50Hz Servo signals, and there was an initialisation sequence
+								that lasts for ≈3s before the motors can actually turn on. The
+								BLHeli_S one was also complex as we needed to understand and
+								implement the OneShot125 protocol. We tried using the DShot
+								protocol to no avail.
+							</p>
+
+							<hr />
+
+							<h2 id="sensors">Sensors</h2>
+
+							<h3 id="imu--compass">IMU / Compass</h3>
+
+							<p>
+								We use the
+								<a href="https://www.adafruit.com/product/3463"
+									>Adafruit NXP Precision IMU</a
+								>
+								because of its accuracy and relatively cheap price. It was also
+								very stable from our testing, something our past IMU used have
+								struggled with.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<a href="https://www.adafruit.com/product/3463">
+									<img
+										loading="lazy"
+										src="/assets/images/adafruit-nxp-imu.jpg"
+										alt="Adafruit NXP Precision IMU"
+										style="margin-left: auto; margin-right: auto;"
+									/>
+								</a>
+
+								<figcaption>
+									<a href="https://www.adafruit.com/product/3463">
+										Adafruit NXP Precision IMU
+									</a>
+								</figcaption>
+							</figure>
+
+							<p>
+								However, one downside compared to the popular BNO055 is the lack
+								of a controller in-built to process sensor fusion algorithms.
+								Hence, we dedicate one sub-µC solely to IMU sensor fusion tasks
+								to ensure maximum stability and data rate.
+							</p>
+
+							<h3 id="mouse-sensor">Mouse Sensor</h3>
+
+							<p>
+								We use the
+								<a
+									href="https://www.pixart.com/products-detail/10/PMW3360DM-T2QU"
+									>PMW3360</a
+								>
+								on our own breakout board. This is because the sensor was
+								expensive and we wanted to reuse the sensor easily rather than
+								soldering it directly to our 1st layer PCB. Moreover, the mouse
+								sensor could only work at ≈3mm from the ground, and our 1st
+								layer PCB was too high off the ground for the mouse sensor to
+								detect anything.
+							</p>
+
+							<p>
+								We did consider getting COTS breakout boards from
+								<a
+									href="https://www.tindie.com/products/jkicklighter/pmw3360-motion-sensor/"
+									>Tindie</a
+								>
+								however the shipping was way too expensive. This did help us a
+								lot though, since we referred to their schematics and example
+								code when designing and using our breakout boards.
+							</p>
+
+							<p>
+								We also did consider other mouse sensors like the ADNS9800 and
+								PMW3389 (both available from the Tindie seller above) however
+								from our research the ADNS9800 had hardware mouse acceleration
+								which may be unsuitable for our purposes, and we could not
+								source the PMW3389 or other mouse sensors from Taobao.
+							</p>
+
+							<h3 id="distance-sensor">Distance Sensor</h3>
+
+							<p>
+								We use 4
+								<a
+									href="https://item.taobao.com/item.htm?spm=a230r.1.14.18.53c9464a8UXNhB&amp;id=600540090714"
+									>VL53L1X</a
+								>
+								TOF sensors on a black breakout board from Taobao. They are
+								accurate, precise due to a small beam angle, very small, and
+								easy to use.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<a
+									href="https://item.taobao.com/item.htm?spm=a230r.1.14.56.70295af05mWyTF&amp;id=600811358224"
+								>
+									<img
+										loading="lazy"
+										src="/assets/images/tof-vl53l1x-black.jpg"
+										alt="VL53L1X TOF Sensor"
+										style="margin-left: auto; margin-right: auto;"
+									/>
+								</a>
+
+								<figcaption>
+									<a
+										href="https://item.taobao.com/item.htm?spm=a230r.1.14.56.70295af05mWyTF&amp;id=600811358224"
+									>
+										VL53L1X TOF Sensor
+									</a>
+								</figcaption>
+							</figure>
+
+							<p>
+								We chose these as distance sensors over the more common and
+								cheaper ultrasonic sensors because of the higher data rate, and
+								precision from a small beam angle. They were also consirably
+								smaller, and advanced functions such as selecting the FOV.
+							</p>
+
+							<h3 id="light-sensor">Light Sensor</h3>
+
+							<p>
+								We use 40 white 3528 LEDs and ALS-PT19 phototransistors for our
+								bottom light sensor ring.
+								<!---explain ring--->
+								These were multiplexed using 74HC4067 ICs.
+							</p>
+
+							<p>
+								We chose the ALS-PT19 because it was small (0603 package) and
+								cheap. Previously, we have used TEMT6000 phototransistors,
+								however they were annoying to solder, expensive and relatively
+								large (1206 package).
+							</p>
+
+							<h3 id="camera">Camera</h3>
+
+							<p>
+								We use a RPi 3B(+) with a RPi Camera V1 for ball tracking and
+								localisation due to its high processing power and flexibility.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<a href="https://www.adafruit.com/product/1367">
+									<img
+										loading="lazy"
+										src="/assets/images/rpi3b-and-camera.jpg"
+										alt="RPi + Camera"
+										style="margin-left: auto; margin-right: auto;"
+									/>
+								</a>
+
+								<figcaption>
+									<a href="https://www.adafruit.com/product/1367">
+										RPi + Camera
+									</a>
+								</figcaption>
+							</figure>
+
+							<hr />
+
+							<h2 id="debugging">Debugging</h2>
+
+							<h3 id="rgb-led-ring">RGB LED Ring</h3>
+
+							<p>
+								We used 16 WS2812B individually addressable RGB LEDs (Neopixel)
+								in a ring to aid in our debugging. These LEDs can highlight the
+								direction of the ball, goals, robots, or any other debugging
+								information without us needing to connect to serial terminals of
+								the µCs or the RPi.
+							</p>
+
+							<figure style="margin-left: auto; margin-right: auto;">
+								<img
+									loading="lazy"
+									src="/assets/images/neopixel-ring.jpg"
+									alt="Neopixel Ring"
+									style="margin-left: auto; margin-right: auto;"
+								/>
+
+								<figcaption>
+									Neopixel Ring
+								</figcaption>
+							</figure>
+
+							<h3 id="bluetooth">Bluetooth</h3>
+
+							<p>
+								We have a HC-05 bluetooth module for communication between
+								robots as well as debugging via phones. This communication
+								between robots allows for advanced strategies like attack /
+								defence role switching, or to “extend” the FOV of the camera
+								since both robots can be used to help the other localise or
+								track the ball.
+							</p>
+
+							<p>
+								We also plan to eventually make an app for our phones to connect
+								to the robot via bluetooth for debugging rather than downloading
+								a new program with changed parameters every time we wanted to
+								tune some parameters or read and debug sensor values
+							</p>
 						</section>
 
 						<footer class="page__meta">
@@ -672,7 +929,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-05-24">May 24, 2020</time>
+								<time datetime="2020-07-08">July 8, 2020</time>
 							</p>
 						</footer>
 
@@ -686,9 +943,9 @@
 							>
 
 							<a
-								href="/open/elec/soldering/"
+								href="/open/elec/selection/"
 								class="pagination--pager"
-								title="Soldering
+								title="Selection Process
 "
 								>Next</a
 							>
