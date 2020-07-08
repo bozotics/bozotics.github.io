@@ -71,6 +71,8 @@ side-open:
         url: "/open/elec/circuits/"
       - title: "Components"
         url: "/open/elec/components/"
+      - title: "Selection Process"
+        url: "/open/elec/selection/"
       - title: "Soldering"
         url: "/open/elec/soldering/"
       - title: "History"
