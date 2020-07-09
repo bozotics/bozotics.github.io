@@ -11,7 +11,7 @@
 
 		<!-- begin _includes/seo.html -->
 		<title>Selection Process | Transcendence</title>
-		<meta name="description" content="Coming Soon™" />
+		<meta name="description" content="Suppliers" />
 
 		<meta property="og:type" content="article" />
 		<meta property="og:locale" content="en_US" />
@@ -22,7 +22,7 @@
 			content="https://bozo.infocommsociety.com/open/elec/selection/"
 		/>
 
-		<meta property="og:description" content="Coming Soon™" />
+		<meta property="og:description" content="Suppliers" />
 
 		<meta
 			property="article:published_time"
@@ -31,7 +31,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-07-08T22:45:35+08:00"
+			content="2020-07-09T11:03:29+08:00"
 		/>
 
 		<link
@@ -292,9 +292,9 @@
 					itemtype="https://schema.org/CreativeWork"
 				>
 					<meta itemprop="headline" content="Selection Process" />
-					<meta itemprop="description" content="Coming Soon™" />
+					<meta itemprop="description" content="Suppliers" />
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-07-08T22:45:35+08:00" />
+					<meta itemprop="dateModified" content="2020-07-09T11:03:29+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -312,47 +312,76 @@
 										</h4>
 									</header>
 									<ul class="toc__menu">
-										<li><a href="#coming-soon">Coming Soon™</a></li>
+										<li><a href="#suppliers">Suppliers</a></li>
+										<li><a href="#selection">Selection</a></li>
+										<li><a href="#caveats">Caveats</a></li>
 									</ul>
 								</nav>
 							</aside>
 
-							<h2 id="coming-soon">Coming Soon™</h2>
+							<h2 id="suppliers">Suppliers</h2>
 
-							<details>
-								<summary>todo</summary>
+							<p>
+								Apart from the reasons outlined in the
+								<a href="/open/elec/components">components section</a>, one main
+								reason we select our components is the availability here in
+								Singapore.
+							</p>
 
-								<ul>
-									<li>
-										suppliers
-										<ul>
-											<li>original: sim lim, sgbotic</li>
-											<li>why we shifted to taobao &amp; e14</li>
-											<li>
-												taobao 101
-												<ul>
-													<li>
-														how this relates to part selection (we start the
-														search in taobao)
-													</li>
-													<li>
-														since taobao generally only sells popular components
-														(the big resellers) we know which parts should work,
-														we can use that to pick our components
-													</li>
-													<li>
-														experience with bad quality
-														<ul>
-															<li>bad tools (drill, angle grinder)</li>
-															<li>bad parts (broken MAX7219, bad solder)</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</details>
+							<p>
+								We used to source our components from the local Sim Lim Tower, a
+								retail complex with shops selling electrical components. We also
+								purchase certain parts from the local shop SGBotic, which is a
+								distributor for popular brands like Pololu, Sparkfun, Adafruit
+								etc.
+							</p>
+
+							<p>
+								However, purchasing parts locally was getting expensive. We had
+								a limited budget with an increasing number of teams to spend it
+								on. Hence, we looked to overseas suppliers like
+								<a href="taobao.com">Taobao</a> and other major distributors
+								like <a href="sg.element14.com">element14</a> which sold parts
+								(sometimes counterfeit) at cheaper prices.
+							</p>
+
+							<h2 id="selection">Selection</h2>
+
+							<p>
+								Now, a major reason we select certain components is based on
+								availability on trusted Taobao suppliers. We usually purchase
+								from <a href="youxin-electronic.taobao.com">YouXin</a> and we
+								also discover components from there.
+							</p>
+
+							<p>
+								For example, out of all the multiplexers that are available, we
+								narrow our search down by searching for “multiplexers” on YouXin
+								and sorting by quantity of each part sold. This gives us a good
+								indication of the more popular ICs which would probably be more
+								trusted and reliable, and also better supported with libraries
+								and examples online.
+							</p>
+
+							<h2 id="caveats">Caveats</h2>
+
+							<p>
+								This selection process does not really work for tools. We had
+								purchased bad solder which refused to melt, bad flux which burnt
+								off in an instant and smelt bad, and bad power tools that melts
+								itself due to the bad construction and material choices.
+							</p>
+
+							<p>
+								The method of sorting by quantity sold only works within a
+								supplier, and usually only for ICs: e.g., sorting all
+								multiplexers within YouXin. When it comes to tools, apart from
+								checking quantity sold we try to look out for the price as well.
+								While this may seem unintuitive, we look out for more expensive
+								tools since most of the time they are still cheaper than
+								purchasing locally, and looking out for the cheapest tools was
+								always too good to be true.
+							</p>
 						</section>
 
 						<footer class="page__meta">
@@ -360,7 +389,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-07-08">July 8, 2020</time>
+								<time datetime="2020-07-09">July 9, 2020</time>
 							</p>
 						</footer>
 

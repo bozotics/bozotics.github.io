@@ -102,7 +102,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Selection Process",
-        "excerpt":"Coming Soon™ todo suppliers original: sim lim, sgbotic why we shifted to taobao &amp; e14 taobao 101 how this relates to part selection (we start the search in taobao) since taobao generally only sells popular components (the big resellers) we know which parts should work, we can use that to...","categories": [],
+        "excerpt":"Suppliers Apart from the reasons outlined in the components section, one main reason we select our components is the availability here in Singapore. We used to source our components from the local Sim Lim Tower, a retail complex with shops selling electrical components. We also purchase certain parts from the...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/selection/",
         "teaser": null
