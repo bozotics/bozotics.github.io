@@ -114,7 +114,7 @@ var store = [{
         "teaser": null
       },{
         "title": "History",
-        "excerpt":"Warning: this is really lengthy COMING SOON When we started RoboCup back in 2017, we were given a set of sensors that were the leftovers from whatever our seniors used. With these sensors, there was little documentation as they were usually from JoinMax (the company that produces the RCU and...","categories": [],
+        "excerpt":"Warning: this section is really lengthy, and probably would not be as helpful as the other sections. However, we faced many problems with our electronics as beginners especially with little people guiding us along. Hence, we hope that through highlighting our learning process other beginners can benefit! So read on...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/history/",
         "teaser": null
