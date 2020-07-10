@@ -67,16 +67,16 @@ side-open:
     children:
       - title: "Design"
         url: "/open/elec/design/"
-      - title: "Circuits"
-        url: "/open/elec/circuits/"
-      - title: "Components"
-        url: "/open/elec/components/"
       - title: "Selection Process"
         url: "/open/elec/selection/"
-      - title: "Soldering"
-        url: "/open/elec/soldering/"
+      - title: "Components"
+        url: "/open/elec/components/"
+      - title: "Circuits"
+        url: "/open/elec/circuits/"
       - title: "History"
         url: "/open/elec/history/"
+      - title: "Soldering"
+        url: "/open/elec/soldering/"
   - title: Camera
     url: "/open/cam/"
     children:
