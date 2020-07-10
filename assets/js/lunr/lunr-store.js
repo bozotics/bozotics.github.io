@@ -126,7 +126,7 @@ var store = [{
         "teaser": null
       },{
         "title": "General Information",
-        "excerpt":"Camera Currently, we are using RPi camera V1 which is able to capture frames at 640p and 90 FPS. Other options such as RPi camera V2 had a cap of 40 FPS while capturing at full FOV, USB camera has a high latency and OpenMV cameras do not have as...","categories": [],
+        "excerpt":"Camera Microprocessor Raspberry Pi (RPi) 3B This model of RPi is the choice of our microprocessor for the camera system of our robot. The computational power of the RPi to its price is higher than other SBCs. Furthermore, the RPi has a well established community online which had been helpful...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/cam/general/",
         "teaser": null
