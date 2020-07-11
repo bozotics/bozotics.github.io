@@ -78,7 +78,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Electronics",
-        "excerpt":"This section contains everything related to electronics about our robot: why we chose certain components, how we designed our circuits, and reasons for some of our decisions. Design: Details our design considerations Circuits: Explains the different circuits on our robot Components: Explains our choice of components Selection Process: Explains the...","categories": [],
+        "excerpt":"This section contains everything related to electronics about our robot: why we chose certain components, how we designed our circuits, and reasons for some of our decisions. Design: Details our design considerations Selection Process: Explains the process of sourcing and selecting our components Components: Explains our choice of components Circuits:...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/",
         "teaser": null
@@ -89,10 +89,10 @@ var store = [{
         "url": "https://bozo.infocommsociety.com/open/elec/design/",
         "teaser": null
       },{
-        "title": "Circuits",
-        "excerpt":"Coming Soon™ todo buck failed LM2596 (was the most popular so we tried first) how we chose which to try failed TPS54330 originally wanted because low current performance why we went with TPS5430 (simple and worked) boost asplosion (don’t say here, link to history page before this) misconceptions with how...","categories": [],
+        "title": "Selection Process",
+        "excerpt":"Suppliers Apart from the reasons outlined in the components section, one main reason we select our components is the availability here in Singapore. We used to source our components from the local Sim Lim Tower, a retail complex with shops selling electrical components. We also purchase certain parts from the...","categories": [],
         "tags": [],
-        "url": "https://bozo.infocommsociety.com/open/elec/circuits/",
+        "url": "https://bozo.infocommsociety.com/open/elec/selection/",
         "teaser": null
       },{
         "title": "Components",
@@ -101,22 +101,22 @@ var store = [{
         "url": "https://bozo.infocommsociety.com/open/elec/components/",
         "teaser": null
       },{
-        "title": "Selection Process",
-        "excerpt":"Suppliers Apart from the reasons outlined in the components section, one main reason we select our components is the availability here in Singapore. We used to source our components from the local Sim Lim Tower, a retail complex with shops selling electrical components. We also purchase certain parts from the...","categories": [],
+        "title": "Circuits",
+        "excerpt":"Coming Soon™ todo buck failed LM2596 (was the most popular so we tried first) how we chose which to try failed TPS54330 originally wanted because low current performance why we went with TPS5430 (simple and worked) boost asplosion (don’t say here, link to history page before this) misconceptions with how...","categories": [],
         "tags": [],
-        "url": "https://bozo.infocommsociety.com/open/elec/selection/",
-        "teaser": null
-      },{
-        "title": "Soldering",
-        "excerpt":"When we were first learning to solder SMD components, we used many different tools and methods on the internet to make it easier for us. Some worked and some did not: Lead-free solder Since we buy from Taobao, the quality of lead free solder is really bad and unusable, which...","categories": [],
-        "tags": [],
-        "url": "https://bozo.infocommsociety.com/open/elec/soldering/",
+        "url": "https://bozo.infocommsociety.com/open/elec/circuits/",
         "teaser": null
       },{
         "title": "History",
         "excerpt":"Warning: this section is really lengthy, and probably would not be as helpful as the other sections. However, we faced many problems with our electronics as beginners especially with little people guiding us along. Hence, we hope that through highlighting our learning process other beginners can benefit! So read on...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/history/",
+        "teaser": null
+      },{
+        "title": "Soldering",
+        "excerpt":"When we were first learning to solder SMD components, we used many different tools and methods on the internet to make it easier for us. Some worked and some did not: Lead-free solder Since we buy from Taobao, the quality of lead free solder is really bad and unusable, which...","categories": [],
+        "tags": [],
+        "url": "https://bozo.infocommsociety.com/open/elec/soldering/",
         "teaser": null
       },{
         "title": "Camera",
@@ -126,7 +126,7 @@ var store = [{
         "teaser": null
       },{
         "title": "General Information",
-        "excerpt":"Camera Microprocessor Raspberry Pi (RPi) 3B This model of RPi is the choice of our microprocessor for the camera system of our robot. The computational power of the RPi to its price is higher than other SBCs. Furthermore, the RPi has a well established community online which had been helpful...","categories": [],
+        "excerpt":"Camera Microprocessor Raspberry Pi (RPi) 3B This model of RPi is the choice of our SBC for the camera system of our robot, because of its low price and high computational power. Furthermore, it has a well established community online which has been helpful when we faced issues. Aside from...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/cam/general/",
         "teaser": null
