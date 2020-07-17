@@ -37,7 +37,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-07-09T22:12:58+08:00"
+			content="2020-07-17T17:36:59+08:00"
 		/>
 
 		<link
@@ -301,7 +301,7 @@
 						content="Warning: this section is really lengthy, and probably would not be ashelpful as the other sections. However, we faced many problems with ourelectronics as beginners especially with little people guiding us along. Hence,we hope that through highlighting our learning process other beginners canbenefit! So read on to laugh at our incompetence or for a very long drawnexplanation of why we chose certain components."
 					/>
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-07-09T22:12:58+08:00" />
+					<meta itemprop="dateModified" content="2020-07-17T17:36:59+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -326,9 +326,6 @@
 													<a href="#motor-drivers">Motor Drivers</a>
 													<ul>
 														<li><a href="#motor-current">Motor Current</a></li>
-														<li>
-															<a href="#solenoid-current">Solenoid Current</a>
-														</li>
 													</ul>
 												</li>
 												<li>
@@ -355,6 +352,9 @@
 												<li>
 													<a href="#pcb-trace-widths">PCB trace widths</a>
 													<ul>
+														<li>
+															<a href="#solenoid-current">Solenoid Current</a>
+														</li>
 														<li><a href="#other-woes">Other woes</a></li>
 													</ul>
 												</li>
@@ -495,23 +495,6 @@
 								<a href="#pcb-trace-widths">run wires outside of our PCB</a>
 								directly to motor drivers to prevent potential issues in our
 								PCB.
-							</p>
-
-							<h4 id="solenoid-current">Solenoid Current</h4>
-
-							<p>
-								Similar to the
-								<a href="#motor-current">motor current experiments</a> above, we
-								connected our solenoid to a resistor and oscilloscope to see how
-								much power it draws. We found that it drew
-								<a href="/resources/Electronics1/#/solenoid-scope"
-									>≈10A of current</a
-								>
-								at 60V despite having a coil resistance of ≈20Ω. We are not sure
-								what we did wrong, but a definite conclusion is our solenoid
-								draws a lot of power and
-								<a href="#pcb-trace-widths">wires should be run</a> directly to
-								it as well, just like the motors.
 							</p>
 
 							<h3 id="µcs">µCs</h3>
@@ -754,6 +737,23 @@
 								to high current sinks.
 							</p>
 
+							<h4 id="solenoid-current">Solenoid Current</h4>
+
+							<p>
+								Similar to the
+								<a href="#motor-current">motor current experiments</a> above, we
+								connected our solenoid to a resistor and oscilloscope to see how
+								much power it draws. We found that it drew
+								<a href="/resources/Electronics1/#/solenoid-scope"
+									>≈10A of current</a
+								>
+								at 60V despite having a coil resistance of ≈20Ω. We are not sure
+								what we did wrong, but a definite conclusion is our solenoid
+								draws a lot of power and
+								<a href="#pcb-trace-widths">wires should be run</a> directly to
+								it as well, just like the motors.
+							</p>
+
 							<h4 id="other-woes">Other woes</h4>
 
 							<p>
@@ -968,7 +968,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-07-09">July 9, 2020</time>
+								<time datetime="2020-07-17">July 17, 2020</time>
 							</p>
 						</footer>
 

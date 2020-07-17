@@ -102,7 +102,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Circuits",
-        "excerpt":"Coming Soon™ todo buck failed LM2596 (was the most popular so we tried first) how we chose which to try failed TPS54330 originally wanted because low current performance why we went with TPS5430 (simple and worked) boost asplosion (don’t say here, link to history page before this) misconceptions with how...","categories": [],
+        "excerpt":"Power Buck We use TI’s TPS5430 buck converter IC to step down our 12v battery voltage to 5v (for the RPi, LED ring and ESC) and 3.3v (for everything else) Buck Circuit Before this, we have used COTS step down converters before, from Hobbyking’s UBEC to Taobao’s MP1584 and LM2596...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/circuits/",
         "teaser": null

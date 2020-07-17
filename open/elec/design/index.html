@@ -37,7 +37,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-07-10T18:23:57+08:00"
+			content="2020-07-17T17:36:59+08:00"
 		/>
 
 		<link
@@ -301,7 +301,7 @@
 						content="It was challenging to fit all our sensors into our circuit boards since wewanted a 20cm diameter robot, while keeping double layered wheels, doubledribblers and a solenoid, which took up a lot of space. Here, we detail somedesign considerations for cramming our sensors and components in a small area."
 					/>
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-07-10T18:23:57+08:00" />
+					<meta itemprop="dateModified" content="2020-07-17T17:36:59+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -498,6 +498,14 @@
 								data lines.
 							</p>
 
+							<p>
+								Lastly, we ensured that the boost converter circuit, a very high
+								powered circuit charging capacitors at up to 60v, was
+								<a href="/open/elec/circuits/#positioning">placed far away</a>
+								from our other components to prevent any accidents or
+								interference from the switching action of the boost converter.
+							</p>
+
 							<figure style="margin-left: auto; margin-right: auto;">
 								<img
 									loading="lazy"
@@ -588,8 +596,9 @@
 							<p>
 								Sometimes, these COTS components we purchase from Taobao come
 								with schematics as well, and if we are using the same IC
-								<a href="#sike">(which we usually are)</a
-								><!---/open/elec/components#abcdef--->
+								<a href="/open/elec/selection/#selection"
+									>(which we usually are)</a
+								>
 								we consult these schematics to design our circuits as well.
 							</p>
 
@@ -608,8 +617,9 @@
 
 							<p>
 								Lastly, ICs we use are
-								<a href="#sike">typically found in COTS components</a
-								><!---above--->
+								<a href="/open/elec/selection/#selection"
+									>typically found in COTS components</a
+								>
 								from popular manufacturers like Sparkfun or Pololu, and these
 								companies usually release their schematics, hence we can take
 								those as reference when designing our circuits.
@@ -638,7 +648,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-07-10">July 10, 2020</time>
+								<time datetime="2020-07-17">July 17, 2020</time>
 							</p>
 						</footer>
 
