@@ -22,5 +22,7 @@ Do above then make camera cover screwable
   - lmao multiplexer power with normal V not analog V
   - maybe more PCBs stacked in a 3d way as 18cm comes, else don't know how to
     fit everything
+  - wrong dir of sh ports
+  - change small mosfet to opto iso
 
 </details>
