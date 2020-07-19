@@ -108,7 +108,7 @@ var store = [{
         "teaser": null
       },{
         "title": "History",
-        "excerpt":"Warning: this section is really lengthy, and probably would not be as helpful as the other sections. However, we faced many problems with our electronics as beginners especially with little people guiding us along. Hence, we hope that through highlighting our learning process other beginners can benefit! So read on...","categories": [],
+        "excerpt":"Warning: this section is really lengthy, and probably would not be as helpful as the other sections. However, we faced many problems with our electronics as beginners especially with few people guiding us along. Hence, we hope that through highlighting our learning process other beginners can benefit! So read on...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/elec/history/",
         "teaser": null
