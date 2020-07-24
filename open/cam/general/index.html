@@ -31,7 +31,7 @@
 
 		<meta
 			property="article:modified_time"
-			content="2020-07-11T16:42:50+08:00"
+			content="2020-07-24T18:35:23+08:00"
 		/>
 
 		<link
@@ -292,7 +292,7 @@
 					<meta itemprop="headline" content="General Information" />
 					<meta itemprop="description" content="Camera Microprocessor" />
 					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-07-11T16:42:50+08:00" />
+					<meta itemprop="dateModified" content="2020-07-24T18:35:23+08:00" />
 
 					<div class="page__inner-wrap">
 						<header>
@@ -345,6 +345,7 @@
 														>Alternatives considered</a
 													>
 												</li>
+												<li><a href="#backing-up">Backing Up</a></li>
 											</ul>
 										</li>
 										<li>
@@ -576,6 +577,24 @@
 								aspects of our robot.
 							</p>
 
+							<h3 id="backing-up">Backing Up</h3>
+
+							<p>
+								Given the possibility of our SD card being corrupted, we would
+								regularly backup an image of the whole OS. Furthermore, we can
+								revert any changes made easily if we accidentally break the
+								system. However, since we are using a 32GB SD card, the image of
+								the OS will be 32GB even though the actual space used is less
+								than 10GB. Therefore, the task of backing up was slow and a
+								waste of space. We found out about
+								<a href="https://aur.archlinux.org/packages/pishrink-git/"
+									>pishrink</a
+								>
+								which shrinks pi images such that it doesn’t include unused
+								space in the image. With this, we were able to effectively
+								backup the raspi.
+							</p>
+
 							<h2 id="programming-language">Programming Language</h2>
 
 							<p>
@@ -646,20 +665,6 @@
 								Our GUI was created using this library - from the design to
 								functions.
 							</p>
-
-							<details>
-								<summary>todo</summary>
-
-								<ul>
-									<li>
-										camera+raspi
-										<ul>
-											<li>SD card woes + backup problems</li>
-										</ul>
-									</li>
-									<li>bruh justin pls</li>
-								</ul>
-							</details>
 						</section>
 
 						<footer class="page__meta">
@@ -667,7 +672,7 @@
 								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 
 								<strong>Updated:</strong>
-								<time datetime="2020-07-11">July 11, 2020</time>
+								<time datetime="2020-07-24">July 24, 2020</time>
 							</p>
 						</footer>
 
