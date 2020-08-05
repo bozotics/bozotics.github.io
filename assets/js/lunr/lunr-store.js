@@ -252,7 +252,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Poster",
-        "excerpt":"We made a poster for the RCJ Soccer Virtual Poster Session 2020!   Poster PDF       This browser does not support viewing PDF. Please download the PDF to view it: Download PDF.     Accompanying video            ","categories": [],
+        "excerpt":"We made a poster for the RCJ Soccer Virtual Poster Session 2020!   Poster PDF       This browser does not support viewing PDF. Please download the PDF to view it: Download PDF.     Accompanying video               ","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/resources/poster/",
         "teaser": null
