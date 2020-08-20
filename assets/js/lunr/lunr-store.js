@@ -216,7 +216,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Introduction",
-        "excerpt":"Introduction   COMING SOON  ","categories": [],
+        "excerpt":"COMING SOON      3d Model (≈30mb)       Controls: Left click + drag to orbit, Middle click + drag to pan, Scroll to zoom      ","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/rescue/intro/",
         "teaser": null
