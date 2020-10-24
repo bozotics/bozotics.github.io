@@ -72,7 +72,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Assorted Parts",
-        "excerpt":"WARNING: THIS IS STILL A WORK IN PROGRESS STUFF TO ADD Monetary costs (BOM?) Drive system: motors used, placement angle wheel design Dribbler: design details (gear, bearing, plate, motor, roller, ski ramp) Solenoid: why only 1, design (solenoid plate, placement) Mirror: design process, manufacturing process Mirror plate, mirror plate supporter...","categories": [],
+        "excerpt":"WARNING: THIS IS STILL A WORK IN PROGRESS This section lists out all the remaining components that are too small/unimportant to get an entire section for itself 🙃 Battery Holder The battery is usually the single heaviest part of the robot (our battery weighs over 300g), thus a sturdy holder...","categories": [],
         "tags": [],
         "url": "https://bozo.infocommsociety.com/open/mech/assorted/",
         "teaser": null
