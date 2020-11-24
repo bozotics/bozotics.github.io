@@ -215,12 +215,6 @@ var store = [{
         "url": "https://bozo.infocommsociety.com/blog/the-march-goes-on/",
         "teaser": null
       },{
-        "title": "Perspective",
-        "excerpt":"In all affairs it’s a healthy thing now and then to hang a question mark on the things you have long taken for granted. Bertrand Russell A moment in time… It started as a soft whisper on a late November afternoon. A small gust of wind blowing through the minuscule...","categories": ["Commentary"],
-        "tags": ["Yearly"],
-        "url": "https://bozo.infocommsociety.com/blog/perspective-draft/",
-        "teaser": null
-      },{
         "title": "Introduction",
         "excerpt":"COMING SOON      3d Model (≈30mb)       Controls: Left click + drag to orbit, Middle click + drag to pan, Scroll to zoom      ","categories": [],
         "tags": [],
