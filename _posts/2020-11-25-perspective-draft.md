@@ -55,11 +55,12 @@ The winds subsided momentarily; the air grew heavy with anticipation. That invis
 
 I sunk into my chair and stared intensely, yet nowhere specific, at the torrential downpour. Rain, a formless entity capable of both giving life and causing destruction, yet each individual raindrop remains none the wiser.
 
-*Rain: A symbol of renewal, permeating the atmosphere.*
+<p style="font-style:italic;margin-bottom:0;">Rain: A symbol of renewal, permeating the atmosphere.</p>
+
 *[November: A month of rebirth and reinvention.](https://bozo.infocommsociety.com/blog/a-november-consolidation/#a-few-thoughts)*
 
 The consistent ‘tip-tap’ of the raindrops on my windows produced a steady rhythm, like a metronome in the background, guiding my thoughts in a certain direction, yet nowhere specific. In that moment, despite the chaos, everything felt oddly tranquil.
-The all too familiar mind clutter melted away, leaving behind an unforeseen clarity of thought, and for the first time in a long time, I simply sat there and started… *thinking*.
+The all too familiar mind clutter melted away, leaving behind an unforeseen clarity of thought, and for the first time in a long time, I just sat there and started… *thinking*.
 
 ## Introspective thoughts
 
@@ -71,12 +72,14 @@ With all competitions cancelled and club morale at an all-time low, this pandemi
 
 We have always been a competition-driven club since our inception, more specifically, competition-results-driven. In fact, we are the only High School robotics club in Singapore that specialises across three major robotics competitions: RoboCup, Vex, and Lego. We have always rationalised competitions to be the “only important thing for us” and that “we don’t have time for other stuff”.
 
-{% include figure image_path="/assets/images/dummy_16-9.jpg" alt="Trophies" caption="Casual flex" %}
+{% include figure image_path="/assets/images/trophy-trolley.jpg" alt="Trophies" caption="Trophy trolley, casual flexy" %}
 
 But really, [as I have alluded to in the past](https://bozo.infocommsociety.com/blog/february-worries/#conclusion), is there any meaning behind being so hyper-focused on winning competitions?
 
-Perhaps it is just the pure, unsatiable desire to **win**? Commendable spirit, but that can’t only be it. If competitions get cancelled, that would mean that the very institutions in which we judge our success upon would come crashing down. Our drive to accomplish anything can only be characterised as fragile and easily dismantled.
-Maybe it is to gain useful **“engineering skills”** for the future? Ambitious, but clichéd and wishful. Our competitions are so specialised that we only cover a small part of the real world of engineering.
+<p style="margin-bottom:0;">Perhaps it is just the pure, unsatiable desire to <strong>win</strong>? A commendable spirit, but that can’t only be it. If competitions get cancelled, the very institutions in which we judge our success upon would come crashing down. Our drive to accomplish anything can only be characterised as fragile and easily dismantled.</p>
+
+<p style="margin-bottom:0;">Maybe it is to gain useful <strong>“engineering skills”</strong> for the future? Ambitious, but clichéd and wishful. Our competitions are so specialised that we only cover a small part of the real world of engineering.</p>
+
 Or maybe it is simply to please the **KPI gods** and keep ourselves as a legitimate club in the eyes of the school?
 
 No matter how one cuts it, one thing is clear: to be completely driven by attaining chunks of metal (or plastic) and certificates is a superficial way to motivate ourselves or define our worth.
@@ -103,15 +106,15 @@ In the meantime, we will begin work for 2022 with the 18cm robot. While the over
 
 Our Lightweight robot for this year was never completed due to C*vid-19 so we shall not be documenting it on our Lightweight page. The main unique feature it would have had was having a dribbler (similar design to Open), coupled with a kicker that uses a slip gear mechanism, to give maximum ball control. Sadly, this shall only go down in history as a CAD model.
 
-{% include figure image_path="/assets/images/dummy_16-9.jpg" alt="Soccer Lightweight Robot" caption="RIP Lightweight Robot 2019~2020 (should have given it a name)" %}
+{% include figure image_path="/assets/images/lw-bot.jpg" alt="Soccer Lightweight Robot" caption="RIP Lightweight Robot 2019~2020 (should have given it a name)" %}
 
 The Lightweight team for 2021 will be a completely new batch of juniors, mentored by us. While some elements of the 2020 robots will be ported over, much of the 2021 robots will be completely redesigned by them. If these robots work out in the future, they will definitely be documented on the Lightweight section of our website.
 
 ### Rescue Line
 
-Our team has no immediate plan for the continuation of Rescue Line due to lack of manpower, so this might be the first and last time we would be doing this. Considering how we joined Rescue Line with the goal of pushing boundaries in light of its stagnating progress, this is definitely not a desired ending. Nevertheless, we will still attempt to complete the robot so that it can serve as a reference for our juniors. 
+Our team has no immediate plan for the continuation of Rescue Line due to lack of manpower, so this might be the first and last time we would be doing this. Bearing in mind that we joined Rescue Line with the goal of pushing boundaries in light of its stagnating progress, this is definitely not a desirable ending. Nevertheless, we will still attempt to complete the robot so that it can serve as a reference for our juniors. 
 
-As of now, the mechanical and electrical design of the robot is essentially complete, so the main work needed is to assemble the robot itself. As for programming, we have come up with the logic for line tracking, but naturally there will be a considerable amount of testing required. Experimentation also has to be done for the more novel features such as using the camera and TOF sensor to detect victims.
+As of now, the mechanical and electrical design of the robot is essentially complete, so the main work needed is to assemble the robot itself. As for programming, we have come up with the logic for line tracking, but naturally there will be a substantial amount of testing required. Experimentation also has to be done for the more novel features such as using the camera and TOF sensor to detect victims, and all information will be documented on our Rescue page when the robot is complete.
 
 {% include figure image_path="/assets/images/rescue square render2-crop.jpg" alt="Rescue Line Robot" caption="3D model of Rescue Line robot" %}
 
@@ -121,26 +124,27 @@ Starting from next year, we wish to reach out to youths, especially underprivile
 
 ### Why teach robotics?
 
-Robotics itself has two very high barriers to entry: a financial barrier and a knowledge barrier. Firstly, robotics is inherently expensive. At the primary school level, robotics CCAs typically require hundreds of dollars per semester, while enrolling with private robotics educators can easily reach the thousands. Moreover, to own a sufficient variety of robotics parts to really be able to tinker and explore would require a substantial amount of money too.
+Robotics itself has two very high barriers to entry: a financial barrier and a knowledge barrier. Firstly, robotics is inherently expensive. At the primary school level, robotics CCAs typically require hundreds of dollars per semester, while enrolling with private robotics educators can easily reach the thousands. Moreover, to own a sufficient variety of robotics parts to really be able to tinker and explore would require a sizable amount of money.
 
-{% include figure image_path="/assets/images/dummy_16-9.jpg" alt="Lego parts" caption="This single cupboard of Lego parts is worth 20k SGD" %}
+{% include figure image_path="/assets/images/lego-cupboard.jpg" alt="Lego parts" caption="This single pile of Lego parts is worth over 15k SGD" %}
 
 This raises the second issue: exactly what parts should be bought? Regardless of whether one is buying Lego elements or electrical components, without prior knowledge of what these parts are, or even that they exist, it would be difficult to get started. This is further exacerbated by the fact that robotics is interdisciplinary by nature, which means there is no clear starting point to learn robotics, making it rather intimidating.
 
-This persistent inaccessibility of robotics, which has resulted in the lack of a strong maker culture in Singapore despite the increasing relevance and need for inventors and engineers, is a worrying trend we wish to see addressed.
+<p style="margin-bottom:0">This persistent inaccessibility of robotics, which has resulted in the lack of a strong maker culture in Singapore despite the increasing relevance and need for inventors and engineers, is a worrying trend we wish to see addressed. </p>
+
 That said, admittedly, our plans are likely not going to be make a very significant impact, but at least this can be a starting point. Trust in the process and who knows where this may lead us?
 
 ### What will we be doing?
 
-Our current plan is to organise day camps during the school holidays about constructing a 3D printed remote-control car. We find an RC car suitable because it is a simple enough “robot” that is a **fun** and well-known toy, yet it offers a lot of versatility in terms of the robotics concepts that can be taught.
+Our current plan is to organise day camps during the school holidays about constructing a 3D printed remote-control car. We find an RC car suitable because it is a sufficiently simple “robot” that is a **fun** and well-known toy, yet it offers a lot of versatility in terms of the robotics concepts that can be taught.
 
 Mechanics-wise, participants can be taught about 3D printing technologies, different car mechanisms (differentials, suspension systems), and design considerations of a car (aerodynamics, steering geometry). Electronics can be covered through the different electrical components used e.g. LED lights, motors, batteries, etc. Even simple programming can be taught through learning about how the motors and servos are controlled or how the car interprets the RC signals. And at the end of the day, everyone gets a free RC car, who wouldn’t like that?
 
-By experiencing the joy of having their own physical creation come to life, these participants will get to experience what makes robotics fundamentally enjoyable and interesting.
+By experiencing the joy of seeing their own physical creation come to life, these participants will get to understand what makes robotics fundamentally enjoyable and interesting.
 
 As for the car itself, it is designed on a 1:30 scale, relatively small to keep unit costs low. It is modelled after the Bugatti Chiron, although the final design would likely have to be modified to avoid any copyright problems 🙃. However, for the logistics of running these events, we can only hope that the situation improves by next year such that hosting these group activities would be possible. Till then, fingers crossed! 
 
-{% include figure image_path="/assets/images/rc-car-front.jpg" alt="RC Car Design" caption="Front steering with independent suspension (currently using M3 bolts since we don’t have M2)" %}
+{% include figure image_path="/assets/images/rc-car-front.jpg" alt="RC Car Design" caption="Front steering with independent suspension (temporarily using M3 bolts since we don’t have M2)" %}
 
 ## 3. Renovation
 
@@ -150,19 +154,19 @@ Our club actually owns two areas: a two-storey building (the robotics “lab”)
 
 ### Lab
 
-Improvements within our lab would simply involve improving the way things are stored, for example, fabricating a pegboard to properly hold our tools instead of haphazardly throwing them into wrongly sized boxes. To help with visualising these changes, we have been creating a 1:1 scale 3D model of the lab in AutoCAD, which is currently about 50% complete.
+Improvements within our lab would primarily involve improving the way things are stored, e.g. fabricating a pegboard to properly hold our tools instead of haphazardly throwing them into wrongly sized boxes. To help with visualising these changes, we have been creating a 1:1 scale 3D model of the lab in AutoCAD, which is currently about 50% complete.
 
 {% include gallery id="gallery1" caption="A few renders around the lab" layout="third" %}
 
-In addition, although our club has been using the current location for around 8 years, the place itself is close to 15 years old already, which means the carpet is also 15 years old. Although this decision is not finalised, we are hoping to replace it with a different type of hard flooring, for the sake of both hygiene and functionality. Besides, changing to something cheap but durable, like vinyl flooring, will give the lab a unique *vibe*.
+In addition, although our club has been using the current location for around 8 years, the place itself is close to 15 years old already, which means the carpet is also 15 years old. Although this decision is not finalised, we are hoping to replace it with a different type of hard flooring, for the sake of both hygiene and functionality. Besides, changing to something like vinyl flooring, will give the lab a unique *vibe*.
 
 {% include gallery id="gallery2" caption="Carpet vs Vinyl flooring" layout="half" %}
 
 ### Storeroom/Workshop
 
-Our club also owns a separate storeroom which doubles up occasionally as a workshopping area when using larger power tools. However, we have constantly felt that this room was greatly underused, with most of its space used to store items collecting decades-old dust. *What if we could just clear all this clutter and create an actual workshop — a makerspace — if you will?*
+Our club also owns a separate storeroom which doubles up occasionally as a workshopping area when using larger power tools. However, we have constantly felt that this room was greatly underused, with most of its space used to store items collecting decades-old dust. *What if we could just clear all this clutter and create an actual workshop — a makerspace if you will?*
 
-{% include gallery id="gallery3" caption="Panoramic photos before and after the storeroom was cleared" layout="half" %}
+{% include gallery id="gallery3" caption="Panoramic photos before and after the storeroom was cleared" layout="single" %}
 
 So, that’s what we did. With the room cleared, we now have a respectable 30 square metres (323 square feet) of empty space to create our ideal workshop. Presently, we are thinking of ways to improve ventilation and design a dust collection system for our day-to-day usage. In the long term, we wish to acquire more tools/materials to try out basic carpentry and maybe even use our own creations to furnish the lab itself.
 
@@ -170,13 +174,13 @@ So, that’s what we did. With the room cleared, we now have a respectable 30 sq
 
 Within our school, there has been increasing emphasis on STEM education, especially through the different engineering research projects that students are doing each year. This presents us with another opportunity to share our knowledge and help others with our prior experience in the field of robotics.
 
-Therefore, we have initiated plans with the school to become a “consultancy group” of sorts, starting from next year, where we can help mentor students regarding anything engineering-related, from teaching of new skills to giving out technical advice.
+Therefore, we have initiated plans with the school to become a “consultancy group” of sorts, where starting from next year, we can help mentor students regarding anything engineering-related, from teaching of new skills to providing technical advice.
 
 Our rationale behind doing this is similar to that of our community outreach, but of course in a more academic and official capacity. Hopefully, by making engineering and robotics more accessible, we can inspire more people to try it out and instil a stronger maker culture within our school.
 
 ## 5. A giant flying hexapod
 
-Why? Because why not.
+Why? Because *why not*.
 
 In all seriousness though, many of our senior club members have gone on to embark on their own projects after graduating, with everything from building 3D printers to making their own wireless earbuds. Building a flying hexapod is just another personal project that we would try to work on in our free time. 
 
@@ -184,11 +188,11 @@ The intention to create a large robot first came about from wanting to do a “p
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aH07qF_bhgA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
 
-In terms of the robot’s actual usefulness, well... it’s a good show piece that’s for sure... But still, while not exactly the most practical robot, it will offer us a chance to conduct our own unique exploration into flying legged robots, combining two forms of locomotion that we rarely get exposed to in our typical competitions.
+In terms of the robot’s actual usefulness, well... it’s a good show piece that’s for sure. But still, while not exactly the most practical robot, it will offer us a chance to conduct our own unique exploration into flying legged robots, combining two forms of locomotion that we rarely get exposed to in our typical competitions.
 
-Progress on this hexapod has been rather slow since it is mostly for personal research and fun only. Nonetheless, we have started on a basic design as well as run through some numbers, and current estimates place the hexapod’s maximum wingspan to be over a metre with a mass of at least 3 kg, which means this is sure to be a monstrous thing to deal with. *(insert evil laughter)* We have also recently bought the 60 kg⋅cm servos that we will be using, in order to experiment with its torque and make more accurate estimations.
+Progress on this hexapod has been rather slow since it is mostly for personal research and fun only. Nonetheless, we have started on a basic design as well as run through some numbers, and current estimates place the hexapod’s maximum wingspan to be 1.5 metres with a mass of at least 3 kg, which means this is sure to be a monstrous thing to deal with. *(insert evil laughter)* We have also recently bought the 60 kg⋅cm servos that we will be using, in order to experiment with its torque and make more accurate estimations.
 
-{% include figure image_path="/assets/images/60kg-vs-sg90.jpg" alt="60 kgcm servo vs SG90 servo" caption="Size comparison of 60 kg⋅cm servo with a standard SG90 servo" %}
+{% include figure image_path="/assets/images/60kg-vs-sg90.jpg" alt="60 kgcm servo vs SG90 servo" caption="Size comparison of a 60 kg⋅cm servo with a standard SG90 servo" %}
 
 ---
 
@@ -198,7 +202,7 @@ Progress on this hexapod has been rather slow since it is mostly for personal re
 
 {% include figure image_path="/assets/images/desmos-graph.png" alt="Inflection vs Turning point" caption="Never thought I would ever use Desmos to illustrate a point but here we are" %}
 
-When seeing things from a narrow frame of mind, it would be easy for us to sulk in a corner and whine about the unfairness of the world. But really, from a larger perspective, considering that C*vid-19 cases in Singapore have been largely clamped down and how we are able to mostly resume our club activities, we really got the better end of the bargain in this situation and there is nothing to complain about.
+When seeing things from a narrow frame of mind, it would be easy for us to sulk in a corner and whine about the unfairness of the world. But in actuality, from a larger perspective, considering that C*vid-19 cases in Singapore have been largely clamped down and how we are able to mostly resume our club activities, we really got the better end of the bargain in this situation and there is nothing to complain about.
 
 Ultimately, the best way to confront the chaotic universe is not to grasp harder at the external, as there will only be an eternal struggle to seek satisfaction from the ephemeral, self-worth from the superficial, and power over the uncontrollable. Rather, one should look inwards and find or *create* greater meaning in their actions, for the attitude towards life is the only freedom that no adversity can ever strip away.
 
