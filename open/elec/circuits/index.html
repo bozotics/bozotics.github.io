@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
 	Minimal Mistakes Jekyll Theme 4.19.2 by Michael Rose
 	Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
@@ -7,1101 +7,919 @@
 -->
 <html lang="en" class="no-js">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 
-		<!-- begin _includes/seo.html -->
-		<title>Circuits | Transcendence</title>
-		<meta name="description" content="Power" />
+<!-- begin _includes/seo.html --><title>Circuits | Transcendence</title>
+<meta name="description" content="Power">
 
-		<meta property="og:type" content="article" />
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:site_name" content="Transcendence" />
-		<meta property="og:title" content="Circuits" />
-		<meta
-			property="og:url"
-			content="https://bozo.infocommsociety.com/open/elec/circuits/"
-		/>
 
-		<meta property="og:description" content="Power" />
 
-		<meta
-			property="article:published_time"
-			content="2020-05-02T08:00:00+08:00"
-		/>
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Transcendence">
+<meta property="og:title" content="Circuits">
+<meta property="og:url" content="https://bozo.infocommsociety.com/open/elec/circuits/">
 
-		<meta
-			property="article:modified_time"
-			content="2020-07-17T17:36:59+08:00"
-		/>
 
-		<link
-			rel="canonical"
-			href="https://bozo.infocommsociety.com/open/elec/circuits/"
-		/>
+  <meta property="og:description" content="Power">
 
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
 
-				"@type": "Person",
-				"name": null,
-				"url": "https://bozo.infocommsociety.com/"
-			}
-		</script>
 
-		<!-- end _includes/seo.html -->
 
-		<link
-			href="/feed.xml"
-			type="application/atom+xml"
-			rel="alternate"
-			title="Transcendence Feed"
-		/>
 
-		<!-- https://t.co/dKP3o1e -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<script>
-			document.documentElement.className =
-				document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
-		</script>
 
-		<!-- For all browsers -->
-		<link rel="stylesheet" href="/assets/css/main.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"
-		/>
+  <meta property="article:published_time" content="2020-05-02T08:00:00+08:00">
 
-		<!--[if IE]>
-			<style>
-				/* old IE unsupported flexbox fixes */
-				.greedy-nav .site-title {
-					padding-right: 3em;
-				}
-				.greedy-nav button {
-					position: absolute;
-					top: 0;
-					right: 0;
-					height: 100%;
-				}
-			</style>
-		<![endif]-->
+
+
+  <meta property="article:modified_time" content="2020-07-17T17:36:59+08:00">
+
+
+
+
+<link rel="canonical" href="https://bozo.infocommsociety.com/open/elec/circuits/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://bozo.infocommsociety.com/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Transcendence Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
 
 		<!-- start custom head snippets -->
 
-		<style>
-			ul.visible-links li.masthead__menu-item a[href="/open/intro/"]:before {
-				transform: scaleX(1);
-			}
 
-			ul.hidden-links li.masthead__menu-item a[href="/open/intro/"] {
-				color: #fff;
-				background: #0092ca;
-			}
-		</style>
 
-		<!-- insert favicons. use https://realfavicongenerator.net/ -->
-		<link rel="icon" href="/assets/images/eagle ver 2.1.3.1-lowres.jpg" />
 
-		<!-- end custom head snippets -->
+
+
+
+
+
+
+
+<style>
+    ul.visible-links li.masthead__menu-item a[href="/open/intro/"]:before {
+        transform: scaleX(1);
+    }
+
+    ul.hidden-links li.masthead__menu-item a[href="/open/intro/"] {
+        color: #fff;
+        background: #0092ca;
+    }
+</style>
+
+
+
+
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" href="/assets/images/eagle ver 2.1.3.1-lowres.jpg">
+
+<!-- end custom head snippets -->
 	</head>
 
 	<body class="layout--single">
 		<nav class="skip-links">
-			<h2 class="screen-reader-text">Skip links</h2>
-			<ul>
-				<li>
-					<a href="#site-nav" class="screen-reader-shortcut"
-						>Skip to primary navigation</a
-					>
-				</li>
-				<li>
-					<a href="#main" class="screen-reader-shortcut">Skip to content</a>
-				</li>
-				<li>
-					<a href="#footer" class="screen-reader-shortcut">Skip to footer</a>
-				</li>
-			</ul>
-		</nav>
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
 		<!--[if lt IE 9]>
-			<div class="notice--danger align-center" style="margin: 0;">
-				You are using an <strong>outdated</strong> browser. Please
-				<a href="https://browsehappy.com/">upgrade your browser</a> to improve
-				your experience.
-			</div>
-		<![endif]-->
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
 
-		<div class="masthead">
-			<div class="masthead__inner-wrap">
-				<div class="masthead__menu">
-					<nav id="site-nav" class="greedy-nav">
-						<a class="site-logo" href="/"
-							><img
-								loading="lazy"
-								src="/assets/images/eagle%20ver%202.1.3.1-transparent-lowres.png"
-								alt=""
-						/></a>
+		
 
-						<a class="site-title" href="/">
-							Transcendence
-							<span class="site-subtitle"
-								>The fine line between innovation and insanity</span
-							>
-						</a>
-						<ul class="visible-links">
-							<li class="masthead__menu-item">
-								<a href="/about/">About</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/open/intro/">Open</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/lightweight/intro/">Lightweight</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/rescue/intro/">Rescue</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/blog/">Blog</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/contact/">Contact</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/resources/">Resources</a>
-							</li>
-						</ul>
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img loading="lazy" src="/assets/images/eagle%20ver%202.1.3.1-transparent-lowres.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Transcendence
+          <span class="site-subtitle">The fine line between innovation and insanity</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/open/intro/">Open</a>
+            </li><li class="masthead__menu-item">
+              <a href="/lightweight/intro/">Lightweight</a>
+            </li><li class="masthead__menu-item">
+              <a href="/rescue/intro/">Rescue</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/">Contact</a>
+            </li><li class="masthead__menu-item">
+              <a href="/resources/">Resources</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
 
-						<button class="search__toggle" type="button">
-							<span class="visually-hidden">Toggle search</span>
-							<svg
-								class="icon"
-								width="16"
-								height="16"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 15.99 16"
-							>
-								<path
-									d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
-									transform="translate(-.01)"
-								></path>
-							</svg>
-						</button>
-
-						<button class="greedy-nav__toggle hidden" type="button">
-							<span class="visually-hidden">Toggle menu</span>
-							<div class="navicon"></div>
-						</button>
-						<ul class="hidden-links hidden"></ul>
-					</nav>
-				</div>
-			</div>
-		</div>
 
 		<div class="initial-content">
-			<div id="main" role="main">
-				<div class="sidebar sticky">
-					<nav class="nav__list">
-						<input id="ac-toc" name="accordion-toc" type="checkbox" />
-						<label for="ac-toc">Toggle menu</label>
-						<ul class="nav__items">
-							<li>
-								<a href="/open/intro/"
-									><span class="nav__sub-title">Introduction</span></a
-								>
-							</li>
+			
+
+
+
+<div id="main" role="main">
+	
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <a href="/open/intro/"><span class="nav__sub-title">Introduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/mech/"><span class="nav__sub-title">Mechanical</span></a>
+        
+
+        
+        <ul>
+          
+            <li><a href="/open/mech/general/">General Info</a></li>
+          
+            <li><a href="/open/mech/drive/">Drive System</a></li>
+          
+            <li><a href="/open/mech/mirror/">Mirror</a></li>
+          
+            <li><a href="/open/mech/dribbler/">Dribbler</a></li>
+          
+            <li><a href="/open/mech/assorted/">Assorted Parts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/elec/"><span class="nav__sub-title">Electronics</span></a>
+        
+
+        
+        <ul>
+          
+            <li><a href="/open/elec/design/">Design</a></li>
+          
+            <li><a href="/open/elec/selection/">Selection Process</a></li>
+          
+            <li><a href="/open/elec/components/">Components</a></li>
+          
+            <li><a href="/open/elec/circuits/" class="active">Circuits</a></li>
+          
+            <li><a href="/open/elec/history/">History</a></li>
+          
+            <li><a href="/open/elec/soldering/">Soldering</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/cam/"><span class="nav__sub-title">Camera</span></a>
+        
+
+        
+        <ul>
+          
+            <li><a href="/open/cam/general/">General Info</a></li>
+          
+            <li><a href="/open/cam/track/">Tracking Algorithm</a></li>
+          
+            <li><a href="/open/cam/gui/">GUI</a></li>
+          
+            <li><a href="/open/cam/communication/">Communication</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/strat/"><span class="nav__sub-title">Strategy</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/debug/"><span class="nav__sub-title">Debugging</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/afi/"><span class="nav__sub-title">AFI</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+	<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+		<meta itemprop="headline" content="Circuits">
+		<meta itemprop="description" content="Power">
+		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
+		<meta itemprop="dateModified" content="2020-07-17T17:36:59+08:00">
+
+		<div class="page__inner-wrap">
+			
+				<header>
+					<h1 id="page-title" class="page__title" itemprop="headline">Circuits
+</h1>
+					
+
+
+				</header>
+			
+
+			<section class="page__content" itemprop="text">
+				
+					<aside class="sidebar__right sticky">
+						<nav class="toc">
+							<header><h4 class="nav__title"><i class="fas fa-network-wired"></i> Circuits</h4></header>
+							<ul class="toc__menu">
+  <li><a href="#power">Power</a>
+    <ul>
+      <li><a href="#buck">Buck</a></li>
+      <li><a href="#boost">Boost</a>
+        <ul>
+          <li><a href="#other-topologies">Other Topologies</a></li>
+          <li><a href="#capacitor">Capacitor</a></li>
+          <li><a href="#mosfet">MOSFET</a></li>
+          <li><a href="#positioning">Positioning</a></li>
+          <li><a href="#power-dissipation">Power Dissipation</a></li>
+          <li><a href="#adjustable-pot">Adjustable POT</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#logic">Logic</a>
+    <ul>
+      <li><a href="#multiplexing">Multiplexing</a>
+        <ul>
+          <li><a href="#phototransistor">Phototransistor</a></li>
+        </ul>
+      </li>
+      <li><a href="#level-shifting">Level Shifting</a></li>
+    </ul>
+  </li>
+  <li><a href="#miscellaneous">Miscellaneous</a>
+    <ul>
+      <li><a href="#encoders">Encoders</a></li>
+      <li><a href="#others">Others</a></li>
+    </ul>
+  </li>
+</ul>
 
-							<li>
-								<a href="/open/mech/"
-									><span class="nav__sub-title">Mechanical</span></a
-								>
-
-								<ul>
-									<li><a href="/open/mech/general/">General Info</a></li>
-
-									<li><a href="/open/mech/drive/">Drive System</a></li>
-
-									<li><a href="/open/mech/mirror/">Mirror</a></li>
-
-									<li><a href="/open/mech/dribbler/">Dribbler</a></li>
-
-									<li><a href="/open/mech/assorted/">Assorted Parts</a></li>
-								</ul>
-							</li>
-
-							<li>
-								<a href="/open/elec/"
-									><span class="nav__sub-title">Electronics</span></a
-								>
-
-								<ul>
-									<li><a href="/open/elec/design/">Design</a></li>
-
-									<li><a href="/open/elec/selection/">Selection Process</a></li>
-
-									<li><a href="/open/elec/components/">Components</a></li>
-
-									<li>
-										<a href="/open/elec/circuits/" class="active">Circuits</a>
-									</li>
-
-									<li><a href="/open/elec/history/">History</a></li>
-
-									<li><a href="/open/elec/soldering/">Soldering</a></li>
-								</ul>
-							</li>
-
-							<li>
-								<a href="/open/cam/"
-									><span class="nav__sub-title">Camera</span></a
-								>
-
-								<ul>
-									<li><a href="/open/cam/general/">General Info</a></li>
-
-									<li><a href="/open/cam/track/">Tracking Algorithm</a></li>
-
-									<li><a href="/open/cam/gui/">GUI</a></li>
-
-									<li><a href="/open/cam/communication/">Communication</a></li>
-								</ul>
-							</li>
-
-							<li>
-								<a href="/open/strat/"
-									><span class="nav__sub-title">Strategy</span></a
-								>
-							</li>
-
-							<li>
-								<a href="/open/debug/"
-									><span class="nav__sub-title">Debugging</span></a
-								>
-							</li>
-
-							<li>
-								<a href="/open/afi/"><span class="nav__sub-title">AFI</span></a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-
-				<article
-					class="page"
-					itemscope
-					itemtype="https://schema.org/CreativeWork"
-				>
-					<meta itemprop="headline" content="Circuits" />
-					<meta itemprop="description" content="Power" />
-					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-07-17T17:36:59+08:00" />
-
-					<div class="page__inner-wrap">
-						<header>
-							<h1 id="page-title" class="page__title" itemprop="headline">
-								Circuits
-							</h1>
-						</header>
-
-						<section class="page__content" itemprop="text">
-							<aside class="sidebar__right sticky">
-								<nav class="toc">
-									<header>
-										<h4 class="nav__title">
-											<i class="fas fa-network-wired"></i> Circuits
-										</h4>
-									</header>
-									<ul class="toc__menu">
-										<li>
-											<a href="#power">Power</a>
-											<ul>
-												<li><a href="#buck">Buck</a></li>
-												<li>
-													<a href="#boost">Boost</a>
-													<ul>
-														<li>
-															<a href="#other-topologies">Other Topologies</a>
-														</li>
-														<li><a href="#capacitor">Capacitor</a></li>
-														<li><a href="#mosfet">MOSFET</a></li>
-														<li><a href="#positioning">Positioning</a></li>
-														<li>
-															<a href="#power-dissipation">Power Dissipation</a>
-														</li>
-														<li>
-															<a href="#adjustable-pot">Adjustable POT</a>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<a href="#logic">Logic</a>
-											<ul>
-												<li>
-													<a href="#multiplexing">Multiplexing</a>
-													<ul>
-														<li>
-															<a href="#phototransistor">Phototransistor</a>
-														</li>
-													</ul>
-												</li>
-												<li><a href="#level-shifting">Level Shifting</a></li>
-											</ul>
-										</li>
-										<li>
-											<a href="#miscellaneous">Miscellaneous</a>
-											<ul>
-												<li><a href="#encoders">Encoders</a></li>
-												<li><a href="#others">Others</a></li>
-											</ul>
-										</li>
-									</ul>
-								</nav>
-							</aside>
-
-							<h2 id="power">Power</h2>
-
-							<h3 id="buck">Buck</h3>
-
-							<p>
-								We use TI’s TPS5430 buck converter IC to step down our 12v
-								battery voltage to 5v (for the RPi, LED ring and ESC) and 3.3v
-								(for everything else)
-							</p>
-
-							<figure style="margin-left: auto; margin-right: auto;">
-								<img
-									loading="lazy"
-									src="/assets/images/buck-circuit.svg"
-									alt="Buck Circuit"
-									style="margin-left: auto; margin-right: auto;"
-								/>
-
-								<figcaption>
-									Buck Circuit
-								</figcaption>
-							</figure>
-
-							<p>
-								Before this, we have used COTS step down converters before, from
-								Hobbyking’s
-								<a
-									href="https://hobbyking.com/en_us/hobbykingtm-micro-ubec-3a-5v.html"
-									>UBEC</a
-								>
-								to Taobao’s
-								<a
-									href="https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-21223910208.22.41016a4bPnWtm8&amp;id=522572489248"
-									>MP1584</a
-								>
-								and
-								<a
-									href="https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-21223910208.31.41016a4bPnWtm8&amp;id=545538730505"
-									>LM2596</a
-								>
-								breakout boards. However, we wanted to better
-								<a href="/open/elec/history/#shift-to-smd"
-									>integrate everything</a
-								>
-								into one PCB and there were multiple reports of those buck
-								converters being inefficient and overheating anyways.
-							</p>
-
-							<p>
-								We have tried other buck converter ICs before, such as the
-								TPS54330 and the popular LM2596. However, the TPS54330 did not
-								work (the feedback pin voltage was way lower than stated in the
-								datasheet) and we could not figure out why, while the LM2596
-								kept destroying our Teensys despite it outputting 5v to the
-								Teensy’s VIN LDO port.
-							</p>
-
-							<h3 id="boost">Boost</h3>
-
-							<p>
-								We use TI’s LM2587 boost converter IC to power our solenoid at
-								≈55v, with a 1100µF <a href="#capacitor">capacitor</a> in
-								parallel.
-							</p>
-
-							<figure style="margin-left: auto; margin-right: auto;">
-								<img
-									loading="lazy"
-									src="/assets/images/boost-circuit.svg"
-									alt="Boost Circuit"
-									style="margin-left: auto; margin-right: auto;"
-								/>
-
-								<figcaption>
-									Boost Circuit
-								</figcaption>
-							</figure>
-
-							<p>
-								We have used COTS boost converters before, specifically
-								<a
-									href="https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-21223910208.36.358c6a4bgJqS6y&amp;id=522572146482"
-									>this very large Taobao board</a
-								>
-								and a
-								<a
-									href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0d72e8dcy9j3N&amp;id=36375893381&amp;_u=a30vu5iq8920"
-									>LM2587 breakout board</a
-								>
-								(this breakout board pointed us towards the LM2587 we are using
-								now). Similar to the buck converters above, we wanted to better
-								<a href="/open/elec/history/#shift-to-smd"
-									>integrate everything</a
-								>
-								into one PCB hence we shifted away from these.
-							</p>
-
-							<p>
-								We have also tried other boost converters before, specifically
-								the MAX1522. However, similar to the
-								<a href="#buck">TPS54330 above</a> we could not figure out why
-								it does not work (we could only get it to boost to 20v).
-							</p>
-
-							<h4 id="other-topologies">Other Topologies</h4>
-
-							<p>
-								When we were first looking online on how to design our boost
-								converter circuit, many resources pointed towards using a
-								flyback regulator IC such as the popular MC34063 or UC3843 to
-								achieve our desired 60v voltage level. However, we simply did
-								not have enough space to fit a transformer coil required for the
-								flyback topology, and anyways we soon realised we
-								<a href="#capacitor">did not require that much power</a> to kick
-								the solenoids.
-							</p>
-
-							<p>
-								We also looked to other topologies like the charge pump circuit,
-								inspired by the integrated charge pump on our VNH5019 motor
-								driver. However, we could not find a suitable IC on Taobao that
-								satisfied our power and size requirements.
-							</p>
-
-							<h4 id="capacitor">Capacitor</h4>
-
-							<p>
-								When we first used a solenoid, we needed to increase the
-								solenoid’s strength and our intuition was to increase the
-								voltage supplied. However, we noticed that past ≈40v, the
-								increase in kick strength was negligible for each voltage
-								increase. It took us a lot of researching to understand that it
-								is the current supplied to a solenoid that determines its
-								strength.
-							</p>
-
-							<p>
-								While increasing the output voltage increases current, the main
-								source of energy that is supplied when a solenoid kicks is
-								through the output capacitor because the solenoid just draws
-								<a href="/open/elec/history/#solenoid-current"
-									>so much current</a
-								>
-								in a very short span of time.
-							</p>
-
-							<p>
-								Since we were only kicking a solenoid for short pulses at a time
-								(≈20ms) and there is a long time in between kicks, we could
-								utilise a large capacitor to provide us with that short burst of
-								current. We first attempted to calculate what capacitance would
-								be enough for us, however in the end we decided to just buy a
-								1000µF capacitor to put in parallel with a 100µF capacitor as
-								they were nice round numbers. Currently, we can kick the orange
-								ball over the ramp with our capacitors charged at 55v now.
-							</p>
-
-							<h4 id="mosfet">MOSFET</h4>
-
-							<p>
-								We use a MOSFET to switch our solenoid on and off. Previously,
-								we have used relays, however this was not really suitable due to
-								the
-								<a href="#power-dissipation">inductive nature of the solenoid</a
-								>. We have also considered isolated switches like
-								opto-isolators, however a high powered one was too expensive.
-							</p>
-
-							<p>
-								At 60v, we must ensure that the R<sub>ds</sub> (resistance
-								across terminals of the MOSFET) is very low to decrease power
-								losses and overheating of the MOSFET. However, for most MOSFETs,
-								the R<sub>ds</sub> is very high at a low V<sub>gs</sub> (gate /
-								drive voltage). At our 3.3v logic levels, the best MOSFET we
-								could find had R<sub>ds</sub> of ≈100mΩ, which would translate
-								to ≈0.5W of power dissipation in the MOSFET. This was
-								unacceptable as we found the MOSFET would heat up very fast and
-								the solenoid would not be as powerful.
-							</p>
-
-							<p>
-								Hence, we used a small MOSFET that had a low R<sub>ds</sub>
-								(≈40mΩ) even with a low V<sub>gs</sub> to turn on our bigger
-								MOSFET. We still had to use a bigger MOSFET because the V<sub
-									>ds</sub
-								>
-								(voltage across MOSFET terminals) was 30v, way lower than our
-								solenoid drive voltage.
-							</p>
-
-							<p>
-								Referring to the image below, when we send a logic high to the
-								“CONTROL” bus, there is a positive V<sub>gs</sub> and that would
-								turn on the small MOSFET. Now, at the drain terminal of the
-								small MOSFET (terminal 2), it is tied to ground. This creates a
-								12v V<sub>gs</sub> across the larger MOSFET, turning it on as
-								well.
-							</p>
-
-							<p>
-								However, when the MOSFETs are off, the 60v is “shared” between
-								the two MOSFETs and thus the smaller MOSFET will not be
-								destroyed due to its 30v V<sub>ds</sub> limit.
-							</p>
-
-							<figure style="margin-left: auto; margin-right: auto;">
-								<img
-									loading="lazy"
-									src="/assets/images/mosfet-gate-drive.svg"
-									alt="MOSFET drive circuit"
-									style="height: 300px; margin-left: auto; margin-right: auto;"
-								/>
-
-								<figcaption>
-									MOSFET drive circuit
-								</figcaption>
-							</figure>
-
-							<p>
-								In the future, we could use an opto isolator to turn on the
-								MOSFET rather than this current solution since we would prefer
-								if our sensitive µCs are isolated from this high powered system.
-							</p>
-
-							<h4 id="positioning">Positioning</h4>
-
-							<p>
-								As mentioned before in the
-								<a href="/open/elec/design/#positioning">design section</a>, we
-								placed our boost converter circuit at a corner of PCB so in the
-								case of accidents, it will (hopefully) not affect our other
-								circuits. Not only that, a boost converter works by rapidly
-								switching a MOSFET between charging an inductor and discharging
-								it across a capacitor. This high powered high speed switching
-								action has the potential to magnetically interfere with our
-								other data lines. While we have not experienced these issues in
-								the past, it is better to play it safe and simply position our
-								circuit away from the rest of our PCB.
-							</p>
-
-							<h4 id="power-dissipation">Power Dissipation</h4>
-
-							<p>
-								Due to the inductive nature of the solenoid and high current
-								draw, we had to use a <a href="#capacitor">capacitor</a> to
-								charge our solenoid coil up. However, there was another issue as
-								this solenoid was now “charged up”, with its coil being
-								magnetised. When the <a href="#mosfet">MOSFET switch</a> turns
-								off, this magnetic field that is built up by the coil needs to
-								collapse somewhere.
-							</p>
-
-							<p>
-								Without a robust power dissipation circuit, this magnetic field
-								would create a very high voltage across the open switch (since
-								the circuit is broken and the current cannot flow) which will
-								destroy the MOSFET. This was even worse last time, when we used
-								a relay rather than a MOSFET. This high voltage across the relay
-								created sparks across the relay contacts which destroyed the
-								relay and produced some magic smoke. Hence, to prevent this
-								sparking or destroying of MOSFETs from happening, we use 2 ways
-								to dissipate this magnetic field quickly.
-							</p>
-
-							<p>
-								One way is through a simple flyback diode. During normal
-								operation, the diode is in reverse polarity and will not conduct
-								electricity. However, when the switch turns off and when this
-								magnetic field collapses, current is allowed to flow through the
-								diode and thus the voltage across the MOSFET does not build up
-								to dangerous levels.
-							</p>
-
-							<p>
-								However, we were worried that the 0.6v forward voltage was not
-								enough to dissipate the magnetic field, hence we placed a 3.3v
-								zener diode backwards in series with the original flyback diode.
-								This increases the forward volage to ≈4v to dissipate this
-								energy more quickly.
-							</p>
-
-							<figure style="margin-left: auto; margin-right: auto;">
-								<img
-									loading="lazy"
-									src="/assets/images/solenoid-zener.svg"
-									alt="Flyback + Zener Diode"
-									style="height: 300px; margin-left: auto; margin-right: auto;"
-								/>
-
-								<figcaption>
-									Flyback + Zener Diode
-								</figcaption>
-							</figure>
-
-							<p>
-								Another way is to include a R-C snubber circuit across the
-								MOSFET drain and source. During normal operation, the small
-								capacitance of the capacitor quickly gets charged up and since
-								this is a DC circuit, has infinite DC resistance and does not
-								allow current to pass. However, when the voltage of the coil
-								increases and the switch does not conduct electricity, a small
-								amount of current is allowed to pass through this capacitor in
-								the reverse way, thus again preventing the voltage from building
-								up to dangerous levels.
-							</p>
-
-							<p>
-								A better explanation can be found on
-								<a href="https://en.wikipedia.org/wiki/Snubber#RC_snubbers"
-									>Wikipedia</a
-								>
-							</p>
-
-							<figure style="margin-left: auto; margin-right: auto;">
-								<img
-									loading="lazy"
-									src="/assets/images/solenoid-rc.svg"
-									alt="R-C Snubber Circuit"
-									style="height: 300px; margin-left: auto; margin-right: auto;"
-								/>
-
-								<figcaption>
-									R-C Snubber Circuit
-								</figcaption>
-							</figure>
-
-							<h4 id="adjustable-pot">Adjustable POT</h4>
-
-							<p>
-								Inspired by the
-								<a href="https://youtu.be/yaFfWd6ZHGA">SSL team OP-AmP</a>, we
-								wanted the ability to control our kicker strength so we could do
-								cool tricks like curved shots. Therefore, we thought of using an
-								adjustable potentiometer on the feedback pin of the boost
-								converter which allows it to change the voltage output of the
-								boost converter and therefore the kicker.
-							</p>
-
-							<p>
-								However, we faced issues from the start up time of this digital
-								adjustable POT. Our original circuit in our 2019 PCB looked
-								something like this:
-							</p>
-
-							<figure style="margin-left: auto; margin-right: auto;">
-								<img
-									loading="lazy"
-									src="/assets/images/adj-pot-initial.svg"
-									alt="Initial Adjustable POT Circuit"
-									style="height: 300px; margin-left: auto; margin-right: auto;"
-								/>
-
-								<figcaption>
-									Initial Circuit
-								</figcaption>
-							</figure>
-
-							<p>
-								However, the LM2587 boost converter started up faster than the
-								MCP41XXX adjustable POT we used. Before starting up, the
-								MCP41XXX resistance is very high. This resulted in the feedback
-								pin voltage being very low since there is a large voltage drop
-								across the POT. The LM2587, which already started up, hence
-								ramps up the voltage rapidly. In our case, the LM2587 blew
-								because it ramped up the voltage to 90v, way above its
-								theoretical 60v limit.
-							</p>
-
-							<p>
-								In our test PCB, we attempted to use a different circuit which
-								placed the adjustable POT parallel to another fixed resistor.
-								This means that on the high side, the resistance can only
-								decrease, not increase. This ensures that our 60v voltage limit
-								is strictly adhered to and protects our circuit.
-							</p>
-
-							<figure style="margin-left: auto; margin-right: auto;">
-								<img
-									loading="lazy"
-									src="/assets/images/adj-pot-final.svg"
-									alt="Fixed Adjustable POT Circuit"
-									style="height: 300px; margin-left: auto; margin-right: auto;"
-								/>
-
-								<figcaption>
-									Fixed Circuit
-								</figcaption>
-							</figure>
-
-							<p>
-								From the circuit above, the maximum resistance between the
-								output voltage and feedback pin is limited by (R2+R3) even if
-								the adjustable POT abruptly fails. This caps the output voltage
-								to ≈55V. However, if we want to decrease this output voltage for
-								a lighter kick, the POT can be adjusted to decrease in
-								resistance so the feedback pin voltage drops and therefore
-								output voltage drops. The additional trimpot is there just to
-								adjust the range of the adjustable POT.
-							</p>
-
-							<p>
-								This has another benefit of increased sensitivity, since the
-								adjustable POT has a limited amount of “steps” spread across its
-								resistance range. By adding R3, we basically allocate the
-								adjustable POT’s steps to a smaller voltage range, from
-								≈40v-50v, thus each “step” is more sensitive and represents a
-								smaller change in the output voltage.
-							</p>
-
-							<p>
-								While this worked well, in our actual PCB we
-								<a href="#positioning"
-									>positioned the boost circuit away from everything else</a
-								>
-								and thus the electronics were very isolated from the µC on that
-								layer. We were unable to route the adjustable POT’s 4 SPI wires
-								to the µC without compromising some high power traces’ widths or
-								decreasing the data wires width to &gt;8mils, hence we decided
-								it was not worth it to implement this system since in reality we
-								would rarely need to adjust the kick strength in-game.
-							</p>
-
-							<hr />
-
-							<h2 id="logic">Logic</h2>
-
-							<h3 id="multiplexing">Multiplexing</h3>
-
-							<p>
-								We have 40 light sensors (phototransistors) which need to be
-								read via an analog voltage, and we definitely do not have 40
-								analog ports to read them. Thus, we would require a multiplexer.
-								We use 3 74HC4067 16-channel analog multiplexer for our light
-								sensors as well as our lightgates, current sense and motor
-								thermistors.
-							</p>
-
-							<p>
-								Since these phototransistors vary current based on light, we
-								need a resistor divider to measure this current across the
-								phototransistor. Rather than adding one resistor for each
-								phototransistor and using 40 resistors, we simply use one
-								resistor per multiplexer by adding it at the “COM” common
-								output.
-							</p>
-
-							<figure style="margin-left: auto; margin-right: auto;">
-								<img
-									loading="lazy"
-									src="/assets/images/mux.svg"
-									alt="Multiplexer"
-									style="height: 300px; margin-left: auto; margin-right: auto;"
-								/>
-
-								<figcaption>
-									Multiplexer
-								</figcaption>
-							</figure>
-
-							<h4 id="phototransistor">Phototransistor</h4>
-
-							<p>
-								In our
-								<a
-									href="https://www.everlight.com/file/productfile/201407061531031645.pdf"
-									>phototansistor’s datasheet (ALS-PT19)</a
-								>, it suggested we use a capacitor in parallel with the current
-								sense resistor in order to smooth voltages. However, when we
-								tried it out, we had to put too much of a delay while switching
-								between different outputs for the capacitor voltage to change
-								(since we used a shared resistor &amp; capacitor), hence we
-								ditched it in the end.
-							</p>
-
-							<h3 id="level-shifting">Level Shifting</h3>
-
-							<p>
-								On our robot, we mainly use a 3.3v logic level since both our
-								main µC (Teensy 3.5/6) and sub-µC (STM32F103) run on 3.3v.
-								However, certain components like the ESC and the RGB ring
-								require a 5v logic level to operate.
-							</p>
-
-							<p>
-								While we first used a MOSFET-based logic level converter
-								<a href="https://www.sparkfun.com/products/12009"
-									>(something like this)</a
-								>, that was
-								<a
-									href="https://forum.pjrc.com/threads/25549-What-is-the-difference-between-the-74HCT245-and-sparkfun-s-logic-level-converter"
-									>unsuitable for the 800kHz digital signal for the Neopixel</a
-								>.
-							</p>
-
-							<p>
-								Since we did not need to use I<sup>2</sup>C logic level
-								shifting, we decided to use the
-								<a href="https://en.wikipedia.org/wiki/HCMOS"
-									>74HC logic family</a
-								>, specifically the
-								<a href="https://www.onsemi.com/pub/Collateral/74HCT08.REV1.PDF"
-									>74HCT08 Quad AND Gate</a
-								>
-								with a minimum high level input voltage of 2.0v and output
-								voltage of 5v. While many often recommend the 74HCT245, that
-								chip had too many inputs for us to use and the quad 74HCT08
-								works anyways.
-							</p>
-
-							<hr />
-
-							<h2 id="miscellaneous">Miscellaneous</h2>
-
-							<h3 id="encoders">Encoders</h3>
-
-							<p>
-								We had considered using encoders to measure the RPM of our
-								motors so that we can control the speed of our robot better.
-							</p>
-
-							<p>
-								There are a number of different types of encoders we could use.
-								We first thought of utilising the small extended back shaft of
-								our JoinMax motors
-								<a
-									href="https://www.pololu.com/category/141/micro-metal-gearmotors-with-extended-motor-shafts"
-									>(something like this)</a
-								>
-								to attach a small encoder disc and PCB. However, because our
-								robot needed to keep within a 20cm diameter limit (or 18cm in
-								the future) there was no space to fit such an encoder disc.
-							</p>
-
-							<p>
-								Taking inspiration from teams like LJ Stand in 2018
-								<a
-									href="https://photos.google.com/share/AF1QipPh5H2HzPVjt2wpaWPG-9Mnrah6Dkoe2Ghs8lTklUj96C2vK_ss1Fg4HTWEEaDdhg/photo/AF1QipOusXaE-bTkOXWjb3M6T7Pcu6LTusV3T5kNputd?key=dHA1TUNIdHFCR1ZnMnN1T1o4S0NZaGlhMzE0OHpn"
-									>(poster)</a
-								>, we also considered mounting some sort of magnet on our wheel,
-								with a hall sensor in the layer above to detect variations in
-								magnetic field. However, our custom designed wheels had no space
-								to fit magnets in them, and we could not increase the thickness
-								of the wheels just to fit the magnets due to the size
-								restriction.
-							</p>
-
-							<p>
-								Building on the previous idea of the wheel as an encoder, we
-								thought of using light instead of magnets to detect the rotation
-								of the wheel, alternating the colours of our rollers and 3d
-								printed core so that a phototransistor mounted above could
-								detect changes in the light intensity of the reflection.
-								However, we thought this method would be too prone to external
-								interference and ran out of time to fully test the reliability
-								of this. In future iterations however, this method of using
-								light to detect may be preferred over other encoder solutions.
-							</p>
-
-							<h3 id="others">Others</h3>
-
-							<p>
-								We only decided to cover certain circuits, however if you would
-								like to know more you can find our design files
-								<a href="https://github.com/bozotics/robocup2020/tree/PCB"
-									>here!</a
-								>
-							</p>
-						</section>
-
-						<footer class="page__meta">
-							<p class="page__date">
-								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
-
-								<strong>Updated:</strong>
-								<time datetime="2020-07-17">July 17, 2020</time>
-							</p>
-						</footer>
-
-						<nav class="pagination">
-							<a
-								href="/open/elec/components/"
-								class="pagination--pager"
-								title="Components
-"
-								>Previous</a
-							>
-
-							<a
-								href="/open/elec/history/"
-								class="pagination--pager"
-								title="History
-"
-								>Next</a
-							>
 						</nav>
-					</div>
-				</article>
-			</div>
+					</aside>
+				
+				<h2 id="power">Power</h2>
+
+<h3 id="buck">Buck</h3>
+
+<p>We use TI’s TPS5430 buck converter IC to step down our 12v battery voltage to 5v
+(for the RPi, LED ring and ESC) and 3.3v (for everything else)</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/buck-circuit.svg" alt="Buck Circuit" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Buck Circuit
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>Before this, we have used COTS step down converters before, from Hobbyking’s
+<a href="https://hobbyking.com/en_us/hobbykingtm-micro-ubec-3a-5v.html">UBEC</a> to
+Taobao’s
+<a href="https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-21223910208.22.41016a4bPnWtm8&amp;id=522572489248">MP1584</a>
+and
+<a href="https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-21223910208.31.41016a4bPnWtm8&amp;id=545538730505">LM2596</a>
+breakout boards. However, we wanted to better
+<a href="/open/elec/history/#shift-to-smd">integrate everything</a> into one PCB and there
+were multiple reports of those buck converters being inefficient and overheating
+anyways.</p>
+
+<p>We have tried other buck converter ICs before, such as the TPS54330 and the
+popular LM2596. However, the TPS54330 did not work (the feedback pin voltage was
+way lower than stated in the datasheet) and we could not figure out why, while
+the LM2596 kept destroying our Teensys despite it outputting 5v to the Teensy’s
+VIN LDO port.</p>
+
+<h3 id="boost">Boost</h3>
+
+<p>We use TI’s LM2587 boost converter IC to power our solenoid at ≈55v, with a
+1100µF <a href="#capacitor">capacitor</a> in parallel.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/boost-circuit.svg" alt="Boost Circuit" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Boost Circuit
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>We have used COTS boost converters before, specifically
+<a href="https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-21223910208.36.358c6a4bgJqS6y&amp;id=522572146482">this very large Taobao board</a>
+and a
+<a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0d72e8dcy9j3N&amp;id=36375893381&amp;_u=a30vu5iq8920">LM2587 breakout board</a>
+(this breakout board pointed us towards the LM2587 we are using now). Similar to
+the buck converters above, we wanted to better
+<a href="/open/elec/history/#shift-to-smd">integrate everything</a> into one PCB hence we
+shifted away from these.</p>
+
+<p>We have also tried other boost converters before, specifically the MAX1522.
+However, similar to the <a href="#buck">TPS54330 above</a> we could not figure out why it
+does not work (we could only get it to boost to 20v).</p>
+
+<h4 id="other-topologies">Other Topologies</h4>
+
+<p>When we were first looking online on how to design our boost converter circuit,
+many resources pointed towards using a flyback regulator IC such as the popular
+MC34063 or UC3843 to achieve our desired 60v voltage level. However, we simply
+did not have enough space to fit a transformer coil required for the flyback
+topology, and anyways we soon realised we
+<a href="#capacitor">did not require that much power</a> to kick the solenoids.</p>
+
+<p>We also looked to other topologies like the charge pump circuit, inspired by the
+integrated charge pump on our VNH5019 motor driver. However, we could not find a
+suitable IC on Taobao that satisfied our power and size requirements.</p>
+
+<h4 id="capacitor">Capacitor</h4>
+
+<p>When we first used a solenoid, we needed to increase the solenoid’s strength and
+our intuition was to increase the voltage supplied. However, we noticed that
+past ≈40v, the increase in kick strength was negligible for each voltage
+increase. It took us a lot of researching to understand that it is the current
+supplied to a solenoid that determines its strength.</p>
+
+<p>While increasing the output voltage increases current, the main source of energy
+that is supplied when a solenoid kicks is through the output capacitor because
+the solenoid just draws <a href="/open/elec/history/#solenoid-current">so much current</a>
+in a very short span of time.</p>
+
+<p>Since we were only kicking a solenoid for short pulses at a time (≈20ms) and
+there is a long time in between kicks, we could utilise a large capacitor to
+provide us with that short burst of current. We first attempted to calculate
+what capacitance would be enough for us, however in the end we decided to just
+buy a 1000µF capacitor to put in parallel with a 100µF capacitor as they were
+nice round numbers. Currently, we can kick the orange ball over the ramp with
+our capacitors charged at 55v now.</p>
+
+<h4 id="mosfet">MOSFET</h4>
+
+<p>We use a MOSFET to switch our solenoid on and off. Previously, we have used
+relays, however this was not really suitable due to the
+<a href="#power-dissipation">inductive nature of the solenoid</a>. We have also considered
+isolated switches like opto-isolators, however a high powered one was too
+expensive.</p>
+
+<p>At 60v, we must ensure that the R<sub>ds</sub> (resistance across terminals of
+the MOSFET) is very low to decrease power losses and overheating of the MOSFET.
+However, for most MOSFETs, the R<sub>ds</sub> is very high at a low
+V<sub>gs</sub> (gate / drive voltage). At our 3.3v logic levels, the best MOSFET
+we could find had R<sub>ds</sub> of ≈100mΩ, which would translate to ≈0.5W of
+power dissipation in the MOSFET. This was unacceptable as we found the MOSFET
+would heat up very fast and the solenoid would not be as powerful.</p>
+
+<p>Hence, we used a small MOSFET that had a low R<sub>ds</sub> (≈40mΩ) even with a
+low V<sub>gs</sub> to turn on our bigger MOSFET. We still had to use a bigger
+MOSFET because the V<sub>ds</sub> (voltage across MOSFET terminals) was 30v, way
+lower than our solenoid drive voltage.</p>
+
+<p>Referring to the image below, when we send a logic high to the “CONTROL” bus,
+there is a positive V<sub>gs</sub> and that would turn on the small MOSFET. Now,
+at the drain terminal of the small MOSFET (terminal 2), it is tied to ground.
+This creates a 12v V<sub>gs</sub> across the larger MOSFET, turning it on as
+well.</p>
+
+<p>However, when the MOSFETs are off, the 60v is “shared” between the two MOSFETs
+and thus the smaller MOSFET will not be destroyed due to its 30v V<sub>ds</sub>
+limit.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/mosfet-gate-drive.svg" alt="MOSFET drive circuit" style="height:300px;margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      MOSFET drive circuit
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>In the future, we could use an opto isolator to turn on the MOSFET rather than
+this current solution since we would prefer if our sensitive µCs are isolated
+from this high powered system.</p>
+
+<h4 id="positioning">Positioning</h4>
+
+<p>As mentioned before in the <a href="/open/elec/design/#positioning">design section</a>, we
+placed our boost converter circuit at a corner of PCB so in the case of
+accidents, it will (hopefully) not affect our other circuits. Not only that, a
+boost converter works by rapidly switching a MOSFET between charging an inductor
+and discharging it across a capacitor. This high powered high speed switching
+action has the potential to magnetically interfere with our other data lines.
+While we have not experienced these issues in the past, it is better to play it
+safe and simply position our circuit away from the rest of our PCB.</p>
+
+<h4 id="power-dissipation">Power Dissipation</h4>
+
+<p>Due to the inductive nature of the solenoid and high current draw, we had to use
+a <a href="#capacitor">capacitor</a> to charge our solenoid coil up. However, there was
+another issue as this solenoid was now “charged up”, with its coil being
+magnetised. When the <a href="#mosfet">MOSFET switch</a> turns off, this magnetic field
+that is built up by the coil needs to collapse somewhere.</p>
+
+<p>Without a robust power dissipation circuit, this magnetic field would create a
+very high voltage across the open switch (since the circuit is broken and the
+current cannot flow) which will destroy the MOSFET. This was even worse last
+time, when we used a relay rather than a MOSFET. This high voltage across the
+relay created sparks across the relay contacts which destroyed the relay and
+produced some magic smoke. Hence, to prevent this sparking or destroying of
+MOSFETs from happening, we use 2 ways to dissipate this magnetic field quickly.</p>
+
+<p>One way is through a simple flyback diode. During normal operation, the diode is
+in reverse polarity and will not conduct electricity. However, when the switch
+turns off and when this magnetic field collapses, current is allowed to flow
+through the diode and thus the voltage across the MOSFET does not build up to
+dangerous levels.</p>
+
+<p>However, we were worried that the 0.6v forward voltage was not enough to
+dissipate the magnetic field, hence we placed a 3.3v zener diode backwards in
+series with the original flyback diode. This increases the forward volage to ≈4v
+to dissipate this energy more quickly.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/solenoid-zener.svg" alt="Flyback + Zener Diode" style="height:300px;margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Flyback + Zener Diode
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>Another way is to include a R-C snubber circuit across the MOSFET drain and
+source. During normal operation, the small capacitance of the capacitor quickly
+gets charged up and since this is a DC circuit, has infinite DC resistance and
+does not allow current to pass. However, when the voltage of the coil increases
+and the switch does not conduct electricity, a small amount of current is
+allowed to pass through this capacitor in the reverse way, thus again preventing
+the voltage from building up to dangerous levels.</p>
+
+<p>A better explanation can be found on
+<a href="https://en.wikipedia.org/wiki/Snubber#RC_snubbers">Wikipedia</a></p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/solenoid-rc.svg" alt="R-C Snubber Circuit" style="height:300px;margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      R-C Snubber Circuit
+
+      
+    </figcaption>
+  
+</figure>
+
+<h4 id="adjustable-pot">Adjustable POT</h4>
+
+<p>Inspired by the <a href="https://youtu.be/yaFfWd6ZHGA">SSL team OP-AmP</a>, we wanted the
+ability to control our kicker strength so we could do cool tricks like curved
+shots. Therefore, we thought of using an adjustable potentiometer on the
+feedback pin of the boost converter which allows it to change the voltage output
+of the boost converter and therefore the kicker.</p>
+
+<p>However, we faced issues from the start up time of this digital adjustable POT.
+Our original circuit in our 2019 PCB looked something like this:</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/adj-pot-initial.svg" alt="Initial Adjustable POT Circuit" style="height:300px;margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Initial Circuit
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>However, the LM2587 boost converter started up faster than the MCP41XXX
+adjustable POT we used. Before starting up, the MCP41XXX resistance is very
+high. This resulted in the feedback pin voltage being very low since there is a
+large voltage drop across the POT. The LM2587, which already started up, hence
+ramps up the voltage rapidly. In our case, the LM2587 blew because it ramped up
+the voltage to 90v, way above its theoretical 60v limit.</p>
+
+<p>In our test PCB, we attempted to use a different circuit which placed the
+adjustable POT parallel to another fixed resistor. This means that on the high
+side, the resistance can only decrease, not increase. This ensures that our 60v
+voltage limit is strictly adhered to and protects our circuit.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/adj-pot-final.svg" alt="Fixed Adjustable POT Circuit" style="height:300px;margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Fixed Circuit
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>From the circuit above, the maximum resistance between the output voltage and
+feedback pin is limited by (R2+R3) even if the adjustable POT abruptly fails.
+This caps the output voltage to ≈55V. However, if we want to decrease this
+output voltage for a lighter kick, the POT can be adjusted to decrease in
+resistance so the feedback pin voltage drops and therefore output voltage drops.
+The additional trimpot is there just to adjust the range of the adjustable POT.</p>
+
+<p>This has another benefit of increased sensitivity, since the adjustable POT has
+a limited amount of “steps” spread across its resistance range. By adding R3, we
+basically allocate the adjustable POT’s steps to a smaller voltage range, from
+≈40v-50v, thus each “step” is more sensitive and represents a smaller change in
+the output voltage.</p>
+
+<p>While this worked well, in our actual PCB we
+<a href="#positioning">positioned the boost circuit away from everything else</a> and thus
+the electronics were very isolated from the µC on that layer. We were unable to
+route the adjustable POT’s 4 SPI wires to the µC without compromising some high
+power traces’ widths or decreasing the data wires width to &gt;8mils, hence we
+decided it was not worth it to implement this system since in reality we would
+rarely need to adjust the kick strength in-game.</p>
+
+<hr />
+
+<h2 id="logic">Logic</h2>
+
+<h3 id="multiplexing">Multiplexing</h3>
+
+<p>We have 40 light sensors (phototransistors) which need to be read via an analog
+voltage, and we definitely do not have 40 analog ports to read them. Thus, we
+would require a multiplexer. We use 3 74HC4067 16-channel analog multiplexer for
+our light sensors as well as our lightgates, current sense and motor
+thermistors.</p>
+
+<p>Since these phototransistors vary current based on light, we need a resistor
+divider to measure this current across the phototransistor. Rather than adding
+one resistor for each phototransistor and using 40 resistors, we simply use one
+resistor per multiplexer by adding it at the “COM” common output.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/mux.svg" alt="Multiplexer" style="height:300px;margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Multiplexer
+
+      
+    </figcaption>
+  
+</figure>
+
+<h4 id="phototransistor">Phototransistor</h4>
+
+<p>In our
+<a href="https://www.everlight.com/file/productfile/201407061531031645.pdf">phototansistor’s datasheet (ALS-PT19)</a>,
+it suggested we use a capacitor in parallel with the current sense resistor in
+order to smooth voltages. However, when we tried it out, we had to put too much
+of a delay while switching between different outputs for the capacitor voltage
+to change (since we used a shared resistor &amp; capacitor), hence we ditched it in
+the end.</p>
+
+<h3 id="level-shifting">Level Shifting</h3>
+
+<p>On our robot, we mainly use a 3.3v logic level since both our main µC (Teensy
+3.5/6) and sub-µC (STM32F103) run on 3.3v. However, certain components like the
+ESC and the RGB ring require a 5v logic level to operate.</p>
+
+<p>While we first used a MOSFET-based logic level converter
+<a href="https://www.sparkfun.com/products/12009">(something like this)</a>, that was
+<a href="https://forum.pjrc.com/threads/25549-What-is-the-difference-between-the-74HCT245-and-sparkfun-s-logic-level-converter">unsuitable for the 800kHz digital signal for the Neopixel</a>.</p>
+
+<p>Since we did not need to use I<sup>2</sup>C logic level shifting, we decided to
+use the <a href="https://en.wikipedia.org/wiki/HCMOS">74HC logic family</a>, specifically
+the
+<a href="https://www.onsemi.com/pub/Collateral/74HCT08.REV1.PDF">74HCT08 Quad AND Gate</a>
+with a minimum high level input voltage of 2.0v and output voltage of 5v. While
+many often recommend the 74HCT245, that chip had too many inputs for us to use
+and the quad 74HCT08 works anyways.</p>
+
+<hr />
+
+<h2 id="miscellaneous">Miscellaneous</h2>
+
+<h3 id="encoders">Encoders</h3>
+
+<p>We had considered using encoders to measure the RPM of our motors so that we can
+control the speed of our robot better.</p>
+
+<p>There are a number of different types of encoders we could use. We first thought
+of utilising the small extended back shaft of our JoinMax motors
+<a href="https://www.pololu.com/category/141/micro-metal-gearmotors-with-extended-motor-shafts">(something like this)</a>
+to attach a small encoder disc and PCB. However, because our robot needed to
+keep within a 20cm diameter limit (or 18cm in the future) there was no space to
+fit such an encoder disc.</p>
+
+<p>Taking inspiration from teams like LJ Stand in 2018
+<a href="https://photos.google.com/share/AF1QipPh5H2HzPVjt2wpaWPG-9Mnrah6Dkoe2Ghs8lTklUj96C2vK_ss1Fg4HTWEEaDdhg/photo/AF1QipOusXaE-bTkOXWjb3M6T7Pcu6LTusV3T5kNputd?key=dHA1TUNIdHFCR1ZnMnN1T1o4S0NZaGlhMzE0OHpn">(poster)</a>,
+we also considered mounting some sort of magnet on our wheel, with a hall sensor
+in the layer above to detect variations in magnetic field. However, our custom
+designed wheels had no space to fit magnets in them, and we could not increase
+the thickness of the wheels just to fit the magnets due to the size restriction.</p>
+
+<p>Building on the previous idea of the wheel as an encoder, we thought of using
+light instead of magnets to detect the rotation of the wheel, alternating the
+colours of our rollers and 3d printed core so that a phototransistor mounted
+above could detect changes in the light intensity of the reflection. However, we
+thought this method would be too prone to external interference and ran out of
+time to fully test the reliability of this. In future iterations however, this
+method of using light to detect may be preferred over other encoder solutions.</p>
+
+<h3 id="others">Others</h3>
+
+<p>We only decided to cover certain circuits, however if you would like to know
+more you can find our design files
+<a href="https://github.com/bozotics/robocup2020/tree/PCB">here!</a></p>
+
+				
+			</section>
+
+			<footer class="page__meta">
+				
+				
+
+
+				<p class="page__date">
+	<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
+	
+		<strong>Updated:</strong>
+		<time datetime="2020-07-17">July 17, 2020</time>
+	
+</p>
+
+			</footer>
+
+			
+
+			
+  <nav class="pagination">
+    
+      <a href="/open/elec/components/" class="pagination--pager" title="Components
+">Previous</a>
+    
+    
+      <a href="/open/elec/history/" class="pagination--pager" title="History
+">Next</a>
+    
+  </nav>
+
 		</div>
 
-		<div class="search-content">
-			<div class="search-content__inner-wrap">
-				<form
-					class="search-content__form"
-					onkeydown="return event.key != 'Enter';"
-				>
-					<label class="sr-only" for="search">
-						Enter your search term...
-					</label>
-					<input
-						type="search"
-						id="search"
-						class="search-input"
-						tabindex="-1"
-						placeholder="Enter your search term..."
-					/>
-				</form>
-				<div id="results" class="results"></div>
-			</div>
+		
+	</article>
+
+	
+	
+</div>
+
 		</div>
+
+		
+			<div class="search-content">
+				<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+			</div>
+		
 
 		<div id="footer" class="page__footer">
 			<footer>
 				<!-- start custom footer snippets -->
 
-				<!-- end custom footer snippets -->
+<!-- end custom footer snippets -->
 				<div class="page__footer-follow">
-					<ul class="social-icons">
-						<li><strong>Follow:</strong></li>
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
 
-						<li>
-							<a
-								href="https://twitter.com/bozotics"
-								rel="nofollow noopener noreferrer"
-								><i
-									class="fab fa-fw fa-twitter"
-									style="color: white;"
-									aria-hidden="true"
-								></i>
-								Twitter</a
-							>
-						</li>
+    
+      
+        
+          <li><a href="https://twitter.com/bozotics" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" style="color:white" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://facebook.com/Bozotics-113608380186713" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook" style="color:white" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/bozotics" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" style="color:white" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/bozotics" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" style="color:white" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
 
-						<li>
-							<a
-								href="https://facebook.com/Bozotics-113608380186713"
-								rel="nofollow noopener noreferrer"
-								><i
-									class="fab fa-fw fa-facebook"
-									style="color: white;"
-									aria-hidden="true"
-								></i>
-								Facebook</a
-							>
-						</li>
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" style="color:white" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
 
-						<li>
-							<a
-								href="https://github.com/bozotics"
-								rel="nofollow noopener noreferrer"
-								><i
-									class="fab fa-fw fa-github"
-									style="color: white;"
-									aria-hidden="true"
-								></i>
-								GitHub</a
-							>
-						</li>
+<div class="page__footer-copyright">&copy; 2020 Transcendence. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
-						<li>
-							<a
-								href="https://instagram.com/bozotics"
-								rel="nofollow noopener noreferrer"
-								><i
-									class="fab fa-fw fa-instagram"
-									style="color: white;"
-									aria-hidden="true"
-								></i>
-								Instagram</a
-							>
-						</li>
-
-						<li>
-							<a href="/feed.xml"
-								><i
-									class="fas fa-fw fa-rss-square"
-									style="color: white;"
-									aria-hidden="true"
-								></i>
-								Feed</a
-							>
-						</li>
-					</ul>
-				</div>
-
-				<div class="page__footer-copyright">
-					&copy; 2020 Transcendence. Powered by
-					<a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
-					<a
-						href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
-						rel="nofollow"
-						>Minimal Mistakes</a
-					>.
-				</div>
 			</footer>
 		</div>
 
-		<script src="/assets/js/main.min.js"></script>
+		
+  <script src="/assets/js/main.min.js"></script>
 
-		<script src="/assets/js/lunr/lunr.min.js"></script>
-		<script src="/assets/js/lunr/lunr-store.js"></script>
-		<script src="/assets/js/lunr/lunr-en.js"></script>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=UA-166112888-1"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
 
-			gtag("config", "UA-166112888-1", { anonymize_ip: false });
-		</script>
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166112888-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166112888-1', { 'anonymize_ip': false});
+</script>
+
+
+
+
+
+
+
+
 
 		<aside class="sidebar__top" id="topButton">
 			<a href="#top"><i class="fas fa-angle-double-up fa-2x"></i></a>
 		</aside>
 		<script>
-			/* When the user scrolls down 100px from the top of the document, show the button */
-			$(window).scroll(function () {
-				if ($(this).scrollTop() >= 100) {
-					$("#topButton").fadeIn(200);
-				} else {
-					$("#topButton").fadeOut(200);
-				}
-			});
+		/* When the user scrolls down 100px from the top of the document, show the button */
+		$(window).scroll(function() {
+			if ($(this).scrollTop() >= 100) {
+				$("#topButton").fadeIn(200);
+			} else {
+				$("#topButton").fadeOut(200);
+			}
+		});
 		</script>
+
 	</body>
 </html>
+

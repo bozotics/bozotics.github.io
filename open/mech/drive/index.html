@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
 	Minimal Mistakes Jekyll Theme 4.19.2 by Michael Rose
 	Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
@@ -7,1314 +7,753 @@
 -->
 <html lang="en" class="no-js">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 
-		<!-- begin _includes/seo.html -->
-		<title>Drive System | Transcendence</title>
-		<meta
-			name="description"
-			content="WARNING: THIS IS STILL A WORK IN PROGRESS"
-		/>
+<!-- begin _includes/seo.html --><title>Drive System | Transcendence</title>
+<meta name="description" content="WARNING: THIS IS STILL A WORK IN PROGRESS">
 
-		<meta property="og:type" content="article" />
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:site_name" content="Transcendence" />
-		<meta property="og:title" content="Drive System" />
-		<meta
-			property="og:url"
-			content="https://bozo.infocommsociety.com/open/mech/drive/"
-		/>
 
-		<meta
-			property="og:description"
-			content="WARNING: THIS IS STILL A WORK IN PROGRESS"
-		/>
 
-		<meta
-			property="article:published_time"
-			content="2020-05-02T08:00:00+08:00"
-		/>
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Transcendence">
+<meta property="og:title" content="Drive System">
+<meta property="og:url" content="https://bozo.infocommsociety.com/open/mech/drive/">
 
-		<meta
-			property="article:modified_time"
-			content="2020-06-26T12:49:33+08:00"
-		/>
 
-		<link
-			rel="canonical"
-			href="https://bozo.infocommsociety.com/open/mech/drive/"
-		/>
+  <meta property="og:description" content="WARNING: THIS IS STILL A WORK IN PROGRESS">
 
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
 
-				"@type": "Person",
-				"name": null,
-				"url": "https://bozo.infocommsociety.com/"
-			}
-		</script>
 
-		<!-- end _includes/seo.html -->
 
-		<link
-			href="/feed.xml"
-			type="application/atom+xml"
-			rel="alternate"
-			title="Transcendence Feed"
-		/>
 
-		<!-- https://t.co/dKP3o1e -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<script>
-			document.documentElement.className =
-				document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
-		</script>
 
-		<!-- For all browsers -->
-		<link rel="stylesheet" href="/assets/css/main.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"
-		/>
+  <meta property="article:published_time" content="2020-05-02T08:00:00+08:00">
 
-		<!--[if IE]>
-			<style>
-				/* old IE unsupported flexbox fixes */
-				.greedy-nav .site-title {
-					padding-right: 3em;
-				}
-				.greedy-nav button {
-					position: absolute;
-					top: 0;
-					right: 0;
-					height: 100%;
-				}
-			</style>
-		<![endif]-->
+
+
+  <meta property="article:modified_time" content="2020-06-26T12:49:33+08:00">
+
+
+
+
+<link rel="canonical" href="https://bozo.infocommsociety.com/open/mech/drive/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://bozo.infocommsociety.com/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Transcendence Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
 
 		<!-- start custom head snippets -->
 
-		<style>
-			ul.visible-links li.masthead__menu-item a[href="/open/intro/"]:before {
-				transform: scaleX(1);
-			}
 
-			ul.hidden-links li.masthead__menu-item a[href="/open/intro/"] {
-				color: #fff;
-				background: #0092ca;
-			}
-		</style>
 
-		<!-- insert favicons. use https://realfavicongenerator.net/ -->
-		<link rel="icon" href="/assets/images/eagle ver 2.1.3.1-lowres.jpg" />
 
-		<!-- end custom head snippets -->
+
+
+
+
+
+
+
+<style>
+    ul.visible-links li.masthead__menu-item a[href="/open/intro/"]:before {
+        transform: scaleX(1);
+    }
+
+    ul.hidden-links li.masthead__menu-item a[href="/open/intro/"] {
+        color: #fff;
+        background: #0092ca;
+    }
+</style>
+
+
+
+
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" href="/assets/images/eagle ver 2.1.3.1-lowres.jpg">
+
+<!-- end custom head snippets -->
 	</head>
 
 	<body class="layout--single">
 		<nav class="skip-links">
-			<h2 class="screen-reader-text">Skip links</h2>
-			<ul>
-				<li>
-					<a href="#site-nav" class="screen-reader-shortcut"
-						>Skip to primary navigation</a
-					>
-				</li>
-				<li>
-					<a href="#main" class="screen-reader-shortcut">Skip to content</a>
-				</li>
-				<li>
-					<a href="#footer" class="screen-reader-shortcut">Skip to footer</a>
-				</li>
-			</ul>
-		</nav>
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
 		<!--[if lt IE 9]>
-			<div class="notice--danger align-center" style="margin: 0;">
-				You are using an <strong>outdated</strong> browser. Please
-				<a href="https://browsehappy.com/">upgrade your browser</a> to improve
-				your experience.
-			</div>
-		<![endif]-->
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
 
-		<div class="masthead">
-			<div class="masthead__inner-wrap">
-				<div class="masthead__menu">
-					<nav id="site-nav" class="greedy-nav">
-						<a class="site-logo" href="/"
-							><img
-								loading="lazy"
-								src="/assets/images/eagle%20ver%202.1.3.1-transparent-lowres.png"
-								alt=""
-						/></a>
+		
 
-						<a class="site-title" href="/">
-							Transcendence
-							<span class="site-subtitle"
-								>The fine line between innovation and insanity</span
-							>
-						</a>
-						<ul class="visible-links">
-							<li class="masthead__menu-item">
-								<a href="/about/">About</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/open/intro/">Open</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/lightweight/intro/">Lightweight</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/rescue/intro/">Rescue</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/blog/">Blog</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/contact/">Contact</a>
-							</li>
-							<li class="masthead__menu-item">
-								<a href="/resources/">Resources</a>
-							</li>
-						</ul>
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img loading="lazy" src="/assets/images/eagle%20ver%202.1.3.1-transparent-lowres.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Transcendence
+          <span class="site-subtitle">The fine line between innovation and insanity</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/open/intro/">Open</a>
+            </li><li class="masthead__menu-item">
+              <a href="/lightweight/intro/">Lightweight</a>
+            </li><li class="masthead__menu-item">
+              <a href="/rescue/intro/">Rescue</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/">Contact</a>
+            </li><li class="masthead__menu-item">
+              <a href="/resources/">Resources</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
 
-						<button class="search__toggle" type="button">
-							<span class="visually-hidden">Toggle search</span>
-							<svg
-								class="icon"
-								width="16"
-								height="16"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 15.99 16"
-							>
-								<path
-									d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z"
-									transform="translate(-.01)"
-								></path>
-							</svg>
-						</button>
-
-						<button class="greedy-nav__toggle hidden" type="button">
-							<span class="visually-hidden">Toggle menu</span>
-							<div class="navicon"></div>
-						</button>
-						<ul class="hidden-links hidden"></ul>
-					</nav>
-				</div>
-			</div>
-		</div>
 
 		<div class="initial-content">
-			<div id="main" role="main">
-				<div class="sidebar sticky">
-					<nav class="nav__list">
-						<input id="ac-toc" name="accordion-toc" type="checkbox" />
-						<label for="ac-toc">Toggle menu</label>
-						<ul class="nav__items">
-							<li>
-								<a href="/open/intro/"
-									><span class="nav__sub-title">Introduction</span></a
-								>
-							</li>
+			
+
+
+
+<div id="main" role="main">
+	
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <a href="/open/intro/"><span class="nav__sub-title">Introduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/mech/"><span class="nav__sub-title">Mechanical</span></a>
+        
+
+        
+        <ul>
+          
+            <li><a href="/open/mech/general/">General Info</a></li>
+          
+            <li><a href="/open/mech/drive/" class="active">Drive System</a></li>
+          
+            <li><a href="/open/mech/mirror/">Mirror</a></li>
+          
+            <li><a href="/open/mech/dribbler/">Dribbler</a></li>
+          
+            <li><a href="/open/mech/assorted/">Assorted Parts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/elec/"><span class="nav__sub-title">Electronics</span></a>
+        
+
+        
+        <ul>
+          
+            <li><a href="/open/elec/design/">Design</a></li>
+          
+            <li><a href="/open/elec/selection/">Selection Process</a></li>
+          
+            <li><a href="/open/elec/components/">Components</a></li>
+          
+            <li><a href="/open/elec/circuits/">Circuits</a></li>
+          
+            <li><a href="/open/elec/history/">History</a></li>
+          
+            <li><a href="/open/elec/soldering/">Soldering</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/cam/"><span class="nav__sub-title">Camera</span></a>
+        
+
+        
+        <ul>
+          
+            <li><a href="/open/cam/general/">General Info</a></li>
+          
+            <li><a href="/open/cam/track/">Tracking Algorithm</a></li>
+          
+            <li><a href="/open/cam/gui/">GUI</a></li>
+          
+            <li><a href="/open/cam/communication/">Communication</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/strat/"><span class="nav__sub-title">Strategy</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/debug/"><span class="nav__sub-title">Debugging</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/open/afi/"><span class="nav__sub-title">AFI</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+	<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+		<meta itemprop="headline" content="Drive System">
+		<meta itemprop="description" content="WARNING: THIS IS STILL A WORK IN PROGRESS">
+		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
+		<meta itemprop="dateModified" content="2020-06-26T12:49:33+08:00">
+
+		<div class="page__inner-wrap">
+			
+				<header>
+					<h1 id="page-title" class="page__title" itemprop="headline">Drive System
+</h1>
+					
+
+
+				</header>
+			
+
+			<section class="page__content" itemprop="text">
+				
+					<aside class="sidebar__right sticky">
+						<nav class="toc">
+							<header><h4 class="nav__title"><i class="fas fa-dharmachakra"></i> Drive System</h4></header>
+							<ul class="toc__menu">
+  <li><a href="#motors">Motors</a></li>
+  <li><a href="#wheels">Wheels</a></li>
+  <li><a href="#positioning">Positioning</a></li>
+  <li><a href="#3-vs-4-wheels">3 vs 4 Wheels</a></li>
+</ul>
 
-							<li>
-								<a href="/open/mech/"
-									><span class="nav__sub-title">Mechanical</span></a
-								>
-
-								<ul>
-									<li><a href="/open/mech/general/">General Info</a></li>
-
-									<li>
-										<a href="/open/mech/drive/" class="active">Drive System</a>
-									</li>
-
-									<li><a href="/open/mech/mirror/">Mirror</a></li>
-
-									<li><a href="/open/mech/dribbler/">Dribbler</a></li>
-
-									<li><a href="/open/mech/assorted/">Assorted Parts</a></li>
-								</ul>
-							</li>
-
-							<li>
-								<a href="/open/elec/"
-									><span class="nav__sub-title">Electronics</span></a
-								>
-
-								<ul>
-									<li><a href="/open/elec/design/">Design</a></li>
-
-									<li><a href="/open/elec/selection/">Selection Process</a></li>
-
-									<li><a href="/open/elec/components/">Components</a></li>
-
-									<li><a href="/open/elec/circuits/">Circuits</a></li>
-
-									<li><a href="/open/elec/history/">History</a></li>
-
-									<li><a href="/open/elec/soldering/">Soldering</a></li>
-								</ul>
-							</li>
-
-							<li>
-								<a href="/open/cam/"
-									><span class="nav__sub-title">Camera</span></a
-								>
-
-								<ul>
-									<li><a href="/open/cam/general/">General Info</a></li>
-
-									<li><a href="/open/cam/track/">Tracking Algorithm</a></li>
-
-									<li><a href="/open/cam/gui/">GUI</a></li>
-
-									<li><a href="/open/cam/communication/">Communication</a></li>
-								</ul>
-							</li>
-
-							<li>
-								<a href="/open/strat/"
-									><span class="nav__sub-title">Strategy</span></a
-								>
-							</li>
-
-							<li>
-								<a href="/open/debug/"
-									><span class="nav__sub-title">Debugging</span></a
-								>
-							</li>
-
-							<li>
-								<a href="/open/afi/"><span class="nav__sub-title">AFI</span></a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-
-				<article
-					class="page"
-					itemscope
-					itemtype="https://schema.org/CreativeWork"
-				>
-					<meta itemprop="headline" content="Drive System" />
-					<meta
-						itemprop="description"
-						content="WARNING: THIS IS STILL A WORK IN PROGRESS"
-					/>
-					<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00" />
-					<meta itemprop="dateModified" content="2020-06-26T12:49:33+08:00" />
-
-					<div class="page__inner-wrap">
-						<header>
-							<h1 id="page-title" class="page__title" itemprop="headline">
-								Drive System
-							</h1>
-						</header>
-
-						<section class="page__content" itemprop="text">
-							<aside class="sidebar__right sticky">
-								<nav class="toc">
-									<header>
-										<h4 class="nav__title">
-											<i class="fas fa-dharmachakra"></i> Drive System
-										</h4>
-									</header>
-									<ul class="toc__menu">
-										<li><a href="#motors">Motors</a></li>
-										<li><a href="#wheels">Wheels</a></li>
-										<li><a href="#positioning">Positioning</a></li>
-										<li><a href="#3-vs-4-wheels">3 vs 4 Wheels</a></li>
-									</ul>
-								</nav>
-							</aside>
-
-							<p>WARNING: THIS IS STILL A WORK IN PROGRESS</p>
-
-							<p>
-								The drive system is the most important part of the robot,
-								directly dictating the degree of mobility of the robot. A
-								4-wheeled holonomic drive was utilised to give our robot full
-								control over both its linear and angular velocity. Much
-								consideration was also put into the individual components to
-								produce the most effective drive system.
-							</p>
-
-							<h2 id="motors">Motors</h2>
-
-							<p>
-								The motor we use is the JMP-BE-3561 model by JoinMax (<a
-									href="http://roboexp.com/products/post.asp?pid=34"
-									>Website</a
-								>
-								&amp;
-								<a href="http://roboexp.com/products/images/201812/3561.pdf"
-									>Datasheet</a
-								>). We first bought this motor back in 2018, which was also the
-								year where this motor made its international debut with
-								lightweight champions, LJ Stand (<a
-									href="https://photos.google.com/share/AF1QipPh5H2HzPVjt2wpaWPG-9Mnrah6Dkoe2Ghs8lTklUj96C2vK_ss1Fg4HTWEEaDdhg/photo/AF1QipOusXaE-bTkOXWjb3M6T7Pcu6LTusV3T5kNputd?key=dHA1TUNIdHFCR1ZnMnN1T1o4S0NZaGlhMzE0OHpn"
-									>Poster</a
-								>). We used this motor for internationals in 2018 too (<a
-									href="https://photos.google.com/share/AF1QipPh5H2HzPVjt2wpaWPG-9Mnrah6Dkoe2Ghs8lTklUj96C2vK_ss1Fg4HTWEEaDdhg/photo/AF1QipObWPqCdW84jdbp6I86uDTHw8wcNx2Ohzzu-GZ-?key=dHA1TUNIdHFCR1ZnMnN1T1o4S0NZaGlhMzE0OHpn"
-									>Poster</a
-								>), and this motor has only seen increasing adoption in the 2019
-								season.
-							</p>
-
-							<figure class="third">
-								<a href="/assets/images/motor-new.jpg" title="The tiny beast">
-									<img
-										loading="lazy"
-										src="/assets/images/motor-new.jpg"
-										alt="JoinMax Motor"
-									/>
-								</a>
-
-								<a
-									href="/assets/images/dummy_16-9.jpg"
-									title="2018 lightweight robot with the JoinMax motor"
-								>
-									<img
-										loading="lazy"
-										src="/assets/images/dummy_16-9.jpg"
-										alt="Lightweight robot with JoinMax motor"
-									/>
-								</a>
-
-								<a
-									href="/assets/images/dummy_16-9.jpg"
-									title="Current robot with the JoinMax motor"
-								>
-									<img
-										loading="lazy"
-										src="/assets/images/dummy_16-9.jpg"
-										alt="Current robot with JoinMax motor"
-									/>
-								</a>
-
-								<figcaption>Our motor’s history</figcaption>
-							</figure>
-
-							<p>
-								Out of the box, this motor comes equipped with a planetary
-								gearbox and is built with an angle bracket frame for easy
-								mounting. This is an <em>extremely</em> high-powered motor with
-								a no-load speed of 1700 RPM and a stall-torque of 20 kgf·cm,
-								which translates to about 1.96 Nm. To understand how insanely
-								powerful that is, here’s a comparison table of its specs to
-								other similarly sized motors from more popular brands. (Notes:
-								no load speed and stall torque are calculated assuming 100%
-								gearhead efficiency, the price is calculated from unit price,
-								and all motors have a nominal voltage of 12 V)
-							</p>
-
-							<table>
-								<thead>
-									<tr>
-										<th style="text-align: center;">Motor</th>
-										<th style="text-align: center;">Diameter (mm)</th>
-										<th style="text-align: center;">No load speed (RPM)</th>
-										<th style="text-align: center;">Stall Torque (Nm)</th>
-										<th style="text-align: center;">No load current (mA)</th>
-										<th style="text-align: center;">Weight (g)</th>
-										<th style="text-align: center;">Price (SGD)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td style="text-align: center;">JoinMax Motor</td>
-										<td style="text-align: center;">24.5</td>
-										<td style="text-align: center;">1700</td>
-										<td style="text-align: center;">1.96</td>
-										<td style="text-align: center;">700</td>
-										<td style="text-align: center;">80</td>
-										<td style="text-align: center;">120</td>
-									</tr>
-									<tr>
-										<td style="text-align: center;">
-											<a
-												href="https://www.maxongroup.com/maxon/view/product/110937"
-												>Maxon A-Max Motor 11037</a
-											>
-											with
-											<a
-												href="https://www.maxongroup.com/maxon/view/product/166156"
-												>Maxon 4.8:1 Gearhead 166156</a
-											>
-										</td>
-										<td style="text-align: center;">26</td>
-										<td style="text-align: center;">1706</td>
-										<td style="text-align: center;">0.385</td>
-										<td style="text-align: center;">57</td>
-										<td style="text-align: center;">220</td>
-										<td style="text-align: center;">348</td>
-									</tr>
-									<tr>
-										<td style="text-align: center;">
-											<a
-												href="https://www.maxongroup.com/maxon/view/product/339150"
-												>Maxon RE Motor 339150</a
-											>
-											with
-											<a
-												href="https://www.maxongroup.com/maxon/view/product/166157"
-												>Maxon 5.8:1 Gearhead 166157</a
-											>
-										</td>
-										<td style="text-align: center;">25</td>
-										<td style="text-align: center;">1658</td>
-										<td style="text-align: center;">1.55</td>
-										<td style="text-align: center;">68.1</td>
-										<td style="text-align: center;">220</td>
-										<td style="text-align: center;">480</td>
-									</tr>
-									<tr>
-										<td style="text-align: center;">
-											<a href="https://www.pololu.com/product/3202"
-												>Pololu Metal Gear Motor with 9.68:1 reduction</a
-											>
-										</td>
-										<td style="text-align: center;">25</td>
-										<td style="text-align: center;">1030</td>
-										<td style="text-align: center;">0.314</td>
-										<td style="text-align: center;">300</td>
-										<td style="text-align: center;">82</td>
-										<td style="text-align: center;">31</td>
-									</tr>
-									<tr>
-										<td style="text-align: center;">
-											<a
-												href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.7c0e2e8dvVvgZ0&amp;id=538197884967&amp;_u=730vu5iq9443"
-												>CHR-GM25-BK370 with 1:20 reduction</a
-											>
-											(Another China motor we own)
-										</td>
-										<td style="text-align: center;">24.4</td>
-										<td style="text-align: center;">980</td>
-										<td style="text-align: center;">-</td>
-										<td style="text-align: center;">600</td>
-										<td style="text-align: center;">85</td>
-										<td style="text-align: center;">6.40</td>
-									</tr>
-								</tbody>
-							</table>
-
-							<p>
-								It is clear that no motor even comes close to the JMP motor in
-								terms of offering high speeds, high torque, low weight
-								<em>and</em> relatively cheap pricing. However, there is one
-								major disadvantage which is the incredibly high no load current.
-								This motor is a giant power suck and thus, heats up very quickly
-								too. On the other hand, this motor is simply too highly rated
-								for us to ever use its full capabilities in a controllable way,
-								with the fastest speeds used set at about 50% of the full speed.
-								While this means a lot of the motor’s capabilities are “wasted”,
-								it also means that the negative effect of overheating is
-								somewhat curbed.
-							</p>
-
-							<p>
-								A good alternative to our JMP motors would be Maxon’s RE motor
-								series, but a single motor with gearhead combo costs 480 SGD
-								without shipping so that’s definitely not happening anytime
-								soon…🙃 (yes, we tried requesting for sponsorship under Maxon’s
-								<a href="https://drive.tech/en/young-engineers-program"
-									>Young Engineers Program</a
-								>
-								before but they didn’t even bother replying us…) Hence, we
-								concluded that the JMP motors were our best option after
-								considering all the factors above.
-							</p>
-
-							<!-- >Life lesson: When all else fails, China is the answer -->
-
-							<h2 id="wheels">Wheels</h2>
-
-							<figure style="margin-left: auto; margin-right: auto;">
-								<img
-									loading="lazy"
-									src="/assets/images/motor-wheel-exploded-full.jpg"
-									alt="Exploded wheel model"
-									style="margin-left: auto; margin-right: auto;"
-								/>
-
-								<figcaption>
-									Exploded view of wheel
-								</figcaption>
-							</figure>
-
-							<p>
-								Our wheels are mostly made up of 3D printed parts. We made the
-								omni-wheels doubled layered instead of single layered so that
-								our robot has greater traction on the field, especially since
-								the mini rollers are quite thin. Each omni-wheel layer contains
-								15 3D printed mini rollers, which has an hourglass shape.
-							</p>
-
-							<p>
-								Each mini roller is fitted with a
-								<a
-									href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.51532e8dsZMwNp&amp;id=576164717128&amp;_u=730vu5iq5aad"
-									>NBR O-ring</a
-								>
-								(6 mm diamter, 3 mm thickness) that acts as the tyre. This
-								O-ring has to be stretched a little to wrap around the outer
-								section of the mini-roller before falling in place along the
-								recess of the roller.
-							</p>
-
-							<p>
-								Also, a
-								<a
-									href="https://detail.tmall.com/item.htm?id=521984195750&amp;spm=a1z09.2.0.0.51532e8dsZMwNp&amp;_u=730vu5iqd166"
-									>dowel pin</a
-								>
-								(2mm diameter, 8mm length) is fitted through the middle of the
-								roller to act as an axle. The centre hole of the roller is
-								slightly smaller on one side such that the dowel pin has to be
-								force through, ensuring that the roller remains rigidly
-								connected in place since its the dowel pin that is spinning
-								freely, not the roller.
-							</p>
-
-							<p>
-								Each omni-wheel layer is made up of one thick and one thin 3D
-								printed plate. The thicker plate contains rectangular indents
-								where the mini rollers fitted with the dowel pins will sit in.
-								The size of these rectangular indents took quite some trial and
-								error since their tolerances are very small; they had to be just
-								loose enough to allow the dowel pins to spin freely but just
-								tight enough to prevent it from jittering about too much. The
-								thinner plate fits on top of the thicker plate to act as a
-								cover.
-							</p>
-
-							<blockquote
-								class="instagram-media"
-								data-instgrm-captioned=""
-								data-instgrm-permalink="https://www.instagram.com/p/B-KBDjQgEFK/?utm_source=ig_embed&amp;utm_campaign=loading"
-								data-instgrm-version="12"
-								style="
-									background: #fff;
-									border: 0;
-									border-radius: 3px;
-									box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
-										0 1px 10px 0 rgba(0, 0, 0, 0.15);
-									margin: 1px;
-									max-width: 540px;
-									min-width: 326px;
-									padding: 0;
-									width: 99.375%;
-									width: -webkit-calc(100% - 2px);
-									width: calc(100% - 2px);
-								"
-							>
-								<div style="padding: 16px;">
-									<a
-										href="https://www.instagram.com/p/B-KBDjQgEFK/?utm_source=ig_embed&amp;utm_campaign=loading"
-										style="
-											background: #ffffff;
-											line-height: 0;
-											padding: 0 0;
-											text-align: center;
-											text-decoration: none;
-											width: 100%;
-										"
-										target="_blank"
-									>
-										<div
-											style="
-												display: flex;
-												flex-direction: row;
-												align-items: center;
-											"
-										>
-											<div
-												style="
-													background-color: #f4f4f4;
-													border-radius: 50%;
-													flex-grow: 0;
-													height: 40px;
-													margin-right: 14px;
-													width: 40px;
-												"
-											></div>
-											<div
-												style="
-													display: flex;
-													flex-direction: column;
-													flex-grow: 1;
-													justify-content: center;
-												"
-											>
-												<div
-													style="
-														background-color: #f4f4f4;
-														border-radius: 4px;
-														flex-grow: 0;
-														height: 14px;
-														margin-bottom: 6px;
-														width: 100px;
-													"
-												></div>
-												<div
-													style="
-														background-color: #f4f4f4;
-														border-radius: 4px;
-														flex-grow: 0;
-														height: 14px;
-														width: 60px;
-													"
-												></div>
-											</div>
-										</div>
-										<div style="padding: 19% 0;"></div>
-										<div
-											style="
-												display: block;
-												height: 50px;
-												margin: 0 auto 12px;
-												width: 50px;
-											"
-										>
-											<svg
-												width="50px"
-												height="50px"
-												viewBox="0 0 60 60"
-												version="1.1"
-												xmlns="https://www.w3.org/2000/svg"
-												xmlns:xlink="https://www.w3.org/1999/xlink"
-											>
-												<g
-													stroke="none"
-													stroke-width="1"
-													fill="none"
-													fill-rule="evenodd"
-												>
-													<g
-														transform="translate(-511.000000, -20.000000)"
-														fill="#000000"
-													>
-														<g>
-															<path
-																d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
-															></path>
-														</g>
-													</g>
-												</g>
-											</svg>
-										</div>
-										<div style="padding-top: 8px;">
-											<div
-												style="
-													color: #3897f0;
-													font-family: Arial, sans-serif;
-													font-size: 14px;
-													font-style: normal;
-													font-weight: 550;
-													line-height: 18px;
-												"
-											>
-												View this post on Instagram
-											</div>
-										</div>
-										<div style="padding: 12.5% 0;"></div>
-										<div
-											style="
-												display: flex;
-												flex-direction: row;
-												margin-bottom: 14px;
-												align-items: center;
-											"
-										>
-											<div>
-												<div
-													style="
-														background-color: #f4f4f4;
-														border-radius: 50%;
-														height: 12.5px;
-														width: 12.5px;
-														transform: translateX(0px) translateY(7px);
-													"
-												></div>
-												<div
-													style="
-														background-color: #f4f4f4;
-														height: 12.5px;
-														transform: rotate(-45deg) translateX(3px)
-															translateY(1px);
-														width: 12.5px;
-														flex-grow: 0;
-														margin-right: 14px;
-														margin-left: 2px;
-													"
-												></div>
-												<div
-													style="
-														background-color: #f4f4f4;
-														border-radius: 50%;
-														height: 12.5px;
-														width: 12.5px;
-														transform: translateX(9px) translateY(-18px);
-													"
-												></div>
-											</div>
-											<div style="margin-left: 8px;">
-												<div
-													style="
-														background-color: #f4f4f4;
-														border-radius: 50%;
-														flex-grow: 0;
-														height: 20px;
-														width: 20px;
-													"
-												></div>
-												<div
-													style="
-														width: 0;
-														height: 0;
-														border-top: 2px solid transparent;
-														border-left: 6px solid #f4f4f4;
-														border-bottom: 2px solid transparent;
-														transform: translateX(16px) translateY(-4px)
-															rotate(30deg);
-													"
-												></div>
-											</div>
-											<div style="margin-left: auto;">
-												<div
-													style="
-														width: 0px;
-														border-top: 8px solid #f4f4f4;
-														border-right: 8px solid transparent;
-														transform: translateY(16px);
-													"
-												></div>
-												<div
-													style="
-														background-color: #f4f4f4;
-														flex-grow: 0;
-														height: 12px;
-														width: 16px;
-														transform: translateY(-4px);
-													"
-												></div>
-												<div
-													style="
-														width: 0;
-														height: 0;
-														border-top: 8px solid #f4f4f4;
-														border-left: 8px solid transparent;
-														transform: translateY(-4px) translateX(8px);
-													"
-												></div>
-											</div></div
-									></a>
-									<p style="margin: 8px 0 0 0; padding: 0 4px;">
-										<a
-											href="https://www.instagram.com/p/B-KBDjQgEFK/?utm_source=ig_embed&amp;utm_campaign=loading"
-											style="
-												color: #000;
-												font-family: Arial, sans-serif;
-												font-size: 14px;
-												font-style: normal;
-												font-weight: normal;
-												line-height: 17px;
-												text-decoration: none;
-												word-wrap: break-word;
-											"
-											target="_blank"
-											>Realised that we had never showcased our self-made
-											omniwheels before so here goes! ⠀ 1: Open robot uses
-											double layer wheels for better traction while lightweight
-											robot uses single layer wheels to save weight 2: 15 mini
-											rollers per layer, each has 3D printed rims 3,4: Each rim
-											is fitted with a nitrile rubber O-ring and threaded
-											through a dowel pin 5: 3D printed main wheel piece (left)
-											holds these rollers in place with small indents that
-											loosely support the dowel pins, while a covering piece
-											(right) is placed on top to secure the rollers 6: Fully
-											assembled single and double layered omniwheels 7,8: Single
-											layered omniwheel attached to robot 9: Timelapse of wheel
-											assembly!!! ⠀ Very slow progress right now, but there will
-											surely be more to come... 🤷‍♂️ ~kfc [Soccer
-											Lightweight/Open] ⁣⁣⁣⠀ #robocup #robocupjunior #grind
-											#wheel #robot #robotics #technology #engineering #stem
-											#3dprinting #bozotics</a
-										>
-									</p>
-									<p
-										style="
-											color: #c9c8cd;
-											font-family: Arial, sans-serif;
-											font-size: 14px;
-											line-height: 17px;
-											margin-bottom: 0;
-											margin-top: 8px;
-											overflow: hidden;
-											padding: 8px 0 7px;
-											text-align: center;
-											text-overflow: ellipsis;
-											white-space: nowrap;
-										"
-									>
-										A post shared by
-										<a
-											href="https://www.instagram.com/bozotics/?utm_source=ig_embed&amp;utm_campaign=loading"
-											style="
-												color: #c9c8cd;
-												font-family: Arial, sans-serif;
-												font-size: 14px;
-												font-style: normal;
-												font-weight: normal;
-												line-height: 17px;
-											"
-											target="_blank"
-										>
-											¡ßöZø 🗽 SqûãD!</a
-										>
-										(@bozotics) on
-										<time
-											style="
-												font-family: Arial, sans-serif;
-												font-size: 14px;
-												line-height: 17px;
-											"
-											datetime="2020-03-25T12:24:19+00:00"
-											>Mar 25, 2020 at 5:24am PDT</time
-										>
-									</p>
-								</div>
-							</blockquote>
-							<script async="" src="//www.instagram.com/embed.js"></script>
-
-							<p class="caption">Wheel assembly process</p>
-
-							<p>
-								<strong>Backstory:</strong> These wheels were created to replace
-								our
-								<a href="http://www.roboexp.com/products/post.asp?pid=24"
-									>JMP-BE-6059 wheels</a
-								>. The JMP wheels were actually quite good since it uses large
-								rollers and is also double layered. However, the material of its
-								roller is soft rubber, which despite having good traction, was
-								<em>not durable</em> at all. These wheels were used by our
-								RoboCup 2018 lightweight team and at the start of the
-								competition, the wheels were almost brand new, but by the end,
-								the rubber rollers were either breaking apart or had completely
-								fallen off, leaving behind the raw plastic roller itself.
-								Attempts to make a Frankenstein wheel out of another JMP wheel
-								(<a href="http://www.roboexp.com/products/post.asp?pid=14"
-									>JMP-BP-1261</a
-								>) which used a harder rubber were tried, but they were much
-								less effective since the harder rubber had little traction.
-								Hence, the need to create our own, more durable wheels arose.
-							</p>
-
-							<figure class="half">
-								<a
-									href="/assets/images/dummy_16-9.jpg"
-									title="Brand new green wheel"
-								>
-									<img
-										loading="lazy"
-										src="/assets/images/dummy_16-9.jpg"
-										alt="Brand new green wheel"
-									/>
-								</a>
-
-								<a
-									href="/assets/images/wheel_dirty.jpg"
-									title="Worn out green wheel"
-								>
-									<img
-										loading="lazy"
-										src="/assets/images/wheel_dirty.jpg"
-										alt="Worn out green wheel"
-									/>
-								</a>
-
-								<a
-									href="/assets/images/wheel_old.jpg"
-									title="Hard rubber rollers on other wheel model"
-								>
-									<img
-										loading="lazy"
-										src="/assets/images/wheel_old.jpg"
-										alt="Other wheel"
-									/>
-								</a>
-
-								<a
-									href="/assets/images/wheel_combined.jpg"
-									title="Combined wheel model"
-								>
-									<img
-										loading="lazy"
-										src="/assets/images/wheel_combined.jpg"
-										alt="Frankenstein wheel"
-									/>
-								</a>
-
-								<figcaption>Old wheels</figcaption>
-							</figure>
-
-							<h2 id="positioning">Positioning</h2>
-
-							<p>
-								The motors’ angles relative to one another can affect the
-								maximum speed of the robot when moving in certain directions.
-								For example, a motor combination with the front angles being
-								larger will result in faster forward movement. Since we wanted
-								the robot to travel equally fast in all directions, as well as
-								to make our holonomic calculations easier, we decided to arrange
-								the motors in a 90 degree fashion. However, arranging them
-								simply in a 90 degree cross would make the catchment areas very
-								small and the solenoid has to be forced in place to fit between
-								the motors. Thus, we came up with a “split cross” arrangement,
-								where the motors were moved apart horizontally while preserving
-								the same angle.
-							</p>
-
-							<figure class="half">
-								<a
-									href="/assets/images/normal-cross.jpg"
-									title="Standard cross motor arrangement"
-								>
-									<img
-										loading="lazy"
-										src="/assets/images/normal-cross.jpg"
-										alt="Standard cross arrangement"
-									/>
-								</a>
-
-								<a
-									href="/assets/images/split-cross.jpg"
-									title="Split cross motor arrangement"
-								>
-									<img
-										loading="lazy"
-										src="/assets/images/split-cross.jpg"
-										alt="Split cross arrangement"
-									/>
-								</a>
-
-								<figcaption>Standard vs Split cross</figcaption>
-							</figure>
-
-							<p>
-								This arrangment provides the much needed extra space and expands
-								the catchment area size, while resulting in minimal change in
-								the robot’s locomotion characteristics. In the vector diagrams
-								below, the blue vectors represent the wheels’ velocities, which
-								is of the same direction and magnitude for both arrangments.
-								Thus, linear motion remains the same. However, with the split
-								cross, the wheels are not perpendicular to its displacement from
-								the robot’s centre. Thus, only the perpendicular component
-								(purple arrow) contributes to the robot’s angular velocity,
-								which can be easily accounted for in the calculations. (More
-								details about holonomic movement can be found in the
-								<a href="#sike">Programming</a> section)
-							</p>
-
-							<figure class="half">
-								<a
-									href="/assets/images/normal-cross-top-label.jpg"
-									title="Standard cross vector diagram"
-								>
-									<img
-										loading="lazy"
-										src="/assets/images/normal-cross-top-label.jpg"
-										alt="Standard cross vector diagram"
-									/>
-								</a>
-
-								<a
-									href="/assets/images/split-cross-top-label.jpg"
-									title="Split cross vector diagram"
-								>
-									<img
-										loading="lazy"
-										src="/assets/images/split-cross-top-label.jpg"
-										alt="Split cross vector diagram"
-									/>
-								</a>
-
-								<figcaption>
-									Vector diagrams: Standard vs Split cross
-								</figcaption>
-							</figure>
-
-							<h2 id="3-vs-4-wheels">3 vs 4 Wheels</h2>
-
-							<p>
-								In theory, only a minimum of 3 wheels are needed to produce a
-								holonomic movement. (This is because with 2 wheels, if they are
-								directly parallel to each other, there is only one translational
-								degree of freedom. Otherwise, if they are in any other
-								configuration, as long as they are moving at different speeds
-								there will always be a net angular velocity on the robot.)
-							</p>
-
-							<p>
-								There are a number of RoboCup teams who do choose to employ a 3
-								wheel holonomic drive, particularly in lightweight due to weight
-								constraints. However, a 3-wheel drive has many,
-								<em>many</em> problems, especially considering the dynamic
-								nature of a match.
-							</p>
-
-							<p>
-								Firstly, it is inefficient. A 3-wheel drive in RoboCup must be
-								arranged in the Y-formation to give room in the front for the
-								catchment area. Thus, when moving straight (which is probably
-								the most common direction), only the front 2 motors are being
-								used to move the robot.
-							</p>
-
-							<figure style="margin-left: auto; margin-right: auto;">
-								<img
-									loading="lazy"
-									src="/assets/images/3-wheel-label.jpg"
-									alt="3-wheel top view"
-									style="margin-left: auto; margin-right: auto;"
-								/>
-
-								<figcaption>
-									3 wheeled diagram
-								</figcaption>
-							</figure>
-
-							<p>
-								Secondly, it has much less traction, which reduces agility.
-								Intuitively, with less wheels there would be less traction
-								(especially if the forwards direction is only driven by 2 wheels
-								instead of the typical 4). However, there is also the
-								consideration of collisions. If a 3 wheel robot collides head-on
-								with another robot (which happens all the time), the front 2
-								wheels will be lifted up momentarily. When this happens, there
-								would be completely
-								<strong>no motors driving the robot</strong> forwards, which is
-								bad, <em>really bad</em>.
-							</p>
-
-							<figure style="margin-left: auto; margin-right: auto;">
-								<img
-									loading="lazy"
-									src="/assets/images/3-wheel-lifted.jpg"
-									alt="3-wheel lifted"
-									style="margin-left: auto; margin-right: auto;"
-								/>
-
-								<figcaption>
-									Lifted 3-wheel robot
-								</figcaption>
-							</figure>
-
-							<p>
-								Thirdly, it is much more unstable. There is a further distance
-								between each wheel as compared to a 4-wheeled robot, which
-								increases the tendency for the robot to tilt. Also, since 2
-								adjacent wheels are now closer to the CG, there is a larger
-								moment about the base of the wheels whenever there is a change
-								in momentum. Both phenomena causes a loss of traction, which
-								further exacerbates the previous problem.
-							</p>
-
-							<p>
-								Fourthly, the position of the back wheel prevents any chance of
-								a double dribbler design. This. This is the deal breaker. 🙃
-							</p>
-
-							<p>
-								Therefore, it is without a doubt that a 4-wheeled robot is much
-								more superior to a 3-wheel robot and there really isn’t any
-								reason to go for a 3-wheeled design other than <em>maybe</em> to
-								save weight.
-							</p>
-							<blockquote>
-								<p>
-									But to become lighter in exchange for less traction? That
-									would be the worst trade deal in the history of trade deals,
-									maybe ever… :)
-								</p>
-							</blockquote>
-						</section>
-
-						<footer class="page__meta">
-							<p class="page__date">
-								<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
-
-								<strong>Updated:</strong>
-								<time datetime="2020-06-26">June 26, 2020</time>
-							</p>
-						</footer>
-
-						<nav class="pagination">
-							<a
-								href="/open/mech/general/"
-								class="pagination--pager"
-								title="General Information
-"
-								>Previous</a
-							>
-
-							<a
-								href="/open/mech/mirror/"
-								class="pagination--pager"
-								title="Mirror Design
-"
-								>Next</a
-							>
 						</nav>
-					</div>
-				</article>
-			</div>
+					</aside>
+				
+				<p>WARNING: THIS IS STILL A WORK IN PROGRESS</p>
+
+<p>The drive system is the most important part of the robot, directly dictating the degree of mobility of the robot. A 4-wheeled holonomic drive was utilised to give our robot full control over both its linear and angular velocity. Much consideration was also put into the individual components to produce the most effective drive system.</p>
+
+<h2 id="motors">Motors</h2>
+
+<p>The motor we use is the JMP-BE-3561 model by JoinMax (<a href="http://roboexp.com/products/post.asp?pid=34">Website</a> &amp; <a href="http://roboexp.com/products/images/201812/3561.pdf">Datasheet</a>). We first bought this motor back in 2018, which was also the year where this motor made its international debut with lightweight champions, LJ Stand (<a href="https://photos.google.com/share/AF1QipPh5H2HzPVjt2wpaWPG-9Mnrah6Dkoe2Ghs8lTklUj96C2vK_ss1Fg4HTWEEaDdhg/photo/AF1QipOusXaE-bTkOXWjb3M6T7Pcu6LTusV3T5kNputd?key=dHA1TUNIdHFCR1ZnMnN1T1o4S0NZaGlhMzE0OHpn">Poster</a>). We used this motor for internationals in 2018 too (<a href="https://photos.google.com/share/AF1QipPh5H2HzPVjt2wpaWPG-9Mnrah6Dkoe2Ghs8lTklUj96C2vK_ss1Fg4HTWEEaDdhg/photo/AF1QipObWPqCdW84jdbp6I86uDTHw8wcNx2Ohzzu-GZ-?key=dHA1TUNIdHFCR1ZnMnN1T1o4S0NZaGlhMzE0OHpn">Poster</a>), and this motor has only seen increasing adoption in the 2019 season.</p>
+
+<figure class="third ">
+  
+    
+      <a href="/assets/images/motor-new.jpg" title="The tiny beast">
+          <img loading="lazy" src="/assets/images/motor-new.jpg" alt="JoinMax Motor" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/dummy_16-9.jpg" title="2018 lightweight robot with the JoinMax motor">
+          <img loading="lazy" src="/assets/images/dummy_16-9.jpg" alt="Lightweight robot with JoinMax motor" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/dummy_16-9.jpg" title="Current robot with the JoinMax motor">
+          <img loading="lazy" src="/assets/images/dummy_16-9.jpg" alt="Current robot with JoinMax motor" />
+      </a>
+    
+  
+  
+    <figcaption>Our motor’s history
+</figcaption>
+  
+</figure>
+
+<p>Out of the box, this motor comes equipped with a planetary gearbox and is built with an angle bracket frame for easy mounting. This is an <em>extremely</em> high-powered motor with a no-load speed of 1700 RPM and a stall-torque of 20 kgf·cm, which translates to about 1.96 Nm. To understand how insanely powerful that is, here’s a comparison table of its specs to other similarly sized motors from more popular brands. (Notes: no load speed and stall torque are calculated assuming 100% gearhead efficiency, the price is calculated from unit price, and all motors have a nominal voltage of 12 V)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Motor</th>
+      <th style="text-align: center">Diameter (mm)</th>
+      <th style="text-align: center">No load speed (RPM)</th>
+      <th style="text-align: center">Stall Torque (Nm)</th>
+      <th style="text-align: center">No load current (mA)</th>
+      <th style="text-align: center">Weight (g)</th>
+      <th style="text-align: center">Price (SGD)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">JoinMax Motor</td>
+      <td style="text-align: center">24.5</td>
+      <td style="text-align: center">1700</td>
+      <td style="text-align: center">1.96</td>
+      <td style="text-align: center">700</td>
+      <td style="text-align: center">80</td>
+      <td style="text-align: center">120</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.maxongroup.com/maxon/view/product/110937">Maxon A-Max Motor 11037</a> with <a href="https://www.maxongroup.com/maxon/view/product/166156">Maxon 4.8:1 Gearhead 166156</a></td>
+      <td style="text-align: center">26</td>
+      <td style="text-align: center">1706</td>
+      <td style="text-align: center">0.385</td>
+      <td style="text-align: center">57</td>
+      <td style="text-align: center">220</td>
+      <td style="text-align: center">348</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.maxongroup.com/maxon/view/product/339150">Maxon RE Motor 339150</a> with <a href="https://www.maxongroup.com/maxon/view/product/166157">Maxon 5.8:1 Gearhead 166157</a></td>
+      <td style="text-align: center">25</td>
+      <td style="text-align: center">1658</td>
+      <td style="text-align: center">1.55</td>
+      <td style="text-align: center">68.1</td>
+      <td style="text-align: center">220</td>
+      <td style="text-align: center">480</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.pololu.com/product/3202">Pololu Metal Gear Motor with 9.68:1 reduction</a></td>
+      <td style="text-align: center">25</td>
+      <td style="text-align: center">1030</td>
+      <td style="text-align: center">0.314</td>
+      <td style="text-align: center">300</td>
+      <td style="text-align: center">82</td>
+      <td style="text-align: center">31</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.7c0e2e8dvVvgZ0&amp;id=538197884967&amp;_u=730vu5iq9443">CHR-GM25-BK370 with 1:20 reduction</a> (Another China motor we own)</td>
+      <td style="text-align: center">24.4</td>
+      <td style="text-align: center">980</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">600</td>
+      <td style="text-align: center">85</td>
+      <td style="text-align: center">6.40</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>It is clear that no motor even comes close to the JMP motor in terms of offering high speeds, high torque, low weight <em>and</em> relatively cheap pricing. However, there is one major disadvantage which is the incredibly high no load current. This motor is a giant power suck and thus, heats up very quickly too. On the other hand, this motor is simply too highly rated for us to ever use its full capabilities in a controllable way, with the fastest speeds used set at about 50% of the full speed. While this means a lot of the motor’s capabilities are “wasted”, it also means that the negative effect of overheating is somewhat curbed.</p>
+
+<p>A good alternative to our JMP motors would be Maxon’s RE motor series, but a single motor with gearhead combo costs 480 SGD without shipping so that’s definitely not happening anytime soon…🙃 (yes, we tried requesting for sponsorship under Maxon’s <a href="https://drive.tech/en/young-engineers-program">Young Engineers Program</a> before but they didn’t even bother replying us…) Hence, we concluded that the JMP motors were our best option after considering all the factors above.</p>
+
+<!-- >Life lesson: When all else fails, China is the answer -->
+
+<h2 id="wheels">Wheels</h2>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/motor-wheel-exploded-full.jpg" alt="Exploded wheel model" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Exploded view of wheel
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>Our wheels are mostly made up of 3D printed parts. We made the omni-wheels doubled layered instead of single layered so that our robot has greater traction on the field, especially since the mini rollers are quite thin. Each omni-wheel layer contains 15 3D printed mini rollers, which has an hourglass shape.</p>
+
+<p>Each mini roller is fitted with a <a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.51532e8dsZMwNp&amp;id=576164717128&amp;_u=730vu5iq5aad">NBR O-ring</a> (6 mm diamter, 3 mm thickness) that acts as the tyre. This O-ring has to be stretched a little to wrap around the outer section of the mini-roller before falling in place along the recess of the roller.</p>
+
+<p>Also, a <a href="https://detail.tmall.com/item.htm?id=521984195750&amp;spm=a1z09.2.0.0.51532e8dsZMwNp&amp;_u=730vu5iqd166">dowel pin</a> (2mm diameter, 8mm length) is fitted through the middle of the roller to act as an axle. The centre hole of the roller is slightly smaller on one side such that the dowel pin has to be force through, ensuring that the roller remains rigidly connected in place since its the dowel pin that is spinning freely, not the roller.</p>
+
+<p>Each omni-wheel layer is made up of one thick and one thin 3D printed plate. The thicker plate contains rectangular indents where the mini rollers fitted with the dowel pins will sit in. The size of these rectangular indents took quite some trial and error since their tolerances are very small; they had to be just loose enough to allow the dowel pins to spin freely but just tight enough to prevent it from jittering about too much. The thinner plate fits on top of the thicker plate to act as a cover.</p>
+
+<blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-permalink="https://www.instagram.com/p/B-KBDjQgEFK/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/B-KBDjQgEFK/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div></a> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/B-KBDjQgEFK/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Realised that we had never showcased our self-made omniwheels before so here goes! ⠀ 1: Open robot uses double layer wheels for better traction while lightweight robot uses single layer wheels to save weight 2: 15 mini rollers per layer, each has 3D printed rims 3,4: Each rim is fitted with a nitrile rubber O-ring and threaded through a dowel pin 5: 3D printed main wheel piece (left) holds these rollers in place with small indents that loosely support the dowel pins, while a covering piece (right) is placed on top to secure the rollers 6: Fully assembled single and double layered omniwheels 7,8: Single layered omniwheel attached to robot 9: Timelapse of wheel assembly!!! ⠀ Very slow progress right now, but there will surely be more to come... 🤷‍♂️ ~kfc [Soccer Lightweight/Open] ⁣⁣⁣⠀ #robocup #robocupjunior #grind #wheel #robot #robotics #technology #engineering #stem #3dprinting #bozotics</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/bozotics/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> ¡ßöZø 🗽 SqûãD!</a> (@bozotics) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2020-03-25T12:24:19+00:00">Mar 25, 2020 at 5:24am PDT</time></p></div></blockquote>
+<script async="" src="//www.instagram.com/embed.js"></script>
+
+<p class="caption">Wheel assembly process</p>
+
+<p><strong>Backstory:</strong> These wheels were created to replace our <a href="http://www.roboexp.com/products/post.asp?pid=24">JMP-BE-6059 wheels</a>. The JMP wheels were actually quite good since it uses large rollers and is also double layered. However, the material of its roller is soft rubber, which despite having good traction, was <em>not durable</em> at all. These wheels were used by our RoboCup 2018 lightweight team and at the start of the competition, the wheels were almost brand new, but by the end, the rubber rollers were either breaking apart or had completely fallen off, leaving behind the raw plastic roller itself. Attempts to make a Frankenstein wheel out of another JMP wheel (<a href="http://www.roboexp.com/products/post.asp?pid=14">JMP-BP-1261</a>) which used a harder rubber were tried, but they were much less effective since the harder rubber had little traction. Hence, the need to create our own, more durable wheels arose.</p>
+
+<figure class="half ">
+  
+    
+      <a href="/assets/images/dummy_16-9.jpg" title="Brand new green wheel">
+          <img loading="lazy" src="/assets/images/dummy_16-9.jpg" alt="Brand new green wheel" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/wheel_dirty.jpg" title="Worn out green wheel">
+          <img loading="lazy" src="/assets/images/wheel_dirty.jpg" alt="Worn out green wheel" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/wheel_old.jpg" title="Hard rubber rollers on other wheel model">
+          <img loading="lazy" src="/assets/images/wheel_old.jpg" alt="Other wheel" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/wheel_combined.jpg" title="Combined wheel model">
+          <img loading="lazy" src="/assets/images/wheel_combined.jpg" alt="Frankenstein wheel" />
+      </a>
+    
+  
+  
+    <figcaption>Old wheels
+</figcaption>
+  
+</figure>
+
+<h2 id="positioning">Positioning</h2>
+
+<p>The motors’ angles relative to one another can affect the maximum speed of the robot when moving in certain directions. For example, a motor combination with the front angles being larger will result in faster forward movement. Since we wanted the robot to travel equally fast in all directions, as well as to make our holonomic calculations easier, we decided to arrange the motors in a 90 degree fashion. However, arranging them simply in a 90 degree cross would make the catchment areas very small and the solenoid has to be forced in place to fit between the motors. Thus, we came up with a “split cross” arrangement, where the motors were moved apart horizontally while preserving the same angle.</p>
+
+<figure class="half ">
+  
+    
+      <a href="/assets/images/normal-cross.jpg" title="Standard cross motor arrangement">
+          <img loading="lazy" src="/assets/images/normal-cross.jpg" alt="Standard cross arrangement" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/split-cross.jpg" title="Split cross motor arrangement">
+          <img loading="lazy" src="/assets/images/split-cross.jpg" alt="Split cross arrangement" />
+      </a>
+    
+  
+  
+    <figcaption>Standard vs Split cross
+</figcaption>
+  
+</figure>
+
+<p>This arrangment provides the much needed extra space and expands the catchment area size, while resulting in minimal change in the robot’s locomotion characteristics. In the vector diagrams below, the blue vectors represent the wheels’ velocities, which is of the same direction and magnitude for both arrangments. Thus, linear motion remains the same. However, with the split cross, the wheels are not perpendicular to its displacement from the robot’s centre. Thus, only the perpendicular component (purple arrow) contributes to the robot’s angular velocity, which can be easily accounted for in the calculations. (More details about holonomic movement can be found in the <a href="#sike">Programming</a> section)</p>
+
+<figure class="half ">
+  
+    
+      <a href="/assets/images/normal-cross-top-label.jpg" title="Standard cross vector diagram">
+          <img loading="lazy" src="/assets/images/normal-cross-top-label.jpg" alt="Standard cross vector diagram" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/split-cross-top-label.jpg" title="Split cross vector diagram">
+          <img loading="lazy" src="/assets/images/split-cross-top-label.jpg" alt="Split cross vector diagram" />
+      </a>
+    
+  
+  
+    <figcaption>Vector diagrams: Standard vs Split cross
+</figcaption>
+  
+</figure>
+
+<h2 id="3-vs-4-wheels">3 vs 4 Wheels</h2>
+
+<p>In theory, only a minimum of 3 wheels are needed to produce a holonomic movement. (This is because with 2 wheels, if they are directly parallel to each other, there is only one translational degree of freedom. Otherwise, if they are in any other configuration, as long as they are moving at different speeds there will always be a net angular velocity on the robot.)</p>
+
+<p>There are a number of RoboCup teams who do choose to employ a 3 wheel holonomic drive, particularly in lightweight due to weight constraints. However, a 3-wheel drive has many, <em>many</em> problems, especially considering the dynamic nature of a match.</p>
+
+<p>Firstly, it is inefficient. A 3-wheel drive in RoboCup must be arranged in the Y-formation to give room in the front for the catchment area. Thus, when moving straight (which is probably the most common direction), only the front 2 motors are being used to move the robot.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/3-wheel-label.jpg" alt="3-wheel top view" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      3 wheeled diagram
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>Secondly, it has much less traction, which reduces agility. Intuitively, with less wheels there would be less traction (especially if the forwards direction is only driven by 2 wheels instead of the typical 4). However, there is also the consideration of collisions. If a 3 wheel robot collides head-on with another robot (which happens all the time), the front 2 wheels will be lifted up momentarily. When this happens, there would be completely <strong>no motors driving the robot</strong> forwards, which is bad, <em>really bad</em>.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/3-wheel-lifted.jpg" alt="3-wheel lifted" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Lifted 3-wheel robot
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>Thirdly, it is much more unstable. There is a further distance between each wheel as compared to a 4-wheeled robot, which increases the tendency for the robot to tilt. Also, since 2 adjacent wheels are now closer to the CG, there is a larger moment about the base of the wheels whenever there is a change in momentum. Both phenomena causes a loss of traction, which further exacerbates the previous problem.</p>
+
+<p>Fourthly, the position of the back wheel prevents any chance of a double dribbler design. This. This is the deal breaker. 🙃</p>
+
+<p>Therefore, it is without a doubt that a 4-wheeled robot is much more superior to a 3-wheel robot and there really isn’t any reason to go for a 3-wheeled design other than <em>maybe</em> to save weight.</p>
+<blockquote>
+  <p>But to become lighter in exchange for less traction? That would be the worst trade deal in the history of trade deals, maybe ever… :)</p>
+</blockquote>
+
+				
+			</section>
+
+			<footer class="page__meta">
+				
+				
+
+
+				<p class="page__date">
+	<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
+	
+		<strong>Updated:</strong>
+		<time datetime="2020-06-26">June 26, 2020</time>
+	
+</p>
+
+			</footer>
+
+			
+
+			
+  <nav class="pagination">
+    
+      <a href="/open/mech/general/" class="pagination--pager" title="General Information
+">Previous</a>
+    
+    
+      <a href="/open/mech/mirror/" class="pagination--pager" title="Mirror Design
+">Next</a>
+    
+  </nav>
+
 		</div>
 
-		<div class="search-content">
-			<div class="search-content__inner-wrap">
-				<form
-					class="search-content__form"
-					onkeydown="return event.key != 'Enter';"
-				>
-					<label class="sr-only" for="search">
-						Enter your search term...
-					</label>
-					<input
-						type="search"
-						id="search"
-						class="search-input"
-						tabindex="-1"
-						placeholder="Enter your search term..."
-					/>
-				</form>
-				<div id="results" class="results"></div>
-			</div>
+		
+	</article>
+
+	
+	
+</div>
+
 		</div>
+
+		
+			<div class="search-content">
+				<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+			</div>
+		
 
 		<div id="footer" class="page__footer">
 			<footer>
 				<!-- start custom footer snippets -->
 
-				<!-- end custom footer snippets -->
+<!-- end custom footer snippets -->
 				<div class="page__footer-follow">
-					<ul class="social-icons">
-						<li><strong>Follow:</strong></li>
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
 
-						<li>
-							<a
-								href="https://twitter.com/bozotics"
-								rel="nofollow noopener noreferrer"
-								><i
-									class="fab fa-fw fa-twitter"
-									style="color: white;"
-									aria-hidden="true"
-								></i>
-								Twitter</a
-							>
-						</li>
+    
+      
+        
+          <li><a href="https://twitter.com/bozotics" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" style="color:white" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://facebook.com/Bozotics-113608380186713" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook" style="color:white" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/bozotics" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" style="color:white" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/bozotics" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" style="color:white" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
 
-						<li>
-							<a
-								href="https://facebook.com/Bozotics-113608380186713"
-								rel="nofollow noopener noreferrer"
-								><i
-									class="fab fa-fw fa-facebook"
-									style="color: white;"
-									aria-hidden="true"
-								></i>
-								Facebook</a
-							>
-						</li>
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" style="color:white" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
 
-						<li>
-							<a
-								href="https://github.com/bozotics"
-								rel="nofollow noopener noreferrer"
-								><i
-									class="fab fa-fw fa-github"
-									style="color: white;"
-									aria-hidden="true"
-								></i>
-								GitHub</a
-							>
-						</li>
+<div class="page__footer-copyright">&copy; 2020 Transcendence. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
-						<li>
-							<a
-								href="https://instagram.com/bozotics"
-								rel="nofollow noopener noreferrer"
-								><i
-									class="fab fa-fw fa-instagram"
-									style="color: white;"
-									aria-hidden="true"
-								></i>
-								Instagram</a
-							>
-						</li>
-
-						<li>
-							<a href="/feed.xml"
-								><i
-									class="fas fa-fw fa-rss-square"
-									style="color: white;"
-									aria-hidden="true"
-								></i>
-								Feed</a
-							>
-						</li>
-					</ul>
-				</div>
-
-				<div class="page__footer-copyright">
-					&copy; 2020 Transcendence. Powered by
-					<a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
-					<a
-						href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
-						rel="nofollow"
-						>Minimal Mistakes</a
-					>.
-				</div>
 			</footer>
 		</div>
 
-		<script src="/assets/js/main.min.js"></script>
+		
+  <script src="/assets/js/main.min.js"></script>
 
-		<script src="/assets/js/lunr/lunr.min.js"></script>
-		<script src="/assets/js/lunr/lunr-store.js"></script>
-		<script src="/assets/js/lunr/lunr-en.js"></script>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=UA-166112888-1"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
 
-			gtag("config", "UA-166112888-1", { anonymize_ip: false });
-		</script>
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166112888-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166112888-1', { 'anonymize_ip': false});
+</script>
+
+
+
+
+
+
+
+
 
 		<aside class="sidebar__top" id="topButton">
 			<a href="#top"><i class="fas fa-angle-double-up fa-2x"></i></a>
 		</aside>
 		<script>
-			/* When the user scrolls down 100px from the top of the document, show the button */
-			$(window).scroll(function () {
-				if ($(this).scrollTop() >= 100) {
-					$("#topButton").fadeIn(200);
-				} else {
-					$("#topButton").fadeOut(200);
-				}
-			});
+		/* When the user scrolls down 100px from the top of the document, show the button */
+		$(window).scroll(function() {
+			if ($(this).scrollTop() >= 100) {
+				$("#topButton").fadeIn(200);
+			} else {
+				$("#topButton").fadeOut(200);
+			}
+		});
 		</script>
+
 	</body>
 </html>
+
