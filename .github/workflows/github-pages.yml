@@ -33,7 +33,7 @@ jobs:
           jekyll_src: .
           gem_src: .
           enable_cache: true
-          prettier_opts: '{ "useTabs": true }'
+          #prettier_opts: '{ "useTabs": true }'
           prettier_ignore: |
             assets/reveal.js/**
 
