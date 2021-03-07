@@ -7,4 +7,4 @@ redirect_from:
 
 {{page.title}}
 
-# COMING SOON?
+# Hi
