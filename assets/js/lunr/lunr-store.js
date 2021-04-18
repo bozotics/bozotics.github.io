@@ -221,6 +221,12 @@ var store = [{
         "url": "/blog/perspective/",
         "teaser": null
       },{
+        "title": "A Musing",
+        "excerpt":"Robotics is cruelly ironic. Behind each flashy robot, 99% of the time is spent fixing problems arising from our own creation, instead of actual creation itself. Beyond its initial novelty, 99% of the time is filled with anger, desperation, pain, and sadness, instead of that once familiar feeling of joy...","categories": ["Commentary"],
+        "tags": ["Monthly"],
+        "url": "/blog/a-musing/",
+        "teaser": null
+      },{
         "title": "Introduction",
         "excerpt":"COMING SOON      3d Model (≈30mb)       Controls: Left click + drag to orbit, Middle click + drag to pan, Scroll to zoom      ","categories": [],
         "tags": [],
