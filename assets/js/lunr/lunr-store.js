@@ -180,7 +180,7 @@ var store = [{
         "teaser": null
       },{
         "title": "December - Week 2",
-        "excerpt":"Working from the rainforest A thousand apologies… our week 2 post came in a little late, but better than late than never! Doing productive work in Malaysia is really hard. There are tons of distractions around me – from endless errands to chatty relatives. Despite everything I managed to carve...","categories": ["Soccer Open"],
+        "excerpt":"Working from the rainforest Our week 2 post came in a little late, but better than late than never! Doing productive work in Malaysia is really hard. There are tons of distractions around me – from endless errands to chatty relatives. Despite everything I managed to carve out small pockets...","categories": ["Soccer Open"],
         "tags": ["Programming","Weekly"],
         "url": "/blog/december-week-2/",
         "teaser": null
