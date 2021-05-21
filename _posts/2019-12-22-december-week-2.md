@@ -9,7 +9,7 @@ toc_icon: "calendar-week"
 toc_label: "December - Week 2"
 ---
 ## Working from the rainforest
-A thousand apologies… our week 2 post came in a little late, but better than late than never! Doing productive work in Malaysia is really hard. There are tons of distractions around me – from endless errands to chatty relatives. Despite everything I managed to carve out small pockets of time in the middle of the night to get a little work done. 
+Our week 2 post came in a little late, but better than late than never! Doing productive work in Malaysia is really hard. There are tons of distractions around me – from endless errands to chatty relatives. Despite everything I managed to carve out small pockets of time in the middle of the night to get a little work done. 
 
 ---
 
