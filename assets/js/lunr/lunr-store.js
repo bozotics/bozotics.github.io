@@ -144,7 +144,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Communication",
-        "excerpt":"Speed   Protocol  ","categories": [],
+        "excerpt":"Serial between Raspi and Teensy Speed The maximum baudrate supported by teensy 3.5 is 4 million. However, the error percentage at this speed is 0.16%. Hence, we choose to decrease the baudrate to 2 million which has an error rate of 0.00%, allowing the serial communication to be more reliable....","categories": [],
         "tags": [],
         "url": "/open/cam/communication/",
         "teaser": null

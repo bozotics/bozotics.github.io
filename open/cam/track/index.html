@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:modified_time" content="2020-07-07T13:27:42+08:00">
+  <meta property="article:modified_time" content="2021-05-21T18:32:53+08:00">
 
 
 
@@ -323,7 +323,7 @@
 		<meta itemprop="headline" content="Tracking Algorithm">
 		<meta itemprop="description" content="Overview">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2020-07-07T13:27:42+08:00">
+		<meta itemprop="dateModified" content="2021-05-21T18:32:53+08:00">
 
 		<div class="page__inner-wrap">
 			
@@ -356,7 +356,6 @@
           <li><a href="#circular-buffer">Circular buffer</a></li>
           <li><a href="#image-processing">Image Processing</a></li>
           <li><a href="#kalman-filter">Kalman Filter</a></li>
-          <li><a href="#tried--abandoned">Tried &amp; Abandoned</a></li>
         </ul>
       </li>
     </ul>
@@ -378,7 +377,7 @@
 
 <figure style="margin-left:auto;margin-right:auto;">
   
-  <img loading="lazy" src="/assets/images/program_flowchart.png" alt="Cadence and flow" style="margin-left:auto;margin-right:auto;" />
+  <img loading="lazy" src="/assets/images/program_flowchart.png" alt="Main Program Flowchart" style="margin-left:auto;margin-right:auto;" />
   
   
     <figcaption>
@@ -412,17 +411,39 @@
 
 <h4 id="circular-buffer">Circular buffer</h4>
 
+<p>To avoid race conditions where one thread is reading the image while another is writing into the same image array, we implemented the circular buffer. With the circular buffer, each thread is not hindered by another thread while trying to access information. As such, race condition can be prevented and our program is more efficient.</p>
+
 <h4 id="image-processing">Image Processing</h4>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/image_processing.png" alt="Image Processing Flowchart" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Image Processing Flowchart
+
+      
+    </figcaption>
+  
+</figure>
 
 <h4 id="kalman-filter">Kalman Filter</h4>
 
-<h4 id="tried--abandoned">Tried &amp; Abandoned</h4>
+<p>In order to provide an accurate prediction of the ball in situations where it is obscured by other elements on the field, we employed the kalman fitler. With the kalman filter, we can have a better idea of where the ball was based on the trajectory of the ball. However, due to the non-linear nature of the image from our curve mirror, we mapped the ball from the image to real world coordinates before applying kalman filter. This way, the kalman filter is applied effectively.</p>
 
 <h2 id="threading">Threading</h2>
 
+<p>Since we are tracking multiple different objects on the field, ball, goals, area of the field, we utilised threading to improve the performance of our program.</p>
+
 <h3 id="precautions">Precautions</h3>
 
+<p>The most common issue with threading is race condition where a variable is accessed while it is being edited, corrupting the data. Hence, we took extra precautions in our program to prevent this fatal error. Through the use of the atomic varables and locks, we created a program free of race conditions. Another precaution we took was the possibility of locks decreasing the performance of our program. We minimised the impacts of locks on our program by implementing the circular buffer as described above.</p>
+
 <h3 id="dynamic-priority">Dynamic priority</h3>
+
+<p>Keeping in mind not all the elements need to be tracked at the highest frame rate possible all the time, we effectively allocate the available computing resources with dynamic priority implementation. Priorities for different objects can be controlled by the main microcontroller. For example, if the robot is not in possession of the ball, it will run the ball tracking thread at the highest possible performance while other elements like the field and the goals can be placed at a lower priority.</p>
 
 
 				
@@ -437,7 +458,7 @@
 	<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 	
 		<strong>Updated:</strong>
-		<time datetime="2020-07-07">July 7, 2020</time>
+		<time datetime="2021-05-21">May 21, 2021</time>
 	
 </p>
 

@@ -10,7 +10,7 @@
 		<meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Communication | Transcendence</title>
-<meta name="description" content="Speed">
+<meta name="description" content="Serial between Raspi and Teensy">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://bozo.infocommsociety.com/open/cam/communication/">
 
 
-  <meta property="og:description" content="Speed">
+  <meta property="og:description" content="Serial between Raspi and Teensy">
 
 
 
@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:modified_time" content="2020-07-06T00:23:51+08:00">
+  <meta property="article:modified_time" content="2021-05-21T18:32:53+08:00">
 
 
 
@@ -321,9 +321,9 @@
 
 	<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
 		<meta itemprop="headline" content="Communication">
-		<meta itemprop="description" content="Speed">
+		<meta itemprop="description" content="Serial between Raspi and Teensy">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2020-07-06T00:23:51+08:00">
+		<meta itemprop="dateModified" content="2021-05-21T18:32:53+08:00">
 
 		<div class="page__inner-wrap">
 			
@@ -342,16 +342,25 @@
 						<nav class="toc">
 							<header><h4 class="nav__title"><i class="fas fa-satellite-dish"></i> Communication</h4></header>
 							<ul class="toc__menu">
-  <li><a href="#speed">Speed</a></li>
-  <li><a href="#protocol">Protocol</a></li>
+  <li><a href="#serial-between-raspi-and-teensy">Serial between Raspi and Teensy</a>
+    <ul>
+      <li><a href="#speed">Speed</a></li>
+    </ul>
+  </li>
+  <li><a href="#bluetooth">Bluetooth</a></li>
 </ul>
 
 						</nav>
 					</aside>
 				
-				<h2 id="speed">Speed</h2>
+				<h2 id="serial-between-raspi-and-teensy">Serial between Raspi and Teensy</h2>
 
-<h2 id="protocol">Protocol</h2>
+<h3 id="speed">Speed</h3>
+
+<p>The maximum baudrate supported by teensy 3.5 is 4 million. However, the error percentage at this speed is 0.16%. Hence, we choose to decrease the baudrate to 2 million which has an error rate of 0.00%, allowing the serial communication to be more reliable.</p>
+
+<h2 id="bluetooth">Bluetooth</h2>
+
 
 				
 			</section>
@@ -365,7 +374,7 @@
 	<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 	
 		<strong>Updated:</strong>
-		<time datetime="2020-07-06">July 6, 2020</time>
+		<time datetime="2021-05-21">May 21, 2021</time>
 	
 </p>
 
