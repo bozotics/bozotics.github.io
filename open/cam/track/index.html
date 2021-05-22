@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:modified_time" content="2021-05-21T18:32:53+08:00">
+  <meta property="article:modified_time" content="2021-05-22T16:01:10+08:00">
 
 
 
@@ -323,7 +323,7 @@
 		<meta itemprop="headline" content="Tracking Algorithm">
 		<meta itemprop="description" content="Overview">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2021-05-21T18:32:53+08:00">
+		<meta itemprop="dateModified" content="2021-05-22T16:01:10+08:00">
 
 		<div class="page__inner-wrap">
 			
@@ -389,7 +389,7 @@
   
 </figure>
 
-<p>Our program will launch on startup and enter either competition or debug mode upon selection by the user. The code behind the tracking program will be explained in this article while the debugging will be covered under GUI (next article).</p>
+<p>Our program will launch on startup and enter either competition or debug mode upon selection by the user. The code behind the tracking program will be explained in this article while debugging will be covered under GUI (next article).</p>
 
 <h2 id="tracking">Tracking</h2>
 
@@ -399,19 +399,19 @@
 
 <h4 id="speed--latency">Speed &amp; Latency</h4>
 
-<p>We wanted a program which could track object <strong>above 60 FPS</strong> with <strong>minimal latency</strong>. Since our robot is moving at high speeds thoughout the game, it is important to have high refresh rates so that the movement of the robot will be fluid. It is also essential for the robot to have minimal latency to avoid low responsiveness and overshooting the ball while tracking it. From past year’s experience, our robot would overshoot while moving towards the ball which could be explained by the low FPS and high latency of the program as we were using python back then.</p>
+<p>We wanted a program which could track objects <strong>above 60 FPS</strong> with <strong>minimal latency</strong>. Since our robot is moving at high speeds throughout the game, it is important to have high refresh rates so that the movement of the robot will be fluid. It is also essential for the robot to have minimal latency to avoid low responsiveness and overshooting the ball while tracking it. From past year’s experience, our robot would overshoot while moving towards the ball which could be explained by the low FPS and high latency of the program as we were using python back then.</p>
 
 <h4 id="accuracy--reliability">Accuracy &amp; Reliability</h4>
 
-<p>We also wanted a program which can track the objects on the field accurately while doing so reliably. Given that we are using a omnidirectional mirror, the images captured will be distorted and minimised. Furthermore, our mirror is not completely smooth, thus the image will be slightly blurred. To compensate for these problems arising from the choice of an omnidirectional mirror, we had to create a program which has high accuracy and reliability at detecting objects. Moreover, we had to discern between the bjects in the field and unwanted objects outside of the field accurately to prevent detecting false postives.</p>
+<p>We also wanted a program which can track the objects on the field accurately while doing so reliably. Given that we are using an omnidirectional mirror, the images captured will be distorted and minimised. Furthermore, our mirror is not completely smooth, thus the image will be slightly blurred. To compensate for these problems arising from the choice of an omnidirectional mirror, we had to create a program which has high accuracy and reliability at detecting objects. Moreover, we had to discern between the objects in the field and unwanted objects outside of the field accurately to prevent detecting false positives.</p>
 
 <h3 id="algorithms">Algorithms</h3>
 
-<p>We used several algorithms and techniques to achieve the fulfill the considerations we had.</p>
+<p>We used several algorithms and techniques to fulfill the considerations we had.</p>
 
 <h4 id="circular-buffer">Circular buffer</h4>
 
-<p>To avoid race conditions where one thread is reading the image while another is writing into the same image array, we implemented the circular buffer. With the circular buffer, each thread is not hindered by another thread while trying to access information. As such, race condition can be prevented and our program is more efficient.</p>
+<p>To avoid race conditions where one thread is reading the image while another is writing into the same image array, we implemented the circular buffer. With the circular buffer, each thread is not hindered by another thread while trying to access information. As such, race conditions can be prevented and our program is more efficient.</p>
 
 <h4 id="image-processing">Image Processing</h4>
 
@@ -431,7 +431,7 @@
 
 <h4 id="kalman-filter">Kalman Filter</h4>
 
-<p>In order to provide an accurate prediction of the ball in situations where it is obscured by other elements on the field, we employed the kalman fitler. With the kalman filter, we can have a better idea of where the ball was based on the trajectory of the ball. However, due to the non-linear nature of the image from our curve mirror, we mapped the ball from the image to real world coordinates before applying kalman filter. This way, the kalman filter is applied effectively.</p>
+<p>In order to provide an accurate prediction of the ball in situations where it is obscured by other elements on the field, we employed the kalman filter. With the kalman filter, we can have a better idea of where the ball was based on the trajectory of the ball. However, due to the non-linear nature of the image from our curved mirror, we mapped the ball from the image to real world coordinates before applying the kalman filter. This way, the kalman filter is applied effectively.</p>
 
 <h2 id="threading">Threading</h2>
 
@@ -439,7 +439,7 @@
 
 <h3 id="precautions">Precautions</h3>
 
-<p>The most common issue with threading is race condition where a variable is accessed while it is being edited, corrupting the data. Hence, we took extra precautions in our program to prevent this fatal error. Through the use of the atomic varables and locks, we created a program free of race conditions. Another precaution we took was the possibility of locks decreasing the performance of our program. We minimised the impacts of locks on our program by implementing the circular buffer as described above.</p>
+<p>The most common issue with threading is race condition where a variable is accessed while it is being edited, corrupting the data. Hence, we took extra precautions in our program to prevent this fatal error. Through the use of the atomic variables and locks, we created a program free of race conditions. Another precaution we took was the possibility of locks decreasing the performance of our program. We minimise the impacts of locks on our program by implementing the circular buffer as described above.</p>
 
 <h3 id="dynamic-priority">Dynamic priority</h3>
 
@@ -458,7 +458,7 @@
 	<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 	
 		<strong>Updated:</strong>
-		<time datetime="2021-05-21">May 21, 2021</time>
+		<time datetime="2021-05-22">May 22, 2021</time>
 	
 </p>
 
