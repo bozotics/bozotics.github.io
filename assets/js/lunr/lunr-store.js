@@ -150,9 +150,39 @@ var store = [{
         "teaser": null
       },{
         "title": "Strategy",
-        "excerpt":"Strategy   COMING NOT SO SOON  ","categories": [],
+        "excerpt":"This section contains information related to movement and strategy for the robot i.e. the main tracking program that runs on the Teensy which receives input from the various sensors to come up with the correct robot trajectory. Below is a simplified flowchart of the robot’s overall logic: Teensy program flowchart...","categories": [],
         "tags": [],
         "url": "/open/strat/",
+        "teaser": null
+      },{
+        "title": "Attack Strategy",
+        "excerpt":"Ball following   bruh   Front catchment   bruh   Back catchment   bruh   Goal aiming   bruh   Front scoring   bruh   Back scoring   bruh  ","categories": [],
+        "tags": [],
+        "url": "/open/strat/attack/",
+        "teaser": null
+      },{
+        "title": "Defence Strategy",
+        "excerpt":"Ball following  ","categories": [],
+        "tags": [],
+        "url": "/open/strat/defence/",
+        "teaser": null
+      },{
+        "title": "Localisation",
+        "excerpt":"Camera  ","categories": [],
+        "tags": [],
+        "url": "/open/strat/localisation/",
+        "teaser": null
+      },{
+        "title": "Staying Within Bounds",
+        "excerpt":"Sensor configuration   bruh   Line avoidance   bruh x2   Line tracking   bruh x3  ","categories": [],
+        "tags": [],
+        "url": "/open/strat/staying/",
+        "teaser": null
+      },{
+        "title": "State Switching",
+        "excerpt":"Lmao   bruh  ","categories": [],
+        "tags": [],
+        "url": "/open/strat/state/",
         "teaser": null
       },{
         "title": "Debugging",
@@ -267,5 +297,11 @@ var store = [{
         "excerpt":"We made a poster for the RCJ Soccer Virtual Poster Session 2020!   Poster PDF       This browser does not support viewing PDF. Please download the PDF to view it: Download PDF.     Accompanying video               ","categories": [],
         "tags": [],
         "url": "/resources/poster/",
+        "teaser": null
+      },{
+        "title": "Virtual RCJ SG Open 2021",
+        "excerpt":"We made a few video materials which we submitted in the Virtual RoboCup SG Open 2021 event.   These videos, as well as other video clips such as our interviews, can be found in this YouTube playlist.   ","categories": [],
+        "tags": [],
+        "url": "/resources/RCJ-SG-2021/",
         "teaser": null
       }]

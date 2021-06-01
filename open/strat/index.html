@@ -10,7 +10,7 @@
 		<meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Strategy | Transcendence</title>
-<meta name="description" content="Strategy">
+<meta name="description" content="This section contains information related to movement and strategy for the robot i.e. the main tracking program that runs on the Teensy which receives input from the various sensors to come up with the correct robot trajectory.">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://bozo.infocommsociety.com/open/strat/">
 
 
-  <meta property="og:description" content="Strategy">
+  <meta property="og:description" content="This section contains information related to movement and strategy for the robot i.e. the main tracking program that runs on the Teensy which receives input from the various sensors to come up with the correct robot trajectory.">
 
 
 
@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:modified_time" content="2020-07-05T20:14:31+08:00">
+  <meta property="article:modified_time" content="2021-06-02T05:55:44+08:00">
 
 
 
@@ -293,6 +293,20 @@
         
 
         
+        <ul>
+          
+            <li><a href="/open/strat/attack/">Attack Strategy</a></li>
+          
+            <li><a href="/open/strat/defence/">Defence Strategy</a></li>
+          
+            <li><a href="/open/strat/localisation/">Localisation</a></li>
+          
+            <li><a href="/open/strat/staying/">Staying Within Bounds</a></li>
+          
+            <li><a href="/open/strat/state/">State Switching</a></li>
+          
+        </ul>
+        
       </li>
     
       <li>
@@ -322,9 +336,9 @@
 
 	<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
 		<meta itemprop="headline" content="Strategy">
-		<meta itemprop="description" content="Strategy">
+		<meta itemprop="description" content="This section contains information related to movement and strategy for the robot i.e. the main tracking program that runs on the Teensy which receives input from the various sensors to come up with the correct robot trajectory.">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2020-07-05T20:14:31+08:00">
+		<meta itemprop="dateModified" content="2021-06-02T05:55:44+08:00">
 
 		<div class="page__inner-wrap">
 			
@@ -339,9 +353,33 @@
 
 			<section class="page__content" itemprop="text">
 				
-				<p>Strategy</p>
+				<p>This section contains information related to movement and strategy for the robot i.e. the main tracking program that runs on the Teensy which receives input from the various sensors to come up with the correct robot trajectory.</p>
 
-<h1 id="coming-not-so-soon">COMING NOT SO SOON</h1>
+<p>Below is a simplified flowchart of the robot’s overall logic:</p>
+
+<figure class="single ">
+  
+    
+      <a href="/assets/images/teensy-program-flowchart.png" title="Teensy program flowchart">
+          <img loading="lazy" src="/assets/images/teensy-program-flowchart.png" alt="Teensy program flowchart" />
+      </a>
+    
+  
+  
+    <figcaption>Teensy program flowchart
+</figcaption>
+  
+</figure>
+
+<p>The different subpages for this section are as follows:</p>
+
+<ul>
+  <li><a href="/open/strat/attack/">Attack Strategy</a>: Strategy for the striker robot</li>
+  <li><a href="/open/strat/defence/">Defence Strategy</a>: Strategy for the goalie robot</li>
+  <li><a href="/open/strat/localistion/">Localisation</a>: Algorithms used by the robot to determine its position and orientation on the field</li>
+  <li><a href="/open/strat/staying/">Staying Within Bounds</a>: Algorithms used for staying within the field lines</li>
+  <li><a href="/open/strat/state/">State Switching</a>: Dynamic switching of striker/goalie roles between robots</li>
+</ul>
 
 				
 			</section>
@@ -355,7 +393,7 @@
 	<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 	
 		<strong>Updated:</strong>
-		<time datetime="2020-07-05">July 5, 2020</time>
+		<time datetime="2021-06-02">June 2, 2021</time>
 	
 </p>
 
@@ -370,7 +408,7 @@
 ">Previous</a>
     
     
-      <a href="/open/debug/" class="pagination--pager" title="Debugging
+      <a href="/open/strat/attack/" class="pagination--pager" title="Attack Strategy
 ">Next</a>
     
   </nav>

@@ -9,19 +9,19 @@
 	<head>
 		<meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Selection Process | Transcendence</title>
-<meta name="description" content="Suppliers">
+<!-- begin _includes/seo.html --><title>Staying Within Bounds | Transcendence</title>
+<meta name="description" content="Sensor configuration">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Transcendence">
-<meta property="og:title" content="Selection Process">
-<meta property="og:url" content="https://bozo.infocommsociety.com/open/elec/selection/">
+<meta property="og:title" content="Staying Within Bounds">
+<meta property="og:url" content="https://bozo.infocommsociety.com/open/strat/staying/">
 
 
-  <meta property="og:description" content="Suppliers">
+  <meta property="og:description" content="Sensor configuration">
 
 
 
@@ -33,12 +33,12 @@
 
 
 
-  <meta property="article:modified_time" content="2020-07-17T17:36:59+08:00">
+  <meta property="article:modified_time" content="2021-06-02T05:55:44+08:00">
 
 
 
 
-<link rel="canonical" href="https://bozo.infocommsociety.com/open/elec/selection/">
+<link rel="canonical" href="https://bozo.infocommsociety.com/open/strat/staying/">
 
 
 
@@ -253,7 +253,7 @@
           
             <li><a href="/open/elec/design/">Design</a></li>
           
-            <li><a href="/open/elec/selection/" class="active">Selection Process</a></li>
+            <li><a href="/open/elec/selection/">Selection Process</a></li>
           
             <li><a href="/open/elec/components/">Components</a></li>
           
@@ -301,7 +301,7 @@
           
             <li><a href="/open/strat/localisation/">Localisation</a></li>
           
-            <li><a href="/open/strat/staying/">Staying Within Bounds</a></li>
+            <li><a href="/open/strat/staying/" class="active">Staying Within Bounds</a></li>
           
             <li><a href="/open/strat/state/">State Switching</a></li>
           
@@ -335,15 +335,15 @@
 
 
 	<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-		<meta itemprop="headline" content="Selection Process">
-		<meta itemprop="description" content="Suppliers">
+		<meta itemprop="headline" content="Staying Within Bounds">
+		<meta itemprop="description" content="Sensor configuration">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2020-07-17T17:36:59+08:00">
+		<meta itemprop="dateModified" content="2021-06-02T05:55:44+08:00">
 
 		<div class="page__inner-wrap">
 			
 				<header>
-					<h1 id="page-title" class="page__title" itemprop="headline">Selection Process
+					<h1 id="page-title" class="page__title" itemprop="headline">Staying Within Bounds
 </h1>
 					
 
@@ -355,65 +355,27 @@
 				
 					<aside class="sidebar__right sticky">
 						<nav class="toc">
-							<header><h4 class="nav__title"><i class="fas fa-check-square"></i> Selection Process</h4></header>
+							<header><h4 class="nav__title"><i class="fas fa-grip-lines-vertical"></i> Staying Within Bounds</h4></header>
 							<ul class="toc__menu">
-  <li><a href="#suppliers">Suppliers</a></li>
-  <li><a href="#selection">Selection</a></li>
-  <li><a href="#caveats">Caveats</a></li>
+  <li><a href="#sensor-configuration">Sensor configuration</a></li>
+  <li><a href="#line-avoidance">Line avoidance</a></li>
+  <li><a href="#line-tracking">Line tracking</a></li>
 </ul>
 
 						</nav>
 					</aside>
 				
-				<h2 id="suppliers">Suppliers</h2>
+				<h2 id="sensor-configuration">Sensor configuration</h2>
 
-<p>Apart from the reasons outlined in the
-<a href="/open/elec/components">components section</a>, one main reason we select our
-components is the availability here in Singapore.</p>
+<p>bruh</p>
 
-<p>We used to source our components from the local Sim Lim Tower, a retail complex
-with shops selling electrical components. We also purchase certain parts from
-the local shop SGBotic, which is a distributor for popular brands like Pololu,
-Sparkfun, Adafruit etc.</p>
+<h2 id="line-avoidance">Line avoidance</h2>
 
-<p>However, purchasing parts locally was getting expensive. We had a limited budget
-with an increasing number of teams to spend it on. Hence, we looked to overseas
-suppliers like <a href="https://world.taobao.com/">Taobao</a> and other major distributors
-like <a href="https://sg.element14.com">element14</a> which sold parts (sometimes
-counterfeit) at cheaper prices.</p>
+<p>bruh x2</p>
 
-<h2 id="selection">Selection</h2>
+<h2 id="line-tracking">Line tracking</h2>
 
-<p>Now, a major reason we select certain components is based on availability on
-trusted Taobao suppliers. We usually purchase from
-<a href="https://youxin-electronic.taobao.com">YouXin</a> and we also discover components
-from there.</p>
-
-<p>For example, out of all the multiplexers that are available, we narrow our
-search down by searching for “multiplexers” on YouXin and sorting by quantity of
-each part sold. This gives us a good indication of the more popular ICs which
-would probably be more trusted and reliable, and also better supported with
-libraries and examples online.</p>
-
-<p>These popular ICs are usually also used in popular breakout boards. For example,
-the LM2596 buck converter IC is both popular as a COTS breakout board and as an
-IC. Thus, when we
-<a href="/open/elec/history/#shift-to-smd">shifted from COTS breakout boards to SMD ICs</a>
-we also looked at the breakout boards we were using while finding different ICs.</p>
-
-<h2 id="caveats">Caveats</h2>
-
-<p>This selection process does not really work for tools. We had purchased bad
-solder which refused to melt, bad flux which burnt off in an instant and smelt
-bad, and bad power tools that melts itself due to the bad construction and
-material choices.</p>
-
-<p>The method of sorting by quantity sold only works within a supplier, and usually
-only for ICs: e.g., sorting all multiplexers within YouXin. When it comes to
-tools, apart from checking quantity sold we try to look out for the price as
-well. While this may seem unintuitive, we look out for more expensive tools
-since most of the time they are still cheaper than purchasing locally, and
-looking out for the cheapest tools was always too good to be true.</p>
+<p>bruh x3</p>
 
 				
 			</section>
@@ -427,7 +389,7 @@ looking out for the cheapest tools was always too good to be true.</p>
 	<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 	
 		<strong>Updated:</strong>
-		<time datetime="2020-07-17">July 17, 2020</time>
+		<time datetime="2021-06-02">June 2, 2021</time>
 	
 </p>
 
@@ -438,11 +400,11 @@ looking out for the cheapest tools was always too good to be true.</p>
 			
   <nav class="pagination">
     
-      <a href="/open/elec/design/" class="pagination--pager" title="Design
+      <a href="/open/strat/localisation/" class="pagination--pager" title="Localisation
 ">Previous</a>
     
     
-      <a href="/open/elec/components/" class="pagination--pager" title="Components
+      <a href="/open/strat/state/" class="pagination--pager" title="State Switching
 ">Next</a>
     
   </nav>
