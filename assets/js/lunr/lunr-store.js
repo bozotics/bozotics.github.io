@@ -60,19 +60,19 @@ var store = [{
         "teaser": null
       },{
         "title": "Mirror Design",
-        "excerpt":"WARNING: THIS IS STILL A WORK IN PROGRESS In order to view the whole field with only one camera, a curved mirror is used to provide 360 degree vision for the robot i.e. catoptric system. Theory Background information Mirror-field diagram) No. Term Definition (a) Camera FOV (Red area) Maximum angle...","categories": [],
+        "excerpt":"In order to view the whole field with only one camera, a curved mirror is used to provide 360 degree vision for the robot i.e. catoptric system. Theory Background information Mirror-field diagram No. Term Definition (a) Camera FOV (Red area) Maximum angle range that the camera is capable of seeing...","categories": [],
         "tags": [],
         "url": "/open/mech/mirror/",
         "teaser": null
       },{
         "title": "Dribbler",
-        "excerpt":"WARNING: THIS IS STILL A WORK IN PROGRESS Dribbler close-up Exploded view of dribbler The biggest inspirations for our dribblers were from teams: EMM Soccer (2016) (Match Video): Double dribbler Input (2017) (Poster, Blog): General concepts Cat-Bot (2018) (Poster, Blog): Dribbler design Theory A dribbler works by having a fast...","categories": [],
+        "excerpt":"Dribbler close-up Exploded view of dribbler The biggest inspirations for our dribblers were from teams: EMM Soccer (2016) (Match Video): Double dribbler Input (2017) (Poster, Blog): General concepts Cat-Bot (2018) (Poster, Blog): Dribbler design Theory A dribbler works by having a fast moving roller that imparts backspin on the ball,...","categories": [],
         "tags": [],
         "url": "/open/mech/dribbler/",
         "teaser": null
       },{
         "title": "Assorted Parts",
-        "excerpt":"WARNING: THIS IS STILL A WORK IN PROGRESS This section lists out all the remaining components that are too small/unimportant to get an entire section for itself 🙃 Battery Holder The battery is usually the single heaviest part of the robot (our battery weighs over 300g), thus a sturdy holder...","categories": [],
+        "excerpt":"This section lists out all the remaining components that are too small/unimportant to get an entire section for itself 🙃 Battery Holder The battery is usually the single heaviest part of the robot (our battery weighs over 300g), thus a sturdy holder for the battery is necessary to prevent it...","categories": [],
         "tags": [],
         "url": "/open/mech/assorted/",
         "teaser": null

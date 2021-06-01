@@ -10,7 +10,7 @@
 		<meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Assorted Parts | Transcendence</title>
-<meta name="description" content="WARNING: THIS IS STILL A WORK IN PROGRESS">
+<meta name="description" content="This section lists out all the remaining components that are too small/unimportant to get an entire section for itself 🙃">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://bozo.infocommsociety.com/open/mech/assorted/">
 
 
-  <meta property="og:description" content="WARNING: THIS IS STILL A WORK IN PROGRESS">
+  <meta property="og:description" content="This section lists out all the remaining components that are too small/unimportant to get an entire section for itself 🙃">
 
 
 
@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:modified_time" content="2020-10-25T01:01:29+08:00">
+  <meta property="article:modified_time" content="2021-06-02T04:44:38+08:00">
 
 
 
@@ -322,9 +322,9 @@
 
 	<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
 		<meta itemprop="headline" content="Assorted Parts">
-		<meta itemprop="description" content="WARNING: THIS IS STILL A WORK IN PROGRESS">
+		<meta itemprop="description" content="This section lists out all the remaining components that are too small/unimportant to get an entire section for itself 🙃">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2020-10-25T01:01:29+08:00">
+		<meta itemprop="dateModified" content="2021-06-02T04:44:38+08:00">
 
 		<div class="page__inner-wrap">
 			
@@ -348,15 +348,12 @@
   <li><a href="#handle">Handle</a></li>
   <li><a href="#main-switch">Main switch</a></li>
   <li><a href="#microprocessor-placements">Microprocessor placements</a></li>
-  <li><a href="#layer-design">Layer design</a></li>
 </ul>
 
 						</nav>
 					</aside>
 				
-				<p>WARNING: THIS IS STILL A WORK IN PROGRESS</p>
-
-<p>This section lists out all the remaining components that are too small/unimportant to get an entire section for itself 🙃</p>
+				<p>This section lists out all the remaining components that are too small/unimportant to get an entire section for itself 🙃</p>
 
 <h2 id="battery-holder">Battery Holder</h2>
 
@@ -366,19 +363,43 @@
 
 <p>The cover to prevent the battery from falling out is a spring-loaded up-down gate that makes it very easy to insert and remove the battery.</p>
 
-<p>ADD IMAGES</p>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/MrxRGYqUD3A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 <h2 id="tof-holder">TOF holder</h2>
 
-<p>Our TOF holder is a 3D printed frame.</p>
+<p>Our TOF holder is a 3D printed frame, allowing the TOFs to be screwed into place.</p>
 
-<p>ADD IMAGES</p>
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/tof-holder.jpg" alt="TOF holder" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      TOF holder
+
+      
+    </figcaption>
+  
+</figure>
 
 <h2 id="handle">Handle</h2>
 
-<p>The handle is sawed out from a 2 mm alumininum metal plate and is mounted on the 4 main supporting stands of the robot.</p>
+<p>The handle is sawed out from a 2 mm alumininum metal plate and is mounted on the 4 main supporting stands of the robot. The reason we opted for aluminium, other than its strength, is because of tradition: a callback to our past where we used manually sawed metal plates for our robot’s layers… 😂 The handle is also supported by 4 points, as continued from the bottom layers, which adds to its stability and strength.</p>
 
-<p>Why we choose metal handle + Why mount by 4 points</p>
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/handle.jpg" alt="Robot handle" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Robot handle
+
+      
+    </figcaption>
+  
+</figure>
 
 <h2 id="main-switch">Main switch</h2>
 
@@ -388,35 +409,69 @@
 
 <h2 id="microprocessor-placements">Microprocessor placements</h2>
 
-<p>Logic behind placements of teensy and raspi</p>
+<p>As simple as it may seem, the position and orientation of the microprocessors used is extremely important to ensure ease of programming.</p>
 
-<h2 id="layer-design">Layer design</h2>
+<p>The Raspberry Pi is placed directly under the Layer 4 PCB, where the Raspberry Pi camera is mounted, such that the wire goes up to the camera directly. More importantly, the Pi is elevated by around 5mm, which allows the ethernet cable to be easily unclipped and extracted.</p>
 
-<p>STUFF TO ADD
-Monetary costs (BOM?)</p>
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/pi-ethernet-port.jpg" alt="RasPi ethernet port" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      That gap under the ethernet cable is more important than it looks 🙃
 
-<p>Drive system: 
-motors used, placement angle
-wheel design</p>
+      
+    </figcaption>
+  
+</figure>
 
-<p>Dribbler: design details (gear, bearing, plate, motor, roller, ski ramp)
-Solenoid: why only 1, design (solenoid plate, placement)</p>
+<p>The Teensy 3.6 is located adjacent to the Raspberry Pi, with its micro-USB port facing the same way as the Pi’s ethernet port. There is also a small indent designed into the trapezium mount above the Teensy, allowing for the program mode button to be pressed easily.</p>
 
-<p>Mirror: design process, manufacturing process
-Mirror plate, mirror plate supporter (trapezium stands)
-Camera module: camera cone cover, camera position (height)</p>
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/teensy-position.jpg" alt="Teensy position" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Our ports are all on the port side
 
-<p>Battery slot</p>
+      
+    </figcaption>
+  
+</figure>
 
-<p>Switch</p>
+<p>The SH1.0 connectors (used for programming the STM32 chip through SWD) can be easily connected to on each layer. The reset button and indicator LEDs are also located close by and are equally accessible.</p>
 
-<p>Large microprocessor placements (raspi, teensy)</p>
+<figure class="third ">
+  
+    
+      <a href="/assets/images/layer1-sh-conn.jpg" title="SH1.0 connector on Layer 1">
+          <img loading="lazy" src="/assets/images/layer1-sh-conn.jpg" alt="SH1.0 connector on Layer 1" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/layer3-sh-conn.jpg" title="SH1.0 connector on Layer 3">
+          <img loading="lazy" src="/assets/images/layer3-sh-conn.jpg" alt="SH1.0 connector on Layer 3" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/layer4-sh-conn.jpg" title="SH1.0 connector on Layer 4">
+          <img loading="lazy" src="/assets/images/layer4-sh-conn.jpg" alt="SH1.0 connector on Layer 4" />
+      </a>
+    
+  
+  
+    <figcaption>SH1.0 connectors on our PCBs
+</figcaption>
+  
+</figure>
 
-<p>TOF holder</p>
-
-<p>Handle</p>
-
-<p>Layer design</p>
+<!-- TO INCLUDE ## Layer design IF NOT LAZY -->
 
 				
 			</section>
@@ -430,7 +485,7 @@ Camera module: camera cone cover, camera position (height)</p>
 	<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 	
 		<strong>Updated:</strong>
-		<time datetime="2020-10-25">October 25, 2020</time>
+		<time datetime="2021-06-02">June 2, 2021</time>
 	
 </p>
 
