@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:modified_time" content="2020-05-27T15:02:25+08:00">
+  <meta property="article:modified_time" content="2021-06-01T23:11:31+08:00">
 
 
 
@@ -53,6 +53,7 @@
     
   }
 </script>
+
 
 
 
@@ -147,7 +148,7 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-          <a class="site-logo" href="/"><img loading="lazy" src="/assets/images/eagle%20ver%202.1.3.1-transparent-lowres.png" alt=""></a>
+          <a class="site-logo" href="/"><img loading="lazy" src="/assets/images/eagle%20ver%202.1.3.1-transparent-lowres.png" alt="Transcendence"></a>
         
         <a class="site-title" href="/">
           Transcendence
@@ -323,7 +324,7 @@
 		<meta itemprop="headline" content="Mirror Design">
 		<meta itemprop="description" content="WARNING: THIS IS STILL A WORK IN PROGRESS">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2020-05-27T15:02:25+08:00">
+		<meta itemprop="dateModified" content="2021-06-01T23:11:31+08:00">
 
 		<div class="page__inner-wrap">
 			
@@ -344,6 +345,7 @@
 							<ul class="toc__menu">
   <li><a href="#theory">Theory</a>
     <ul>
+      <li><a href="#background-information">Background information</a></li>
       <li><a href="#mirror-curvature">Mirror curvature</a></li>
       <li><a href="#mirror-camera-distance">Mirror-Camera Distance</a></li>
       <li><a href="#catoptric-system-height">Catoptric System Height</a></li>
@@ -376,11 +378,77 @@
 
 <h2 id="theory">Theory</h2>
 
-<p>INSERT RAY DIAGRAM AND IMAGE RENDER FOR DEFINITIONS OF TERMS</p>
+<h3 id="background-information">Background information</h3>
+
+<figure class="single ">
+  
+    
+      <a href="/assets/images/mirror-diagram-labelled.png" title="Mirror-field diagram labelled">
+          <img loading="lazy" src="/assets/images/mirror-diagram-labelled.png" alt="Mirror-field diagram labelled" />
+      </a>
+    
+  
+  
+    <figcaption>Mirror-field diagram)
+</figcaption>
+  
+</figure>
 
 <!-- Things to define: Camera FOV, System FOV, mirror diameter, mirror angle, mirror profile, field distance-->
 
-<p>Note: In reality, light rays reflect off of objects into the camera, but for ease of understanding the rays here represent what the camera sees so the “rays” are perceived as moving in the opposite direction.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">No.</th>
+      <th style="text-align: center">Term</th>
+      <th style="text-align: center">Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">(a)</td>
+      <td style="text-align: center">Camera FOV</td>
+      <td style="text-align: center">(Red area) Maximum angle range that the camera is capable of seeing</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">(b)</td>
+      <td style="text-align: center">System FOV</td>
+      <td style="text-align: center">(Green area) Maximum angle range that the entire catoptric system is able to see</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">(c)</td>
+      <td style="text-align: center">Mirror diameter</td>
+      <td style="text-align: center">The diameter of the mirror at the top (largest diameter)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">(d)</td>
+      <td style="text-align: center">Mirror profile</td>
+      <td style="text-align: center">Refers to the shape of the half section of the mirror</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">(e)</td>
+      <td style="text-align: center">Mirror angle</td>
+      <td style="text-align: center">The angle of elevation of the mirror profile relative to the ground, at a specific point</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">(f)</td>
+      <td style="text-align: center">Mirror height</td>
+      <td style="text-align: center">Distance from the top of the mirror to the ground</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">(g)</td>
+      <td style="text-align: center">Camera height</td>
+      <td style="text-align: center">Distance from the <strong>camera sensor</strong> to the ground</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">(h)</td>
+      <td style="text-align: center">Field distance</td>
+      <td style="text-align: center">The distance on the field represented by a certain camera FOV angle range</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note: In reality, light rays reflect off of objects into the camera, but for ease of understanding, all ray diagrams and explanations should be interpreted from what the camera sees, so the “rays” are perceived as moving from the camera to the field.</p>
 
 <p>For all mirror renders in this section, the actual field setup is as depicted below. The first ball in each row of balls are 200 mm away from the centre, and the following balls are 300 mm from the ball in front of it. The camera and mirror is aligned at the centre of the field and all images are rendered at 640 by 480 px, the actual resolution our Raspberry Pi camera is running at.</p>
 
@@ -743,7 +811,19 @@
 
 <p>This is mainly seen in a few lightweight teams e.g. M&amp;A in RoboCup 2019 (<a href="https://bbcrobotics-mna.weebly.com/">Website</a>), since the mirror needs to see the goals only, which are usually far away, and thus, the problems of a conic mirror is not an issue. Hence, this method was not suitable for us.</p>
 
-<p>INSERT GALLERY</p>
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/mirror-glued.jpg" alt="Glued mirror sheet" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Glued mirror sheet (from Lightweight 2020)
+
+      
+    </figcaption>
+  
+</figure>
 
 <h3 id="moulding-mirror-sheet">Moulding mirror sheet</h3>
 
@@ -964,7 +1044,7 @@
 	<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 	
 		<strong>Updated:</strong>
-		<time datetime="2020-05-27">May 27, 2020</time>
+		<time datetime="2021-06-01">June 1, 2021</time>
 	
 </p>
 

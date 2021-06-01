@@ -54,13 +54,13 @@ var store = [{
         "teaser": null
       },{
         "title": "Drive System",
-        "excerpt":"WARNING: THIS IS STILL A WORK IN PROGRESS The drive system is the most important part of the robot, directly dictating the degree of mobility of the robot. A 4-wheeled holonomic drive was utilised to give our robot full control over both its linear and angular velocity. Much consideration was...","categories": [],
+        "excerpt":"The drive system is the most important part of the robot, directly dictating the degree of mobility of the robot. A 4-wheeled holonomic drive was utilised to give our robot full control over both its linear and angular velocity. Much consideration was also put into the individual components to produce...","categories": [],
         "tags": [],
         "url": "/open/mech/drive/",
         "teaser": null
       },{
         "title": "Mirror Design",
-        "excerpt":"WARNING: THIS IS STILL A WORK IN PROGRESS In order to view the whole field with only one camera, a curved mirror is used to provide 360 degree vision for the robot i.e. catoptric system. Theory INSERT RAY DIAGRAM AND IMAGE RENDER FOR DEFINITIONS OF TERMS Note: In reality, light...","categories": [],
+        "excerpt":"WARNING: THIS IS STILL A WORK IN PROGRESS In order to view the whole field with only one camera, a curved mirror is used to provide 360 degree vision for the robot i.e. catoptric system. Theory Background information Mirror-field diagram) No. Term Definition (a) Camera FOV (Red area) Maximum angle...","categories": [],
         "tags": [],
         "url": "/open/mech/mirror/",
         "teaser": null
@@ -144,7 +144,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Communication",
-        "excerpt":"Serial between Raspi and Teensy Speed The maximum baudrate supported by teensy 3.5 is 4 million. However, the error percentage at this speed is 0.16%. Hence, we choose to decrease the baudrate to 2 million which has an error rate of 0.00%, allowing the serial communication to be more reliable....","categories": [],
+        "excerpt":"Serial between Raspi and Teensy Speed The maximum baud rate supported by Teensy 3.5 is 4 million. However, the error percentage at this speed is 0.16%. Hence, we choose to decrease the baudrate to 2 million which has an error rate of 0.00%, allowing the serial communication to be more...","categories": [],
         "tags": [],
         "url": "/open/cam/communication/",
         "teaser": null
