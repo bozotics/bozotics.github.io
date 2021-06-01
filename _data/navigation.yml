@@ -90,6 +90,17 @@ side-open:
         url: "/open/cam/communication/"
   - title: Strategy
     url: "/open/strat/"
+    children:
+      - title: "Attack Strategy"
+        url: "/open/strat/attack/"
+      - title: "Defence Strategy"
+        url: "/open/strat/defence/"
+      - title: "Localisation"
+        url: "/open/strat/localisation/"
+      - title: "Staying Within Bounds"
+        url: "/open/strat/staying/"
+      - title: "State Switching"
+        url: "/open/strat/state/"
   - title: Debugging
     url: "/open/debug/"
   - title: AFI
