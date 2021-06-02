@@ -10,7 +10,7 @@
 		<meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Attack Strategy | Transcendence</title>
-<meta name="description" content="Ball following">
+<meta name="description" content="As a striker, the robot actively chases the ball and tries to score into the goal. We will be explaining the ball following and goal scoring strategies separately.">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://bozo.infocommsociety.com/open/strat/attack/">
 
 
-  <meta property="og:description" content="Ball following">
+  <meta property="og:description" content="As a striker, the robot actively chases the ball and tries to score into the goal. We will be explaining the ball following and goal scoring strategies separately.">
 
 
 
@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:modified_time" content="2021-06-02T05:55:44+08:00">
+  <meta property="article:modified_time" content="2021-06-03T05:48:09+08:00">
 
 
 
@@ -119,6 +119,8 @@
 
 
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
@@ -301,9 +303,11 @@
           
             <li><a href="/open/strat/localisation/">Localisation</a></li>
           
-            <li><a href="/open/strat/staying/">Staying Within Bounds</a></li>
+            <li><a href="/open/strat/line/">Line Control</a></li>
           
             <li><a href="/open/strat/state/">State Switching</a></li>
+          
+            <li><a href="/open/strat/simluation/">Simulation</a></li>
           
         </ul>
         
@@ -336,9 +340,9 @@
 
 	<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
 		<meta itemprop="headline" content="Attack Strategy">
-		<meta itemprop="description" content="Ball following">
+		<meta itemprop="description" content="As a striker, the robot actively chases the ball and tries to score into the goal. We will be explaining the ball following and goal scoring strategies separately.">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2021-06-02T05:55:44+08:00">
+		<meta itemprop="dateModified" content="2021-06-03T05:48:09+08:00">
 
 		<div class="page__inner-wrap">
 			
@@ -357,46 +361,264 @@
 						<nav class="toc">
 							<header><h4 class="nav__title"><i class="fas fa-crosshairs"></i> Attack Strategy</h4></header>
 							<ul class="toc__menu">
-  <li><a href="#ball-following">Ball following</a>
+  <li><a href="#ball-chasing">Ball Chasing</a>
     <ul>
-      <li><a href="#front-catchment">Front catchment</a></li>
-      <li><a href="#back-catchment">Back catchment</a></li>
+      <li><a href="#front-catchment">Front Catchment</a>
+        <ul>
+          <li><a href="#basic-principles">Basic Principles</a></li>
+          <li><a href="#mathematical-approach">Mathematical Approach</a></li>
+          <li><a href="#robot-orientation">Robot Orientation</a></li>
+        </ul>
+      </li>
+      <li><a href="#back-catchment">Back Catchment</a></li>
     </ul>
   </li>
-  <li><a href="#goal-aiming">Goal aiming</a>
+  <li><a href="#goal-aiming">Goal Aiming</a>
     <ul>
-      <li><a href="#front-scoring">Front scoring</a></li>
-      <li><a href="#back-scoring">Back scoring</a></li>
+      <li><a href="#front-scoring">Front Scoring</a></li>
+      <li><a href="#back-scoring">Back Scoring</a></li>
     </ul>
   </li>
+  <li><a href="#waiting-position">Waiting Position</a></li>
+  <li><a href="#staying-in-bounds">Staying In-bounds</a></li>
+  <li><a href="#striker-video">Striker Video</a></li>
 </ul>
 
 						</nav>
 					</aside>
 				
-				<h2 id="ball-following">Ball following</h2>
+				<p>As a striker, the robot actively chases the ball and tries to score into the goal. We will be explaining the ball following and goal scoring strategies separately.</p>
 
-<p>bruh</p>
+<h2 id="ball-chasing">Ball Chasing</h2>
 
-<h3 id="front-catchment">Front catchment</h3>
+<p>Being able to chase down the ball is the most crucial part of any soccer robot. In our case, having a front and back catchment area means different algorithms must be used depending on which catchment area we are using.</p>
 
-<p>bruh</p>
+<h3 id="front-catchment">Front Catchment</h3>
 
-<h3 id="back-catchment">Back catchment</h3>
+<p>To catch the ball in the front catchment area, it is not sufficient to just move towards the ball, the robot must also find the path that orbits it <strong>around</strong> the ball such that it ends up <strong>behind</strong> the ball.</p>
 
-<p>bruh</p>
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/strat-attack-ball-orbit.jpg" alt="Robot orbit ball" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Robot should go behind the ball, not directly to the ball
 
-<h2 id="goal-aiming">Goal aiming</h2>
+      
+    </figcaption>
+  
+</figure>
 
-<p>bruh</p>
+<p>We will be explaining how we achieve such motion intuitively first, before jumping into the math behind it.</p>
 
-<h3 id="front-scoring">Front scoring</h3>
+<h4 id="basic-principles">Basic Principles</h4>
 
-<p>bruh</p>
+<blockquote>
+  <p>Principle 1: The greater the ball angle (from the front of the robot), the more the robot needs to deviate from the ball in order to go around it.</p>
+</blockquote>
 
-<h3 id="back-scoring">Back scoring</h3>
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/strat-attack-ball-offset.jpg" alt="Robot offset to ball" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      As the ball angle increases, the robot angle’s deivation increases
 
-<p>bruh</p>
+      
+    </figcaption>
+  
+</figure>
+
+<p>For the first principle, we’re concerned with the ball’s angle only. From the diagram above, this principle should be self-explanatory: As the ball’s angle increases, it is getting “further away” from the front, which means the robot must deviate further from the ball in order to move <strong>around</strong> the ball. Do note that the maximum offset angle is typically capped at 90°, or the robot runs the risk of moving <em>away</em> from the robot instead of around it (e.g. think about ball angle at 180°).</p>
+
+<blockquote>
+  <p>Principle 2: As the ball distance increases, the robot’s angle deviation should decrease</p>
+</blockquote>
+
+<p>If the robot’s offset angle varies only by the ball’s angle, it could create an inefficient path when the ball is far away, as shown below:</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/strat-attack-ball-bigarc.jpg" alt="Robot inefficient path to ball" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      The robot will move in the red arc, when the green path is more efficient
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>When the ball is further away, the robot can afford to have a smaller offset angle as its main objective becomes <strong>reaching</strong> the ball as fast as possible, not necessarily going <strong>around</strong> it.</p>
+
+<h4 id="mathematical-approach">Mathematical Approach</h4>
+
+<p>The overall equation is simply:</p>
+
+<div>
+    <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mi>B</mi><mo>+</mo><mi>O</mi><mo>⋅</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">R = B + O \cdot M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span>
+</div>
+
+<p>where <em>R</em> is the robot’s bearing, <em>B</em> is the ball’s bearing, <em>O</em> is the offset angle (which varies positively with the ball’s angle), and <em>m</em> is the offset multiplier (which varies inversely with the ball’s distance).</p>
+
+<p>Firstly, for the offset angle, we opted for a simple direct proportionality relationship with <em>B</em>:</p>
+
+<div>
+    <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.1600em" columnalign="center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>min</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>B</mi><mo>⋅</mo><mi>n</mi><mo separator="true">,</mo><mn>90</mn><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn><mi mathvariant="normal">°</mi><mo>≤</mo><mi>B</mi><mo>≤</mo><mn>180</mn><mi mathvariant="normal">°</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>max</mi><mo>⁡</mo><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>B</mi><mo>−</mo><mn>360</mn><mo stretchy="false">)</mo><mo>⋅</mo><mi>n</mi><mo separator="true">,</mo><mo>−</mo><mn>90</mn><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>180</mn><mi mathvariant="normal">°</mi><mo>&lt;</mo><mi>B</mi><mo>&lt;</mo><mn>360</mn><mi mathvariant="normal">°</mi></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">O = 
+    \left\{
+        \begin{matrix}
+        \min(B \cdot n,90)  &amp; 0\degree\leq B\leq180\degree \\ 
+        \max((B-360) \cdot n,-90) &amp; 180\degree&lt;B&lt;360\degree
+        \end{matrix}
+    \right.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">min</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">90</span><span class="mclose">)</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">max</span><span class="mopen">((</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">360</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">−</span><span class="mord">90</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0°</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">180°</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">180°</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">360°</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>
+</div>
+
+<p>where <em>n</em> is a constant. The reason it is a piecewise function is because if the ball is on the left side (0° to 180° the robot needs to orbit around from the right i.e. anti-clockwise, while if the ball is on the right 180° to 360°, th erobot needs to orbit fromt he left i.e. clockwise). As mentioned ealier, the total offset angle is always capped at a magnitude of 90°. Below is the graph of the above function, which might make it easier to visually understand.</p>
+
+<iframe loading="lazy" src="https://www.desmos.com/calculator/bj7wkt40oz?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+
+<p>As for the multiplier <em>M</em>, it varies in a negative exponential relationship with the ball’s distance. The relevant equations are:</p>
+
+<div>
+    <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable rowspacing="0.2500em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mi>f</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mi>D</mi><mi>c</mi></mfrac></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mi>M</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mi>min</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><msup><mi>e</mi><mrow><mi>b</mi><mi>f</mi></mrow></msup><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+    f&amp;=1-\frac{D}{c} \\
+    M &amp;= \min(a{e}^{bf},1)
+    \end{aligned}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.905438em;vertical-align:-1.702719em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.202719em;"><span style="top:-4.202719em;"><span class="pstrut" style="height:3.3603300000000003em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span><span style="top:-2.3176110000000003em;"><span class="pstrut" style="height:3.3603300000000003em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.702719em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.202719em;"><span style="top:-4.202719em;"><span class="pstrut" style="height:3.3603300000000003em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-2.3176110000000003em;"><span class="pstrut" style="height:3.3603300000000003em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mop">min</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord"><span class="mord mathnormal">e</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991079999999999em;"><span style="top:-3.1130000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.702719em;"><span></span></span></span></span></span></span></span></span></span></span>
+</div>
+
+<p>where <em>D</em> is the ball’s distance (in cm), c is a constant that typically represents the maximum ball distance, such that <em>f</em> is a variable measuring how “close” the ball is. The values <em>a</em> and <em>b</em> are constants which can be tuned to change the robot’s ball chasing characteristics.</p>
+
+<p>In the graph below, the red line represents the equation above with arbitrary constants for <em>a</em>, <em>b</em> and <em>c</em>. By increasing <em>a</em>, the graph transforms into the blue and black lines, while increasing <em>b</em> transforms it into the green and purple lines. As shown, by modifying both constants, an ideal response curve can be generated, which would allow the robot to quickly increase its offset angle as it gets closer to the ball, while preventing its arc path from being too large.</p>
+
+<iframe loading="lazy" src="https://www.desmos.com/calculator/dugokevt1z?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+
+<h4 id="robot-orientation">Robot Orientation</h4>
+
+<p>When doing front ball chasing, we have the option of either orientating towards the goal or simply facing straight forward. Whilst in theory, facing the goal sounds like a better idea, after much testing with our specific robot, we found facing straight forward to be more feasible.</p>
+
+<ol>
+  <li>
+    <p>Our robot already has a good enough dribbler that allows it to move in all directions while keeping control of the ball. Hence, after catching the ball, the robot can simply manoeuvre its way to the goal, without tilting towards it.</p>
+  </li>
+  <li>
+    <p>When facing the goal, especially at larger tilts, the robot has to leave the field more in order to catch the ball, as shown in the diagram below.</p>
+  </li>
+</ol>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/strat-attack-front-orient.jpg" alt="Robot leaves field more" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Robot facing straight (left) has to leave the field less to catch the ball vs facing the goal (right)
+
+      
+    </figcaption>
+  
+</figure>
+
+<h3 id="back-catchment">Back Catchment</h3>
+
+<p>The benefit of using the back dribbler when the ball is behind the robot is that it allows for the ball to be caught much faster, since the robot doesn’t have to orbit around the ball and catch it in the front. In addition, the opponent robot would not be able to see the ball when its dribbled in the back, giving it less time to react to the ball.</p>
+
+<p>However, since scoring with a “back dribbler flick” is less reliable, we only trigger the condition for it when the ball is in a small angle range of ± 15° from the back.</p>
+
+<p>Since the range of angles is small, the back ball chasing algorithm is simply to move exactly in the direction of the ball, while applying an angular velocity that is proportional to the ball angle, allowing the robot to turn to face the ball.</p>
+
+<h2 id="goal-aiming">Goal Aiming</h2>
+
+<p>While being able to capture the ball is important, to ultimately win, the robot must be able to convert possession into actual goals scored. With a strong dribbler which allows our robot to manoeuvre in all directions while keeping possession of the ball, extra strategies should be implemented to deal with how the robot should move with the ball and score goals.</p>
+
+<p>Note that for all goal scoring, the robot always orientates itself to face straight forward.</p>
+
+<h3 id="front-scoring">Front Scoring</h3>
+
+<p>The robot uses a similar equation to that of ball chasing i.e. adding an offset angle to the goal angle to orbit its way to face the goal. For goal tracking however, we went with a constant offset multiplier as we wanted the robot to take a big orbit path, regardless of its distance to the goal, such that it has more space to position itself before shooting. Hence, the equations for goal tracking is simply:</p>
+
+<div>
+    <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable rowspacing="0.2500em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mi>R</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mi>G</mi><mo>+</mo><msub><mi>O</mi><mi>G</mi></msub><mo>∗</mo><msub><mi>M</mi><mi>G</mi></msub></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><msub><mi>O</mi><mi>G</mi></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.1600em" columnalign="center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>min</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>G</mi><mo separator="true">,</mo><mn>90</mn><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn><mi mathvariant="normal">°</mi><mo>≤</mo><mi>G</mi><mo>≤</mo><mn>180</mn><mi mathvariant="normal">°</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>max</mi><mo>⁡</mo><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>G</mi><mo>−</mo><mn>360</mn><mo stretchy="false">)</mo><mo separator="true">,</mo><mo>−</mo><mn>90</mn><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>180</mn><mi mathvariant="normal">°</mi><mo>&lt;</mo><mi>G</mi><mo>&lt;</mo><mn>360</mn><mi mathvariant="normal">°</mi></mrow></mstyle></mtd></mtr></mtable></mrow></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+    R&amp;=G + O_{G} * M_{G} \\
+    O_{G} &amp;= 
+    \left\{
+        \begin{matrix}
+        \min(G,90) &amp; 0\degree\leq G\leq180\degree \\ 
+        \max((G-360),-90) &amp; 180\degree&lt;G&lt;360\degree
+        \end{matrix}
+    \right.
+    \end{aligned}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.20003em;vertical-align:-1.850015em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.350015em;"><span style="top:-4.960015em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-2.8500150000000004em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">G</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.850015em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.350015em;"><span style="top:-4.960015em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">G</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">G</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.8500150000000004em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">min</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">90</span><span class="mclose">)</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">max</span><span class="mopen">((</span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">360</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">−</span><span class="mord">90</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0°</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">180°</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">180°</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">360°</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.850015em;"><span></span></span></span></span></span></span></span></span></span></span>
+</div>
+
+<p>where <em>G</em> is the goal’s bearing, <i>O<sub>G</sub></i> is the offset angle for goal tracking, and <i>M<sub>G</sub></i> is a constant multiplier.</p>
+
+<p>The solenoid kick condition is triggered when the robot is less than a specifc distance away from the goal and its current robot angle is in the general forwards direction.</p>
+
+<h3 id="back-scoring">Back Scoring</h3>
+
+<p>If the ball is in the back, the robot moves to 1 of the 2 neutral points in front of the opponent’s goal, based on which one is closer to itself. Once it is within range of the neutral point, it would spin on the spot, either left or right depending on whether it’s on the right or left neutral point respectively, which flicks the ball out of the back catchment area and hopefully its backspin is sufficient to carry it into the goal.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/strat-attack-back-score.jpg" alt="Movement when back scoring" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Robot moves to closest neutral point and spins accordingly
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>As for the positioning of the robot when the goal is blocked, due to the movement towards the neutral points being based on the camera detecting the goals (see <a href="/open/strat/localisation">Localisation</a>), it would naturally move more towards the left or right depending on which area of the goal is blocked.</p>
+
+<p>In the diagram below, the light blue arrows show the vectors to the actual centre of the blue goal and the actual left neutral point. However, as the blue goal is partly blocked by the opponent robot, the <em>perceived</em> centre of the blue goal and <em>perceived</em> neutral point will be shifted left, represented by the orange vectors. This “automatic” shift to the left gives more space for the ball to be flicked from the right, increasing the chances of scoring.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/strat-attack-back-shift.jpg" alt="Neutral point shifts" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Neutral point shifts based on which part of the goal is blocked
+
+      
+    </figcaption>
+  
+</figure>
+
+<h2 id="waiting-position">Waiting Position</h2>
+
+<p>When the robot detects that the ball is not in the field after some time has passed, it returns to its default position, which is located about 25 cm behind the centre of the field. To find out how it is able to move to specific points on the field, see <a href="/open/strat/localisation">Localisation</a>.</p>
+
+<p>UPDATE TO SPECIFIC HEADER</p>
+
+<h2 id="staying-in-bounds">Staying In-bounds</h2>
+
+<p>To stay within boundaries as a striker, we employ a few strategies.</p>
+
+<ol>
+  <li>The further the robot’s distance from the field centre, the slower the robot’s speed. This is a somewhat suitable compromise as the extreme corners and sides of the field are far from the goal, so the slower movement would not produce too big of a disadvantage. However, if we are able to further refine our staying within bounds techniques, we would definitely remove this speed clamp as having a very fast robot is crucial at the highest levels in the international competition.</li>
+  <li>When the robot first hits the line, we will check its present speed. If it is very high, we will perfom a line avoidance, which is where it moves perpendicularly away from the line, inwards into the field (essentially rejecting the line).</li>
+  <li>If the robot is moving slowly, we will perform line tracking instead, where the robot follows the line until it is as close to the ball as possible.</li>
+</ol>
+
+<p>For more information on strategies 2 and 3, check out <a href="/open/strat/line">Line Control</a>.</p>
+
+<h2 id="striker-video">Striker Video</h2>
+
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/jXlGPTwgB9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>UPDATE TO BETTER VID</p>
 
 				
 			</section>
@@ -410,7 +632,7 @@
 	<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 	
 		<strong>Updated:</strong>
-		<time datetime="2021-06-02">June 2, 2021</time>
+		<time datetime="2021-06-03">June 3, 2021</time>
 	
 </p>
 

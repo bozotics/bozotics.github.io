@@ -156,33 +156,39 @@ var store = [{
         "teaser": null
       },{
         "title": "Attack Strategy",
-        "excerpt":"Ball following   bruh   Front catchment   bruh   Back catchment   bruh   Goal aiming   bruh   Front scoring   bruh   Back scoring   bruh  ","categories": [],
+        "excerpt":"As a striker, the robot actively chases the ball and tries to score into the goal. We will be explaining the ball following and goal scoring strategies separately. Ball Chasing Being able to chase down the ball is the most crucial part of any soccer robot. In our case, having...","categories": [],
         "tags": [],
         "url": "/open/strat/attack/",
         "teaser": null
       },{
         "title": "Defence Strategy",
-        "excerpt":"Ball following  ","categories": [],
+        "excerpt":"As a goalie, the robot stays along the line of the penalty areas, following the position of the ball laterally. When the ball is close to the goalie or enters its catchment area, it will automatically enter attack mode. Ball Following The goalie simply line tracks on the penalty area...","categories": [],
         "tags": [],
         "url": "/open/strat/defence/",
         "teaser": null
       },{
         "title": "Localisation",
-        "excerpt":"Camera  ","categories": [],
+        "excerpt":"We have came up with a method for finding the position and orientation of the robot using purely the camera, which we also use to be able to face “straight” forward. Camera Localisation There are usually two big issues when it comes to camera localisation: Inaccuracy: Due to noise from...","categories": [],
         "tags": [],
         "url": "/open/strat/localisation/",
         "teaser": null
       },{
-        "title": "Staying Within Bounds",
+        "title": "Line Control",
         "excerpt":"Sensor configuration   bruh   Line avoidance   bruh x2   Line tracking   bruh x3  ","categories": [],
         "tags": [],
-        "url": "/open/strat/staying/",
+        "url": "/open/strat/line/",
         "teaser": null
       },{
         "title": "State Switching",
         "excerpt":"Lmao   bruh  ","categories": [],
         "tags": [],
         "url": "/open/strat/state/",
+        "teaser": null
+      },{
+        "title": "Simluation",
+        "excerpt":"About it   bruh   Future strategy ideas   lmao top secret  ","categories": [],
+        "tags": [],
+        "url": "/open/strat/simluation/",
         "teaser": null
       },{
         "title": "Debugging",

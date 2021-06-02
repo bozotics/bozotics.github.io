@@ -9,19 +9,19 @@
 	<head>
 		<meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Localisation | Transcendence</title>
-<meta name="description" content="We have came up with a method for finding the position and orientation of the robot using purely the camera, which we also use to be able to face “straight” forward.">
+<!-- begin _includes/seo.html --><title>Simluation | Transcendence</title>
+<meta name="description" content="About it">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Transcendence">
-<meta property="og:title" content="Localisation">
-<meta property="og:url" content="https://bozo.infocommsociety.com/open/strat/localisation/">
+<meta property="og:title" content="Simluation">
+<meta property="og:url" content="https://bozo.infocommsociety.com/open/strat/simluation/">
 
 
-  <meta property="og:description" content="We have came up with a method for finding the position and orientation of the robot using purely the camera, which we also use to be able to face “straight” forward.">
+  <meta property="og:description" content="About it">
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-<link rel="canonical" href="https://bozo.infocommsociety.com/open/strat/localisation/">
+<link rel="canonical" href="https://bozo.infocommsociety.com/open/strat/simluation/">
 
 
 
@@ -299,13 +299,13 @@
           
             <li><a href="/open/strat/defence/">Defence Strategy</a></li>
           
-            <li><a href="/open/strat/localisation/" class="active">Localisation</a></li>
+            <li><a href="/open/strat/localisation/">Localisation</a></li>
           
             <li><a href="/open/strat/line/">Line Control</a></li>
           
             <li><a href="/open/strat/state/">State Switching</a></li>
           
-            <li><a href="/open/strat/simluation/">Simulation</a></li>
+            <li><a href="/open/strat/simluation/" class="active">Simulation</a></li>
           
         </ul>
         
@@ -337,15 +337,15 @@
 
 
 	<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-		<meta itemprop="headline" content="Localisation">
-		<meta itemprop="description" content="We have came up with a method for finding the position and orientation of the robot using purely the camera, which we also use to be able to face “straight” forward.">
+		<meta itemprop="headline" content="Simluation">
+		<meta itemprop="description" content="About it">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
 		<meta itemprop="dateModified" content="2021-06-03T05:48:09+08:00">
 
 		<div class="page__inner-wrap">
 			
 				<header>
-					<h1 id="page-title" class="page__title" itemprop="headline">Localisation
+					<h1 id="page-title" class="page__title" itemprop="headline">Simluation
 </h1>
 					
 
@@ -357,131 +357,22 @@
 				
 					<aside class="sidebar__right sticky">
 						<nav class="toc">
-							<header><h4 class="nav__title"><i class="fas fa-map-marker-alt"></i> Localisation</h4></header>
+							<header><h4 class="nav__title"><i class="fas fa-python"></i> Simulation</h4></header>
 							<ul class="toc__menu">
-  <li><a href="#camera-localisation">Camera Localisation</a>
-    <ul>
-      <li><a href="#position">Position</a></li>
-      <li><a href="#orientation">Orientation</a></li>
-      <li><a href="#other-landmarks">Other Landmarks</a></li>
-    </ul>
-  </li>
-  <li><a href="#tof-localisation">TOF Localisation</a></li>
+  <li><a href="#about-it">About it</a></li>
+  <li><a href="#future-strategy-ideas">Future strategy ideas</a></li>
 </ul>
 
 						</nav>
 					</aside>
 				
-				<p>We have came up with a method for finding the position and orientation of the robot using purely the camera, which we also use to be able to face “straight” forward.</p>
+				<h2 id="about-it">About it</h2>
 
-<h2 id="camera-localisation">Camera Localisation</h2>
+<p>bruh</p>
 
-<p>There are usually two big issues when it comes to camera localisation:</p>
+<h2 id="future-strategy-ideas">Future strategy ideas</h2>
 
-<ol>
-  <li>Inaccuracy: Due to noise from the camera’s image, the areas detected as objects are constantly changing, which would change the distance measurements (from our testing, the angle remains quite stable). Besides, the further away an object is, the more stretching (distortion) would occur to its image on the mirror. Hence, any small fluctuations in the object’s position could cause large distance changes on the image.</li>
-  <li>Lack of reliabilty: The field is often crowded with many robots which would severely limit the robot’s field of view. This prevents the robot from being able to constantly see the landmarks it needs to calculate its position.</li>
-</ol>
-
-<p>However, our method has proven to be rather successful in circumventing these problems. Note that our “localisation” algorithm finds the vector from the robot to a specific point on the field, not necessarily finding out the current position of the robot (since localisation is, more often than not, simply used to find out where to move to reach a desired destination).</p>
-
-<h3 id="position">Position</h3>
-
-<p>At first glance, it might seem logical to simply form the vectors from the robot to the 2 goals, and since we know the real-life positions of the 2 goals relative to each other, it would thus be possible to triangulate the robot’s position relative to the 2 goals. However, due to the inaccurate distance measurements as stated in point 1 above, this would not yield good results, since it relies on the camera measurements matching up to the real distance of the goals.</p>
-
-<p>Hence, our method avoids absolute distances completely by first finding the relative centre between the 2 goals. In the diagram below, we see that given yellow vector <em>CB</em> and blue vector <em>CD</em>, their vector sum adds up to <em>CE</em>, for which halving its magnitude would create vector <em>CA</em> that points directly to the centre point. The benefit of finding the centre point first is that it’s a relative reference point i.e. positions on the field will be based on this reference point, but its a relative point between the 2 goals rather than a “fixed” point based on knowledge of absolute distances.</p>
-
-<p>Once we know the centre point, we can find vector <em>AB = CB - CA</em>. Vector <em>AB</em> is very important as this represents the vector that tells us the direction of where the front of the field is (assuming facing the yellow goal is the “front” position).</p>
-
-<figure style="margin-left:auto;margin-right:auto;">
-  
-  <img loading="lazy" src="/assets/images/strat-local-1.jpg" alt="Finding centre point" style="margin-left:auto;margin-right:auto;" />
-  
-  
-    <figcaption>
-      
-      Finding centre point
-
-      
-    </figcaption>
-  
-</figure>
-
-<p>Now, let’s say we want to move to point F. We already know the angle of vector <em>AF</em> relative to vector <em>AB</em>, since angles are quite accurate and “real-life” values can be used. For the magnitude of <em>AF</em>, we know the real-life ratio of its length relative to the distance between the 2 goals. Using this ratio, we multiply it by the total goal distance <em>BD</em>, to give us the relative length of <em>AF</em>! And just like that, the vector from the robot to the point is simply <em>CF = CA + AF</em>!</p>
-
-<figure style="margin-left:auto;margin-right:auto;">
-  
-  <img loading="lazy" src="/assets/images/strat-local-2.jpg" alt="Finding vector CF" style="margin-left:auto;margin-right:auto;" />
-  
-  
-    <figcaption>
-      
-      Finding vector <em>CF</em>
-
-      
-    </figcaption>
-  
-</figure>
-
-<p>To show that this method is resilient to “false” distance measurements, the diagram below shows a scenario where the robot detects the correct blue goal angle, but its distance is detected at around 2/3 of the actual distance (note that in reality, our maximum deviation is only around 75% of the actual distance when the robot is furthest away from the goal).</p>
-
-<p>The diagram is drawn to scale (in Fusion 360) and the first circle to the left, shows the real position of point F, while the circle more to the right shows the calculated position of point F. Even with a theoretical 33% measurement error, the final calculated position is only slightly deviated away from the real position, nowhere near significant to negatively affect the robot’s performance.</p>
-
-<figure class="single ">
-  
-    
-      <a href="/assets/images/strat-local-3.jpg" title="Calculations are resilient to false measurements">
-          <img loading="lazy" src="/assets/images/strat-local-3.jpg" alt="Resilient to false reading" />
-      </a>
-    
-  
-  
-    <figcaption>Calculations are resilient to false measurements
-</figcaption>
-  
-</figure>
-
-<h3 id="orientation">Orientation</h3>
-
-<p>In order to find out our orientation, we simply take reference to vector <em>AB</em>. Since the information regarding landmarks are all in polar form (angle and distance), we work with all our vectors in polar form as well. Hence, the angle of vector <em>AB</em> is simply the current orientation of the robot. By applying an angular velocity that is proportional to the angle of vector <em>AB</em>, the robot can be made to face straight forward.</p>
-
-<figure style="margin-left:auto;margin-right:auto;">
-  
-  <img loading="lazy" src="/assets/images/strat-local-4.jpg" alt="Orientating to vector AB" style="margin-left:auto;margin-right:auto;" />
-  
-  
-    <figcaption>
-      
-      Orientating to vector <em>AB</em>
-
-      
-    </figcaption>
-  
-</figure>
-
-<p>To orientate towards the blue goal as the “front” instead, we can just reference to vector <em>AD</em> instead.</p>
-
-<h3 id="other-landmarks">Other Landmarks</h3>
-
-<p>To further improve this, we can use the entire field instead. We are currently able to detect the entire field by tracking all that is green and drawing a “best-fit rectangle” around it. Simply looking at the angle of this rectangle relative to the front of the robot can easily tell us our heading. We did not have enough time to fully look into the feasibility of this, but it is definitely something we will try in the near future.</p>
-
-<figure style="margin-left:auto;margin-right:auto;">
-  
-  <img loading="lazy" src="/assets/images/strat-local-5.jpg" alt="Field tracking" style="margin-left:auto;margin-right:auto;" />
-  
-  
-    <figcaption>
-      
-      Field tracking
-
-      
-    </figcaption>
-  
-</figure>
-
-<h2 id="tof-localisation">TOF Localisation</h2>
-
-<p>Coming soon, maybe never</p>
+<p>lmao top secret</p>
 
 				
 			</section>
@@ -506,11 +397,11 @@
 			
   <nav class="pagination">
     
-      <a href="/open/strat/defence/" class="pagination--pager" title="Defence Strategy
+      <a href="/open/strat/state/" class="pagination--pager" title="State Switching
 ">Previous</a>
     
     
-      <a href="/open/strat/line/" class="pagination--pager" title="Line Control
+      <a href="/open/debug/" class="pagination--pager" title="Debugging
 ">Next</a>
     
   </nav>

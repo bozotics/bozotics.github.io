@@ -10,7 +10,7 @@
 		<meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Defence Strategy | Transcendence</title>
-<meta name="description" content="Ball following">
+<meta name="description" content="As a goalie, the robot stays along the line of the penalty areas, following the position of the ball laterally. When the ball is close to the goalie or enters its catchment area, it will automatically enter attack mode.">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://bozo.infocommsociety.com/open/strat/defence/">
 
 
-  <meta property="og:description" content="Ball following">
+  <meta property="og:description" content="As a goalie, the robot stays along the line of the penalty areas, following the position of the ball laterally. When the ball is close to the goalie or enters its catchment area, it will automatically enter attack mode.">
 
 
 
@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:modified_time" content="2021-06-02T05:55:44+08:00">
+  <meta property="article:modified_time" content="2021-06-03T05:48:09+08:00">
 
 
 
@@ -301,9 +301,11 @@
           
             <li><a href="/open/strat/localisation/">Localisation</a></li>
           
-            <li><a href="/open/strat/staying/">Staying Within Bounds</a></li>
+            <li><a href="/open/strat/line/">Line Control</a></li>
           
             <li><a href="/open/strat/state/">State Switching</a></li>
+          
+            <li><a href="/open/strat/simluation/">Simulation</a></li>
           
         </ul>
         
@@ -336,9 +338,9 @@
 
 	<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
 		<meta itemprop="headline" content="Defence Strategy">
-		<meta itemprop="description" content="Ball following">
+		<meta itemprop="description" content="As a goalie, the robot stays along the line of the penalty areas, following the position of the ball laterally. When the ball is close to the goalie or enters its catchment area, it will automatically enter attack mode.">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2021-06-02T05:55:44+08:00">
+		<meta itemprop="dateModified" content="2021-06-03T05:48:09+08:00">
 
 		<div class="page__inner-wrap">
 			
@@ -357,13 +359,31 @@
 						<nav class="toc">
 							<header><h4 class="nav__title"><i class="fas fa-shield-alt"></i> Defence Strategy</h4></header>
 							<ul class="toc__menu">
-  <li><a href="#ball-following">Ball following</a></li>
+  <li><a href="#ball-following">Ball Following</a></li>
+  <li><a href="#return-to-goal">Return To Goal</a></li>
+  <li><a href="#goalie-video">Goalie Video</a></li>
 </ul>
 
 						</nav>
 					</aside>
 				
-				<h2 id="ball-following">Ball following</h2>
+				<p>As a goalie, the robot stays along the line of the penalty areas, following the position of the ball laterally. When the ball is close to the goalie or enters its catchment area, it will automatically enter attack mode.</p>
+
+<h2 id="ball-following">Ball Following</h2>
+
+<p>The goalie simply line tracks on the penalty area line, slowing its speed down proportionally to the ball’s angle, such that it always stops in front of the ball. More information about line tracking can be found in <a href="/open/strat/line/">Line Control</a>.</p>
+
+<h2 id="return-to-goal">Return To Goal</h2>
+
+<p>To prevent the robot from line tracking out of the penalty area and onto the rectangular boundary, the robot initiates a movement directly back towards its own goal whenever it detects it is further than a specific distance away from the goal. The robot stops returning to the goal and resumes ball following once it is within the distance range of its goal and on a line.</p>
+
+<p>This return to goal manoeuvre is also performed when the robot moves off the line.</p>
+
+<h2 id="goalie-video">Goalie Video</h2>
+
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/4bFf0z1nTDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>UPDATE TO BETTER VIDEO</p>
 
 				
 			</section>
@@ -377,7 +397,7 @@
 	<i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
 	
 		<strong>Updated:</strong>
-		<time datetime="2021-06-02">June 2, 2021</time>
+		<time datetime="2021-06-03">June 3, 2021</time>
 	
 </p>
 
