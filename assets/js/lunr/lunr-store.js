@@ -168,25 +168,25 @@ var store = [{
         "teaser": null
       },{
         "title": "Localisation",
-        "excerpt":"We have came up with a method for finding the position and orientation of the robot using purely the camera, which we also use to be able to face “straight” forward. Camera Localisation There are usually two big issues when it comes to camera localisation: Inaccuracy: Due to noise from...","categories": [],
+        "excerpt":"We have came up with a method for finding the position and orientation of the robot using purely the camera, which we also use to be able to face “straight” forward. Camera There are usually two big issues when it comes to camera localisation: Inaccuracy: Due to noise from the...","categories": [],
         "tags": [],
         "url": "/open/strat/localisation/",
         "teaser": null
       },{
         "title": "Line Control",
-        "excerpt":"Sensor configuration   bruh   Line avoidance   bruh x2   Line tracking   bruh x3  ","categories": [],
+        "excerpt":"Sensor Configuration Naturally, the main sensors used for staying within the line boundaries are the light sensors. We have 36 light sensors arranged in a ring, as well as 2 extra light sensors at the left and right. While the 2 extra sensors can be used for early detection of...","categories": [],
         "tags": [],
         "url": "/open/strat/line/",
         "teaser": null
       },{
         "title": "State Switching",
-        "excerpt":"Lmao   bruh  ","categories": [],
+        "excerpt":"WARNING THIS IS A WORK IN PROGRESS! Key points The robot with the slave mode bluetooth module constantly sends its ball angle and ball distance data over to the robot with the master mode bluetooth module. When the attack robot detects the ball is behind it while the defence robot...","categories": [],
         "tags": [],
         "url": "/open/strat/state/",
         "teaser": null
       },{
         "title": "Simluation",
-        "excerpt":"About it   bruh   Future strategy ideas   lmao top secret  ","categories": [],
+        "excerpt":"WARNING THIS IS A WORK IN PROGRESS We made a 2D simulation of the game back in 2020 for use in testing out new strategies, some of which have actually been materialised into our actual program. About it The simulation is made using Python, with the Arcade library for sprite...","categories": [],
         "tags": [],
         "url": "/open/strat/simluation/",
         "teaser": null
@@ -198,7 +198,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Areas For Improvement",
-        "excerpt":"Mechanical Dribbler make it ultra vacuum suck Make mirror plate the 4th layer pcb, move all TOF and neopixel to top layer so they can actually be used Do above then make camera cover screwable todo elec/design high V right next to 3V3 bad signals running parallel bad but difficult...","categories": [],
+        "excerpt":"Mechanical Dribbler make it ultra vacuum suck Make mirror plate the 4th layer pcb, move all TOF and neopixel to top layer so they can actually be used Do above then make camera cover screwable Program PID for: Goalie ball track Line track Turning to angle F got 1 more...","categories": [],
         "tags": [],
         "url": "/open/afi/",
         "teaser": null

@@ -10,7 +10,7 @@
 		<meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Line Control | Transcendence</title>
-<meta name="description" content="Sensor configuration">
+<meta name="description" content="Sensor Configuration">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://bozo.infocommsociety.com/open/strat/line/">
 
 
-  <meta property="og:description" content="Sensor configuration">
+  <meta property="og:description" content="Sensor Configuration">
 
 
 
@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:modified_time" content="2021-06-03T05:48:09+08:00">
+  <meta property="article:modified_time" content="2021-06-03T11:06:44+08:00">
 
 
 
@@ -119,6 +119,8 @@
 
 
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
@@ -338,9 +340,9 @@
 
 	<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
 		<meta itemprop="headline" content="Line Control">
-		<meta itemprop="description" content="Sensor configuration">
+		<meta itemprop="description" content="Sensor Configuration">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2021-06-03T05:48:09+08:00">
+		<meta itemprop="dateModified" content="2021-06-03T11:06:44+08:00">
 
 		<div class="page__inner-wrap">
 			
@@ -359,25 +361,231 @@
 						<nav class="toc">
 							<header><h4 class="nav__title"><i class="fas fa-grip-lines-vertical"></i> Line Control</h4></header>
 							<ul class="toc__menu">
-  <li><a href="#sensor-configuration">Sensor configuration</a></li>
-  <li><a href="#line-avoidance">Line avoidance</a></li>
-  <li><a href="#line-tracking">Line tracking</a></li>
+  <li><a href="#sensor-configuration">Sensor Configuration</a></li>
+  <li><a href="#line-avoidance">Line Avoidance</a>
+    <ul>
+      <li><a href="#light-sensors">Light Sensors</a></li>
+      <li><a href="#incorporating-camera">Incorporating Camera</a></li>
+      <li><a href="#uses">Uses</a></li>
+    </ul>
+  </li>
+  <li><a href="#line-tracking">Line Tracking</a>
+    <ul>
+      <li><a href="#theory">Theory</a></li>
+      <li><a href="#incorporating-camera-1">Incorporating Camera</a></li>
+      <li><a href="#uses-1">Uses</a></li>
+    </ul>
+  </li>
 </ul>
 
 						</nav>
 					</aside>
 				
-				<h2 id="sensor-configuration">Sensor configuration</h2>
+				<h2 id="sensor-configuration">Sensor Configuration</h2>
 
-<p>bruh</p>
+<p>Naturally, the main sensors used for staying within the line boundaries are the light sensors. We have 36 light sensors arranged in a ring, as well as 2 extra light sensors at the left and right. While the 2 extra sensors can be used for early detection of the lines, we did not actually end up utilising it in our staying within bounds strategy.</p>
 
-<h2 id="line-avoidance">Line avoidance</h2>
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/light-ring-studio.jpg" alt="Light Ring" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Light sensor ring
 
-<p>bruh x2</p>
+      
+    </figcaption>
+  
+</figure>
 
-<h2 id="line-tracking">Line tracking</h2>
+<p>We opted for 36 for ease of programming, so that each sensor simply represents 10 degrees (measuring from the centre of the robot). Theoretically, any number of sensors and any shape of configuration will work with our strategy as long as there is a connectable ring of light sensors and the angle to each of them is known.</p>
 
-<p>bruh x3</p>
+<p>In addition, since the camera is able to tell us the vector to the centre of the field (see <a href="/open/strat/localisation">Localisation</a>), we can also use it to tell how close we are to the edge of the field, as well as the position of the line relative to the field, which could be useful to tell when it is safe to stop avoiding the line and start tracking the ball again.</p>
+
+<h2 id="line-avoidance">Line Avoidance</h2>
+
+<p>Being able to stay in the field is top priority, on par with being able to follow the ball, because once any robot leaves the field, the team will be at a severe 2-to-1 disadvantage for a full minute. Hence, we can rely on staying in-bounds purely through our light sensors, which means it is essentially impossible for outside interference to ever affect our robot’s ability to stay in-bounds.</p>
+
+<p>Do note that “Line Avoidance” refers to the motion of moving away (typically in a perpendicular direction) from the line, back towards the field, i.e. <em>rejecting</em> the line.</p>
+
+<h3 id="light-sensors">Light Sensors</h3>
+
+<p>Since the light sensors are in a ring, when the robot first touches the line, there will be clusters of sensors that show up as detecting the presence of the white line. We take the 2 sensors that give the biggest <strong>non-reflex</strong> angle about the robot’s centre. Finding the angle bisector of these 2 sensors will give the angle that is perpendicular and towards the line, from the robot’s centre. This works regardless of what type of line the robot is on, as shown in the diagrams below.</p>
+
+<figure class="third ">
+  
+    
+      <a href="/assets/images/strat-line-1.jpg" title="Light ring on straight line">
+          <img loading="lazy" src="/assets/images/strat-line-1.jpg" alt="Straight" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/strat-line-2.jpg" title="Light ring on corner">
+          <img loading="lazy" src="/assets/images/strat-line-2.jpg" alt="Corner" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/strat-line-3.jpg" title="Light ring on curved arc boundary">
+          <img loading="lazy" src="/assets/images/strat-line-3.jpg" alt="Curve" />
+      </a>
+    
+  
+  
+    <figcaption>Light ring on different types of lines
+</figcaption>
+  
+</figure>
+
+<p>We can also determine the relative length of the chord that crosses these 2 sensors, normalising it between 0 and 1 where 1 is the diamemter length. This chord length is a proxy measurement of how much the robot has crossed over the line. Hence the speed of the robot’s rebound is proportional to this chord length.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/strat-line-4.jpg" alt="Chord length" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Chord length increases as robot moves over line
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>However, when the robot crosses the halfway mark, the chord length will begin to decrease, so how do we continue using it to measure how much the robot has crossed the line? Well, since the angle bisector cuts across the non-reflex angle, when the halfway mark is crossed, the angle bisector will essentially “flip” to the other side. Hence, when there is a huge jump from the previous angle of the angle bisector to its present angle, we know the robot is more than halfway past the line and we modify the chord length variable to continue increasing above 1, all the way up to 2.</p>
+
+<p>Hence, “mathematically speaking”, when the smallest angle difference between A<sub>initial</sub> and A<sub>present</sub> is larger than 90°:</p>
+<div>
+    <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.1600em" columnalign="center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><msub><mi>A</mi><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow></msub><mo>+</mo><mn>180</mn><mi mathvariant="normal">°</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>A</mi><mrow><mi>i</mi><mi>n</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>a</mi><mi>l</mi></mrow></msub><mo separator="true">,</mo><msub><mi>A</mi><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow></msub><mo stretchy="false">)</mo><mo>≤</mo><mn>90</mn><mi mathvariant="normal">°</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>A</mi><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>A</mi><mrow><mi>i</mi><mi>n</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>a</mi><mi>l</mi></mrow></msub><mo separator="true">,</mo><msub><mi>A</mi><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow></msub><mo stretchy="false">)</mo><mo>&gt;</mo><mn>90</mn><mi mathvariant="normal">°</mi></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">R = 
+    \left\{
+        \begin{matrix}
+        A_{present} + 180\degree  &amp; f(A_{initial},A_{present}) \leq 90\degree \\ 
+        A_{present} &amp; f(A_{initial},A_{present}) &gt; 90\degree
+        \end{matrix}
+    \right.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.28055599999999997em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">rese</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">180°</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.28055599999999997em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">rese</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ini</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">ia</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.28055599999999997em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">rese</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">90°</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ini</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">ia</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.28055599999999997em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">rese</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">90°</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>
+    <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.1600em" columnalign="center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>l</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>A</mi><mrow><mi>i</mi><mi>n</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>a</mi><mi>l</mi></mrow></msub><mo separator="true">,</mo><msub><mi>A</mi><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow></msub><mo stretchy="false">)</mo><mo>≤</mo><mn>90</mn><mi mathvariant="normal">°</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>2</mn><mo>−</mo><mi>l</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>A</mi><mrow><mi>i</mi><mi>n</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>a</mi><mi>l</mi></mrow></msub><mo separator="true">,</mo><msub><mi>A</mi><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow></msub><mo stretchy="false">)</mo><mo>&gt;</mo><mn>90</mn><mi mathvariant="normal">°</mi></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">L = 
+    \left\{
+        \begin{matrix}
+        \mathit{l}  &amp; f(A_{initial},A_{present}) \leq 90\degree \\ 
+        2-\mathit{l} &amp; f(A_{initial},A_{present}) &gt; 90\degree
+        \end{matrix}
+    \right.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">l</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit">l</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ini</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">ia</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.28055599999999997em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">rese</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">90°</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ini</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">ia</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.28055599999999997em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">rese</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">90°</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>
+    <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow></msub><mo>=</mo><mi>L</mi><mo>⋅</mo><msub><mi>S</mi><mrow><mi>d</mi><mi>e</mi><mi>f</mi><mi>a</mi><mi>u</mi><mi>l</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{present} = L \cdot S_{default}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.28055599999999997em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">rese</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">lt</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>
+</div>
+
+<p>where <em>R</em> is the robot’s bearing to move away from the line, <em>A</em> is the angle of the angle bisector, <em>l</em> is the chord length between the sensors, <em>L</em> is the modified chord length variable representing how far off the line the robot has gone, <em>S</em> is the robot’s speed, and <em>f(x,y)</em> is a function that returns the smallest angle difference between the 2 parameters in degrees.</p>
+
+<h3 id="incorporating-camera">Incorporating Camera</h3>
+
+<p>An alternative to a pure light sensor line avoidance is to use information about the location of the centre point of the field. The most simplified method would be to move in the direction of the centre of the field when a line is detected. However, this may be too simplistic as there is over-reliance on the camera data which has a higher chance of interference.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/strat-line-5.jpg" alt="Return to centre" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Robot moves in direction of field centre when it hits a line
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>A better way could be to find both angle bisectors (of the reflex and non-reflex angle) and move in the one that more closely matches angle to the centre of the field. This simplifies the program as it eliminates the need to check for the “flipping” of angle bisectors.</p>
+
+<p>However, we feel that the simplification which using the camera data brings about does not justify the decreased robustness of the line avoidance program, which is why we still rely on pure light sensor for line avoidance.</p>
+
+<h3 id="uses">Uses</h3>
+
+<p>This is mainly used when the robot hits a line at a high speed. Direct line rejection is necessary to ensure the robot cancels out all the momentum built up from travelling to the line at its high velocity. However, constantly doing line avoidance would result in unnecessary oscillations about the line, which is where the 2nd approach to line control comes in.</p>
+
+<h2 id="line-tracking">Line Tracking</h2>
+
+<p>This is the process where the robot moves to an object/in a certain direction while following a line.</p>
+
+<h3 id="theory">Theory</h3>
+
+<p>As with <em>“normal”</em> (think: 2-wheeled WRO robot) line tracking, there must first be a desired direction to travel in. This is dependent on what object the robot is trying to chase (e.g. ball, goal, point on field).</p>
+
+<p>Next, the robot finds the light sensor that is closest to the desired angle. The angle of this light sensor will thus be the direction of the robot.</p>
+
+<figure class="third ">
+  
+    
+      <a href="/assets/images/strat-line-6.jpg" title="Desired angle: 20&deg;, Line track angle: 50&deg;">
+          <img loading="lazy" src="/assets/images/strat-line-6.jpg" alt="Line 1" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/strat-line-7.jpg" title="Desired angle: 20&deg;, Line track angle: 30&deg;">
+          <img loading="lazy" src="/assets/images/strat-line-7.jpg" alt="Line 2" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/strat-line-8.jpg" title="Desired angle: 20&deg;, Line track angle: 350&deg;">
+          <img loading="lazy" src="/assets/images/strat-line-8.jpg" alt="Line 3" />
+      </a>
+    
+  
+  
+    <figcaption>Various line track angles based on desired angle of 20°
+</figcaption>
+  
+</figure>
+
+<p>As for speed of the robot, it varies inversely with the chord length (i.e. it moves faster the further it is from the halfway mark of the line) as well as inversely with the perpendicular angle deviation of the ball (i.e. it slows down). Hence, the equation for the robot’s speed is:</p>
+
+<div>
+    <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow></msub><mo>=</mo><mi>min</mi><mo>⁡</mo><mo stretchy="false">(</mo><msub><mi>S</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo separator="true">,</mo><mi>a</mi><mo>⋅</mo><msqrt><mi>D</mi></msqrt><mo>+</mo><mi>b</mi><mo>⋅</mo><mi>l</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">S_{present} = \min(S_{max}, a \cdot \sqrt{D} + b \cdot \mathit{l})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.28055599999999997em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">rese</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">min</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ma</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.11333499999999996em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathit">l</span><span class="mclose">)</span></span></span></span>
+</div>
+
+<p>where <em>S<sub>max</sub></em> is the preset maximum speed of the robot, <em>D</em> is the angle of deviation from how far the ball is to being perpendicular to the robot, <em>l</em> is the chord length, and <em>a</em>, <em>b</em> are constants to be tuned.</p>
+
+<h3 id="incorporating-camera-1">Incorporating Camera</h3>
+
+<p>When using line tracking to stay within the field, the location data is used to tell when the ball has been returned to the field. As shown in the diagram below, the yellow arrows represent the angles of the 2 sensors that are detecting the line, the red arrow represents the direction to the centre of the field and the orange arrow is the ball angle. With the yellow arrows acting as the half line, as long as the red and orange arrows lie on the same half it is safe to continue ball chasing.</p>
+
+<figure style="margin-left:auto;margin-right:auto;">
+  
+  <img loading="lazy" src="/assets/images/strat-line-9.jpg" alt="Return to centre" style="margin-left:auto;margin-right:auto;" />
+  
+  
+    <figcaption>
+      
+      Robot moves in direction of field centre when it hits a line
+
+      
+    </figcaption>
+  
+</figure>
+
+<p>A non-localisation based method can work by recording the last seen ball angle and where the robot came from, and then checking whether the ball presently lies on the same side as the robot. This would reduce the reliance on the localisation data, a possible point of inaccuracy. However, we have not gone for this solution yet solely because we’ve been too lazy to program that lmao. ~kfc</p>
+
+<p>TO BE UPDATED!</p>
+
+<h3 id="uses-1">Uses</h3>
+
+<p>Line tracking is used in many places, to stay within bounds, for going to points on the field that lie on the line, and for the goalie program to track the penalty area line.</p>
+
+<p>A very obvious AFI would be to implement PID line tracking, not just the proportional line tracking method currently used, but again sorry i lazy. ~kfc</p>
 
 				
 			</section>

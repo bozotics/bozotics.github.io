@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:modified_time" content="2021-06-03T05:48:09+08:00">
+  <meta property="article:modified_time" content="2021-06-03T11:06:44+08:00">
 
 
 
@@ -342,7 +342,7 @@
 		<meta itemprop="headline" content="Attack Strategy">
 		<meta itemprop="description" content="As a striker, the robot actively chases the ball and tries to score into the goal. We will be explaining the ball following and goal scoring strategies separately.">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2021-06-03T05:48:09+08:00">
+		<meta itemprop="dateModified" content="2021-06-03T11:06:44+08:00">
 
 		<div class="page__inner-wrap">
 			
@@ -494,7 +494,7 @@
 
 <p>where <em>D</em> is the ball’s distance (in cm), c is a constant that typically represents the maximum ball distance, such that <em>f</em> is a variable measuring how “close” the ball is. The values <em>a</em> and <em>b</em> are constants which can be tuned to change the robot’s ball chasing characteristics.</p>
 
-<p>In the graph below, the red line represents the equation above with arbitrary constants for <em>a</em>, <em>b</em> and <em>c</em>. By increasing <em>a</em>, the graph transforms into the blue and black lines, while increasing <em>b</em> transforms it into the green and purple lines. As shown, by modifying both constants, an ideal response curve can be generated, which would allow the robot to quickly increase its offset angle as it gets closer to the ball, while preventing its arc path from being too large.</p>
+<p>In the graph below, the red line represents the equation above with arbitrary constants for <em>a</em>, <em>b</em> and <em>c</em>. By increasing <em>a</em>, the graph transforms into the blue and black lines, while increasing <em>b</em> transforms it into the green and purple lines. As shown, by modifying both constants, an ideal response curve can be generated, which would allow the robot to quickly increase its offset angle as it gets closer to the ball, while preventing its arc path from being too large. Tuning this curve is the difficult part of getting good ball chasing movements.</p>
 
 <iframe loading="lazy" src="https://www.desmos.com/calculator/dugokevt1z?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
 

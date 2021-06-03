@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:modified_time" content="2021-06-03T05:48:09+08:00">
+  <meta property="article:modified_time" content="2021-06-03T11:06:44+08:00">
 
 
 
@@ -340,7 +340,7 @@
 		<meta itemprop="headline" content="Localisation">
 		<meta itemprop="description" content="We have came up with a method for finding the position and orientation of the robot using purely the camera, which we also use to be able to face “straight” forward.">
 		<meta itemprop="datePublished" content="2020-05-02T08:00:00+08:00">
-		<meta itemprop="dateModified" content="2021-06-03T05:48:09+08:00">
+		<meta itemprop="dateModified" content="2021-06-03T11:06:44+08:00">
 
 		<div class="page__inner-wrap">
 			
@@ -359,14 +359,16 @@
 						<nav class="toc">
 							<header><h4 class="nav__title"><i class="fas fa-map-marker-alt"></i> Localisation</h4></header>
 							<ul class="toc__menu">
-  <li><a href="#camera-localisation">Camera Localisation</a>
+  <li><a href="#camera">Camera</a>
     <ul>
       <li><a href="#position">Position</a></li>
       <li><a href="#orientation">Orientation</a></li>
       <li><a href="#other-landmarks">Other Landmarks</a></li>
     </ul>
   </li>
-  <li><a href="#tof-localisation">TOF Localisation</a></li>
+  <li><a href="#light-sensor">Light Sensor</a></li>
+  <li><a href="#tof">TOF</a></li>
+  <li><a href="#localisation-demos">Localisation Demos</a></li>
 </ul>
 
 						</nav>
@@ -374,7 +376,7 @@
 				
 				<p>We have came up with a method for finding the position and orientation of the robot using purely the camera, which we also use to be able to face “straight” forward.</p>
 
-<h2 id="camera-localisation">Camera Localisation</h2>
+<h2 id="camera">Camera</h2>
 
 <p>There are usually two big issues when it comes to camera localisation:</p>
 
@@ -479,9 +481,23 @@
   
 </figure>
 
-<h2 id="tof-localisation">TOF Localisation</h2>
+<h2 id="light-sensor">Light Sensor</h2>
 
-<p>Coming soon, maybe never</p>
+<p>While the line is not the most useful landmark on the field, it is the most trustable landmark since its detected by the light sensors which have virtually no chance of being interfered with.</p>
+
+<p>When the desired point to travel to lies on a line, the robot not only travels in the vector to that point, but also does line tracking based on that vector, to reach the point with greater accuracy.</p>
+
+<p>In addition, for edge cases where the robot is on a line and is unable to use any of the camera’s landmarks for orientation, it can simply orientate itself to be parallel with the line in order to face straight forward.</p>
+
+<h2 id="tof">TOF</h2>
+
+<p>Coming eventually, maybe never, definitely not soon, but probably maybe…</p>
+
+<h2 id="localisation-demos">Localisation Demos</h2>
+
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uwvPuR9AYmc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/3ExjoEmAOgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 				
 			</section>
