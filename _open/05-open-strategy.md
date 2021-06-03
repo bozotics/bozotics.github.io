@@ -19,6 +19,6 @@ The different subpages for this section are as follows:
 - [Attack Strategy](/open/strat/attack/): Strategy for the striker robot
 - [Defence Strategy](/open/strat/defence/): Strategy for the goalie robot
 - [Localisation](/open/strat/localistion/): Algorithms used by the robot to determine its position and orientation on the field
-- [Staying Within Bounds](/open/strat/staying/): Algorithms used for staying within the field lines
+- [Line Control](/open/strat/line/): Algorithms used for staying within the field lines
 - [State Switching](/open/strat/state/): Dynamic switching of striker/goalie roles between robots
 - [Simulation](/open/strat/simulation/): Our 2D simulation program, used for testing novel strategies

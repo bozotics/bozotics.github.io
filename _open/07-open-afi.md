@@ -12,6 +12,18 @@ they can actually be used
 
 Do above then make camera cover screwable
 
+## Program
+
+PID for:
+- Goalie ball track
+- Line track
+- Turning to angle
+- F got 1 more i cant rmb
+
+Tune stupid orbit damn cancer
+
+Incorporate TOF into localisation lmao
+
 <details markdown=1><summary>todo</summary>
 
 - elec/design
