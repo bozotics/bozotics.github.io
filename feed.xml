@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://bozo.infocommsociety.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bozo.infocommsociety.com/" rel="alternate" type="text/html" /><updated>2021-06-23T01:25:05+08:00</updated><id>https://bozo.infocommsociety.com/feed.xml</id><title type="html">Transcendence</title><subtitle>The fine line between innovation and insanity</subtitle><entry><title type="html">A Musing</title><link href="https://bozo.infocommsociety.com/blog/a-musing/" rel="alternate" type="text/html" title="A Musing" /><published>2021-04-18T00:00:00+08:00</published><updated>2021-04-18T12:29:07+08:00</updated><id>https://bozo.infocommsociety.com/blog/a-musing</id><content type="html" xml:base="https://bozo.infocommsociety.com/blog/a-musing/">&lt;p&gt;Robotics is cruelly ironic.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://bozo.infocommsociety.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bozo.infocommsociety.com/" rel="alternate" type="text/html" /><updated>2021-07-05T19:42:57+08:00</updated><id>https://bozo.infocommsociety.com/feed.xml</id><title type="html">Transcendence</title><subtitle>The fine line between innovation and insanity</subtitle><entry><title type="html">A Mazed</title><link href="https://bozo.infocommsociety.com/blog/a-mazed/" rel="alternate" type="text/html" title="A Mazed" /><published>2021-07-05T00:00:00+08:00</published><updated>2021-07-05T19:39:40+08:00</updated><id>https://bozo.infocommsociety.com/blog/a-mazed</id><content type="html" xml:base="https://bozo.infocommsociety.com/blog/a-mazed/">&lt;p&gt;Why do we have a maze on our robot’s mirror plate?&lt;/p&gt;
+
+&lt;figure style=&quot;margin-left:auto;margin-right:auto;&quot;&gt;
+  
+  &lt;img src=&quot;/assets/images/mirror-maze-crop.jpg&quot; alt=&quot;Mirror maze&quot; style=&quot;margin-left:auto;margin-right:auto;&quot; /&gt;
+  
+  
+&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;When you first pick it up,&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;there is a strange allure to its madness.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;You vaguely know where the end point is,&lt;/p&gt;
+&lt;p&gt;but the path to that end is completely unknown.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;You make your entrance.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Corridor by corridor, corner by corner.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Things start moving, progressing,&lt;/p&gt;
+&lt;p&gt;some say even smooth sailing…&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Then you hit your first dead end.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Confusion ensues.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Retrace your steps.&lt;/p&gt;
+&lt;p&gt;Find the way out.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Route after route,&lt;/p&gt;
+&lt;p&gt;Round and round you go.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Passageways once explored&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;out of curiosity and wonderment,&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;become familiar alleyways revisited&lt;/p&gt;
+&lt;p&gt;with disdain and despondency.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;&quot;I mean, there must come a point&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;when I'm back at square one,&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;where I've failed so many times,&lt;/p&gt;
+&lt;p&gt;that only one, &lt;em&gt;correct&lt;/em&gt;, path remains&lt;/p&gt;
+
+&lt;p&gt;…right?”&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Your vision tunnels, your focus sharpens.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Time appears to dilate,&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;but the path forward&lt;/p&gt;
+&lt;p&gt;finally grows clearer.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Yet strangely, as the end draws near,&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;the unshakeable feeling of pointlessness&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;over the entire endeavour&lt;/p&gt;
+&lt;p&gt;only grows stronger.&lt;/p&gt;
+
+&lt;!-- After all, 
+it is always when 
+you're closest to success, 
+where the biggest wave of self-doubt 
+shall come crashing down. --&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Ultimately,&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;what lies in the centre of it all,&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;the &quot;end&quot; of the road,&lt;/p&gt;
+&lt;p&gt;is just a simple, plain mirror.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;It shows your reflection,&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;serving as a reminder &lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;that this journey's &lt;i&gt;purpose&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;has always been &lt;em&gt;you&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Your strongest motivator;&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt; your greatest enemy.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Every lesson gained;&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;every suffering endured.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;The constant stream of bad luck&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;which you have cursed at so passionately&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;as being the work of some evil entity,&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;becomes most laughable&lt;/p&gt;
+&lt;p&gt;in the face of the lifeless environment.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;The only dynamic factor&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;the only thing that has changed&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;throughout this course&lt;/p&gt;
+&lt;p&gt;is you.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;Despite gaining clarity&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;over the absurdity of your situation,&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;the urge still remains&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;to travel this maze once more,&lt;/p&gt;
+&lt;p style=&quot;margin-bottom:0;&quot;&gt;this time going the opposite way,&lt;/p&gt;
+&lt;p&gt;from the inside-out…&lt;/p&gt;
+
+&lt;p&gt;just for &lt;em&gt;fun&lt;/em&gt;.&lt;/p&gt;</content><author><name>Kai Cong</name><email>161815w@student.hci.edu.sg</email></author><category term="Commentary" /><category term="Monthly" /><summary type="html">Why do we have a maze on our robot’s mirror plate?</summary></entry><entry><title type="html">A Musing</title><link href="https://bozo.infocommsociety.com/blog/a-musing/" rel="alternate" type="text/html" title="A Musing" /><published>2021-04-18T00:00:00+08:00</published><updated>2021-04-18T12:29:07+08:00</updated><id>https://bozo.infocommsociety.com/blog/a-musing</id><content type="html" xml:base="https://bozo.infocommsociety.com/blog/a-musing/">&lt;p&gt;Robotics is cruelly ironic.&lt;/p&gt;
 
 &lt;p style=&quot;margin-bottom:0;&quot;&gt;Behind each flashy robot,&lt;/p&gt;
 &lt;p style=&quot;margin-bottom:0;&quot;&gt;99% of the time is spent fixing problems&lt;/p&gt;
@@ -930,63 +1019,4 @@ Lastly, for our light sensors we would be using the same TEMT6000 in our Soccer 
 
 &lt;p&gt;Most of my time last year was spent on FLL so the PCB was completed only like 2 weeks before the competition… Lets just hope that with no FLL this year it can be completed a little earlier!&lt;/p&gt;
 
-&lt;p&gt;Also, &lt;a href=&quot;https://github.com/hcbozo&quot;&gt;github.com/hcbozo&lt;/a&gt;&lt;/p&gt;</content><author><name>Jing Heng</name><email>151436j@student.hci.edu.sg</email></author><category term="Rescue Line" /><category term="Soccer Open" /><category term="Electronics" /><category term="Weekly" /><summary type="html">Can’t really think of a good intro like the previous post, and can’t find that many photos as well, so here is a very wordy introduction / progress update for our Rescue Line and Soccer Open robots.</summary></entry><entry><title type="html">A November Consolidation</title><link href="https://bozo.infocommsociety.com/blog/a-november-consolidation/" rel="alternate" type="text/html" title="A November Consolidation" /><published>2019-12-02T00:00:00+08:00</published><updated>2020-05-24T13:37:11+08:00</updated><id>https://bozo.infocommsociety.com/blog/a-november-consolidation</id><content type="html" xml:base="https://bozo.infocommsociety.com/blog/a-november-consolidation/">&lt;blockquote&gt;
-  &lt;p&gt;November at its best – with a sort of delightful menace in the air.&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Anne Bosworth Greene&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;a-few-thoughts&quot;&gt;&lt;em&gt;A few thoughts…&lt;/em&gt;&lt;/h2&gt;
-
-&lt;p&gt;November is a month of transition from the autumn to winter season. The beautiful spectrum of striking red, flashy orange, and glowing yellow autumn leaves wither and fall, littering the ground with their dry, brown, shriveled bodies, showing no signs of life other than a short flutter from the occasional gust of wind. Days grow shorter and nights grow longer. The cool, crisp air of autumn becomes the bitter, frigid weather of winter. It is no wonder why to some, the month of November symbolizes the approach of death; the nearing of an end of some metaphorical era of one’s life.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/Bricher-Autumn_Landscape-1024x524.jpg&quot; alt=&quot;Autumn Landscape&quot; title=&quot;Autumn Landscape by Alfred Thomson Bricher(1870)&quot; /&gt;&lt;/p&gt;
-&lt;p class=&quot;caption&quot;&gt;&lt;i&gt;Autumn Landscape&lt;/i&gt; by Alfred Thomson Bricher(1870)&lt;/p&gt;
-
-&lt;p&gt;Personally, I prefer to take a more optimistic outlook. Under the guise of grimness lies a sea of wisdom. Rather than death, November for me represents a rebirth or a reinvention, a chance to impart revolutionary changes to oneself. As a month near the end of the year but just before the holiday month of December, November creates the perfect setting to do some serious self-reflection; to take stock of one’s successes and failures and learn from the year’s worth of experiences. Our RoboCup experience this year was a failure due to a multitude of inexcusable mistakes such as overextending our workloads and poor time management. We have definitely learnt from our mistakes and have sworn to never repeat them again.&lt;/p&gt;
-
-&lt;p&gt;Hence, since mid-October, we have made progress in our Soccer Open robots by leaps and bounds and here is a consolidation of some key moments.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;dribbler&quot;&gt;Dribbler&lt;/h2&gt;
-
-&lt;p&gt;The first draft of the dribbler’s 3D design was actually completed way back in August, but due to pesky exams and waiting of Taobao shipments, it was only fully assembled in mid-November.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/exploded-dribbler-2-1024x576.jpg&quot; alt=&quot;Exploded Dribbler&quot; title=&quot;Exploded view of dribbler&quot; /&gt;&lt;/p&gt;
-&lt;p class=&quot;caption&quot;&gt;Exploded view of dribbler&lt;/p&gt;
-
-&lt;p&gt;The dribbler is powered by an 820kV brushless motor through a 2:5 ratio gear train, giving the bar an estimated 3900 RPM when running on our 12V batteries. This means that the ball will be spinning at over 2000 RPM!&lt;/p&gt;
-
-&lt;p&gt;The dribbler’s rollers are coated with a layer of &lt;a href=&quot;http://www.zener.com.sg/product/araldite-kitchen-and-bathroom-silicone/&quot;&gt;silicone&lt;/a&gt; to have high grip on the ball. The whole dribbler module has a pivot point at its back with a spring suspension to allow for the bar to move up and down slightly, thus absorbing impact and giving better control over the dynamic movements of the ball.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/20191113-2_3-0-1024x498.jpg&quot; alt=&quot;Dribbler Gearbox&quot; title=&quot;Dribbler's gearbox&quot; /&gt;&lt;/p&gt;
-&lt;p class=&quot;caption&quot;&gt;Dribbler's gearbox&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/20191113-2_3-3-1024x498.jpg&quot; alt=&quot;Assembled Dribbler&quot; title=&quot;Assembled dribbler&quot; /&gt;&lt;/p&gt;
-&lt;p class=&quot;caption&quot;&gt;Assembled dribbler&lt;/p&gt;
-
-&lt;p&gt;Slight adjustments of the dribbler’s position were done through trial and error to adjust the angle the dribbler pivots to. While results were satisfactory, the ball still does move in and out when dribbled, and thus we will be experimenting with different spring strengths and even an oil damper for our suspension system soon.&lt;/p&gt;
-
-&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-permalink=&quot;https://www.instagram.com/p/B4y3GI-HftJ/?utm_source=ig_embed&amp;amp;utm_campaign=loading&quot; data-instgrm-version=&quot;12&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:16px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/B4y3GI-HftJ/?utm_source=ig_embed&amp;amp;utm_campaign=loading&quot; style=&quot; background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;&quot; target=&quot;_blank&quot;&gt; &lt;div style=&quot; display: flex; flex-direction: row; align-items: center;&quot;&gt; &lt;div style=&quot;background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display: flex; flex-direction: column; flex-grow: 1; justify-content: center;&quot;&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;padding: 19% 0;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display:block; height:50px; margin:0 auto 12px; width:50px;&quot;&gt;&lt;svg width=&quot;50px&quot; height=&quot;50px&quot; viewBox=&quot;0 0 60 60&quot; version=&quot;1.1&quot; xmlns=&quot;https://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;https://www.w3.org/1999/xlink&quot;&gt;&lt;g stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;g transform=&quot;translate(-511.000000, -20.000000)&quot; fill=&quot;#000000&quot;&gt;&lt;g&gt;&lt;path d=&quot;M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/div&gt;&lt;div style=&quot;padding-top: 8px;&quot;&gt; &lt;div style=&quot; color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;&quot;&gt; View this post on Instagram&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;padding: 12.5% 0;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;&quot;&gt;&lt;div&gt; &lt;div style=&quot;background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot;background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;margin-left: 8px;&quot;&gt; &lt;div style=&quot; background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot; width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;margin-left: auto;&quot;&gt; &lt;div style=&quot; width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot; background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot; width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/B4y3GI-HftJ/?utm_source=ig_embed&amp;amp;utm_campaign=loading&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;Day 3: Man took a well deserved 4 day break and came back to assemble a surprisingly good DRIBBLER 💪😙 #flex #nokick ~kfc [Soccer Open] #robocup #robocupjunior #bozotics&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A post shared by &lt;a href=&quot;https://www.instagram.com/bozotics/?utm_source=ig_embed&amp;amp;utm_campaign=loading&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;&quot; target=&quot;_blank&quot;&gt; ¡ßöZø 🗽 SqûãD!&lt;/a&gt; (@bozotics) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2019-11-13T05:57:47+00:00&quot;&gt;Nov 12, 2019 at 9:57pm PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;//www.instagram.com/embed.js&quot;&gt;&lt;/script&gt;
-
-&lt;h2 id=&quot;mirror&quot;&gt;Mirror&lt;/h2&gt;
-&lt;p&gt;Following a few rounds of experimentation, we finalised on a mirror shape that is a combination of a cone and a hyperbola. The hyperbolic base of the mirror enlarges objects near the robot with minimal deformation, while the conic part of the mirror enlarges the goals and maintains the roughly rectangular shape of the field lines.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/5-48deg-centre-res-1024x787.jpg&quot; alt=&quot;Mirror Render&quot; title=&quot;Robot's POV&quot; /&gt;&lt;/p&gt;
-&lt;p class=&quot;caption&quot;&gt;Robot's POV&lt;/p&gt;
-
-&lt;p&gt;Having faced many problems with the molding method for making our mirror in previous years, we have decided to try manufacturing our mirror this time by sending our design to China for aluminium CNC lathing, followed by polishing it up ourselves. Fingers crossed! 🤞&lt;/p&gt;
-
-&lt;h2 id=&quot;2d-simulation&quot;&gt;2D Simulation&lt;/h2&gt;
-
-&lt;p&gt;As part of our revamp of robot strategy, we are planning to create smarter, more human-like play by introducing decision trees as well as special offensive/defensive manoeuvres (top secret for now!). Hence, we created a semi-realistic 2D simulator using Python with the &lt;a href=&quot;http://arcade.academy/&quot;&gt;Arcade&lt;/a&gt; and &lt;a href=&quot;http://www.pymunk.org/&quot;&gt;Pymunk&lt;/a&gt; libraries. As of now, we have a robot running a simple ball chasing with goal aiming/shooting program, but this simulator will surely come into great use in the future as we further develop our robot strategy.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/t_YrVmQF8q4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;November has been eventful and rewarding, with everything having come together rather smoothly (quite literally). With the robot design basically completed, the other half of the robot’s hardware, Electronics, will be the focus for the month of December. With our fully custom made PCBs and plans for embedded micro-controllers, this December journey will surely be an interesting one.&lt;/p&gt;</content><author><name>Kai Cong</name><email>161815w@student.hci.edu.sg</email></author><category term="Soccer Open" /><category term="Mechanical" /><category term="Monthly" /><category term="Simulation" /><summary type="html">November at its best – with a sort of delightful menace in the air. Anne Bosworth Greene</summary></entry></feed>
+&lt;p&gt;Also, &lt;a href=&quot;https://github.com/hcbozo&quot;&gt;github.com/hcbozo&lt;/a&gt;&lt;/p&gt;</content><author><name>Jing Heng</name><email>151436j@student.hci.edu.sg</email></author><category term="Rescue Line" /><category term="Soccer Open" /><category term="Electronics" /><category term="Weekly" /><summary type="html">Can’t really think of a good intro like the previous post, and can’t find that many photos as well, so here is a very wordy introduction / progress update for our Rescue Line and Soccer Open robots.</summary></entry></feed>
