@@ -264,7 +264,7 @@ var store = [{
         "teaser": null
       },{
         "title": "A Mazed",
-        "excerpt":"Why do we have a maze on our robot’s mirror plate? When you first pick it up, there is a strange allure to its madness. You vaguely know where the end point is, but the path to that end is completely unknown. You make your entrance. Corridor by corridor, corner...","categories": ["Commentary"],
+        "excerpt":"Why do we have a maze on our robot’s mirror plate? A symbol of our robotics journey When you first pick it up, there is a strange allure to its madness. You vaguely know where the end point is, but the path to that end is completely unknown. You make...","categories": ["Commentary"],
         "tags": ["Monthly"],
         "url": "/blog/a-mazed/",
         "teaser": null

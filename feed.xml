@@ -1,9 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://bozo.infocommsociety.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bozo.infocommsociety.com/" rel="alternate" type="text/html" /><updated>2021-07-05T19:42:57+08:00</updated><id>https://bozo.infocommsociety.com/feed.xml</id><title type="html">Transcendence</title><subtitle>The fine line between innovation and insanity</subtitle><entry><title type="html">A Mazed</title><link href="https://bozo.infocommsociety.com/blog/a-mazed/" rel="alternate" type="text/html" title="A Mazed" /><published>2021-07-05T00:00:00+08:00</published><updated>2021-07-05T19:39:40+08:00</updated><id>https://bozo.infocommsociety.com/blog/a-mazed</id><content type="html" xml:base="https://bozo.infocommsociety.com/blog/a-mazed/">&lt;p&gt;Why do we have a maze on our robot’s mirror plate?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://bozo.infocommsociety.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bozo.infocommsociety.com/" rel="alternate" type="text/html" /><updated>2021-07-05T20:02:53+08:00</updated><id>https://bozo.infocommsociety.com/feed.xml</id><title type="html">Transcendence</title><subtitle>The fine line between innovation and insanity</subtitle><entry><title type="html">A Mazed</title><link href="https://bozo.infocommsociety.com/blog/a-mazed/" rel="alternate" type="text/html" title="A Mazed" /><published>2021-07-05T00:00:00+08:00</published><updated>2021-07-05T20:02:14+08:00</updated><id>https://bozo.infocommsociety.com/blog/a-mazed</id><content type="html" xml:base="https://bozo.infocommsociety.com/blog/a-mazed/">&lt;p&gt;Why do we have a maze on our robot’s mirror plate?&lt;/p&gt;
 
 &lt;figure style=&quot;margin-left:auto;margin-right:auto;&quot;&gt;
   
   &lt;img src=&quot;/assets/images/mirror-maze-crop.jpg&quot; alt=&quot;Mirror maze&quot; style=&quot;margin-left:auto;margin-right:auto;&quot; /&gt;
   
+  
+    &lt;figcaption&gt;
+      
+      A symbol of our robotics journey
+
+      
+    &lt;/figcaption&gt;
   
 &lt;/figure&gt;
 
