@@ -69,7 +69,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: bozo.infocommsociety.com
+      url: https://bozo.infocommsociety.com
     runs-on: ubuntu-latest
     needs: build
     steps:
